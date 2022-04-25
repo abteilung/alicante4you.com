@@ -174,7 +174,7 @@ module.exports = {
                     'primary': '#00377B',
                     'primary-focus': '#D8942E',
                     'primary-content': '#ffffff',
-                    'secondary': '#D8942E',
+                    'secondary': '#DD1C2F',
                     'secondary-focus': '#831111',
                     'neutral': '#EFEFEF',
                     'error': '#ff9900',

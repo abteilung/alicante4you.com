@@ -16,13 +16,13 @@ prototype(Alicante.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neo
             <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
               <Alicante.Navigation:Navbar.LinkItem />
             </Neos.Fusion:Loop>
-            <div "@click.prevent"="showModal = !showModal" class="cursor-pointer text-base-300 hover:text-primary">
+            <div "@click.prevent"="showModal = !showModal" class="cursor-pointer text-base-300 hover:text-black">
               { I18n.translate('Alicante.Navigation:Main:contact') }
             </div>
           </nav>
           <div>
             <Carbon.Link:Link 
-                additionalClass="h3" 
+                additionalClass="font-bold text-black hover:underline" 
                 link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
                 renderDefaultTagIfNoLink='true'
             >

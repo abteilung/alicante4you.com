@@ -27,7 +27,7 @@ prototype(Alicante.Navigation:Component.Navbar) < prototype(Neos.Fusion:Componen
 
                         <div 
                             x-data="\{ 'showMenu' : false \}" 
-                            class="flex justify-center w-full text-primary mainNavigation font-headings">
+                            class="flex justify-center w-full">
                             <Alicante.Navigation:Component.Navbar.Navigation />
                             <Alicante.Navigation:Component.Navbar.Hamburger />
                             <!-- <Alicante.Navigation:Component.Navbar.KontaktButton /> -->

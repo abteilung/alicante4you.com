@@ -47,12 +47,9 @@ prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
                         <div class="flex justify-center w-full lg:w-auto">
                             <Abte.Site:Component.Logo class="h-16" />
                         </div>
-                        <div class="justify-center py-4 text-center lg:py-0">
+                        <div class="justify-center py-4 text-sm text-right lg:py-0">
                             <div class="inline-block">{props.metaItems}</div>
                         </div>
-                        <div class="flex justify-center w-full text-right lg:w-auto">
-                            © {props.year} {props.footerInfo}
-                        </div>                
                     </div>
                 </div>
             </div>

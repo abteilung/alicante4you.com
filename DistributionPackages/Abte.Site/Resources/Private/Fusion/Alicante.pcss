@@ -8,6 +8,15 @@
         @apply hidden;
     }
 
+    .roundedCorners {
+        @apply rounded-t-[30px] rounded-br-[30px];
+    }
+
+    .mainNavigation a {
+        @apply border-b-2 border-transparent;
+
+    } 
+
     body {
         @apply text-sm lg:text-base;
         @apply bg-white;
@@ -79,7 +88,7 @@
     }
 
     h1, .h1, h2, .h2, h3, .h3 {
-        @apply text-primary;
+        @apply text-black;
     }
 
     h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1 {
@@ -101,7 +110,7 @@
     }
 
     h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
-        @apply text-base lg:text-lg font-headings leading-tight;
+        @apply text-lg lg:text-xl font-headings leading-tight font-bold;
         i, em {
             @apply not-italic text-accent-focus;
         }
@@ -224,7 +233,7 @@
     }
 
     .box-shadow {
-        @apply shadow-2xl bg-white hover:shadow-3xl duration-150;
+        @apply shadow-2xl bg-white hover:shadow-xl !shadow-black/5 duration-150;
     }
     .bg-nav-scrolled {
         @apply box-shadow bg-transparent;

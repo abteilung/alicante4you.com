@@ -96,7 +96,7 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
             condition = ${ q(node).property('layout') == 'products' || layout == 'products' }
             renderer = afx`
                 <nav class={props.class}>
-                    <ul class="grid md:grid-cols-2 lg:grid-cols-4 gridgap">
+                    <ul class="grid md:grid-cols-2 lg:grid-cols-3 gridgap">
                         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
                             <li class="mb-4"
                                 @if.isWithinRange={i.index < props.limit}

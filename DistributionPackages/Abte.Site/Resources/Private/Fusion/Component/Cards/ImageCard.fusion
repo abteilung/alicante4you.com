@@ -16,7 +16,7 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
     subTitle = ${ q(node).property('subTitle') || q( q(node).property('reference') ).property('subTitle') }
 
     icon = Abte.Site:Icon.ArrowRight {
-        class = 'absolute z-0 duration-150 scale-75 bottom-6 lg:scale-100 text-primary-focus group-hover:right-6 right-8'
+        class = 'absolute z-0 duration-150 scale-75 bottom-6 lg:scale-100 text-secondary group-hover:right-6 right-8'
     }
 
     kates = Abte.Site:Component.FilterKates
@@ -24,7 +24,7 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
     isNew = ${ q(node).property('isNew') ? true : false }
     category = ${ q( q(node).property('categories') ).property('title') }
     
-    class = 'relative flex flex-col h-full duration-150 bg-white shadow-2xl group hover:shadow-lg'
+    class = 'relative flex flex-col h-full overflow-hidden duration-150 bg-white shadow-2xl box-shadow group roundedCorners isolate'
 
     renderer = afx`
             <Neos.Neos:NodeLink 
@@ -44,11 +44,11 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
                 />
 
                 <div class="flex flex-col flex-1 space-y-4">
-                    <div class="overflow-hidden ">
+                    <div class="overflow-hidden">
                         <Sitegeist.Lazybones:Image 
                             @if.hasImage={props.imageSource}
                             imageSource={props.imageSource} 
-                            class="object-cover duration-150 scale-100 group-hover:scale-105 aspect-[4/3]"
+                            class="object-cover duration-150 scale-100 group-hover:scale-105 aspect-[19/12]"
                         />
 
                         <img src="https://via.placeholder.com/620x620" alt={props.title} width="620" height="620"
@@ -57,9 +57,9 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
                     </div>
 
                     <div class="h-32 px-6 pt-2 pb-6 md:px-4 lg:px-6 md:h-44 lg:h-48">
-                        <p class="mb-2 text-base-300">{props.category}</p>
+                        <p class="hidden mb-2 text-base-300">{props.category}</p>
                         <h3 class="mb-0">{props.title}</h3>
-                        <h3 class="pr-12 text-primary-focus line-clamp-3">{props.subTitle}</h3>
+                        <h3 class="pr-12 text-secondary line-clamp-3">{props.subTitle}</h3>
                     </div>
                     {props.icon}
                 </div>
@@ -85,6 +85,3 @@ prototype(Abte.Site:Component.isNew) < prototype(Neos.Fusion:Component) {
     `
 
 }
-
-
-// bg-accent

@@ -4,7 +4,7 @@ prototype(Alicante.Navigation:Component.Nav.Meta) < prototype(Neos.Fusion:Compon
         itemCollection = ${site.properties.footerItems}
     }
 
-	class = "space-x-4 md:flex"
+	class = "space-x-4 md:flex text-base-300"
 	linkClass = "xl:py-3 whitespace-nowrap hover:opacity-100 hover:underline"
 
 	renderer = afx`
@@ -13,7 +13,7 @@ prototype(Alicante.Navigation:Component.Nav.Meta) < prototype(Neos.Fusion:Compon
                 <li>
                     <Neos.Neos:NodeLink
 						node={item.node}
-						attributes.class={props.linkClass}
+						attributes.class={props.linkClass + ' ' + (item.state == 'current' ? 'underline' : item.state == 'active' ? 'underline' : null ) }
 					>
 						{item.label}
 					</Neos.Neos:NodeLink>

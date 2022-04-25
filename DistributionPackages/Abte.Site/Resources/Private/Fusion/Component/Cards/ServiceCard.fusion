@@ -18,7 +18,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
         class = 'absolute z-10 text-white duration-150 scale-75 bottom-6 lg:scale-100 group-hover:right-6 right-8'
     }
 
-    class = 'group relative h-full w-full block'
+    class = 'relative block w-full h-full group'
     imageClass = 'w-full h-full object-cover object-center duration-300 scale-100 group-hover:scale-105'
 
     pageTitleForFilter = ${ q(documentNode).property('title') }
@@ -40,7 +40,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
             attributes.x-transition:leave="transition duration-50 ease-in"
             attributes.x-transition:leave-end="opacity-0 scale-100"
         >
-            <div class="absolute block z-10 grid content-end w-full h-full p-6 text-white md:p-4 lg:p-8 serviceCard">
+            <div class="absolute z-10 grid content-end block w-full h-full p-6 text-white roundedCorners md:p-4 lg:p-8 serviceCard">
                 <p>{ q(documentNode).is('[uriPathSegment="news-and-trends"],[uriPathSegment="home"]') ? props.datePublished : props.title }</p>
                 <h3 class="pr-12 mb-0 line-clamp-none md:line-clamp-3 lg:line-clamp-none">{ q(node).property('titleOverride') ? q(node).property('titleOverride') : q(documentNode).is('[instanceof Abte.Site:Document.Kompetenzen],[instanceof Abte.Site:Document.Products]') ? q(node).property('subTitle') : q(node).property('title') }</h3>
             </div>

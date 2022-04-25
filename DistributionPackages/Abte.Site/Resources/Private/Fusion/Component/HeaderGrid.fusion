@@ -52,23 +52,23 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
         `
     }
     oneTheme = ''
-    oneClass = 'relative bg-primary box-h-2 row-span-2 col-span-1 md:col-span-2 headGrid'
+    oneClass = 'roundedCorners relative bg-primary box-h-2 row-span-2 col-span-1 md:col-span-2 headGrid'
     oneHTML = ${ q(node).property('oneHTML') }
   
     two = ''
-    twoClass = 'relative bg-base-100 box-h-2 row-span-2 lg:row-span-1 lg:box-h-1 '
+    twoClass = 'roundedCorners overflow-hidden relative bg-base-100 box-h-2 row-span-2 lg:row-span-1 lg:box-h-1 '
     twoTheme = ''
     
     three = ''
-    threeClass = 'relative bg-white box-h-2 row-span-2 shadow-box'
+    threeClass = 'roundedCorners overflow-hidden relative bg-white box-h-2 row-span-2 box-shadow'
     threeTheme = ''
 
     four = ''
-    fourClass = 'relative bg-base-100 box-h-1'
+    fourClass = 'roundedCorners relative bg-base-100 box-h-1'
     fourTheme = 'human'
 
     five = ''
-    fiveClass = 'relative bg-base-100 box-h-1'
+    fiveClass = 'roundedCorners relative bg-base-100 box-h-1'
     fiveTheme = 'vet'
 
     renderer = afx`
