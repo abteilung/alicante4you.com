@@ -171,10 +171,10 @@ module.exports = {
         themes: [
             {
                 'default': {
-                    'primary': '#00377B',
+                    'primary': '#114db3',
                     'primary-focus': '#D8942E',
                     'primary-content': '#ffffff',
-                    'secondary': '#DD1C2F',
+                    'secondary': '#dd1c2f',
                     'secondary-focus': '#831111',
                     'neutral': '#EFEFEF',
                     'error': '#ff9900',

@@ -73,6 +73,14 @@
                 <source>Our X-Ray Solutions</source>
             </trans-unit>
             
+            <trans-unit id="dreamProperty">
+                <source>Are you looking for your dream property?</source>
+            </trans-unit>
+
+            <trans-unit id="solventBuyers">
+                <source>Are you looking for solvent buyers for your property?</source>
+            </trans-unit>
+
             <trans-unit id="solutionsForHum">
                 <source>for hospitals, X-ray institutes and your medical practice.</source>
             </trans-unit>

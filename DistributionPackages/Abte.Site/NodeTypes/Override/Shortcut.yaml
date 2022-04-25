@@ -14,3 +14,15 @@
         label: Title Override
         inspector:
           group: document
+    'SVGIcon': 
+      type: string
+      defaultValue: '<svg>SVG Code</svg>'
+      ui:
+        label: SVG Icon Code
+        reloadIfChanged: false
+        inspector:
+          group: document
+          position: 2
+          editor: Neos.Neos/Inspector/Editors/CodeEditor
+          editorOptions:
+            buttonLabel: 'SVG bearbeiten'

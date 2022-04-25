@@ -51,48 +51,43 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
             </div>
         `
     }
-    oneTheme = ''
     oneClass = 'roundedCorners relative bg-primary box-h-2 row-span-2 col-span-1 md:col-span-2 headGrid'
     oneHTML = ${ q(node).property('oneHTML') }
   
     two = ''
     twoClass = 'roundedCorners overflow-hidden relative bg-base-100 box-h-2 row-span-2 lg:row-span-1 lg:box-h-1 '
-    twoTheme = ''
     
     three = ''
     threeClass = 'roundedCorners overflow-hidden relative bg-white box-h-2 row-span-2 box-shadow'
-    threeTheme = ''
 
     four = ''
-    fourClass = 'roundedCorners relative bg-base-100 box-h-1'
-    fourTheme = 'human'
+    fourClass = 'roundedCorners relative bg-secondary text-white box-h-1'
 
     five = ''
-    fiveClass = 'roundedCorners relative bg-base-100 box-h-1'
-    fiveTheme = 'vet'
+    fiveClass = 'roundedCorners relative bg-primary text-white box-h-1'
 
     renderer = afx`
         <div class={props.class + ' ' + 'grid md:grid-cols-2 lg:grid-cols-3 gridgap'}>
-            <div class={props.oneClass} data-theme={props.oneTheme}>
+            <div class={props.oneClass}>
                 <Abte.Site:Component.BackendIndicator label="1" />
                 {props.one}
                 {props.oneHTML}
             </div>
-            <div class={props.twoClass} data-theme={props.twoTheme}>
+            <div class={props.twoClass}>
                 <Abte.Site:Component.BackendIndicator label="2" />
                 {props.two}
             </div>
-            <div class={props.threeClass} data-theme={props.threeTheme}>
+            <div class={props.threeClass}>
                 <Abte.Site:Component.BackendIndicator label="3" />
                 {props.three}
             </div>
 
-            <div class={props.fourClass} data-theme={props.fourTheme}>
+            <div class={props.fourClass}>
                 <Abte.Site:Component.BackendIndicator label="4" />
                 {props.four}
             </div>
 
-            <div class={props.fiveClass} data-theme={props.fiveTheme}>
+            <div class={props.fiveClass}>
                 <Abte.Site:Component.BackendIndicator label="5" />
                 {props.five}
             </div>

@@ -37,8 +37,12 @@ prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
 
         <footer class="z-10">
           
-            <div class="pt-8 pb-16 text-white bg-primary gridPadding primary-footer">
-                <div class="container">{props.footerContent}</div>
+            <div class="pt-8 pb-16 text-black bg-base-100 gridPadding primary-footer">
+                <div class="container">{props.footerContent}
+
+                <Alicante.Navigation:Component.Nav.Social />
+
+                </div>
             </div>
             
             <div class="py-8 bg-white gridPadding-x text-primary">

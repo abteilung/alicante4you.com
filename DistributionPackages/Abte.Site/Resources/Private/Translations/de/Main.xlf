@@ -97,6 +97,16 @@
                 <target>Unsere Röntgenlösungen</target>
             </trans-unit>
 
+            <trans-unit id="dreamProperty">
+                <source>Are you looking for your dream property?</source>
+                <target>Suchen Sie Ihr Traumgrundstück?</target>
+            </trans-unit>
+
+            <trans-unit id="solventBuyers">
+                <source>Are you looking for solvent buyers for your property?</source>
+                <target>Suchen Sie solvente Käufer für Ihr Grundstück?</target>
+            </trans-unit>
+
             <trans-unit id="solutionsForHum">
                 <source>for hospitals, X-ray institutes and your medical practice.</source>
                 <target>für Spitäler, Röntgeninstitute und Ihre Arztpraxis.</target>

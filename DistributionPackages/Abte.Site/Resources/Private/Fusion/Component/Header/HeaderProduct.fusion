@@ -45,24 +45,24 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
 
     price = ${ q(node).property('productPrice')}
 
-    renderer = afx`
-        <div class="container grid md:grid-cols-2 gridPadding gridgap">
-            <Abte.Site:Component.RemoteSlider />
-            <div class="space-y-6">
+    category = ${ q( q(node).property('categories') ).property('title') }
 
+    renderer = afx`
+        <div class="container">
+
+            ((HEADERPICTURE))
+
+            <div class="space-y-6">
+                <h4>{props.category}</h4>
                 <h1>
                     <span class="productTitle">{props.pageTitle}</span>
-                    <br
-                        @if.is={props.subTitle} 
-                    />
-                    <em>{props.subTitle}</em>
                 </h1>
 
                 <Neos.Fusion:Augmenter class="lead">
                     {props.teaser_short}
                 </Neos.Fusion:Augmenter>
 
-                <Abte.Site:Content.BasketButton class="bg-primary" iconImage="basket" cartImage={props.imageSource} text={ I18n.translate('Abte.Site:Main:nonBindingRequest') } />
+                <Abte.Site:Component.RemoteSlider />
 
             </div>
            

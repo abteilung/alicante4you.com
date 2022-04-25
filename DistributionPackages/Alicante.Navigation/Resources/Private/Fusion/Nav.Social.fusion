@@ -9,9 +9,9 @@ prototype(Alicante.Navigation:Component.Nav.Social) < prototype(Neos.Fusion:Comp
 	renderer = afx`
         <ul class="flex mt-6 space-x-4 lg:mt-0 justify-items-end">
             <Neos.Fusion:Loop items={props.menuItems}>
-                <li class="flex items-center justify-center w-10 h-10 p-1 bg-white">
+                <li class="flex items-center justify-center w-6 h-6 p-1">
                     <Neos.Neos:NodeLink node={item.node}>
-                        <Neos.Fusion:Augmenter class="w-full h-full text-primary hover:text-black">
+                        <Neos.Fusion:Augmenter class="w-full h-full text-black hover:text-primary">
                             {q(item.node).property('SVGIcon')}
                         </Neos.Fusion:Augmenter>
                     </Neos.Neos:NodeLink>

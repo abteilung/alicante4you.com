@@ -43,7 +43,8 @@
         "alicante/fuzzysearch": "@dev",
         "alicante/mixitup": "@dev",
         "alicante/flickity": "@dev",
-        "alicante/privacy": "@dev"
+        "alicante/privacy": "@dev",
+        "jonnitto/googlemaps": "^4.0"
     },
     "require-dev": {
         "neos/buildessentials": "~7.3.0",
