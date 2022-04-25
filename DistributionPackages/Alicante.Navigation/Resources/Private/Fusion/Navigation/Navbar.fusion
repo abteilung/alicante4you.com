@@ -23,7 +23,7 @@ prototype(Alicante.Navigation:Component.Navbar) < prototype(Neos.Fusion:Componen
                         :class="showSearch ? 'left-0' : ''"
                     >
                     
-                        <Alicante.Navigation:Component.FuzzySearch />
+                        <!-- <Alicante.Navigation:Component.FuzzySearch /> -->
 
                         <div 
                             x-data="\{ 'showMenu' : false \}" 

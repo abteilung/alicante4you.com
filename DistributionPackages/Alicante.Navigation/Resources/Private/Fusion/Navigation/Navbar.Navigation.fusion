@@ -13,8 +13,7 @@ prototype(Alicante.Navigation:Component.Navbar.Navigation) < prototype(Neos.Fusi
 
         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
           <Alicante.Navigation:Navbar.LinkItem />
-          <Alicante.Navigation:Navbar.LinkItemWithSub />
-          <Alicante.Navigation:Navbar.MegaMenuItem />
+          <!-- <Alicante.Navigation:Navbar.LinkItemWithSub /> -->
         </Neos.Fusion:Loop>
 
       </nav>
