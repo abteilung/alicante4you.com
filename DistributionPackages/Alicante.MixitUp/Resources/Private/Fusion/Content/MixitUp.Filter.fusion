@@ -1,0 +1,182 @@
+// prototype(Alicante.MixitUp:Content.Filter) < prototype(Neos.Fusion:Component) {
+
+//   node = ${ node }
+//   @context {
+//     node = ${ this.node }
+//   }
+
+//     subMenuOrientation = 'left-32'
+
+//   showAllFilter = false
+
+//   categoryItems = Neos.Neos:MenuItems {
+//       itemCollection = ${ q(node).children('[instanceof Abte.Site:Document.Category]') ? q(node).children('[instanceof Abte.Site:Document.Category]').get() : null }
+//       filter = ${ 'Abte.Site:Document.Category' }
+//   }
+
+//   itemsWrapClass = Neos.Fusion:Case {
+//       projects {
+//         condition = ${ q(node).is('[instanceof Abte.Site:Document.Projects]') }
+//         renderer = 'mt-12 mixitupContent'
+//       }
+//       fallback {
+//         condition = ${true}
+//         renderer = 'grid grid-cols-2 mt-12 mixitupContent gridgap'
+//       }
+//   }
+
+//   filterItems = Neos.Fusion:Loop {
+//       items = ${ q(documentNode).find('[instanceof Abte.Site:Document.Story],[instanceof Abte.Site:Document.Tutorial],[instanceof Abte.Site:Document.Project]').get() }
+//       itemName = 'element'
+//       iterationName = 'i'
+//       itemRenderer = 'xxx'
+        
+//       // itemRenderer.@if.isWithinLimitsOfFour= ${ i.cycle <= 4 ? true : false }
+//       // @process.removeDuplicates = ${Array.unique(value)}
+//   }
+
+//   renderer = afx`
+//       <div class="mb-20 filter">
+
+//         <!-- Dropdown menu on small screens -->
+//         <div class="mt-12 lg:hidden">
+//           <label for="mixitup-tab" class="sr-only">Select a tab</label>
+//           <select id="mixitup-tab" name="mixitup-tab" class="block w-full py-2 pl-3 pr-10 text-base border-2 rounded-md focus:outline-none focus:ring-transparent border-base-100 focus:border-base-100 sm:text-sm">
+//             <option value="all"
+//                 @if.showAllFilter={props.showAllFilter}
+//             >Alle</option>
+//             <Neos.Fusion:Loop 
+//                 items={props.categoryItems} 
+//                 iterationName='i'
+//                 @if.hasCats={props.categoryItems}
+//             >
+//                 <option 
+//                     value={'.' + q(item.node).property('_identifier') }
+//                 >
+//                   {q(item.node).property('title')}
+//                 </option>
+//             </Neos.Fusion:Loop>
+//           </select>
+//         </div>
+
+
+
+//         <!-- Tabs at lg breakpoint and up -->
+//         <div class="container hidden lg:block">
+//           <nav 
+//             class="flex space-x-8 text-lg border-b-2 mixitupFilter border-black-border" 
+//             aria-label="Tabs"
+//           >
+//             <button
+//               @if.showAllFilter={props.showAllFilter}
+//               type="button"
+//               id="filterAll"
+//               data-filter="all"
+//               class="cursor-pointer filterButton mixitup-control-active text-base-300 pb-2 mb-[-2px]"
+//             >
+//                 { I18n.translate('Abte.Site:Main:all') }
+//             </button>
+
+//             <Neos.Fusion:Loop 
+//               items={props.categoryItems} 
+//               iterationName='i'
+//               @if.hasCats={props.categoryItems}
+//             >
+
+//               <div
+//                   x-data="{ show: false }"
+//                   class="relative"
+//               >
+//                 <div 
+//                     "@mouseover"="show = true"
+//                     "@mouseout"="show = !true"
+//                     class="relative filter-box"
+//                 >
+//                   <div class="flex">
+//                     <Alicante.MixitUp:FilterButton 
+//                         node={item.node} 
+//                         content={q(item.node).property('title')}
+//                     />
+
+//                     <Alicante.Mixitup:NavCaret 
+//                       @if.hasSubsOfTypeCate={ q(item.node).children('[instanceof Abte.Site:Document.Category]').count() > 0 ? true : false }
+//                     />
+//                   </div>
+
+//                   <div 
+//                     x-show="show"
+//                     "@click.away"="show = false" 
+//                     x-transition:enter="transition duration-300"
+//                     x-transition:enter-start="opacity-0"
+//                     x-transition:enter-end="opacity-100"
+//                     x-transition:leave="transition duration-300"
+//                     x-transition:leave-start="opacity-100"
+//                     x-transition:leave-end="opacity-0"
+//                     class={props.subMenuOrientation + ' ' + ' absolute left-0 z-20 w-72 mt-4 origin-top-left'}
+//                   >
+//                     <div role="none">
+//                       <Neos.Fusion:Loop items={item.subItems}>
+//                         <Alicante.MixitUp:FilterButton 
+//                           node={item.node} 
+//                           content={q(item.node).property('title')}
+//                         />
+//                       </Neos.Fusion:Loop>
+//                     </div>
+//                   </div>
+            
+//                 </div>
+//               </div>
+
+//             </Neos.Fusion:Loop>
+
+//           </nav>
+//         </div>
+//         <div class={props.itemsWrapClass}>
+//           {props.filterItems}
+//         </div>
+//       </div>
+//   `
+
+// }
+
+
+// prototype(Alicante.MixitUp:FilterButton) < prototype(Neos.Fusion:Component) {
+    
+//     node = ''
+//     content = ''
+
+//     @context {
+//         node = ${ this.node }
+//     }
+
+//     renderer = Neos.Fusion:Tag {
+//         tagName = 'div'
+//         title = ${ q(node).property('title') }
+//         content = ${ props.content }
+        
+//         attributes {
+//             type = "button"
+//             class = "block w-full px-4 py-2 mr-3 text-left text-black bg-white cursor-pointer mixitup-control-default hover:bg-primary hover:text-white"
+//             data-filter = ${ '.' + q(item.node).property('_identifier') } 
+//         }
+//     }
+// }
+
+
+// prototype(Alicante.Mixitup:NavCaret) < prototype(Neos.Fusion:Component) {
+//     renderer = afx`
+//         <svg
+//             width="16"
+//             class={'mt-1 ml-1 -rotate-90 text-navigation text-primary'}
+//             height="16"
+//             viewBox="0 0 24 24"
+//             fill="none"
+//             xmlns="http://www.w3.org/2000/svg"
+//             >
+//             <path
+//                 d="M16.2426 6.34317L14.8284 4.92896L7.75739 12L14.8285 19.0711L16.2427 17.6569L10.5858 12L16.2426 6.34317Z"
+//                 fill="currentColor"
+//             />
+//         </svg>
+//     `
+// }

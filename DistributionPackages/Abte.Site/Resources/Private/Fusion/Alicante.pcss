@@ -1,0 +1,366 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    [x-cloak] {
+        @apply hidden;
+    }
+
+    body {
+        @apply text-sm lg:text-base;
+        @apply bg-white;
+        @apply text-base-300;
+        @apply font-sans font-normal antialiased;
+
+        strong {
+            @apply text-primary;
+        }
+    }
+
+    main {
+        @apply z-0 relative;
+    }
+    
+    main p {
+        @apply mb-4;
+    }
+
+    main a {
+        @apply text-primary;
+    }
+
+    .ce-text {
+        @apply space-y-4;
+
+    }
+    
+    .ce-text, 
+    .container-image, 
+    .button {
+        .neos-contentcollection & {
+            @apply mb-8;
+        }
+    }
+
+    .megaMenu .ce-text  {
+        @apply !mb-4;
+    }
+    .extras nav button {
+        @apply hidden md:flex;
+    }
+
+    .ce-text a {
+        @apply underline underline-offset-1 decoration-primary/0 hover:decoration-primary duration-200;
+    }
+
+    .ce-text ul li, .lead ul li {
+        @apply list-outside ml-4;
+        &::marker {
+            content: "–  ";
+        }
+    }
+    .ce-text ol li {
+        @apply list-decimal list-outside ml-4;
+    }
+
+    p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+        .bg-primary &,
+        .bg-error & {
+            @apply text-white;
+        }
+    }
+
+    p {
+        .bg-primary & {
+            @apply text-white/60;
+        }
+    }
+
+    h1, .h1, h2, .h2, h3, .h3 {
+        @apply text-primary;
+    }
+
+    h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1 {
+        @apply mb-2 font-headings text-xl lg:text-2xl xl:text-3xl font-semibold xl:mb-4;
+        i, em {
+            @apply not-italic text-accent-focus;
+        }
+        .headGrid & i, 
+        .headGrid & em {
+            @apply not-italic !text-accent-focus;
+        }
+    }
+
+    h2, .h2, h1.h2, h4.h2, h5.h2 {
+        @apply mb-2 font-headings text-lg md:text-xl;
+        i, em {
+            @apply not-italic text-accent-focus;
+        }
+    }
+
+    h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
+        @apply text-base lg:text-lg font-headings leading-tight;
+        i, em {
+            @apply not-italic text-accent-focus;
+        }
+        i strong {
+            @apply not-italic text-base-300;
+        }
+    }
+    .testimonial .lead p{
+        @apply h1;
+    }
+
+    h4, .h4, h1.h4, h2.h4, h3.h4, h5.h4 {
+        @apply font-sans font-normal text-base;
+        .megaMenu & {
+            @apply mb-4;
+        }
+    }
+
+    h5, .h5, h1.h5, h2.h5, h3.h5 {
+        @apply font-headings font-normal text-base;
+    }
+
+    b, strong {
+    }
+
+    .lead {
+        @apply text-base lg:text-lg text-base-300 mb-4 !leading-normal;
+    }
+
+    .container-wide {
+        @apply max-w-screen-2xl mx-auto;
+    }
+
+    .container {
+        @apply max-w-screen-xl !important;
+    }
+    .containerHeader {
+        .button {
+            @apply aspect-square md:aspect-auto p-3 md:px-5 md:py-3;
+            span {
+            @apply hidden md:flex;
+            }
+            svg {
+                @apply !ml-0 left-0 md:left-2 scale-90 md:scale-100;
+            }
+        }
+    }
+
+    main.main {
+    }
+
+    .gridgap {
+        @apply gap-4 md:gap-8 xl:gap-12;
+    }
+
+    .gridgap-x {
+        @apply gap-x-4 md:gap-x-8 xl:gap-x-12;
+    }
+
+    .gridPadding {
+        @apply py-12 md:py-16 lg:py-24 xl:py-32 px-4 md:px-8 xl:px-12 2xl:px-0;
+    }
+    
+    .gridPadding-x {
+        @apply px-4 md:px-8 xl:px-12 2xl:px-0;
+    }
+    .gridPadding-y {
+        @apply py-12 md:py-16 lg:py-24 xl:py-32 ;
+    }
+
+    .gridPadding-left {
+        @apply pl-5 md:pl-8 lg:pl-12;
+    }
+
+    .gridPadding-top {
+        @apply pt-5 md:pt-8 lg:pt-12;
+    }
+    .gridPadding-bottom {
+        @apply pb-12 md:pb-16 lg:pb-24 xl:pb-32;
+    }
+
+    .col-spacing-y {
+        @apply space-y-12;
+    }
+
+    hr {
+        @apply border-t-2 !border-base-200 my-6;
+    }
+
+    .megaMenu nav li a  {
+        @apply py-1 block duration-100 hover:text-accent-focus !important;
+        @apply text-lg;
+    }
+
+    .megaMenu nav li {
+        @apply border-b-2 border-base-100 last:border-none !important;
+    }
+
+    .subNavigation {
+        @apply !overflow-x-scroll;
+    }
+
+    #primaryMenu {
+        &.-translate-y-48 {
+         @apply mt-8 md:mt-0 !important;
+        }
+    }
+
+    .subNavigation button a{
+        body[data-theme="human"] & {
+            @apply text-accent-focus;            
+        }
+        body[data-theme="vet"] & {
+            @apply text-accent-focus;            
+        }
+
+        &.activeLink {
+            @apply !text-primary;
+        }
+    }
+
+    .box-shadow {
+        @apply shadow-2xl bg-white hover:shadow-3xl duration-150;
+    }
+    .bg-nav-scrolled {
+        @apply box-shadow bg-transparent;
+    }
+    .pullUp {
+        @apply relative -top-48;
+    }
+
+    .multicolumn-row.col-divider {
+        @apply divide-x-2 divide-base-100;
+    }
+
+    .serviceCard h3, .serviceCard h3 i{
+        @apply !text-white;
+    }
+    .serviceCard p{
+        @apply !text-white/75;
+    }
+    .serviceCard {
+        @apply bg-gradient-to-t from-black/50;
+    }
+
+    .box-newsletter.box-shadow {
+        @apply !bg-white;
+    }
+    form fieldset {
+        @apply grid gap-4 md:gap-6;
+    }
+    #kurs-form fieldset, .kontaktModal fieldset{
+        @apply md:grid-cols-2 lg:grid-cols-3;
+
+        label {
+            @apply last:col-span-full;
+        }
+
+    }
+    .kontaktModal fieldset, .basketModal fieldset {
+        @apply lg:grid-cols-2;
+
+        input, textarea {
+            @apply bg-base-200;
+            
+            &::placeholder {
+                @apply text-base-300;
+            }
+        }
+        textarea {
+            @apply md:h-32;
+        }
+        label {
+            &:last-child {
+                @apply lg:col-span-2;
+            }
+        }
+    }
+    .basketModal fieldset {
+        label {
+            .choices {
+                @apply !mb-0 mt-4;
+            }
+            .choices__input {
+                @apply !bg-transparent;
+            }
+            .choices__inner {
+                @apply !p-0 border-0 !bg-transparent;
+            }
+            .choices__list--multiple .choices__item {
+                @apply bg-gradient-to-b from-accent to-accent-focus border-0 text-sm md:text-base !py-2 !px-4 rounded-full;
+            }
+            .choices__button {
+                @apply !border-0 mr-0 !bg-[length:12px_12px];
+            }
+
+
+            &:first-child {
+                @apply lg:col-span-2;
+            }
+        }
+    }
+
+    figure.table {
+        @apply block overflow-x-auto;
+    }
+    table {
+        @apply overflow-hidden min-w-full;
+        tbody, thead {
+            @apply divide-y divide-primary;
+
+            td, th {
+                @apply p-3 align-top text-left font-normal text-primary;
+            }
+            th {
+                @apply text-primary bg-base-200/50;
+            }
+        }
+        thead th {
+            @apply text-white bg-primary;
+        }
+    }
+
+
+    #sib-form {
+        @apply !bg-white;
+        @apply !pt-8;
+        @apply !grid !grid-cols-2;
+    }
+
+    #sib-form .entry__specification {
+        @apply hidden;
+    }
+
+    #sib-form .input {
+        @apply !border-2 !border-primary;
+    }
+
+    .sib-form-block {
+    }
+
+    #sib-container {
+        @apply !w-full !max-w-full;
+        @apply !border-none;
+    }
+
+    input, textarea {
+        @apply md:p-3 md:text-base !important;
+    }
+
+    .box-h-1 {
+        @apply h-64;
+    }
+
+    .box-h-2 {
+        @apply h-128 lg:h-full;
+    }
+
+    .button {
+        @apply font-sans rounded-full bg-primary text-white px-6 py-2 hover:scale-105 duration-150;
+    }
+}

@@ -1,0 +1,12 @@
+'Abte.Site:Mixin.isTopOfWorld':
+  abstract: true
+  properties:
+    'isTopOfWorld':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: ⭐ Is top of World (HUM/VET)
+        position: 1
+        reloadIfChanged: true
+        inspector:
+          group: 'style'

@@ -1,0 +1,127 @@
+prototype(Abte.Site:Content.Modal) < prototype(Neos.Neos:ContentComponent) {
+    
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+   
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+    }
+    
+    modal_content = Neos.Neos:Editable {
+        property = 'modal_content'
+    }
+
+    modal_lead = Neos.Neos:Editable {
+        property = 'modal_lead'
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('modal_image') }
+    }
+
+    modal_link = ${ q(node).property('modal_link') }
+
+    icon = Abte.Site:Icon.PaperPlane {
+        class = 'absolute z-10 duration-150 scale-75 text-accent bottom-6 lg:scale-100 group-hover:right-6 right-8 group-hover:bottom-8'
+    }
+
+    renderer = afx`
+
+        <div x-data="{ open: false }"
+            class="modality"
+        >
+            <div 
+                x-ref="modalButton" 
+                class="flex flex-wrap w-full space-y-6 text-base bg-white cursor-pointer group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:w-auto sm:inline-flex"
+            >
+                <div 
+                    class="overflow-hidden"
+                    "@click"="open = true"
+                >
+                    <Sitegeist.Lazybones:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                        class="duration-300 scale-100 group-hover:scale-105 aspect-tv"
+                    />
+                </div>
+                <div class="relative w-full px-8 pb-6">
+                    <h3>{props.title}</h3>
+                    <h3 class="text-accent">{props.modal_lead}</h3>
+                    <p>{props.link}</p>
+                    <div class="flex items-center justify-between">
+                        <Carbon.Link:Link 
+                            additionalClass="hover:underline text-primary block" 
+                            link={props.modal_link} 
+                            renderDefaultTagIfNoLink='true'
+                        >
+                            { I18n.translate('Abte.Site:Main:writeEmail') }
+                        </Carbon.Link:Link>
+                        {props.icon}
+
+                    </div>
+                </div>
+            </div>
+
+            <div 
+                role="dialog" 
+                aria-labelledby="modal1_label" 
+                aria-modal="true" 
+                tabindex="0" 
+                x-show="open"
+                "@click"="open = false; $refs.modalButton.focus()" 
+                "@click.away"="open = false"
+                "@keydown.escape"="open = false"
+                class="fixed top-0 left-0 flex items-center justify-center w-full h-screen z-1000"
+            >
+
+                <div aria-hidden="true" 
+                    x-show="open" 
+                    class="fixed inset-0 flex items-center justify-center overflow-auto bg-black z-1000 pt-36 md:pt-0 bg-opacity-20 backdrop-blur-lg bg-blur-2xl" 
+                    x-transition:enter="transition ease duration-300" 
+                    x-transition:enter-start="opacity-0" 
+                    x-transition:enter-end="opacity-100" 
+                    x-transition:leave="transition ease duration-300" 
+                    x-transition:leave-start="opacity-100" 
+                    x-transition:leave-end="opacity-0"
+                >
+                    <Alicante.Navigation:Component.Navbar.KontaktModal.CloseButton />
+
+                    <div 
+                        data-modal-document 
+                        x-show="open" 
+                        class="container flex items-center justify-center h-screen gridPadding" 
+                        x-transition:enter="transition ease duration-100 transform" 
+                        x-transition:enter-start="opacity-0 scale-90 translate-y-1" 
+                        x-transition:enter-end="opacity-100 scale-100 translate-y-0" 
+                        x-transition:leave="transition ease duration-100 transform" 
+                        x-transition:leave-start="opacity-100 scale-100 translate-y-0" 
+                        x-transition:leave-end="opacity-0 scale-90 translate-y-1"
+                    >
+                        <div class="relative w-full p-4 text-base bg-white lg:w-2/3 contentPanel md:p-8 xl:p-12 2xl:p-12 gridPadding-x">
+                            <div class="grid grid-cols-2 gridgap">
+                                <div class="overflow-hidden">
+                                    <Sitegeist.Lazybones:Image 
+                                        @if.hasImage={props.imageSource}
+                                        imageSource={props.imageSource} 
+                                        class="w-full h-full aspect-tv"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 class="text-primary">{props.title}</h3>
+                                    <p>{props.subTitle}</p>
+                                </div>
+                                <div class="col-span-2">
+                                    {props.modal_content}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    `
+}

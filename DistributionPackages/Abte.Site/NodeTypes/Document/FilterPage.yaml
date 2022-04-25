@@ -1,0 +1,16 @@
+'Abte.Site:Document.FilterPage':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    'Alicante.MixitUp:Include': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Filter Page
+    icon: filter
+    position: 300
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Category': true
+      'Abte.Site:Document.Product': true
+      'Abte.Site:Document.ProductLink': true

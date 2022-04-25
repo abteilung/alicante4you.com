@@ -1,0 +1,36 @@
+
+prototype(Abte.Site:Mixin.BgColor) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    BgColor = Neos.Fusion:Case {
+        light {
+            condition = ${ q(node).property('bgColor') == 'bg-light' }
+            renderer = 'bg-base-100 gridPadding-y'
+        }
+
+        primary {
+            condition = ${ q(node).property('bgColor') == 'bg-primary' }
+            renderer = 'bg-primary text-white gridPadding-y'
+        }
+
+        primaryFocus {
+            condition = ${ q(node).property('bgColor') == 'bg-primary-focus' }
+            renderer = 'bg-primary-focus gridPadding-y'
+        }
+
+        secondary {
+            condition = ${ q(node).property('bgColor') == 'bg-secondary' }
+            renderer = 'bg-secondary text-white gridPadding-y' 
+        }
+
+        none {
+            condition = ${ true }
+            renderer = ''
+        }
+    }
+
+    renderer = afx`
+        {props.BgColor}
+    `
+}

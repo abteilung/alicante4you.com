@@ -1,0 +1,11 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Alicante.MixitUp':
+        Package: 'Alicante.MixitUp'
+        ConditionPrototype: 'Alicante.MixitUp:IncludeCase'
+        General:
+          Head:
+          Body: 
+            # - MixitUp.js[defer]

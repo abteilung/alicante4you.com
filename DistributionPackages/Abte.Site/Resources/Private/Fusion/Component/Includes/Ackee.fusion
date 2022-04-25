@@ -1,0 +1,15 @@
+prototype(Abte.Site:TrackingScript.Ackee) < prototype(Neos.Fusion:Component) {
+
+    // script for Schweizer Röntgen:
+    domainID = 'd2e52752-24e5-451d-901e-e83d3994b302'
+
+    renderer = afx`
+        <script 
+            async 
+            src="https://ackee-noh4.onrender.com/tracker.js" 
+            data-ackee-server="https://ackee-noh4.onrender.com" 
+            data-ackee-domain-id={props.domainID}>
+        </script>
+    `
+}
+

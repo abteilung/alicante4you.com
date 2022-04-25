@@ -1,0 +1,15 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Alicante.Navigation':
+        Package: 'Alicante.Navigation'
+        CacheBuster: false
+        General:
+          # Head: Navigation.css
+          Body: Navigation.js[defer]
+        # Backend:
+        #   Head:
+        #     - Backend.css
+        #     - Backend.js[defer]
+        # Live:

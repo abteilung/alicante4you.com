@@ -1,0 +1,15 @@
+'Abte.Site:Mixin.HideHeader':
+  abstract: true
+  ui:
+    label: i18n
+    icon: square-full
+    position: 400
+  properties:
+    'hideHeader':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 'Hide Header'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'style'

@@ -1,0 +1,47 @@
+prototype(Abte.Site:Content.DownloadBox) < prototype(Neos.Neos:ContentComponent) {
+    
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('downloadPic') ? q(node).property('downloadPic') : q(site).property('downloadPic') }
+    }
+
+    title =${ q(node).property('title') }
+
+    downloads = ${ q(node).property('downloads') }
+
+    renderer = afx`
+        
+
+        <Neos.Fusion:Loop items={props.downloads} iterationName="i">
+
+            <div class="relative block w-full font-light mix box-shadow group mb-12">
+                <Carbon.Link:Link
+                    link={q(item.node).resource)}
+                    additionalClass="hover:underline" 
+                    renderDefaultTagIfNoLink='true'
+                >
+                    <Sitegeist.Lazybones:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                        width="720"
+                        height="480"
+                        class=""
+                    />
+                    <div class="p-6 relative">
+                        <div class="w-14 h-14 bg-primary -translate-y-7 rounded-full absolute top-0 flex justify-center items-center right-2">
+                            <div class="text-white font-sansCondensed text-lg">PDF</div>
+                        </div>
+                
+                        <p>Factsheet</p>
+                        <h3>
+                            {props.title}
+                        </h3>
+
+                        <Abte.Site:Icon.Download class="absolute bottom-4 group-hover:bottom-2 duration-150 right-2" />
+
+                    </div>
+
+                </Carbon.Link:Link>
+            </div>
+        </Neos.Fusion:Loop>
+    `
+}

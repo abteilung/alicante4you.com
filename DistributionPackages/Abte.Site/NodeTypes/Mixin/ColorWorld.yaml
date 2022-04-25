@@ -1,0 +1,21 @@
+'Abte.Site:Mixin.ColorWorld':
+  abstract: true
+  properties:
+    colorWorld:
+      type: string
+      ui:
+        label: 'Color World'
+        reloadPageIfChanged: true
+        inspector:
+          group: style
+          position: 99
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              default:
+                label: 'Default'
+              human:
+                label: 'Human'
+              vet:
+                label: 'Vet'

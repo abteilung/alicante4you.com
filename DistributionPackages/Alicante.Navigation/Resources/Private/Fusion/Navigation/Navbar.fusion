@@ -1,0 +1,49 @@
+prototype(Alicante.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
+
+    menuID = 'primaryMenu'
+
+    renderer = afx`
+
+        <div 
+            x-cloak
+            id={props.menuID}
+            class="fixed top-0 z-20 w-full transition-all duration-200 transform isolate backdrop-blur-md"
+        >
+            <Alicante.Navigation:Component.Extra.Navbar.Navigation />
+            
+            <div class="flex justify-center bg-white">
+                <div class="container flex justify-between mx-0 gridPadding-x">
+                    <div class="flex items-center bg-white justify-left">
+                        <Alicante.Navigation:Component.Navbar.Brand />
+                    </div>
+                    
+                    <div 
+                        x-data="\{ 'showSearch' : false \}"
+                        class="flex justify-between w-full navArea"
+                        :class="showSearch ? 'left-0' : ''"
+                    >
+                    
+                        <Alicante.Navigation:Component.FuzzySearch />
+
+                        <div 
+                            x-data="\{ 'showMenu' : false \}" 
+                            class="flex justify-center w-full text-primary mainNavigation font-headings">
+                            <Alicante.Navigation:Component.Navbar.Navigation />
+                            <Alicante.Navigation:Component.Navbar.Hamburger />
+                            <!-- <Alicante.Navigation:Component.Navbar.KontaktButton /> -->
+                            <Alicante.Navigation:Component.Navbar.Mobile />
+                        </div>
+
+                        <div class="nav-tools">
+                            <Alicante.Navigation:Component.Tools />
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <Alicante.Navigation:Component.Navbar.SubNavigation />
+        </div>
+
+        <Alicante.Navigation:Component.Navbar.KontaktModal />
+    `
+}

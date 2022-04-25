@@ -1,0 +1,37 @@
+'Abte.Site:Document.Product':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Product': true
+    'Abte.Site:Mixin.Image': true
+    'Alicante.Flickity:Include': true
+    'Abte.Site:Mixin.New': true
+    'Abte.Site:Mixin.Hero': true
+    'Abte.Site:Constraint.Document.Restricted': true
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+  label: "${ q(node).property('isHero') && node.context.inBackend ? '<span class=\"hidden\">🏆 </span>' + q(node).property('title') : q(node).property('isNew') && node.context.inBackend ? '<span class=\"hidden\">🆕 </span>' + q(node).property('title') : q(node).property('title') }"
+  ui:
+    icon: fort-awesome
+    label: Property
+    position: 700
+  constraints:
+    nodeTypes:
+      '*': false
+  properties:
+    'images':
+      options:
+        preset: 'image.assets'
+      ui:
+        label: Further Images
+        inspector:
+          group: 'image'
+    'categories':
+      type: references
+      ui:
+        label: 'Kategorien'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'document'
+          position: 20
+          editorOptions:
+            nodeTypes: ['Abte.Site:Document.Category']
+            # startingPoint: "ClientEval:node.properties._path.replace(/(.+)(\\/.+)/, '$1')"

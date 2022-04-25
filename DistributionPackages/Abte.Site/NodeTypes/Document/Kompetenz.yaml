@@ -1,0 +1,37 @@
+'Abte.Site:Document.Kompetenz':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.Hero': true
+    'Abte.Site:Mixin.DatePublished': true
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Kompetenz
+    icon: lightbulb
+    position: 202
+  childNodes:
+    more:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Abte.Site:Constraint.Content.Restricted': false
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Page': true
+  properties:
+    image:
+      ui:
+        inspector:
+          position: 80
+      options:
+        preset: 'image.headerAsset'
+    teaserImage:
+      ui:
+        label: Teaser Image (Square)
+        inspector:
+          position: 88
+          group: 'image'
+      options:
+        preset: 'image.squareAsset'

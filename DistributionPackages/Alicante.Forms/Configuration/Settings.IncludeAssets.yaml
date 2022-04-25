@@ -1,0 +1,20 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Alicante.Forms':
+        Package: 'Alicante.Forms'
+        General:
+          Head: 
+            - Forms.css
+          Body:
+            - https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js
+            - https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css
+            - Forms.js
+            # - https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css
+        # Backend:
+        #   Head:
+        #     - Backend.css
+        #     - Backend.js[defer]
+        Live:
+          # Body: Forms.js[defer]

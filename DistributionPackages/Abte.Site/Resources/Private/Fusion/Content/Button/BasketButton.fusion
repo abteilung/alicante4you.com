@@ -1,0 +1,41 @@
+prototype(Abte.Site:Content.BasketButton) < prototype(Neos.Neos:ContentComponent) {
+
+    buttonClass = 'rounded-full border-white text-white cart-add-item flex flex-row items-center px-5 py-3 space-x-2 text-sm md:text-base tracking-normal'
+
+    iconAfter = Abte.Site:Icon.CartSmall {
+        class='relative duration-300 left-1 text-primary-focus group-hover:scale-110'
+    }
+
+    text = Neos.Neos:Editable {
+        property = 'text'
+        block = ${ false }
+    }
+
+    target = ${ q(node).property('target') }
+    target.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+
+    renderer = afx`
+        <div class="block">
+            <div class="inline-block group">
+                    
+                <Neos.Fusion:Augmenter 
+                    x-data="{event:'addtocart'}"
+                    "@click"="$dispatch(event);showBasket=true;">
+                    <Carbon.Link:Link 
+                        additionalClass={'cursor-pointer' + ' ' + props.buttonClass+ ' ' + props.class + ' ' + props.style} 
+                        link={props.target} 
+                        renderDefaultTagIfNoLink='true' 
+                        attributes.data-trigger="cart-add-item"
+                    >
+                        <span>{props.text}</span>
+                        {props.iconAfter}
+                    </Carbon.Link:Link>
+                </Neos.Fusion:Augmenter>
+            </div>
+            <div x-data @addToCart="console.info('Item added to cart')"></div>
+        </div>
+    `
+
+}

@@ -1,0 +1,57 @@
+prototype(Abte.Site:Component.NewsCard) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    class = 'relative block space-y-4 overflow-hidden group grid-item'
+    
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+        width   = 800
+        height  = 800
+    }
+
+    title = ${ q(node).property('title') }
+    subTitle = ${ q(node).property('subTitle') }
+    teaser_short = ${ q(node).property('teaser_short') }
+
+    kates = Neos.Fusion:Join {
+        @glue = ' '
+        self = ${ Carbon.String.urlize( q(node).parent('[instanceof Abte.Site:Document.Category]').property('title') ) }
+        subs = Neos.Fusion:Loop {
+            items = ${ q(node).parent('[instanceof Abte.Site:Document.Category]').parent('[instanceof Abte.Site:Document.Category]') }
+            itemRenderer = ${ Carbon.String.urlize( q(item).property('title') ) }
+            // @if.hasParentParent=${ q(node).parent('[instanceof Abte.Site:Document.Category]').parent('[instanceof Abte.Site:Document.Category]') }
+        }
+    }
+
+    category = ${ q(node).parent('[instanceof Abte.Site:Document.Category]').property('title') }
+
+
+
+    renderer = afx`
+        <div class={props.class + ' ' + props.kates }>
+
+        <Neos.Neos:NodeLink 
+            node={ q(node).get(0) }
+        >
+            <Sitegeist.Lazybones:Image 
+                @if.hasImage={props.imageSource}
+                imageSource={props.imageSource} 
+                class="duration-300 scale-100 group-hover:scale-105"
+            />
+            <div>
+                <div class="text-sm">{props.category}</div>
+                <h3>{props.title}</h3>
+            </div>
+            <Neos.Fusion:Augmenter class="">
+                {props.teaser_short}
+            </Neos.Fusion:Augmenter>
+
+        </Neos.Neos:NodeLink>
+        </div>
+    `
+}
+                   

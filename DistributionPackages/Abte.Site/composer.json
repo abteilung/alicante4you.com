@@ -1,0 +1,24 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "name": "abte/site",
+    "require": {
+        "neos/neos": "*",
+        "carbon/includeassets": "^5.3",
+        "flowpack/nodetemplates": "^1.3",
+        "jonnitto/prettyembedvideoplatforms": "^2.0",
+        "neos/nodetypes-contentreferences": "^7.3",
+        "carbon/link": "^1.7",
+        "sitegeist/lazybones": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abte\\Site\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Abte.Site"
+        }
+    }
+}

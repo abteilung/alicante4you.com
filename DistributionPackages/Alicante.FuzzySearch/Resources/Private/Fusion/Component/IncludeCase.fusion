@@ -1,0 +1,32 @@
+prototype(Alicante.FuzzySearch:IncludeCase) < prototype(Neos.Fusion:Component) {
+    alwaysInclude = ${Configuration.setting('Alicante.FuzzySearch.alwaysInclude')}
+    selectorCollection = ${Configuration.setting('Alicante.FuzzySearch.selector.collection')}
+    selectorContent = ${Configuration.setting('Alicante.FuzzySearch.selector.content')}
+    selectorOnDocument = ${Configuration.setting('Alicante.FuzzySearch.selector.onDocument')}
+
+    includeInBackend = false
+    node = ${documentNode}
+
+    renderer = Neos.Fusion:Case {
+        alwaysInclude {
+            condition = ${props.alwaysInclude}
+            renderer = true
+        }
+        inBackend {
+            condition = ${node.context.inBackend}
+            renderer = ${props.includeInBackend}
+        }
+        onDocument {
+            condition = ${props.selectorOnDocument && q(props.node).is(props.selectorOnDocument)}
+            renderer = true
+        }
+        inContent {
+            condition = ${props.selectorContent && q(props.node).children(props.selectorCollection).find(props.selectorContent).is()}
+            renderer = true
+        }
+        default {
+            condition = true
+            renderer = false
+        }
+    }
+}

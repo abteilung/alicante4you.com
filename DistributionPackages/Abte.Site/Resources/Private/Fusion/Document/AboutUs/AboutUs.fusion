@@ -1,0 +1,61 @@
+prototype(Abte.Site:Document.AboutUs) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        
+        two = Abte.Site:Document.GridItemRenderer {
+            node = ${ q(node).property('two') }
+        }
+
+        three = Abte.Site:Document.GridItemRenderer {
+            node = ${ q(node).property('three') }
+        }
+
+        renderer = afx`
+            <main class="main">
+                <div class="container gridPadding-x">
+                    <Abte.Site:Component.HeaderGrid 
+                        class="aboutUsGrid"
+                        oneTheme=''
+                        two={props.two}
+                        twoTheme=''
+                        twoClass='relative bg-base-100 box-h-1 lg:row-span-1 lg:box-h-1 '
+
+                        three={props.three}
+                        threeTheme=''
+                        threeClass='relative bg-white box-h-1 shadow-box'                        
+                        
+                        fourClass='hidden'
+                        fiveClass='hidden'
+                    />
+                </div>
+                {props.main}
+            </main>
+        `
+    }
+}
+
+
+prototype(Abte.Site:Document.GridItemRenderer) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    renderer = Neos.Fusion:Case {
+        isStory {
+            condition = ${ q(node).is('[instanceof Abte.Site:Document.Kompetenz],[instanceof Abte.Site:Document.Story]') }
+            renderer = Abte.Site:Component.ServiceCard
+        }
+        isProduct {
+            condition = ${ q(node).is('[instanceof Abte.Site:Document.Product],[instanceof Abte.Site:Document.ProductLink]') }
+            renderer = Abte.Site:Component.ImageCard {
+                class = "relative w-full h-full group block"
+                category=${ q( q(node).property('categories') ).property('title') }
+            }
+        }
+        fallback {
+            condition = ${ true }
+            renderer = 'Not a Story'
+        }
+    }
+}

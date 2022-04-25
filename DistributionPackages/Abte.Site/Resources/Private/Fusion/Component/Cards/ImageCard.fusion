@@ -1,0 +1,90 @@
+prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('teaserImage') || q(node).property('image') || q( q(node).property('reference') ).property('teaserImage') || q( q(node).property('reference') ).property('image') }
+        width   = 450
+        // height  = 450
+        maximumHeight=450
+    }
+
+    title = ${ q(node).property('title') || q( q(node).property('reference') ).property('title') }
+    subTitle = ${ q(node).property('subTitle') || q( q(node).property('reference') ).property('subTitle') }
+
+    icon = Abte.Site:Icon.ArrowRight {
+        class = 'absolute z-0 duration-150 scale-75 bottom-6 lg:scale-100 text-primary-focus group-hover:right-6 right-8'
+    }
+
+    kates = Abte.Site:Component.FilterKates
+
+    isNew = ${ q(node).property('isNew') ? true : false }
+    category = ${ q( q(node).property('categories') ).property('title') }
+    
+    class = 'relative flex flex-col h-full duration-150 bg-white shadow-2xl group hover:shadow-lg'
+
+    renderer = afx`
+            <Neos.Neos:NodeLink 
+                node={ q(node).get(0) }
+                attributes.class={ props.class }
+                attributes.x-show={ props.kates }
+                attributes.x-show.@if.isOfType={ q(documentNode).is('[instanceof Alicante.MixitUp:Include]') }
+                attributes.x-transition:enter="transition duration-50 ease-out"
+                attributes.x-transition:enter-end="scale-100 opacity-100"
+                attributes.x-transition:enter-start="scale-0 opacity-0"
+                attributes.x-transition:leave="transition duration-50 ease-in"
+                attributes.x-transition:leave-end="opacity-0 scale-100"
+            >
+
+                <Abte.Site:Component.isNew 
+                    @if.isNew={ props.isNew }
+                />
+
+                <div class="flex flex-col flex-1 space-y-4">
+                    <div class="overflow-hidden ">
+                        <Sitegeist.Lazybones:Image 
+                            @if.hasImage={props.imageSource}
+                            imageSource={props.imageSource} 
+                            class="object-cover duration-150 scale-100 group-hover:scale-105 aspect-[4/3]"
+                        />
+
+                        <img src="https://via.placeholder.com/620x620" alt={props.title} width="620" height="620"
+                            @if.hasNoImage={!props.imageSource}
+                        />                
+                    </div>
+
+                    <div class="h-32 px-6 pt-2 pb-6 md:px-4 lg:px-6 md:h-44 lg:h-48">
+                        <p class="mb-2 text-base-300">{props.category}</p>
+                        <h3 class="mb-0">{props.title}</h3>
+                        <h3 class="pr-12 text-primary-focus line-clamp-3">{props.subTitle}</h3>
+                    </div>
+                    {props.icon}
+                </div>
+            </Neos.Neos:NodeLink>
+    `
+}
+
+
+prototype(Abte.Site:Component.isNew) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+
+    @context {
+        node = ${ this.node }
+    }
+
+    renderer = afx`
+        <div class="absolute z-10 flex items-center justify-center w-10 h-10 text-white duration-150 scale-90 rounded-full bg-primary lg:w-12 lg:h-12 -top-3 md:-top-5 -right-3 md:-right-5 lg:-top-6 lg:-right-6 group-hover:scale-100">
+            <div class="text-xs md:text-sm font-headings">
+                { I18n.translate('Abte.Site:Main:new') }
+            </div>
+        </div>
+    `
+
+}
+
+
+// bg-accent

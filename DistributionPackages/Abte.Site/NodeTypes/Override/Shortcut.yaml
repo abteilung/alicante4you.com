@@ -1,0 +1,16 @@
+'Neos.Neos:Shortcut':
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Products': true
+      'Abte.Site:Document.Kurs': true
+      'Abte.Site:Document.Category': true
+      'Alicante.Navigation:Document.MegaMenu': true
+  properties:
+    'titleOverride':
+      options:
+        preset: 'text.title'
+      ui:
+        label: Title Override
+        inspector:
+          group: document

@@ -1,0 +1,10 @@
+prototype(Alicante.Navigation:Component.Tools) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+
+        <div class="flex items-center h-24 space-x-4 md:space-x-8 md:h-32 navigation-tools text-accent ">
+            <Alicante.Navigation:Component.Navbar.Language caretColor="text-white" />
+        </div>
+
+    `
+}

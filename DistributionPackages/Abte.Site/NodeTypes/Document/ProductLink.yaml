@@ -1,0 +1,38 @@
+'Abte.Site:Document.ProductLink':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Product': true
+    'Alicante.Flickity:Include': true
+    'Abte.Site:Mixin.New': true
+    'Abte.Site:Mixin.Hero': true
+    'Abte.Site:Constraint.Document.Restricted': true
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+  label: "${ q(node).property('isHero') && node.context.inBackend ? '<span class=\"hidden\">🏆 </span>' + q(node).property('title') : q(node).property('isNew') && node.context.inBackend ? '<span class=\"hidden\">🆕 </span>' + q(node).property('title') : q(node).property('title') }"
+  ui:
+    label: Product Link
+    icon: link
+    position: 710
+  constraints:
+    nodeTypes:
+      '*': false
+  properties:
+    'reference':
+      type: reference
+      ui:
+        label: 'Referenz auf Produkt'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'document'
+          position: 10
+          editorOptions:
+            nodeTypes: ['Abte.Site:Document.Product']  
+    'categories':
+      type: references
+      ui:
+        label: 'Kategorien'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'document'
+          position: 20
+          editorOptions:
+            nodeTypes: ['Abte.Site:Document.Category']

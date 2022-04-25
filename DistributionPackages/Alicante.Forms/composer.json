@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "alicante/forms",
+    "require": {
+        "neos/flow": "*",
+        "neos/form-builder": "^2.2",
+        "wegmeister/sendinblue": "^1.0",
+        "onedrop/ajaxform": "^3.5",
+        "punktde/form-persistence": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alicante\\Forms\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Alicante.Forms"
+        }
+    }
+}

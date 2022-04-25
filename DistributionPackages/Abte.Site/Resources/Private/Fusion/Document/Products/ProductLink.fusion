@@ -1,0 +1,11 @@
+prototype(Abte.Site:Document.ProductLink) < prototype(Abte.Site:Document.Product) {
+
+    body.content = Neos.Fusion:Component {
+
+        main = Neos.Neos:ContentCollection {
+            nodePath = ${ q( q(node).property('reference') ).children('main').property('_path') }
+            collection = ${ q( q(node).property('reference') ).children('main').children() }
+        }
+
+    }
+}

@@ -1,0 +1,34 @@
+prototype(Abte.Site:Document.Kompetenzen) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        
+        pageTitle = Neos.Neos:Editable {
+            property = 'title'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        subTitle = Neos.Neos:Editable {
+            property = 'subTitle'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        teaser_short = Neos.Neos:Editable {
+            property = 'teaser_short'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        renderer = afx`
+            <main class="main">
+                <div class="container gridPadding-x gridPadding-bottom">
+                    <Abte.Site:Component.SubMenuAsCards cols="3" />
+                </div>
+                {props.main}
+            </main>
+        `
+    }
+}

@@ -1,0 +1,72 @@
+prototype(Abte.Site:Component.ProductUpdates) < prototype(Neos.Fusion:Component) {
+
+    // Important class 'product-updates' for Slider initiation
+    itemsToShow = ${ Array.slice( q(site).find('[instanceof Abte.Site:Document.Product]').sort('datePublished', 'DESC').get(), 0, 11 )  }
+
+    @context {
+        itemsToShow = ${ this.itemsToShow }
+    }
+
+    productUpdates = Neos.Neos:MenuItems {
+        itemCollection = ${ itemsToShow }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+    title = ''
+    further = ''
+    renderStyle = ''
+
+    renderer = afx`
+        <div class="flex items-center justify-between">
+            <h2>{props.title}</h2>
+            <div class="h3">{props.further}</div>
+        </div>
+        
+        <div class="mb-20 -mx-2 lg:-mx-4 sm:-mx-4" data-flickity='{"pageDots": true, "groupCells": true, "prevNextButtons": false, "cellSelector": ".product"}'>
+            <div class="flex flex-wrap">
+
+                <Neos.Fusion:Loop items={props.productUpdates}>
+                    <Abte.Site:Component.renderCardType node={item.node} renderStyle={props.renderStyle} />
+                </Neos.Fusion:Loop>
+
+            </div>
+        </div>
+     `
+}
+
+
+prototype(Abte.Site:Component.renderCardType) < prototype(Neos.Neos:ContentComponent) {
+
+    node = ${ node }
+
+    renderStyle = 'products'
+
+    @context {
+        node = ${ this.node }
+        renderStyle = ${ this.renderStyle }
+    }
+
+    renderCardType = Neos.Fusion:Case {
+        ItemCards {
+            condition = ${ renderStyle == 'items' }
+            renderer = Abte.Site:Component.ItemCard
+        }
+
+        NewsCards {
+            condition = ${ renderStyle == 'news' }
+            renderer = Abte.Site:Component.NewsCard
+        }
+        fallback {
+            condition = ${ true }
+            renderer = Abte.Site:Component.ServiceCard
+        }
+    }
+
+    renderer = afx`
+        {props.renderCardType}
+    `
+
+}

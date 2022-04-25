@@ -1,0 +1,48 @@
+prototype(Abte.Site:Document.PageWithAside) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        
+        aside = Neos.Neos:ContentCollection {
+            nodePath = 'aside'
+        }
+
+        pageTitle = Neos.Neos:Editable {
+            property = 'title'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        subTitle = Neos.Neos:Editable {
+            property = 'subTitle'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        teaser_short = Neos.Neos:Editable {
+            property = 'teaser_short'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        renderer = afx`
+            <div class="container justify-between md:flex">
+                <main class="w-full space-y-16 main md:w-2/3">
+                    <div>
+                        <Alicante.Navigation:Component.Nav.Breadcrumb />
+                        <h2 class="h1">{props.pageTitle}</h2>
+                        <p class="lead">{props.teaser_short}</p>
+                    </div>
+                    
+                    {props.main}
+
+                </main>
+                <aside class="w-full md:w-1/4">
+                    <Abte.Site:Content.ContactBox />
+                    {props.aside}
+                </aside>
+            </div>
+        `
+    }
+}

@@ -1,0 +1,131 @@
+prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    class = 'headerGrid'
+
+    one = Neos.Fusion:Component {
+        header = Neos.Neos:Editable {
+            property = 'oneHeader'
+            block = ${ false }
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        lead = Neos.Neos:Editable {
+            property = 'oneLead'
+            block = ${ true }
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        buttonText = Neos.Neos:Editable {
+            property = 'oneText'
+            block = ${ false }
+        }
+
+        target = ${ q(node).property('oneTarget') }        
+
+        renderer = afx`
+            <!-- hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden -->
+            <!-- flex sm:flex md:flex lg:flex xl:flex 2xl:flex -->
+            <!-- right-0 bottom-0 -->
+            <div class="absolute top-0 left-0 z-20 w-full p-4 sm:w-2/3 md:p-8 xl:p-12">
+                <h1>
+                    {props.header}
+                </h1>
+                <p class="!text-white">
+                    {props.lead}
+                </p>
+            </div>
+            <div class="absolute bottom-0 p-4 md:p-8 xl:p-12">
+                <Abte.Site:Content.Button 
+                    target={props.target}
+                    text={props.buttonText}
+                />
+            </div>
+        `
+    }
+    oneTheme = ''
+    oneClass = 'relative bg-primary box-h-2 row-span-2 col-span-1 md:col-span-2 headGrid'
+    oneHTML = ${ q(node).property('oneHTML') }
+  
+    two = ''
+    twoClass = 'relative bg-base-100 box-h-2 row-span-2 lg:row-span-1 lg:box-h-1 '
+    twoTheme = ''
+    
+    three = ''
+    threeClass = 'relative bg-white box-h-2 row-span-2 shadow-box'
+    threeTheme = ''
+
+    four = ''
+    fourClass = 'relative bg-base-100 box-h-1'
+    fourTheme = 'human'
+
+    five = ''
+    fiveClass = 'relative bg-base-100 box-h-1'
+    fiveTheme = 'vet'
+
+    renderer = afx`
+        <div class={props.class + ' ' + 'grid md:grid-cols-2 lg:grid-cols-3 gridgap'}>
+            <div class={props.oneClass} data-theme={props.oneTheme}>
+                <Abte.Site:Component.BackendIndicator label="1" />
+                {props.one}
+                {props.oneHTML}
+            </div>
+            <div class={props.twoClass} data-theme={props.twoTheme}>
+                <Abte.Site:Component.BackendIndicator label="2" />
+                {props.two}
+            </div>
+            <div class={props.threeClass} data-theme={props.threeTheme}>
+                <Abte.Site:Component.BackendIndicator label="3" />
+                {props.three}
+            </div>
+
+            <div class={props.fourClass} data-theme={props.fourTheme}>
+                <Abte.Site:Component.BackendIndicator label="4" />
+                {props.four}
+            </div>
+
+            <div class={props.fiveClass} data-theme={props.fiveTheme}>
+                <Abte.Site:Component.BackendIndicator label="5" />
+                {props.five}
+            </div>
+
+        </div>
+    `
+
+	@cache {
+		mode = 'cached'
+		entryIdentifier {
+			documentNode = ${documentNode}
+		}
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+		}
+	}
+
+}
+
+
+prototype(Abte.Site:Component.BackendIndicator) < prototype(Neos.Fusion:Component) {
+    
+    label = ''
+    class = 'bg-error'
+    theme = ''
+
+    renderer = afx`
+        <div 
+            data-theme={props.theme}
+            class={props.class + ' ' + 'absolute top-0 left-0 z-30 flex items-center justify-center w-5 h-5 text-sm'}
+        >
+            <div class="text-white">{props.label}</div>
+        </div>
+    `
+    renderer.@if.IsInBackendOnly=${node.context.inBackend}
+}

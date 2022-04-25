@@ -1,0 +1,7 @@
+Alicante:
+  FuseJs:
+    alwaysInclude: true
+    selector:
+      onDocument: '[instanceof Alicante.Forms:Include]'
+      collection: '[instanceof Neos.Neos:ContentCollection]'
+      content: '[instanceof Alicante.Forms:Include]'

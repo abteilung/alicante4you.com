@@ -1,0 +1,15 @@
+'Abte.Site:Document.AboutUs':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.HeaderGrid': true
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: About Us
+    icon: building
+    position: 177
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Page': true
+      'Abte.Site:Document.Kompetenzen': true

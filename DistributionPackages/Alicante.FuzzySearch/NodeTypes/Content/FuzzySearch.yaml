@@ -1,0 +1,17 @@
+'Alicante.FuzzySearch:Content.FuzzySearch':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Alicante.FuzzySearch:Include': true
+  ui:
+    label: Fuzzy Search
+    icon: searchengin
+    position: 500
+    group: structure
+    inlineEditable: true
+  properties:
+    title:
+      options:
+        preset: 'text.title'
+    subTitle:
+      options:
+        preset: 'text.title'

@@ -1,0 +1,60 @@
+prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) {
+    content = ''
+
+    pageHeader = Neos.Fusion:Case {
+
+		HomePage {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.HomePage]') }
+			renderer = Abte.Site:Component.HomepageHeader
+		}
+
+		slimHeader {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Overview],[instanceof Abte.Site:Document.AboutUs]') }
+			renderer = Abte.Site:Component.HomepageHeader {
+				class = "mt-20 container-x"
+			}
+		}
+
+		ProductPage {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Product],[instanceof Abte.Site:Document.ProductLink]') }
+			renderer = Abte.Site:Component.HeaderProduct
+		}
+
+		// ArticlePage {
+		// 	condition = ${ q(node).is('[instanceof Abte.Site:Document.Story]') }
+		// 	renderer = Abte.Site:Component.HeaderStories
+		// }
+
+		// ServicePage {
+		// 	condition = ${ q(node).is('[instanceof Abte.Site:Document.Service]') }
+		// 	renderer = Abte.Site:Component.HeaderService
+		// }
+
+		TextHeader {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.FilterPage],[instanceof Abte.Site:Document.Kompetenzen]') }
+			renderer = Abte.Site:Component.TextHeader
+		}
+
+		Default {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Persons],[instanceof Abte.Site:Document.Kurs],[instanceof Abte.Site:Document.Kompetenz],[instanceof Abte.Site:Document.Story]') }
+			renderer = Abte.Site:Component.Header
+		}
+
+		fallback {
+			condition = ${true}
+			renderer = '<div class="pt-24 mb-24"></div>'
+		}		
+	}
+
+    renderer = afx`
+		<Abte.Site:TrackingScript.GoogleAnalytics/>
+        <header class="h-40 md:h-48">
+            <Alicante.Navigation:Component.Navbar />
+        </header>
+		{props.pageHeader}
+
+        {props.content}
+
+        <Abte.Site:Component.Footer />
+    `
+}

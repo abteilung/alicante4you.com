@@ -1,0 +1,7 @@
+Alicante:
+  MixitUp:
+    alwaysInclude: false
+    selector:
+      onDocument: '[instanceof Alicante.MixitUp:Include]'
+      collection: '[instanceof Neos.Neos:ContentCollection]'
+      content: '[instanceof Alicante.MixitUp:Include]'

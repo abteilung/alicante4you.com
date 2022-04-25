@@ -1,0 +1,13 @@
+'Alicante.MixitUp:Content.Filter':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Alicante.MixitUp:Include': true
+  ui:
+    label: Mixit Up Filter
+    icon: filter
+    position: 700
+    inlineEditable: true
+  properties:
+    title:
+      options:
+        preset: 'text.title'

@@ -1,0 +1,11 @@
+prototype(Abte.Site:Content.ContentSlider) < prototype(Neos.Neos:ContentComponent) {
+
+    // Abte.Site:Component.RemoteSlider
+    renderer = afx`
+        <Abte.Site:Component.RemoteSlider />
+    `
+
+    @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+        @position = 'end'
+    }
+}

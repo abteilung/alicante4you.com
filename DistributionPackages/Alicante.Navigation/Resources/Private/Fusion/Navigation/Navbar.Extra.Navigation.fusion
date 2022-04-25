@@ -1,0 +1,36 @@
+prototype(Alicante.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neos.Neos:ContentComponent) {
+    
+    menuItems = Neos.Neos:MenuItems {
+        entryLevel = 1
+        maximumLevels = 1
+    }
+
+    phone = ${ q(site).property('helpdeskPhone') }
+
+    renderer = afx`
+      <div class="extras bg-neutral">
+        <div class="container flex items-center justify-between h-12 gridPadding-x">
+          <nav 
+            class="flex items-center text-base md:space-x-6"
+          >
+            <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+              <Alicante.Navigation:Navbar.LinkItem />
+            </Neos.Fusion:Loop>
+            <div "@click.prevent"="showModal = !showModal" class="cursor-pointer text-base-300 hover:text-primary">
+              { I18n.translate('Alicante.Navigation:Main:contact') }
+            </div>
+          </nav>
+          <div>
+            <Carbon.Link:Link 
+                additionalClass="h3" 
+                link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
+                renderDefaultTagIfNoLink='true'
+            >
+              <Neos.Neos:Editable property="helpdeskPhone" node={site} />
+            </Carbon.Link:Link>
+          </div>
+        </div>  
+      </div>
+
+    `
+}

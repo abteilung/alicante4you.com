@@ -1,0 +1,22 @@
+'Abte.Site:Document.Kurs':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.TeaserText': true
+    'Abte.Site:Mixin.DatePublished': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Kurs
+    icon: graduation-cap
+    position: 777
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Kurs': true
+  properties:
+    'image':
+      options:
+        preset: 'image.headerAsset'
+    'datePublished':
+      ui:
+        label: 'Kursdatum'

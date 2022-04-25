@@ -1,0 +1,4 @@
+Neos:
+  Form:
+    yamlPersistenceManager:
+      savePath: 'resource://Alicante.Forms/Private/Form/'

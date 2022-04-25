@@ -1,0 +1,53 @@
+'Abte.Site:Document.HomePage':
+  superTypes:
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.HeaderGrid': true
+    'Abte.Site:Constraint.Document.Restricted': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.Helpdesk': true
+  ui:
+    label: HomePage
+    icon: icon-globe
+  childNodes:
+    header:
+      type: 'Neos.Neos:ContentCollection'
+      position: 'before main'
+    footer:
+      type: 'Neos.Neos:ContentCollection'
+      position: 'after main'
+    modal:
+      type: 'Neos.Neos:ContentCollection'
+    orderForm:
+      type: 'Neos.Neos:ContentCollection'
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Page': true
+      'Abte.Site:Document.World': true
+      'Abte.Site:Document.PageWithAside': true
+      'Abte.Site:Document.FilterPage': true
+      'Abte.Site:Document.Category': true
+      'Abte.Site:Document.Kompetenzen': true
+      'Abte.Site:Document.AboutUs': true
+      'Abte.Site:Document.SearchResults': true
+  properties:
+    'footerInfo':
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            formatting:
+              a: true
+            placeholder: i18n
+    'footerItems':
+      type: references
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: general
+          editorOptions:
+            nodeTypes:
+              - 'Neos.Neos:Document'

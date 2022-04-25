@@ -1,0 +1,18 @@
+prototype(Abte.Site:Content.LI) < prototype(Neos.Neos:ContentComponent) {
+
+    listIcon = Abte.Site:Mixin.Icons {
+        // class = ${ q(node).property('textColor') }
+        class = ${'text-accent w-[20px] mt-2'}
+    }
+
+    renderer = afx`
+        <li class={props.listIcon ? 'grid grid-cols-12' : null}>
+            {props.listIcon}
+            <div class="col-span-11">
+                <Neos.Fusion:Augmenter class="">
+                    <Neos.Neos:Editable property="li_text" />
+                </Neos.Fusion:Augmenter>
+            </div>
+        </li>
+    `
+}

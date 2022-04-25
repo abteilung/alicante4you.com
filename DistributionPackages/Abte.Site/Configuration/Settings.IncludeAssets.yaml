@@ -1,0 +1,26 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    # GoogleFonts: "Fira+Sans+Condensed:400|Nunito:700&display=swap[async]"
+    Packages:
+      'Abte.Site':
+        Package: 'Abte.Site'
+        General:
+          Head: 
+            - https://use.typekit.net/vgp6vke.css
+            - Roentgen.css
+          Body: 
+            - Roentgen.js[defer]
+        Backend:
+          Head:
+            # - Backend.css
+            # - Backend.js[defer]
+        Live:
+      "Sitegeist.Lazybones":
+        Package: Sitegeist.Lazybones
+        Path:
+          File:
+            JS: 'Public/JavaScript'
+        General:
+          Body:
+            - lazysizes.min.js

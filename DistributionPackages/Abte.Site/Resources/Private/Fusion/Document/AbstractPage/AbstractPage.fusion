@@ -1,0 +1,49 @@
+
+##
+# This prototypes object are sequenctially rendered as strings
+# and output to form the the html response.
+#
+# For all the base data, see Neos.Neos:Page
+##
+prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
+    head {
+        headTags = Neos.Fusion:Join {
+            @glue = ''
+            comp = '<meta http-equiv="x-ua-compatible" content="ie=edge" />''
+            scale = '<meta name="viewport" content="width=device-width, initial-scale=1.0" />'
+        }
+    }
+
+    htmlTag {
+        attributes {
+            class = "scroll-smooth"
+            lang = ${ node.context.targetDimensions.language }
+        }
+    }
+
+    bodyTag {
+        attributes {
+            data-theme=${ q(node).closest("[instanceof Neos.Neos:Document][colorWorld][colorWorld != '']").property('colorWorld') }
+            x-data="\{ showModal : false, showMenu : false, showBasket : false, formOrder: localStorage.getItem('orderValue') \}"
+            x-init="$watch('formOrder', (val) => localStorage.setItem('orderValue', val))"
+        }
+    }
+
+
+    body = Abte.Site:Component.DefaultLayout {
+        content {
+            main = Neos.Neos:ContentCollection {
+                nodePath = ${ q(node).property('reference') ? q( q(node).property('reference') ).children('main').property('_path') : q(node).children('main').property('_path') }
+                collection = ${ q(node).property('reference') ? q( q(node).property('reference') ).children('main').children() : q(node).children('main').children() }
+                default.renderer.attributes.class = ''
+            }
+        }
+
+        // @process.normalize = CodeQ.UnicodeNormalizer:Normalizer
+    }
+
+}
+
+Neos.Neos:ContentCollectionRenderer {
+    @process.addClass=${value}
+}

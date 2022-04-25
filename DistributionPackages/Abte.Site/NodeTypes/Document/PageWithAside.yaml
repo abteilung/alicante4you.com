@@ -1,0 +1,23 @@
+'Abte.Site:Document.PageWithAside':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Page with Aside
+    icon: columns
+    position: 101
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Page': true
+      'Abte.Site:Document.Category': true
+      'Abte.Site:Document.Products': true
+      'Alicante.Navigation:Document.MegaMenu': true
+  properties:
+    image:
+      options:
+        preset: 'image.headerAsset'
+  childNodes:
+    aside:
+      type: 'Neos.Neos:ContentCollection'

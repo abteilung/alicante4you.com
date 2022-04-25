@@ -1,0 +1,22 @@
+'Abte.Site:Document.Category':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    # 'Neos.Seo:NoindexMixin': true
+    'Neos.Neos:Shortcut': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Category
+    icon: sitemap
+    position: 300
+  properties:
+    'targetMode':
+      defaultValue: 'parentNode'
+    'image':
+      options:
+        preset: 'image.squareAsset'
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Category': true
+      'Abte.Site:Document.Story': true

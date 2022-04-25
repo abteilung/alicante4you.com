@@ -1,0 +1,8 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Alicante.Privacy':
+        Package: 'Alicante.Privacy'
+        General:
+          Head: Privacy.css

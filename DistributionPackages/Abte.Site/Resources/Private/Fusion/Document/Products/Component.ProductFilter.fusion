@@ -1,0 +1,47 @@
+prototype(Alicante.Navigation:Component.ProductFilter) < prototype(Neos.Fusion:Component) {
+
+
+    renderer = afx`
+        <div class="border-t-2 articleFilter border-primary">
+            
+            <div class="flex justify-between my-6">
+                <h3>Artikel filtern</h3>
+                <div class="strong">Filter zurücksetzen @</div>
+            </div>
+
+            <div 
+                class="grid grid-cols-4 mb-12 gridgap"
+            >
+                <div class="col-span-2">
+                    <Alicante.Navigation:Component.ProductFilter.Item 
+                        filterProperty="productPrice" 
+                        filterTitle="Kategorie" 
+                        noMatch="Keine Kategorie gefunden" 
+                        unit=""
+                    />
+                </div>
+                <div>
+                    <Alicante.Navigation:Component.ProductFilter.Item 
+                        filterProperty="productWidth" 
+                        filterTitle="Breite" 
+                        noMatch="Keine passende Breite" 
+                        unit="cm"
+                    />
+                </div>
+                <div>
+                    <Alicante.Navigation:Component.ProductFilter.Item 
+                        filterProperty="productHeight" 
+                        filterTitle="Höhe" 
+                        noMatch="Keine passende Höhe" 
+                        unit="cm"
+                    />
+                </div>
+
+            </div>
+
+            <Alicante.Navigation:Component.ProductSearch />
+        </div>
+    `
+}
+
+

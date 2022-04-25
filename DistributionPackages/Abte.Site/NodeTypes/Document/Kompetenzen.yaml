@@ -1,0 +1,13 @@
+'Abte.Site:Document.Kompetenzen':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Kompetenzen
+    icon: brain
+    position: 201
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Kompetenz': true

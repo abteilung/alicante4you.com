@@ -1,0 +1,55 @@
+/**
+ * This code is feasable for production, and renders an image with LazyBones.
+ *
+ * To better learn Neos take a look at Abte.Site:Content.BasicImage,
+ * which renders our images as an img tag.
+ */
+prototype(Abte.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
+
+    # if the current node has previous siblings it is not the
+	# first content and should be loaded lazy otherwise not
+	lazy = ${q(node).prev().is()}
+
+    class = 'container-image'
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    width = ''
+    height = ''
+
+    src = Neos.Fusion:Case {
+        teaserImage {
+            condition = ${ q(node).property('teaserImage') }
+            renderer = Sitegeist.Kaleidoscope:AssetImageSource {
+                asset = ${ q(node).property('teaserImage') }
+            }
+        }
+        image {
+            condition = ${ q(node).property('image') }
+            renderer = Sitegeist.Kaleidoscope:AssetImageSource {
+                asset = ${ q(node).property('image') }
+            }
+        }
+        dummyImage {
+            condition = ${site.context.inBackend}
+            renderer = Sitegeist.Kaleidoscope:DummyImageSource
+        }
+    }
+    alternativeText = ${q(node).property('alternativeText')}
+
+    renderer = afx`
+        <Alicante.Navigation:Component.DisplayCondition>
+            <Sitegeist.Lazybones:Image
+                class={props.class}
+                lazy={true}
+                lazyWidth={200}
+                width={props.width}
+                height={props.height}
+                imageSource={props.src}
+                alt={props.alternativeText}
+            />
+        </Alicante.Navigation:Component.DisplayCondition>
+	`
+}

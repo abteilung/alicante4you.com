@@ -1,0 +1,81 @@
+prototype(Abte.Site:Document.Story) < prototype(Abte.Site:Document.AbstractPage) {
+
+    head {
+        headTags {
+            shareThis = '<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5a4f62e85d7f1a001224d076&product=sticky-share-buttons" async="async"></script>'
+        }
+    }
+
+    body.content = Neos.Fusion:Component {
+        
+        more = Neos.Neos:PrimaryContent {
+            nodePath = 'more'
+        }
+
+        pageTitle = Neos.Neos:Editable {
+            property = 'subTitle'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        subTitle = Neos.Neos:Editable {
+            property = 'subTitle'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        teaser_short = Neos.Neos:Editable {
+            property = 'teaser_short'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        datePublished = ${ Date.formatCldr( q(node).property('datePublished'), 'd. MMM y', 'de_CH') }
+
+        subitoTitolo = Neos.Fusion:Case {
+            isNews {
+                condition = ${ q(node).is('[instanceof Abte.Site:Document.Story]') }
+                renderer = ${ Date.formatCldr( q(node).property('datePublished'), 'd. MMM y', 'de_CH') }
+            }
+            fallback {
+                condition = ${ true }
+                renderer =  Neos.Neos:Editable {
+                    property = 'title'
+                    @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                        @position = 'end'
+                    }
+                }
+            }
+        }
+
+        renderer = afx`
+            <main class=" main">
+                <div class="container gridPadding">
+
+                    <div class="w-full mx-auto space-y-4 lg:w-2/3 md:space-y-8">
+                        <h4>{props.subitoTitolo}</h4>
+                        <h1>{props.pageTitle}</h1>
+                        <Neos.Fusion:Augmenter class="lead">
+                            {props.teaser_short}
+                        </Neos.Fusion:Augmenter>
+                        {props.main}
+                    </div>
+
+                </div>
+
+                {props.more}
+
+                <div class="container">
+                    <Abte.Site:Component.Newsletter.Subscribe />
+                </div>
+
+            </main>
+
+        `
+    }
+}
+
+

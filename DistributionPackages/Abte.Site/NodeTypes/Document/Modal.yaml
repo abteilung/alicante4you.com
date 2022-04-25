@@ -1,0 +1,9 @@
+'Abte.Site:Document.Modal':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Neos.Seo:NoindexMixin': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Modal
+    icon: sticky-note
+    position: 400

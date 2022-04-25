@@ -1,0 +1,38 @@
+'Abte.Site:Document.Story':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.DatePublished': true
+    'Abte.Site:Mixin.TeaserText': true
+    'Abte.Site:Mixin.Hero': true
+    'Abte.Site:Constraint.Document.Restricted': true
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+  label: "${ q(node).property('isHero') && node.context.inBackend ? '<span class=\"hidden\">🏆 </span>' + q(node).property('title') : q(node).property('isNew') && node.context.inBackend ? '<span class=\"hidden\">🆕 </span>' + q(node).property('title') : q(node).property('title') }"
+  ui:
+    label: Story
+    icon: crow
+    position: 120
+  childNodes:
+    more:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Abte.Site:Constraint.Content.Restricted': false
+  properties:
+    image:
+      ui:
+        inspector:
+          position: 80
+      options:
+        preset: 'image.headerAsset'
+    teaserImage:
+      ui:
+        label: Teaser Image (Square)
+        inspector:
+          position: 88
+          group: 'image'
+      options:
+        preset: 'image.squareAsset'
+  constraints:
+    nodeTypes:
+      '*': false

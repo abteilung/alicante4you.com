@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="4xx.errorMessage">
+                <source>This page could not be found.</source>
+            </trans-unit>
+            <trans-unit id="4xx.backHome">
+                <source>Back to homepage</source>
+            </trans-unit>
+
+           <trans-unit id="all">
+                <source>Execution</source>
+            </trans-unit>
+
+            <trans-unit id="moreAboutUs">
+                <source>More about us…</source>
+            </trans-unit>
+
+            <trans-unit id="getInContact">
+                <source>Get in touch</source>
+            </trans-unit>
+
+            <trans-unit id="writeEmail">
+                <source>Write an Email</source>
+            </trans-unit>
+
+            <trans-unit id="downloadPDF">
+                <source>Download PDF</source>
+            </trans-unit>
+
+           <trans-unit id="nonBindingRequest">
+                <source>Non-binding Request</source>
+            </trans-unit>
+
+           <trans-unit id="contactForm">
+                <source>Open Contact Form</source>
+            </trans-unit>
+
+           <trans-unit id="contactTitle">
+                <source>Contact Us</source>
+            </trans-unit>
+            
+            <trans-unit id="overview">
+                <source>Overview</source>
+            </trans-unit>
+
+            <trans-unit id="ourSolutions">
+                <source>Our Digital X-Ray Solutions</source>
+            </trans-unit>
+
+            <trans-unit id="new">
+                <source>New</source>
+            </trans-unit>
+
+            <trans-unit id="back">
+                <source>Back</source>
+            </trans-unit>
+
+            <trans-unit id="yourProducts">
+                <source>Your Products:</source>
+            </trans-unit>
+
+            <trans-unit id="similarProducts">
+                <source>Similar Products</source>
+            </trans-unit>
+
+            <trans-unit id="productRange">
+                <source>Our Product Range</source>
+            </trans-unit>
+
+            <trans-unit id="xRaySolutions">
+                <source>Our X-Ray Solutions</source>
+            </trans-unit>
+            
+            <trans-unit id="solutionsForHum">
+                <source>for hospitals, X-ray institutes and your medical practice.</source>
+            </trans-unit>
+
+            <trans-unit id="solutionsForVet">
+                <source>for your veterinary practice.</source>
+            </trans-unit>
+
+            <trans-unit id="currentCourses">
+                <source>Current courses</source>
+            </trans-unit>
+
+            <trans-unit id="vetCoursesTitle">
+                <source>X-Ray courses in our premises</source>
+            </trans-unit>
+
+            <trans-unit id="vetCoursesSubTitle">
+                <source>For Vets and TPAs</source>
+            </trans-unit>
+
+            <trans-unit id="humCoursesTitle">
+                <source>X-Ray courses in your practice</source>
+            </trans-unit>
+
+            <trans-unit id="humCoursesSubTitle">
+                <source>For GPs and MPAs</source>
+            </trans-unit>
+
+            <trans-unit id="noCourses">
+                <source>No courses available</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

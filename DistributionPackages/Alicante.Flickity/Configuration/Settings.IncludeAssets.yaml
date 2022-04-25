@@ -1,0 +1,18 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Alicante.Flickity':
+        Package: 'Alicante.Flickity'
+        ConditionPrototype: 'Alicante.Flickity:IncludeCase'
+        General:
+          Body: 
+            - Flickity.js[defer]
+            - Flickity.css[async]
+        
+        # Backend:
+        #   Head:
+        #     - Backend.css
+        #     - Backend.js[defer]
+        # Live:
+        #   Body: Main.js[defer]

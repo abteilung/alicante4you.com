@@ -1,0 +1,12 @@
+'Abte.Site:Mixin.New':
+  abstract: true
+  properties:
+    'isNew':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 'Is New'
+        position: 1
+        reloadIfChanged: true
+        inspector:
+          group: 'style'

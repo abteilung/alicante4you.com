@@ -1,0 +1,43 @@
+prototype(Abte.Site:Component.NewsAndTrends) < prototype(Neos.Fusion:Component) {
+
+    class = "stories-updates"
+
+    latestStories = Neos.Neos:MenuItems {
+        itemCollection = ${ Array.slice( q(site).find('[instanceof Abte.Site:Document.Story]').remove(documentNode).sort('datePublished', 'DESC').get(), 0, 3 )  }
+    }
+
+    title = ${ q( q(site).find('[instanceof Abte.Site:Document.Story]').get(0)).parent().parent().property('title') }
+    more = ${ }
+
+    renderer = afx`
+        <div class={props.class}>
+            <div class="flex items-center justify-between">
+                <h2>{props.title}</h2>
+                <div class="h3"><!--Zur Übersicht--></div>
+            </div>
+
+            <div class="grid grid-cols-3 gridgap">
+                <Neos.Fusion:Loop items={props.latestStories}>
+                    <div class="group">
+                        <Carbon.Link:Link 
+                            node={item.node}
+                            attributes.class="block space-y-4"
+                        >
+
+                            <div class="overflow-hidden">
+                                <Abte.Site:Content.Image node={item.node} class="duration-500 scale-100 group-hover:scale-105" />
+                            </div>
+
+                            <p class="text-sm">{ q(item.node).parents('[instanceof Abte.Site:Document.Category]').property('title') }</p>
+                            <div class="">
+                                <h3>{ q(item.node).property('title') }</h3>
+                                <p class="lead">{ String.stripTags( String.cropAtWord( q(item.node).property('teaser_short'), 250, '…' ) )}</p>
+                            </div>
+                        </Carbon.Link:Link>
+                    </div>
+                </Neos.Fusion:Loop>
+
+            </div>
+        </div>
+     `
+}

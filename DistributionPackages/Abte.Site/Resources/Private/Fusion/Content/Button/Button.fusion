@@ -1,0 +1,49 @@
+prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
+        
+    class = ''
+    buttonClass = 'flex flex-row items-center px-5 py-3 space-x-2 text-sm md:text-base truncate tracking-normal bg-white border-base-100 border-2 rounded-full button'
+    icon = ${ q(node).property('icon') ? '' : '' }
+    iconPosition = ${ q(node).property('iconPosition') ? true : false }
+    
+    onDark = ${ q(node).property('onDark') ? 'border-white border-2 text-primary' : null }
+    iconClass = 'text-secondary relative group-hover:left-2 duration-300'
+    style = ${ q(node).property('hollow') ? this.onDark + ' ' + '' : this.onDark + 'border-2' + ' text-primary bg-none' }
+
+    text = Neos.Neos:Editable {
+        property = 'text'
+        block = ${ false }
+    }
+
+    target = ${ q(node).property('target') }
+    // target.@process.convertUris = Neos.Neos:ConvertUris {
+    //     forceConversion = true
+    // }
+
+    iconBefore = Abte.Site:Icon.ArrowRight {
+        class='relative left-0 duration-300 text-accent group-hover:left-2'
+        @if.buttonIsBefore=${this.positionBefore}
+    }
+
+    iconAfter = Abte.Site:Icon.ArrowRight {
+        class='relative left-0 duration-300 text-accent group-hover:left-2'
+        @if.buttonIsBefore=${!this.positionBefore}
+    }
+
+    blank = ${ q(node).property('blank') ? true : false }
+
+    renderer = afx`
+        <div class="block">
+            <div class="inline-block group">
+                <Carbon.Link:Link 
+                    additionalClass={'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style} 
+                    link={props.target} 
+                    renderDefaultTagIfNoLink='true' 
+                >
+                    {props.iconBefore}
+                    <span>{props.text}</span>
+                    {props.iconAfter}
+                </Carbon.Link:Link>
+            </div>
+        </div>
+    `
+}

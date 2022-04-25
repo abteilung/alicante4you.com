@@ -1,0 +1,12 @@
+'Abte.Site:Mixin.Hero':
+  abstract: true
+  properties:
+    'isHero':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 🏆 Is Hero (Frontpage)
+        position: 1
+        reloadIfChanged: true
+        inspector:
+          group: 'style'

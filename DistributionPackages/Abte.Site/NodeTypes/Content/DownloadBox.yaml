@@ -1,0 +1,26 @@
+'Abte.Site:Content.DownloadBox':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abte.Site:Mixin.DisplayCondition': true
+    'Neos.Neos:ContentCollection': true
+  ui:
+    label: File Download
+    icon: arrow-alt-circle-down
+    group: general
+    position: 130
+    inlineEditable: true
+  properties:
+    'title':
+      options:
+        preset: 'text.title'
+    'subTitle':
+      options:
+        preset: 'text.title'
+    'download_link':
+      options:
+        preset: 'file.asset'
+      ui:
+        inspector:
+          editorOptions:
+            constraints:
+              mediaTypes: ['application/msword','application/pdf'] 

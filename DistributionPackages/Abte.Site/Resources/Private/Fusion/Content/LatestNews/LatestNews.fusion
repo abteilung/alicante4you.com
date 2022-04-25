@@ -1,0 +1,51 @@
+prototype(Abte.Site:Content.LatestNews) < prototype(Neos.Neos:ContentComponent) {
+
+    startingPoint = ${ q(node).property('startingPoint') }
+
+    @context {
+        startingPoint = ${ this.startingPoint }
+    }
+
+    class = 'grid sm:grid-cols-2 md:grid-cols-3 gridgap'
+
+    menuItemsArray = ${ q(node).property('startingPoint') }
+    
+    @context {
+        menuItemsArray = ${ this.menuItemsArray }
+    }
+
+	menuItems = Neos.Neos:MenuItems {
+        itemCollection = ${ q(startingPoint).find('[instanceof Abte.Site:Document.Story],[instanceof Abte.Site:Document.Kompetenz]').sort('datePublished', 'DESC').get() }
+        filter = 'Abte.Site:Document.Story, Abte.Site:Document.Kurs, Abte.Site:Document.Kompetenz'
+    }
+
+    limit = ${ q(node).property('limit') ? q(node).property('limit') : 999 }
+
+    itemDate = ${ q(node).property('datePublished') ? Date.formatCldr(q(item).property('datePublished'), 'd. MMMM y', siteLocale) : false }
+
+    renderer = afx`
+        <div class={props.class}>
+            <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+                <div class=""
+                    @if.isWithinRange={i.index < props.limit}
+                >
+                    <Abte.Site:Component.ServiceCard class="relative block group" node={item.node} />
+                </div>
+            </Neos.Fusion:Loop>
+        </div>
+    `
+
+    renderer.@if.hasObjects=${startingPoint}
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.nodeTag(menuItemsArray)}
+            3 = ${Neos.Caching.descendantOfTag(menuItemsArray)}
+        }
+    }    
+}

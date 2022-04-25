@@ -1,0 +1,40 @@
+prototype(Alicante.Navigation:Component.DisplayCondition) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    activeWorld = ${ q(documentNode).parents('[instanceof Abte.Site:Document.World]').property('title') == 'Humanmedizin' ? 'hum' : 'vet' }
+    thisWorld = ${ q(node).property('showHum') ? 'hum' : q(node).property('showVet') ? 'vet' : null }
+    showHum = ${ q(node).property('showHum') }
+    showVet = ${ q(node).property('showVet') }
+
+    @context {
+        node = ${ this.node }
+        activeWorld = ${ this.activeWorld }
+        thisWorld = ${ this.thisWorld }
+        showHum = ${ this.showHum }
+        showVet = ${ this.showVet }
+    }
+
+    content = ''
+    content.@if.isWorld = ${ site.context.inBackend ? true : thisWorld ? thisWorld == activeWorld : true }
+
+    label = ${ q(node).property('showHum') ? 'H' : q(node).property('showVet') ? 'V' : null }
+    theme = ${ q(node).property('showHum') ? 'human' : q(node).property('showVet') ? 'vet' : null }
+
+
+
+    renderer = afx`
+        <div class="relative"
+        >
+            <Abte.Site:Component.BackendIndicator 
+                @if.hasValue={showHum || showVet}
+                label={props.label} 
+                class="bg-primary-focus" 
+                theme={props.theme} 
+            />
+            <div>
+                {props.content}
+            </div>
+        </div>
+
+    `
+}

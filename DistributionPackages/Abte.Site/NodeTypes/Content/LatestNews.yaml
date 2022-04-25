@@ -1,0 +1,31 @@
+'Abte.Site:Content.LatestNews':
+    superTypes:
+        'Neos.Neos:Content': true
+    ui:
+        label: Latest News
+        icon: newspaper
+        group: structure
+        position: 280
+        inlineEditable: true
+        inspector:
+            groups: 
+                style:
+                    label: Style
+    properties:
+        'startingPoint':
+            type: reference
+            ui:
+                label: Starting Point
+                reloadIfChanged: true
+                inspector:
+                    group: general
+                    position: 50
+                    editorOptions:
+                        nodeTypes: ['Neos.Neos:Document']
+        'limit':
+            options:
+                preset: 'text.inspector'
+            ui:
+                label: 'Limit'
+            validation:
+                Neos.Neos/Validation/IntegerValidator: []

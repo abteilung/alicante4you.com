@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "alicante/mixitup",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alicante\\MixitUp\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Alicante.MixitUp"
+        }
+    }
+}

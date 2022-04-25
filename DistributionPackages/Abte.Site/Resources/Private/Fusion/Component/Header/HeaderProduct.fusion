@@ -1,0 +1,81 @@
+prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) {
+
+    pageTitle = Neos.Neos:Editable {
+        property = 'title'
+        block = ${ false }
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+        block = ${ false }
+        node = Neos.Fusion:Case {
+            isReference {
+                condition = ${ q(documentNode).is('[instanceof Abte.Site:Document.ProductLink]') }
+                renderer = ${ q(node).property('reference')}
+            }
+            fallback {
+                condition = ${ true }
+                renderer = ${ node }
+            }
+        }
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    teaser_short = Neos.Neos:Editable {
+        property = 'teaser_short'
+        node = Neos.Fusion:Case {
+            isReference {
+                condition = ${ q(documentNode).is('[instanceof Abte.Site:Document.ProductLink]') }
+                renderer = ${ q(node).property('reference')}
+            }
+            fallback {
+                condition = ${ true }
+                renderer = ${ node }
+            }
+        }
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    price = ${ q(node).property('productPrice')}
+
+    renderer = afx`
+        <div class="container grid md:grid-cols-2 gridPadding gridgap">
+            <Abte.Site:Component.RemoteSlider />
+            <div class="space-y-6">
+
+                <h1>
+                    <span class="productTitle">{props.pageTitle}</span>
+                    <br
+                        @if.is={props.subTitle} 
+                    />
+                    <em>{props.subTitle}</em>
+                </h1>
+
+                <Neos.Fusion:Augmenter class="lead">
+                    {props.teaser_short}
+                </Neos.Fusion:Augmenter>
+
+                <Abte.Site:Content.BasketButton class="bg-primary" iconImage="basket" cartImage={props.imageSource} text={ I18n.translate('Abte.Site:Main:nonBindingRequest') } />
+
+            </div>
+           
+        </div>
+    `
+
+	@cache {
+		mode = 'cached'
+		entryIdentifier {
+			documentNode = ${documentNode}
+		}
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+		}
+	}
+}

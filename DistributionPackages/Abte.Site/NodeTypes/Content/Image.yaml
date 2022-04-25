@@ -1,0 +1,10 @@
+'Abte.Site:Content.Image':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.DisplayCondition': true
+  ui:
+    label: Image
+    icon: picture
+    group: media
+    position: 10

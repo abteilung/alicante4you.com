@@ -1,0 +1,38 @@
+/Build/Behat/*
+/Build/PhpCodesniffer/*
+/Build/BuildEssentials
+/Build/Reports
+/Build/Resources
+/Configuration/
+/Data/
+/Shared/
+/Packages/
+/Web/
+/bin/
+/Readme.txt
+/Upgrading.txt
+/flow
+/flow.bat
+/.ddev/
+
+# ignore the downloaded selenium server, config and the selenium
+# temporary directory (which starts with a quote, do not ask why...)
+/Tests/Selenium/settings.xml
+Build/Resources/Java/selenium-server-standalone*
+/"
+
+# Various temporary and editor files
+!/.ddev/config.yaml
+/.idea
+*.sql
+*.sql.gz
+*.DS_Store
+
+.fuse_hidden
+.sass-cache
+.pnpm-debug.log
+.remote-sync.json
+
+error_log
+node_modules
+bower_components

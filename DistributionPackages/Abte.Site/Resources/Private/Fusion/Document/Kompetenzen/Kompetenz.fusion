@@ -1,0 +1,1 @@
+prototype(Abte.Site:Document.Kompetenz) < prototype(Abte.Site:Document.Story)

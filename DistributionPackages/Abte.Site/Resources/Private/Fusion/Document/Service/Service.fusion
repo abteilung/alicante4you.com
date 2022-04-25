@@ -1,0 +1,28 @@
+prototype(Abte.Site:Document.Service) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        
+        renderer = afx`
+            <header class="mt-48">
+            </header>
+            <div class="container">
+                <div class="grid grid-cols-12 gridgap">
+                    <main class="col-span-7">
+                        <Abte.Site:Component.HeaderService />
+                        {props.main}
+                    </main>
+                    <aside class="col-span-4 col-end-13">
+                        <Abte.Site:Content.ContactBox />
+                        <hr/>
+                        ((Beispiele))
+                        <hr/>
+                        ((Success Story))
+                        <hr/>
+                        <Abte.Site:Component.DropdownMenu label="Weitere Etiketten" />
+                    </aside>
+                </div>
+            </div>
+        `
+    }
+}
+
+

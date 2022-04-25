@@ -1,0 +1,29 @@
+'Abte.Site:Content.Modal':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+  ui:
+    label: Person Modal
+    icon: address-book
+    group: general
+    position: 120
+    inlineEditable: true
+  properties:
+    'title':
+      options:
+        preset: 'text.title'
+    'subTitle':
+      options:
+        preset: 'text.title'
+    'modal_image':
+        options:
+            preset: 'image.asset'
+    'modal_lead':
+      options:
+        preset: 'text.free'
+    'modal_content':
+      options:
+        preset: 'text.free'
+    'modal_link':
+      options:
+        preset: 'text.link'

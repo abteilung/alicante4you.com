@@ -1,0 +1,88 @@
+'Abte.Site:Content.Navigation':
+    superTypes:
+        'Neos.Neos:Content': true
+    ui:
+        label: Navigation
+        icon: directions
+        group: structure
+        position: 250
+        inlineEditable: true
+        inspector:
+            groups: 
+                style:
+                    label: Style
+    properties:
+        'startingPoint':
+            type: reference
+            ui:
+                label: Starting Point
+                reloadIfChanged: true
+                inspector:
+                    group: general
+                    position: 50
+                    editorOptions:
+                        nodeTypes: ['Neos.Neos:Document']
+        'navigationItems':
+            type: references
+            ui:
+                label: Navigation Items
+                reloadIfChanged: true
+                inspector:
+                    group: general
+                    position: 55
+                    editorOptions:
+                        nodeTypes: ['Neos.Neos:Document']
+        'limit':
+            options:
+                preset: 'text.inspector'
+            ui:
+                label: 'Limit'
+            validation:
+                Neos.Neos/Validation/IntegerValidator: []
+        'arrowIcon':
+            type: boolean
+            defaultValue: 'false'
+            ui:
+                label: 'Show Arrow'
+                reloadPageIfChanged: true
+                inspector:
+                    group: general
+        'showTitleOverride':
+            type: boolean
+            defaultValue: 'false'
+            ui:
+                label: 'Show Title Override'
+                reloadPageIfChanged: true
+                inspector:
+                    group: general
+        'iconRight':
+            type: boolean
+            defaultValue: 'false'
+            ui:
+                label: 'Arrow right'
+                reloadPageIfChanged: true
+                inspector:
+                    group: general
+        'layout':
+            type: string
+            defaultValue: 'default'
+            ui:
+                label: 'Layout'
+                reloadIfChanged: true
+                inspector:
+                    group: 'style'
+                    editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+                    editorOptions:
+                        values:
+                            default:
+                                label: 'Default'
+                                icon: 'bars'
+                            smallCircles:
+                                label: 'Small Circles'
+                                icon: 'circle'
+                            products:
+                                label: 'Products'
+                                icon: 'truck'
+                            service:
+                                label: 'Service'
+                                icon: 'heart'

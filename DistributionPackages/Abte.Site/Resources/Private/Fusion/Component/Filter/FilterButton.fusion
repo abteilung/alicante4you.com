@@ -1,0 +1,41 @@
+prototype(Abte.Site:Component.filterButton) < prototype(Neos.Fusion:Component) {
+    
+    node = ''
+
+    @context {
+        node = ${ this.node }
+    }
+
+    kate  = ${ q(node).parent('[instanceof Abte.Site:Document.Category]') ? Carbon.String.urlize( q(node).parent().property('title') ) + '-' + Carbon.String.urlize(q(node).property('title')) : Carbon.String.urlize(q(node).property('title')) }
+
+    renderer = Neos.Fusion:Tag {
+        tagName = 'button'
+
+        content = ${ q(props.node).property('title') }
+        
+        attributes {
+            "@click"=${"cat = '" + props.kate + "'"}
+            class = 'filterButton pb-2 mb-[-2px] duration-150 cursor-pointer block text-base-300 hover:text-primary whitespace-nowrap'
+            ":class"=${ "{'!text-primary' : cat === '" + props.kate + "' }" }
+        }
+    }
+}
+
+
+
+prototype(Abte.Site:Component.filterOption) < prototype(Neos.Fusion:Component) {
+    
+    node = ''
+    @context {
+        node = ${ this.node }
+    }
+    kate  = ${ q(node).parent('[instanceof Abte.Site:Document.Category]') ? Carbon.String.urlize( q(node).parent().property('title') ) + '-' + Carbon.String.urlize(q(node).property('title')) : Carbon.String.urlize(q(node).property('title')) }
+
+    renderer = Neos.Fusion:Tag {
+        tagName = 'option'
+        content = ${ q(props.node).property('title') }
+        attributes {
+            value=${props.kate}
+        }
+    }
+}

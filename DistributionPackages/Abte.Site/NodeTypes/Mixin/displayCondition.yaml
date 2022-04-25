@@ -1,0 +1,29 @@
+'Abte.Site:Mixin.DisplayCondition':
+  abstract: true
+  ui:
+    label: Display Condition
+    icon: map-signs
+    position: 777
+    inspector:
+      groups:
+        style:
+          label: 'Style'
+          position: 17
+          icon: 'clone'
+  properties:
+    'showHum':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 'Show for Human'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+    'showVet':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 'Show for Vets'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'          

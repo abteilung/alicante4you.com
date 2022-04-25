@@ -1,0 +1,7 @@
+Alicante:
+  FuzzySearch:
+    alwaysInclude: false
+    selector:
+      onDocument: '[instanceof Abteilung.FuzzySearch:Include]'
+      collection: '[instanceof Neos.Neos:ContentCollection]'
+      content: '[instanceof Abteilung.FuzzySearch:Include]'

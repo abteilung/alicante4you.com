@@ -1,0 +1,8 @@
+'Abte.Site:Document.ContentTree':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Neos.Seo:NoindexMixin': true
+  ui:
+    label: Content Tree
+    icon: tree
+    position: 199

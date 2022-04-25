@@ -1,0 +1,57 @@
+ prototype(Abte.Site:Document.ProductOverview) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        aside = Neos.Neos:ContentCollection {
+            nodePath = 'aside'
+        }
+
+        pageTitle = Neos.Neos:Editable {
+            property = 'title'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        subTitle = Neos.Neos:Editable {
+            property = 'subTitle'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        teaser_short = Neos.Neos:Editable {
+            property = 'teaser_short'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        
+        renderer = afx`
+            <header class="pt-32 mb-32">
+                
+            </header>
+            <div class="container">
+                <div class="justify-between md:flex">
+                    <main class="w-full space-y-16 md:w-2/3">
+                        <div>
+                            <Alicante.Navigation:Component.Nav.Breadcrumb />
+                            <h2 class="h1">{props.pageTitle}</h2>
+                            <Neos.Fusion:Augmenter class="lead">
+                                {props.teaser_short}
+                            </Neos.Fusion:Augmenter>
+                        </div>
+
+                        <Abte.Site:Component.SubMenuAsCards cols="2" />
+                        
+                        {props.main}
+
+                    </main>
+                    <aside class="w-full md:w-1/4">
+                        <Abte.Site:Content.ContactBox />
+                        {props.aside}
+                    </aside>
+                </div>
+            </div>
+        `
+    }
+}

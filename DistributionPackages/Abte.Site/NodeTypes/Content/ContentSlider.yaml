@@ -1,0 +1,24 @@
+'Abte.Site:Content.ContentSlider':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Alicante.Flickity:Include': true
+  ui:
+    label: Content Image Slider
+    icon: images
+    inlineEditable: true
+    group: media
+    position: 99
+    inspector:
+      groups:
+        image:
+          label: Image
+          position: 100
+  properties:
+    images:
+      options:
+        preset: 'image.assets'
+      ui:
+        reloadPageIfChanged: true
+        label: Slider Images
+        inspector:
+          group: 'image'

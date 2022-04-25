@@ -1,0 +1,55 @@
+prototype(Abte.Site:Component.TextHeader) < prototype(Neos.Fusion:Component) {
+    
+    pageTitle = Neos.Neos:Editable {
+        property = 'title'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'title'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    lead = Neos.Neos:Editable {
+        property = 'teaser_short'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    hideHeader = ${ q(node).property('hideHeader') }
+
+
+    renderer = afx`
+
+        <div class="md:mt-8 lg:mt-2 xl:mt-0"
+            @if.hideHeader={props.hideHeader ? false : true}
+        >
+            <div class="container grid md:grid-cols-2 gridgap gridPadding">
+                <div>
+                    <h1>{props.pageTitle}</h1>
+                </div>
+                <div>
+                    <Neos.Fusion:Augmenter class="lead">
+                        {props.lead}
+                    </Neos.Fusion:Augmenter>
+                </div>
+            </div>
+        </div>
+
+    `
+
+	@cache {
+		mode = 'cached'
+		entryIdentifier {
+			documentNode = ${documentNode}
+		}
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+		}
+	}
+}

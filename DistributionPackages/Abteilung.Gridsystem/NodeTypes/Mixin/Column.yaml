@@ -1,0 +1,16 @@
+'Abteilung.Gridsystem:Mixin.Column':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abteilung.Gridsystem:Mixin.Column.Span': true
+    'Neos.Neos:ContentCollection': true
+  ui:
+    label: 'Column'
+    position: 110
+    icon: columns
+    group: 'structure'
+    inspector:
+      groups:
+        layout:
+          label: 'Layout'
+          icon: arrows-h

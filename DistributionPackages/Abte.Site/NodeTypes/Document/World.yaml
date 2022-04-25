@@ -1,0 +1,41 @@
+'Abte.Site:Document.World':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    # 'Neos.Neos:Shortcut': true
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+    'Abte.Site:Constraint.Document.Restricted': true
+
+    'Neos.Seo:TitleTagMixin': true
+    'Neos.Seo:SeoMetaTagsMixin': true
+    'Neos.Seo:NoindexMixin': false
+    'Neos.Seo:TwitterCardMixin': true
+    'Neos.Seo:CanonicalLinkMixin': true
+    'Neos.Seo:OpenGraphMixin': true
+    'Neos.Seo:XmlSitemapMixin': true
+  ui:
+    label: World
+    icon: chess-rook
+    position: 100
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Page': true
+      'Abte.Site:Document.PageWithAside': true
+      'Abte.Site:Document.FilterPage': true
+      'Abte.Site:Document.Category': true
+      'Abte.Site:Document.Overview': true
+      'Abte.Site:Document.Kompetenzen': true
+      'Abte.Site:Document.Product': true
+      'Alicante.Navigation:Document.MegaMenu': true
+  properties:
+    image:
+      options:
+        preset: 'image.headerAsset'
+    downloadImagePlaceholder:
+      options:
+        preset: 'image.tvAsset'
+      ui:
+        label: 'Doanload Image Placeholder'
+        inspector:
+          group: style

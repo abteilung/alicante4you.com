@@ -1,0 +1,74 @@
+prototype(Abte.Site:Document.ContentTree) < prototype(Abte.Site:Document.AbstractPage) {
+	body.content = Neos.Fusion:Component {
+		main = Neos.Neos:ContentCollection {
+			nodePath = 'main'
+		}
+
+    @context.item = ${site}
+    
+    renderer = Abte.Site:Component.Atom.Node
+    renderer {
+        @process.tmpl = ${ '<ul>' + value + '</ul>' }
+        }
+	}
+}
+
+
+prototype(Abte.Site:Component.Molecule.Subtree) < prototype(Neos.Fusion:Component) {
+
+    rootNode = null
+    padding = ''
+
+    nodes = ${q(this.rootNode).children()}
+
+    renderer = Neos.Fusion:Loop {
+        items = ${props.nodes}
+        itemRenderer = Abte.Site:Component.Atom.Node {
+            padding = ${props.padding}
+        }
+    }
+}
+
+prototype(Abte.Site:Component.Atom.Node) < prototype(Neos.Fusion:Component) {
+
+    padding.@process.increment = ${value + '<span class="indent">–</span>'}
+
+    renderer = Neos.Fusion:Join {
+        theNode = Neos.Fusion:Case {
+            document  {
+                condition = ${Neos.Node.isOfType(item, 'Neos.Neos:Document')}
+                renderer = Abte.Site:Component.Atom.NodeContent {
+                    padding = ${props.padding}
+                    class = 'list-group-item list-group-item-primary text-slate-700'
+                }
+            }
+    
+            collection  {
+                condition = ${Neos.Node.isOfType(item, 'Neos.Neos:ContentCollection')}
+                renderer = Abte.Site:Component.Atom.NodeContent {
+                    padding = ${props.padding}
+                    class = 'list-group-item list-group-item-secondary text-slate-500'
+                }
+            }
+            
+            node  {
+                condition = ${Neos.Node.isOfType(item, 'Neos.Neos:Content')}
+                renderer = Abte.Site:Component.Atom.NodeContent {
+                    padding = ${props.padding}
+                    class = 'list-group-item list-group-item-success text-slate-400'
+                }
+                
+            }
+        }
+        subTree = Abte.Site:Component.Molecule.Subtree {
+            rootNode = ${item}
+            padding = ${props.padding}
+        }
+    }
+}
+
+prototype(Abte.Site:Component.Atom.NodeContent) < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <li class={props.class}>{props.padding}{item.nodeType} ({item.title} {item.label}) [{item.identifier}]</li>
+    `
+}

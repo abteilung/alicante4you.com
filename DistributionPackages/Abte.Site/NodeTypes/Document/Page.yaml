@@ -1,0 +1,22 @@
+'Abte.Site:Document.Page':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Page
+    icon: file-o
+    position: 100
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Page': true
+      'Abte.Site:Document.PageWithAside': true
+      'Abte.Site:Document.FilterPage': true
+      'Abte.Site:Document.Products': true
+      'Alicante.Navigation:Document.MegaMenu': true
+  properties:
+    image:
+      options:
+        preset: 'image.headerAsset'

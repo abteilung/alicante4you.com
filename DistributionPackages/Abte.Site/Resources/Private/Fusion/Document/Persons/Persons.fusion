@@ -1,0 +1,76 @@
+prototype(Abte.Site:Document.Persons) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+
+        fetchSource = Neos.Neos:NodeUri {
+            absolute = true
+        }
+
+        renderer = afx`
+            <main class="main">
+                <div id="filterContainer" data-ref="filterContainer">
+                
+                    <!-- <Abteilung.MixitUp:Filter /> -->
+                    
+                    <div class="relative" 
+                        x-cloak
+                        x-data="{childPages: [], 'isLoading': true}"
+                        x-init={'fetch(\'' +  props.fetchSource + '.json\')' + '.then(response => response.json()).then(response => { childPages = response.childPages; isLoading = false; }).catch((error) => {console.log(error)})' }
+                    />
+                    
+                        <div class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" x-show="isLoading">Loading...</div>
+                        <div 
+                            class="flex grid flex-wrap grid-cols-4 gap-4 pb-8 mixitupContent"
+                            x-show="!isLoading"                
+                        >
+                            <!-- begin: user card -->
+                            <template x-for="teamPlayer in childPages" :key="teamPlayer.nodeId">
+                                <div 
+                                    data-ref="mix"
+                                    class="mix"
+                                    :class="teamPlayer.nodeCatId"
+                                >
+                                    <div class="relative flex duration-100 cursor-pointer bg-base-100 hover:shadow-xl ">
+                                        <div class="leading-normal">
+                                            <img 
+                                                :src="teamPlayer.pageImage ? teamPlayer.pageImage : 'https://via.placeholder.com/546x638'" 
+                                                :alt="teamPlayer.nodeTitle" 
+                                                width="546"
+                                                height="638"
+                                            />
+                                            
+                                            <div class="px-4 py-6">
+                                                <header class="relative z-20 flex flex-col font-bold text-white uppercase heading">
+                                                    <div>
+                                                        <div class="absolute left-0 inline-block w-auto h-8 px-3 pt-1 -top-8 bg-primary">
+                                                            <div class="block" x-text="teamPlayer.nodeTitle"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="absolute top-0 left-0 inline-block w-auto h-8 px-3 pt-1 bg-primary-focus">
+                                                            <div class="block" x-text="teamPlayer.jobTitle"></div>
+                                                        </div>
+                                                    </div>
+                                                </header>
+
+                                                <div class="text-xl font-medium" x-text="teamPlayer.nodeTitle"></div>
+                                                <div class="font-medium" x-text="teamPlayer.phone"></div>
+                                                <a href="#" :href="teamPlayer.vcf">
+                                                    V-Card
+                                                </a>
+                                                <div class="font-medium" x-text="teamPlayer.nodeCatId"></div>
+
+                                                <a href="#" :href="teamPlayer.pagePath"></a>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </template>
+                            <!-- end: user card -->
+                        </div>
+                    </div>
+
+            </main>
+        `
+    }
+}

@@ -1,0 +1,49 @@
+prototype(Abte.Site:Document.Person) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+
+        vcf = ${ q(node).property('vcf') }
+
+        email = Neos.Neos:Editable {
+            property = 'email'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        phone = Neos.Neos:Editable {
+            property = 'phone'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+
+        renderer = afx`
+            <main class="main">
+                <Carbon.Link:Link 
+                    additionalClass="hover:underline" 
+                    link={'tel:' + String.pregReplace(props.phone, "'/[^0-9]/'", '')} 
+                    renderDefaultTagIfNoLink='true'
+                >
+                    <Neos.Neos:Editable property="phone" node={node} />
+                </Carbon.Link:Link>
+                
+                <Carbon.Link:Link 
+                    link={props.vcf} 
+                    renderDefaultTagIfNoLink='true'
+                >
+                    V-Card
+                </Carbon.Link:Link>
+
+                    E-Mail:
+                <Carbon.Link:Link additionalClass='mail' link={'mailto:' + props.card_email} renderDefaultTagIfNoLink='true'>
+                    {props.email}
+                </Carbon.Link:Link>
+
+
+                Job: {props.jobTitle}
+                    {props.main}
+            </main>
+        `
+    }
+}

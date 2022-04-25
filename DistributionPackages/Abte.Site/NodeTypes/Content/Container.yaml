@@ -1,0 +1,49 @@
+'Abte.Site:Content.Container':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'Abte.Site:Mixin.DropShadow': true
+    'Abte.Site:Mixin.BgColor': true
+  ui:
+    label: Container
+    icon: square
+    group: structure
+    position: 120
+    inlineEditable: true
+  properties:
+    'title':
+      options:
+        preset: 'text.title'
+    'subTitle':
+      options:
+        preset: 'text.title'
+    'link':
+      options:
+        preset: 'text.link'
+    'linkText':
+      options:
+        preset: 'text.plain'
+    'removePadding':
+      type: boolean
+      defaultValue: true
+      ui:
+        label: Remove Padding
+        reloadIfChanged: true
+        inspector:
+          group: style
+    'fullWidth':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: Full width
+        reloadIfChanged: true
+        inspector:
+          group: style
+    'contentFullWidth':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: Content Full width
+        reloadIfChanged: true
+        inspector:
+          group: style

@@ -1,0 +1,13 @@
+'Abte.Site:Document.Overview':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.HeaderGrid': true
+    'Abte.Site:Mixin.Searchable.SiteSearch': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Overview
+    icon: binoculars
+    position: 133
+  constraints:
+    nodeTypes:
+      '*': false

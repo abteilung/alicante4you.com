@@ -1,0 +1,56 @@
+prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+
+        @context {
+            parentCategory = ${ this.parentCategory }
+        }
+
+        filterItemsArray = ${ q(node).property('categories') }
+        @context {
+            filterItemsArray = ${ this.filterItemsArray }
+        }
+
+        // similarProducts = ${ q(site).find('[instanceof Abte.Site:Document.Product],[instanceof Abte.Site:Document.ProductLink]').filterByReferences('categories', q(node).property('categories')).remove(documentNode).get() }
+        similarProducts = ${ q(documentNode).parent().children('[instanceof Abte.Site:Mixin.Product]').filterByReference( Array.last( q(node).property('categories') ), 'categories' ).remove(documentNode).get() }
+        //  ${q(node).children().filterByReference(myCategoryNode, 'myCategoryReferencesField')}
+         renderer = afx`
+
+            <div class="space-y-12">
+                <div class="container">
+                    <main class="col-span-12 space-y-8 gridPadding-x">
+                        {props.main}
+                    </main>
+                    <Abte.Site:Content.Container 
+                        @if.hasSimilarProducts={props.similarProducts}
+                        title={ I18n.translate('Abte.Site:Main:similarProducts') }
+                        linkText=''
+                        link=''
+                    >
+
+                        <Abte.Site:Content.Navigation 
+                            node={node}
+                            navigationItems={props.similarProducts}
+                            limit="4" 
+                            layout="products" 
+                        />
+
+                    </Abte.Site:Content.Container>
+                </div>
+            </div>
+        `
+
+        @cache {
+            mode = 'cached'
+            entryIdentifier {
+                node = ${node}
+            }
+            entryTags {
+                1 = ${Neos.Caching.nodeTypeTag('Abte.Site:Document.Product', documentNode)}
+                2 = ${Neos.Caching.nodeTypeTag('Abte.Site:Document.ProductLink', documentNode)}
+                // 1 = ${Neos.Caching.nodeTag(node)}
+                3 = ${Neos.Caching.nodeTag(filterItemsArray)}
+                4 = ${Neos.Caching.descendantOfTag(filterItemsArray)}
+            }
+        }    
+    }
+}

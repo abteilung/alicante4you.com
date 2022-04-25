@@ -1,0 +1,77 @@
+'Abte.Site:Mixin.HeaderGrid':
+  abstract: true
+  properties:
+    'oneHTML': 
+      type: string
+      defaultValue: '<p>HTML Code</p>'
+      ui:
+        label: One HTML Code
+        reloadIfChanged: false
+        inspector:
+          group: general
+          position: 11
+          editor: Neos.Neos/Inspector/Editors/CodeEditor
+          editorOptions:
+            buttonLabel: 'HTML bearbeiten'
+    'oneHeader':
+      options:
+        preset: 'text.title'
+    'oneLead':
+      options:
+        preset: 'text.plain'
+    'oneTarget':
+      options:
+        preset: 'text.link'
+      ui:
+        label: Button Link
+        inspector: 
+          group: general
+          position: 13
+    'oneText':
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Button Text
+        inspector: 
+          group: general
+          position: 12
+    'two':
+      type: reference
+      ui:
+        label: Two
+        reloadIfChanged: true
+        inspector:
+          group: general
+          position: 20
+          editorOptions:
+            nodeTypes: ['Neos.Neos:Document']
+    'three':
+      type: reference
+      ui:
+        label: Three
+        reloadIfChanged: true
+        inspector:
+          group: general
+          position: 30
+          editorOptions:
+            nodeTypes: ['Neos.Neos:Document']
+    'four':
+      type: reference
+      ui:
+        label: Four
+        reloadIfChanged: true
+        inspector:
+          group: general
+          position: 40
+          editorOptions:
+            nodeTypes: ['Neos.Neos:Document']
+    'five':
+      type: reference
+      ui:
+        label: Five
+        reloadIfChanged: true
+        inspector:
+          group: general
+          position: 50
+          editorOptions:
+            nodeTypes: ['Neos.Neos:Document']

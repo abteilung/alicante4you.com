@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "alicante/flickity",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alicante\\Flickity\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Alicante.Flickity"
+        }
+    }
+}

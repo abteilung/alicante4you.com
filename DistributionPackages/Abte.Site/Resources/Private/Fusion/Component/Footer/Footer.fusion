@@ -1,0 +1,72 @@
+prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
+    @context.node = ${site}
+    
+    year = ${Date.format(Date.now(), 'Y')}
+    
+    footerInfo = Neos.Neos:Editable {
+        node = ${site}
+        property = 'footerInfo'
+    }
+
+    footerContent = Neos.Neos:ContentCollection {
+        nodePath = ${ q(site).children('footer').property('_path') }
+        collection = ${ q(site).children('footer').children() }
+    }
+    
+    metaItems = Alicante.Navigation:Component.Nav.Meta {
+        menuItems {
+            itemCollection >
+            startingPoint = ${ q(site).children('[uriPathSegment="meta"]').get(0) }
+        }
+    }
+
+    metaItems = Alicante.Navigation:Component.Nav.Meta {
+        menuItems {
+            itemCollection >
+            startingPoint = ${ q(site).children('[uriPathSegment="meta"]').get(0) }
+        }
+    }
+
+    phone = ${ q(site).property('helpdeskPhone') }
+    
+    email = ${ q(site).property('helpdeskEmail') }
+
+    renderer = afx`
+    
+        <Abte.Site:Component.MoreAboutUs />
+
+        <footer class="z-10">
+          
+            <div class="pt-8 pb-16 text-white bg-primary gridPadding primary-footer">
+                <div class="container">{props.footerContent}</div>
+            </div>
+            
+            <div class="py-8 bg-white gridPadding-x text-primary">
+                <div class="container">
+                    <div class="items-center justify-between flex-none lg:flex gridgap">
+                        <div class="flex justify-center w-full lg:w-auto">
+                            <Abte.Site:Component.Logo class="h-16" />
+                        </div>
+                        <div class="justify-center py-4 text-center lg:py-0">
+                            <div class="inline-block">{props.metaItems}</div>
+                        </div>
+                        <div class="flex justify-center w-full text-right lg:w-auto">
+                            © {props.year} {props.footerInfo}
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </footer>
+    `
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            site = ${site}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(site)}
+        }
+    }
+    
+}

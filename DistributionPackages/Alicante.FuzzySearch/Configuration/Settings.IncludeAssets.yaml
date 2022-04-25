@@ -1,0 +1,17 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Alicante.FuzzySearch':
+        Package: 'Alicante.FuzzySearch'
+        # ConditionPrototype: 'Alicante.FuzzySearch:IncludeCase'
+        General:
+          Body: 
+            - fuzzySearch.js[defer]
+        
+        # Backend:
+        #   Head:
+        #     - Backend.css
+        #     - Backend.js[defer]
+        # Live:
+        #   Body: Main.js[defer]
