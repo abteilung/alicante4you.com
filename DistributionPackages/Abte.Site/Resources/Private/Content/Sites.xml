@@ -3,18 +3,17 @@
  <site name="Alicante4you.com" state="1" siteResourcesPackageKey="Abte.Site" siteNodeName="alicante4you-com">
   <nodes formatVersion="2.0">
    <node identifier="bea51070-dc5c-45c0-83cb-8b9ce04823a1" nodeName="alicante4you-com">
-    <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Document.HomePage" version="4" removed="" hidden="" hiddenInIndex="">
+    <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Document.HomePage" version="9" removed="" hidden="" hiddenInIndex="">
      <dimensions>
       <language>de</language>
      </dimensions>
      <accessRoles __type="array"/>
      <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:23:12+00:00</creationDateTime>
-     <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T14:04:11+00:00</lastModificationDateTime>
-     <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T14:04:11+00:00</lastPublicationDateTime>
+     <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T07:57:52+00:00</lastModificationDateTime>
+     <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T07:57:52+00:00</lastPublicationDateTime>
      <properties>
       <uriPathSegment __type="string">alicante4you-com</uriPathSegment>
       <includeInSearchResults __type="boolean">1</includeInSearchResults>
-      <oneHTML __type="string">&lt;p&gt;HTML Code&lt;/p&gt;</oneHTML>
       <helpdeskPhone __type="string">+41 44 431 91 00</helpdeskPhone>
       <title __type="string">Alicante4you.com</title>
       <footerItems __type="array">
@@ -24,6 +23,12 @@
        <entry3 __type="string">4e1ecef5-16cd-4726-8032-d44a4ea4ff81</entry3>
       </footerItems>
       <three __type="string">0e8346cf-7ff9-4326-8864-81cf883c513f</three>
+      <oneHeader __type="string">Live your Dream in &lt;u&gt;Alicante&lt;/u&gt;</oneHeader>
+      <oneLead __type="string">Real Estates in Paradise</oneLead>
+      <oneText __type="string">Find your real estate</oneText>
+      <oneTarget __type="string">node://6d507992-5b62-43cb-bf18-27f03e7df6be</oneTarget>
+      <oneImage __type="object" __identifier="5f5bfee4-af63-495b-9bc4-1646501ad19e" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;5f5bfee4-af63-495b-9bc4-1646501ad19e&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;9ebead2a-9297-4ca9-be59-286a7763ba83&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;9df1f1ab5d71b48c5834af1a6da2d381aba39eb8.png&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/png&quot;,&quot;sha1&quot;:&quot;c5baab0b0c98d76b218fa828f4406c8a664cab8a&quot;,&quot;hash&quot;:&quot;c5baab0b0c98d76b218fa828f4406c8a664cab8a&quot;,&quot;__identity&quot;:&quot;0d0c2f4e-5bd4-4b00-91df-2626b1f19243&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:768,&quot;position&quot;:10,&quot;width&quot;:768,&quot;x&quot;:69,&quot;y&quot;:0,&quot;__identity&quot;:&quot;b6e1a5d5-fcc9-473d-90ae-bea51e4ccda1&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</oneImage>
+      <two __type="string">fd79859b-6d63-43a6-be7f-e6947bf86cbc</two>
      </properties>
     </variant>
     <node identifier="edb0749e-50ed-5e1f-8cb2-4a58f4752ca9" nodeName="footer">
@@ -68,12 +73,8 @@
        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T14:42:10+00:00</lastModificationDateTime>
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T14:42:10+00:00</lastPublicationDateTime>
        <properties>
-        <dropShadow __type="boolean"></dropShadow>
         <bgColor __type="string">bg-light</bgColor>
-        <linkText __type="string"></linkText>
-        <removePadding __type="boolean"></removePadding>
         <fullWidth __type="boolean">1</fullWidth>
-        <contentFullWidth __type="boolean"></contentFullWidth>
        </properties>
       </variant>
       <node identifier="dc195ff9-b12e-4f87-9d8f-0e155b5dba25" nodeName="node-pcaftbpuwm8br">
@@ -99,7 +100,6 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T14:41:33+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T14:41:32+00:00</lastPublicationDateTime>
          <properties>
-          <paddingY __type="boolean"></paddingY>
           <span-md __type="string">1</span-md>
          </properties>
         </variant>
@@ -176,7 +176,6 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T14:41:33+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T14:41:32+00:00</lastPublicationDateTime>
          <properties>
-          <paddingY __type="boolean"></paddingY>
           <span-md __type="string">1</span-md>
          </properties>
         </variant>
@@ -336,8 +335,6 @@
        <properties>
         <uriPathSegment __type="string">articles</uriPathSegment>
         <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
-        <teaser_short __type="string"></teaser_short>
-        <hideHeader __type="boolean"></hideHeader>
         <includeInSearchResults __type="boolean">1</includeInSearchResults>
         <targetMode __type="string">parentNode</targetMode>
         <SVGIcon __type="string">&lt;svg&gt;SVG Code&lt;/svg&gt;</SVGIcon>
@@ -357,22 +354,23 @@
        </variant>
       </node>
       <node identifier="fd79859b-6d63-43a6-be7f-e6947bf86cbc" nodeName="node-0oj253qjjsb0k">
-       <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Document.Story" version="2" removed="" hidden="" hiddenInIndex="">
+       <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Document.Story" version="4" removed="" hidden="" hiddenInIndex="">
         <dimensions>
          <language>de</language>
         </dimensions>
         <accessRoles __type="array"/>
         <creationDateTime __type="object" __classname="DateTime">2022-04-25T15:36:23+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:37:27+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:37:27+00:00</lastPublicationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T08:12:06+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T08:12:06+00:00</lastPublicationDateTime>
         <properties>
          <uriPathSegment __type="string">the-be-all-and-end-all-in-todays-real-estate-marketing</uriPathSegment>
-         <teaser_short __type="string"></teaser_short>
-         <hideHeader __type="boolean"></hideHeader>
          <includeInSearchResults __type="boolean">1</includeInSearchResults>
          <datePublished __type="object" __classname="DateTime">2022-04-25T15:36:23+00:00</datePublished>
-         <isHero __type="boolean"></isHero>
          <title __type="string">The be-all and end-all in today's real estate marketing</title>
+         <isHero __type="boolean">1</isHero>
+         <image __type="object" __identifier="f03f802e-05d6-4d15-9239-f50248a2ac1a" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;f03f802e-05d6-4d15-9239-f50248a2ac1a&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;4296a6c4-287a-416c-b2d8-84fd26724878&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;755fab3a4bf64e6d997e37f523fc726f095746de.png&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/png&quot;,&quot;sha1&quot;:&quot;9f9d4c86b64509774fbd5bc88ccbc5576965a757&quot;,&quot;hash&quot;:&quot;9f9d4c86b64509774fbd5bc88ccbc5576965a757&quot;,&quot;__identity&quot;:&quot;79c4623c-4647-4eb6-bc1d-62ff31e58265&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:600,&quot;position&quot;:10,&quot;width&quot;:1600,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;de95b6a6-a7c1-4532-b85e-7ef25b64d806&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
+         <subTitle __type="string">The be-all and end-all in today's real estate marketing</subTitle>
+         <teaser_short __type="string">&lt;p&gt;Today's real estate marketing. A variety of factors must be considered when marketing real estate in the digital age. But finding buyers is not necessarily more complicated. In the sales process, much is also in- between simpler and more efficient.&lt;/p&gt;</teaser_short>
         </properties>
        </variant>
        <node identifier="1983f3fc-4a15-05c8-11f1-e673f9259e3e" nodeName="main">
@@ -386,6 +384,21 @@
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:37:27+00:00</lastPublicationDateTime>
          <properties/>
         </variant>
+        <node identifier="c4a5627a-aab7-4954-ba16-9cd7cbb2371a" nodeName="node-g65hutca9idzs">
+         <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Text" version="12" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-26T08:11:25+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T08:12:13+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T08:12:13+00:00</lastPublicationDateTime>
+          <properties>
+           <isLead __type="boolean"></isLead>
+           <text __type="string">&lt;p&gt;Current developments on the residential real estate market in Switzerland clearly show that demand has exceeded supply, and not just since the pandemic. Although there are still many interested parties in response to an ad for sale, potential sellers are increasingly adopting a wait-and-see attitude. Some have put on the handbrake and perhaps prefer to wait a little longer to see where the regional market and prices are heading - in the best case, further upwards.&lt;/p&gt;&lt;h3&gt;New generations, new laws&lt;/h3&gt;&lt;p&gt;Real estate agents in Switzerland are also noticing that the average holding period of a property is decreasing. Up-and-coming generations are moving away from the previously almost ironclad law of owning a house or apartment for a lifetime. In addition, there is a trend towards so-called off-market transactions. Real estate is being sold &quot;under the table&quot;, as it were, and many a brokerage firm is working with internal lists. A special feature and at the same time a new trend are digital offer procedures, in which the property is passed on to the highest bidder in a bidding process.&lt;/p&gt;&lt;p&gt;In terms of renovation before sale, another important trend is emerging, as buyers often already anticipate investments in a possible conversion of the property when they purchase it. Existing owners should therefore not waste too much time and money on last-minute modernization of the property. New owners want to realize and implement their own wishes after the purchase. In general, of course, attention should be paid to the property in question and its condition, but it doesn't really make sense to completely renovate a classic single-family home before selling it. Costs and returns, i.e. a higher sales price, are not within acceptable limits.&lt;/p&gt;&lt;p&gt;Professional beauty corrections, such as repairing the parquet flooring in the living area, the tiles and joints in the bathroom and repainting the walls, can already achieve great effects with relatively little effort. The first inspection of a property offered for sale and the completeness of the documents or the property dossier of the house or apartment are particularly important. This includes the year of construction, exact address and detailed floor plans as well as information on heating and ancillary costs. In the case of condominiums, this also includes data on the renewal fund and investments made in previous years, and in the case of houses, details on the cubature and the exact size of the plot. Hiding glaring problems or not addressing them at the viewing is not wise from the broker's or the seller's point of view. Last but not least, when selling a property, the saying &quot;the honest man is the fool&quot; usually does not prove to be true.&lt;/p&gt;&lt;h3&gt;How the marketing period can be shortened&lt;/h3&gt;&lt;p&gt;Nowadays, the marketing time of a property can also be significantly shortened with the help of some digital solutions: These include, for example, the possibility of a virtual 360-degree tour or the visualization of the interiors of newly built properties. There are now a large number of digital tools available. For example, virtual &quot;homestaging&quot; to make an existing home aesthetically appealing and &quot;palatable&quot; to potential buyers. In the case of renovation projects, it may be worthwhile to use a before-and-after visualization to get a first impression of what the future property could look like. Videos of existing properties, including drone footage, are also becoming increasingly popular and widespread.&lt;/p&gt;&lt;p&gt;Another important aspect to consider in marketing is real estate advertisements: Large ad portals such as Homegate, ImmoScout24, Comparis or Newhome have regional strengths and weaknesses. Not every portal is equally well suited for different cities, regions or cantons. There are significant differences in reach and usage. In the end, the all-important question of the exact offer price remains. Here, the real estate agent has a very clear recommendation: the &quot;price on request&quot; that used to be advertised has definitely had its day in real estate marketing.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Translated with www.DeepL.com/Translator (free version)&lt;/p&gt;</text>
+          </properties>
+         </variant>
+        </node>
        </node>
        <node identifier="5e22ac4c-bc8e-2f96-4f83-29085d0a2b64" nodeName="more">
         <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
@@ -411,11 +424,8 @@
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:37:18+00:00</lastPublicationDateTime>
         <properties>
          <uriPathSegment __type="string">mortgage-rates-2022-upward-pressure-on-long-maturities</uriPathSegment>
-         <teaser_short __type="string"></teaser_short>
-         <hideHeader __type="boolean"></hideHeader>
          <includeInSearchResults __type="boolean">1</includeInSearchResults>
          <datePublished __type="object" __classname="DateTime">2022-04-25T15:36:48+00:00</datePublished>
-         <isHero __type="boolean"></isHero>
          <title __type="string">Mortgage rates 2022 Upward pressure on long maturities</title>
         </properties>
        </variant>
@@ -457,8 +467,6 @@
        <properties>
         <uriPathSegment __type="string">videos</uriPathSegment>
         <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
-        <teaser_short __type="string"></teaser_short>
-        <hideHeader __type="boolean"></hideHeader>
         <includeInSearchResults __type="boolean">1</includeInSearchResults>
         <targetMode __type="string">parentNode</targetMode>
         <SVGIcon __type="string">&lt;svg&gt;SVG Code&lt;/svg&gt;</SVGIcon>
@@ -488,11 +496,8 @@
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:37:27+00:00</lastPublicationDateTime>
         <properties>
          <uriPathSegment __type="string">expert-talk-allocation-of-roles-during-conversion</uriPathSegment>
-         <teaser_short __type="string"></teaser_short>
-         <hideHeader __type="boolean"></hideHeader>
          <includeInSearchResults __type="boolean">1</includeInSearchResults>
          <datePublished __type="object" __classname="DateTime">2022-04-25T15:37:11+00:00</datePublished>
-         <isHero __type="boolean"></isHero>
          <title __type="string">Expert Talk Allocation of roles during conversion</title>
         </properties>
        </variant>
@@ -553,19 +558,20 @@
       </variant>
      </node>
      <node identifier="449486b9-007b-4e2a-bdc3-a006f8ee2208" nodeName="node-c01zf0zwq9awi">
-      <variant sortingIndex="250" workspace="live" nodeType="Abte.Site:Document.Category" version="5" removed="" hidden="" hiddenInIndex="1">
+      <variant sortingIndex="250" workspace="live" nodeType="Abte.Site:Document.Category" version="7" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:50:22+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T08:10:32+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T08:10:31+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T20:31:52+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T20:31:51+00:00</lastPublicationDateTime>
        <properties>
         <uriPathSegment __type="string">rental-properties</uriPathSegment>
         <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
         <targetMode __type="string">parentNode</targetMode>
         <title __type="string">Rental  Properties</title>
+        <includeInSearchResults __type="boolean"></includeInSearchResults>
        </properties>
       </variant>
       <node identifier="39d02a94-17de-7795-a7e4-a42b07f14d7a" nodeName="main">
@@ -582,19 +588,20 @@
       </node>
      </node>
      <node identifier="a4bc9bdd-5e07-4818-b984-98f8838a640b" nodeName="node-emcu0exz2ksey">
-      <variant sortingIndex="300" workspace="live" nodeType="Abte.Site:Document.Category" version="5" removed="" hidden="" hiddenInIndex="1">
+      <variant sortingIndex="300" workspace="live" nodeType="Abte.Site:Document.Category" version="7" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:50:29+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T08:10:32+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T08:10:31+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T20:31:52+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T20:31:51+00:00</lastPublicationDateTime>
        <properties>
         <uriPathSegment __type="string">sold-properties</uriPathSegment>
         <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
         <targetMode __type="string">parentNode</targetMode>
         <title __type="string">Sold Properties</title>
+        <includeInSearchResults __type="boolean"></includeInSearchResults>
        </properties>
       </variant>
       <node identifier="803caa04-9659-f9c1-fb58-01878cfac023" nodeName="main">
@@ -611,14 +618,14 @@
       </node>
      </node>
      <node identifier="16c58ba3-562d-40d3-8a76-867d24a4fbfc" nodeName="node-ifkhiap9ws5oi">
-      <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Document.Category" version="5" removed="" hidden="" hiddenInIndex="1">
+      <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Document.Category" version="6" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:50:12+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T08:10:32+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T08:10:31+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T20:17:28+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T20:17:28+00:00</lastPublicationDateTime>
        <properties>
         <uriPathSegment __type="string">objects-for-sale</uriPathSegment>
         <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
@@ -641,32 +648,223 @@
      </node>
     </node>
     <node identifier="02e3f232-6294-4b27-a796-c48b4043bdbc" nodeName="node-evgxih8apuoe5">
-     <variant sortingIndex="572" workspace="live" nodeType="Abte.Site:Document.World" version="4" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="572" workspace="live" nodeType="Abte.Site:Document.Overview" version="7" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:38:44+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T07:41:57+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T07:41:56+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:08:12+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:08:11+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">sell-real-estate</uriPathSegment>
        <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
        <includeInSearchResults __type="boolean">1</includeInSearchResults>
        <title __type="string">Sell Real Estate</title>
+       <oneHeader __type="string">Are you looking for solvent buyers for your property?</oneHeader>
+       <oneLead __type="string">Sell real estate in Alicante&lt;/span&gt;&lt;span&gt;&amp;nbsp;</oneLead>
+       <oneText __type="string">Contact us</oneText>
       </properties>
      </variant>
      <node identifier="a2da8db6-a428-df31-bef0-d3e5c919fbf6" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:38:44+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T07:41:57+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T07:41:56+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T08:36:50+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T08:36:50+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
+      <node identifier="37a9daf5-ce5b-44f3-9167-80a2662f8374" nodeName="node-mgsrjjvawvvn1">
+       <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Container" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:03:04+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:04:29+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:04:29+00:00</lastPublicationDateTime>
+        <properties>
+         <dropShadow __type="boolean"></dropShadow>
+         <bgColor __type="string">none</bgColor>
+         <linkText __type="string"></linkText>
+         <removePadding __type="boolean">1</removePadding>
+         <fullWidth __type="boolean"></fullWidth>
+         <contentFullWidth __type="boolean"></contentFullWidth>
+        </properties>
+       </variant>
+       <node identifier="1fd22b38-f38f-448c-a43b-972015b0915f" nodeName="node-q6vt9uau9sstg">
+        <variant sortingIndex="250" workspace="live" nodeType="Abteilung.Gridsystem:Content.Row" version="5" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:03:23+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+         <properties>
+          <count-md __type="string">2</count-md>
+         </properties>
+        </variant>
+        <node identifier="23759475-1d62-4287-8d88-b37bfada1f56" nodeName="node-b02jj5a9ebpfx">
+         <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="3" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:03:23+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+          <properties>
+           <paddingY __type="boolean"></paddingY>
+           <span-md __type="string">1</span-md>
+          </properties>
+         </variant>
+         <node identifier="2aced481-2df8-4160-844f-a819ced22481" nodeName="node-km11uinqmmjl6">
+          <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Text" version="5" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:03:33+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+           <properties>
+            <isLead __type="boolean"></isLead>
+            <text __type="string">&lt;h4&gt;Marketing your property&lt;/h4&gt;&lt;p&gt;The highest level of commitment and proven expertise of our brokers form the basis for a comprehensive and professional service.&lt;/p&gt;</text>
+           </properties>
+          </variant>
+         </node>
+        </node>
+        <node identifier="91bf20ec-e187-47b8-a3b8-26fbda5c6f94" nodeName="node-tsc9myhffpqtw">
+         <variant sortingIndex="200" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="3" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:03:23+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+          <properties>
+           <paddingY __type="boolean"></paddingY>
+           <span-md __type="string">1</span-md>
+          </properties>
+         </variant>
+         <node identifier="91d7869a-619e-4b60-8b56-319d401944da" nodeName="node-d278yk6mj808x">
+          <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.UL" version="3" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:03:43+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+           <properties>
+            <isLead __type="boolean"></isLead>
+           </properties>
+          </variant>
+          <node identifier="00f07214-5ab9-4e25-84cc-c30278e6423a" nodeName="node-4pj3kdod4jl3d">
+           <variant sortingIndex="350" workspace="live" nodeType="Abte.Site:Content.LI" version="7" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:04:08+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+            <properties>
+             <icon __type="string">check</icon>
+             <textColor __type="string">none</textColor>
+             <li_text __type="string">&lt;p&gt;Mailing to existing prospects&lt;/p&gt;</li_text>
+            </properties>
+           </variant>
+          </node>
+          <node identifier="b9e6420a-6d2b-4915-a560-fcbc47c1bcf3" nodeName="node-a0s3kas2gund9">
+           <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.LI" version="6" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:03:43+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+            <properties>
+             <icon __type="string">check</icon>
+             <textColor __type="string">none</textColor>
+             <li_text __type="string">&lt;p&gt;Own website for your property&lt;/p&gt;</li_text>
+            </properties>
+           </variant>
+          </node>
+          <node identifier="e57c22c3-4fdc-4189-9047-cb2c6ae1e79d" nodeName="node-h1s64bv7scxq8">
+           <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.LI" version="6" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:03:43+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+            <properties>
+             <icon __type="string">check</icon>
+             <textColor __type="string">none</textColor>
+             <li_text __type="string">&lt;p&gt;Sales boards on the object&lt;/p&gt;</li_text>
+            </properties>
+           </variant>
+          </node>
+          <node identifier="364443bc-2a33-47c8-a2ad-339279b0d220" nodeName="node-jhi3irpkf22ph">
+           <variant sortingIndex="300" workspace="live" nodeType="Abte.Site:Content.LI" version="6" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:03:43+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+            <properties>
+             <icon __type="string">check</icon>
+             <textColor __type="string">none</textColor>
+             <li_text __type="string">&lt;p&gt;AdWords campaign for your property&lt;/p&gt;</li_text>
+            </properties>
+           </variant>
+          </node>
+          <node identifier="7910458b-efa6-4212-8caa-ca3086887a81" nodeName="node-p7vfqfkd5stnw">
+           <variant sortingIndex="450" workspace="live" nodeType="Abte.Site:Content.LI" version="6" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:04:22+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+            <properties>
+             <icon __type="string">check</icon>
+             <textColor __type="string">none</textColor>
+             <li_text __type="string">&lt;p&gt;Window/box displays&lt;/p&gt;</li_text>
+            </properties>
+           </variant>
+          </node>
+          <node identifier="674d9deb-300c-4d6e-b688-0cbd24d5a885" nodeName="node-pfx5ucik3p1kx">
+           <variant sortingIndex="400" workspace="live" nodeType="Abte.Site:Content.LI" version="6" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-26T09:04:03+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:05:38+00:00</lastPublicationDateTime>
+            <properties>
+             <icon __type="string">check</icon>
+             <textColor __type="string">none</textColor>
+             <li_text __type="string">&lt;p&gt;Neighborhood Information&lt;/p&gt;</li_text>
+            </properties>
+           </variant>
+          </node>
+         </node>
+        </node>
+       </node>
+      </node>
      </node>
     </node>
     <node identifier="c8b52f50-8431-4175-afd2-f3c975ecd9ba" nodeName="node-fv3a54w0etrtx">
@@ -698,30 +896,33 @@
      </node>
     </node>
     <node identifier="389b2d4d-ec28-4165-bb9b-7993e5ad559b" nodeName="node-i2964t82cycvm">
-     <variant sortingIndex="569" workspace="live" nodeType="Abte.Site:Document.World" version="4" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="569" workspace="live" nodeType="Abte.Site:Document.Overview" version="7" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:38:30+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T07:41:57+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T07:41:56+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T09:08:26+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T09:08:25+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">buy-real-estate</uriPathSegment>
        <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
        <includeInSearchResults __type="boolean">1</includeInSearchResults>
        <title __type="string">Buy Real Estate</title>
+       <oneLead __type="string">Buy real estate in Alicante</oneLead>
+       <oneHeader __type="string">Are you looking for your dream property?</oneHeader>
+       <oneText __type="string">Contact us</oneText>
       </properties>
      </variant>
      <node identifier="d58d5f83-3aa5-a7c1-6cac-b57b1d06a053" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:38:30+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T07:41:57+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T07:41:56+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T08:36:50+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T08:36:50+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
      </node>
@@ -837,9 +1038,6 @@
       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:00:34+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">social</uriPathSegment>
-       <teaser_short __type="string"></teaser_short>
-       <hideHeader __type="boolean"></hideHeader>
-       <includeInSearchResults __type="boolean"></includeInSearchResults>
        <title __type="string">social</title>
       </properties>
      </variant>
@@ -941,94 +1139,102 @@
        <properties/>
       </variant>
      </node>
+     <node identifier="77fb7c09-9e1b-4774-93a2-2e86bacd93e3" nodeName="node-7vxr2a4p8vwlj">
+      <variant sortingIndex="250" workspace="live" nodeType="Abte.Site:Document.Product" version="4" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-26T20:21:44+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T20:22:04+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T20:22:03+00:00</lastPublicationDateTime>
+       <properties>
+        <uriPathSegment __type="string">finca-x</uriPathSegment>
+        <teaser_short __type="string"></teaser_short>
+        <hideHeader __type="boolean"></hideHeader>
+        <includeInSearchResults __type="boolean">1</includeInSearchResults>
+        <featureIcon __type="string">none</featureIcon>
+        <atm __type="string"></atm>
+        <bus __type="string"></bus>
+        <train __type="string"></train>
+        <school __type="string"></school>
+        <postbox __type="string"></postbox>
+        <road __type="string"></road>
+        <isNew __type="boolean"></isNew>
+        <isHero __type="boolean"></isHero>
+        <address __type="string"></address>
+        <description __type="string"></description>
+        <title __type="string">Finca X</title>
+        <categories __type="array">
+         <entry0 __type="string">a4bc9bdd-5e07-4818-b984-98f8838a640b</entry0>
+        </categories>
+       </properties>
+      </variant>
+      <node identifier="df0911c7-73d6-7b32-a16d-bf5f30a9090b" nodeName="main">
+       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-26T20:21:44+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T20:22:04+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T20:22:03+00:00</lastPublicationDateTime>
+        <properties/>
+       </variant>
+      </node>
+     </node>
      <node identifier="4626fc5f-6fb3-4149-8537-eddb2c6bb613" nodeName="node-pa9juas5nfckz">
-      <variant sortingIndex="150" workspace="live" nodeType="Abte.Site:Document.Product" version="6" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="175" workspace="live" nodeType="Abte.Site:Document.Product" version="17" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:52:19+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:46:54+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:46:54+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T20:20:56+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T20:20:56+00:00</lastPublicationDateTime>
        <properties>
         <uriPathSegment __type="string">asdf</uriPathSegment>
         <includeInSearchResults __type="boolean">1</includeInSearchResults>
-        <title __type="string">Villa in Alicante, Spain,&lt;/span&gt;&lt;span&gt;4 bedrooms, Infinitypool, 180 sq.m.&lt;/span&gt;&lt;span&gt;&amp;nbsp;</title>
+        <title __type="string">Villa in Alicante, Spain,&amp;nbsp;&lt;/span&gt;&lt;span&gt;4 bedrooms, Infinitypool, 180 sq.m.&lt;/span&gt;&lt;span&gt;&amp;nbsp;</title>
         <categories __type="array">
-         <entry0 __type="string">a4bc9bdd-5e07-4818-b984-98f8838a640b</entry0>
+         <entry0 __type="string">449486b9-007b-4e2a-bdc3-a006f8ee2208</entry0>
         </categories>
         <image __type="object" __identifier="03ef2cc3-7f49-41dc-b2f5-165a40731d31" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;03ef2cc3-7f49-41dc-b2f5-165a40731d31&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;andres-canavesi-lprRK_LOaT0-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;f12ef2f5520146f2e8cbde3165cd913d9dbd679f&quot;,&quot;hash&quot;:&quot;f12ef2f5520146f2e8cbde3165cd913d9dbd679f&quot;,&quot;__identity&quot;:&quot;7cc34352-3ef8-424b-ae39-e3a9fc57320f&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</image>
+        <isHero __type="boolean">1</isHero>
+        <images __type="array">
+         <entry0 __type="object" __identifier="38217385-f47d-4bc4-8139-339742798a91" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;38217385-f47d-4bc4-8139-339742798a91&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;natasja-wagemakers-vpryZ7IB_AU-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;a8084303af77c683b1d6252a6dbb851d28893fb2&quot;,&quot;hash&quot;:&quot;a8084303af77c683b1d6252a6dbb851d28893fb2&quot;,&quot;__identity&quot;:&quot;ed562a91-ebba-4962-a162-672039754620&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</entry0>
+         <entry1 __type="object" __identifier="5d816202-68d2-4734-9807-6ce7cfa50381" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5d816202-68d2-4734-9807-6ce7cfa50381&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;will-myers-BCSnor8oUt0-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;ff3867aefc1e6dec5e098fcd4b694c188302f274&quot;,&quot;hash&quot;:&quot;ff3867aefc1e6dec5e098fcd4b694c188302f274&quot;,&quot;__identity&quot;:&quot;5925156c-ff4e-4e05-9cd9-c20832eec6f4&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</entry1>
+         <entry2 __type="object" __identifier="f8d2c334-6a5b-4cda-9748-4ed98525708b" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;f8d2c334-6a5b-4cda-9748-4ed98525708b&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;datingscout-2A2Uj8-rMtw-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;82c1188adbff28f8e58b96faf4fc92decd548151&quot;,&quot;hash&quot;:&quot;82c1188adbff28f8e58b96faf4fc92decd548151&quot;,&quot;__identity&quot;:&quot;9358d3e5-9ca0-4e90-8706-bdd83fa55df5&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</entry2>
+         <entry3 __type="object" __identifier="adc088c9-b615-42dc-b6df-eb31eb08b98b" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;adc088c9-b615-42dc-b6df-eb31eb08b98b&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;viktoria-niezhentseva-dpDQekyeBM4-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;f7829cbd0c0b16395abca8afde7460c812aeec15&quot;,&quot;hash&quot;:&quot;f7829cbd0c0b16395abca8afde7460c812aeec15&quot;,&quot;__identity&quot;:&quot;617c4f70-1988-4baf-b5c7-bd0900a8944a&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</entry3>
+         <entry4 __type="object" __identifier="82ee6279-fdef-4a96-8093-54f1ee7b7647" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;82ee6279-fdef-4a96-8093-54f1ee7b7647&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;jorge-fdez-LNcEj--Mz2Q-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;27c48e8f7d61e8c2c155dfbd876f61a66139f44a&quot;,&quot;hash&quot;:&quot;27c48e8f7d61e8c2c155dfbd876f61a66139f44a&quot;,&quot;__identity&quot;:&quot;9815f457-86be-474a-8c8e-be33cadac01c&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</entry4>
+         <entry5 __type="object" __identifier="689c7c7b-d28f-423f-b83f-f636715717a2" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;689c7c7b-d28f-423f-b83f-f636715717a2&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;samuel-rios-7gVPHthX--U-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;a02e6d07da0e8086df40864d45eea8332df982c4&quot;,&quot;hash&quot;:&quot;a02e6d07da0e8086df40864d45eea8332df982c4&quot;,&quot;__identity&quot;:&quot;8208070d-2a4b-4df4-94f8-24adf01fd36b&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</entry5>
+         <entry6 __type="object" __identifier="600b11d8-a123-49dd-864a-7bf8f42a1b1f" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;600b11d8-a123-49dd-864a-7bf8f42a1b1f&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;juliana-mayo-MlL4XUFK4H4-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;684a95ac912e2b44019bf2aba68d90fbe496b666&quot;,&quot;hash&quot;:&quot;684a95ac912e2b44019bf2aba68d90fbe496b666&quot;,&quot;__identity&quot;:&quot;cedb300a-cbf9-46ed-a6df-4ab510b09380&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</entry6>
+        </images>
+        <atm __type="string">200 m</atm>
+        <train __type="string">4 km</train>
+        <bus __type="string">500 m</bus>
+        <postbox __type="string">2 km</postbox>
+        <road __type="string">16 km</road>
+        <school __type="string"></school>
+        <description __type="string">&lt;p&gt;dfasdfa&lt;/p&gt;</description>
+        <address __type="string">Alicante</address>
+        <floorPlans __type="array">
+         <entry0 __type="object" __identifier="600b11d8-a123-49dd-864a-7bf8f42a1b1f" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;600b11d8-a123-49dd-864a-7bf8f42a1b1f&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;juliana-mayo-MlL4XUFK4H4-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;684a95ac912e2b44019bf2aba68d90fbe496b666&quot;,&quot;hash&quot;:&quot;684a95ac912e2b44019bf2aba68d90fbe496b666&quot;,&quot;__identity&quot;:&quot;cedb300a-cbf9-46ed-a6df-4ab510b09380&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</entry0>
+         <entry1 __type="object" __identifier="f8d2c334-6a5b-4cda-9748-4ed98525708b" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;f8d2c334-6a5b-4cda-9748-4ed98525708b&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;datingscout-2A2Uj8-rMtw-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;82c1188adbff28f8e58b96faf4fc92decd548151&quot;,&quot;hash&quot;:&quot;82c1188adbff28f8e58b96faf4fc92decd548151&quot;,&quot;__identity&quot;:&quot;9358d3e5-9ca0-4e90-8706-bdd83fa55df5&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;f45e0c45-78dc-4c83-b25b-01d90d5d8edd&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[]}]}</entry1>
+        </floorPlans>
        </properties>
       </variant>
       <node identifier="f329743f-7124-5c17-0635-df97e1da26c5" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
         <dimensions>
          <language>de</language>
         </dimensions>
         <accessRoles __type="array"/>
         <creationDateTime __type="object" __classname="DateTime">2022-04-25T07:52:19+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T07:53:54+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T07:53:53+00:00</lastPublicationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T20:20:56+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T20:20:56+00:00</lastPublicationDateTime>
         <properties/>
        </variant>
-       <node identifier="0f4839bd-15c5-436c-8e92-4570884eb186" nodeName="node-idlimz3iad8yj">
-        <variant sortingIndex="25" workspace="live" nodeType="Abte.Site:Content.Container" version="4" removed="" hidden="" hiddenInIndex="">
-         <dimensions>
-          <language>de</language>
-         </dimensions>
-         <accessRoles __type="array"/>
-         <creationDateTime __type="object" __classname="DateTime">2022-04-25T12:51:25+00:00</creationDateTime>
-         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T12:52:46+00:00</lastModificationDateTime>
-         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T12:52:46+00:00</lastPublicationDateTime>
-         <properties>
-          <dropShadow __type="boolean"></dropShadow>
-          <bgColor __type="string">none</bgColor>
-          <linkText __type="string"></linkText>
-          <removePadding __type="boolean">1</removePadding>
-          <fullWidth __type="boolean"></fullWidth>
-          <contentFullWidth __type="boolean"></contentFullWidth>
-          <title __type="string">Shakalak</title>
-         </properties>
-        </variant>
-       </node>
-       <node identifier="225e1791-8461-44a6-8fd6-d6cbe1cea74f" nodeName="node-iq121nmqq96a2">
-        <variant sortingIndex="50" workspace="live" nodeType="Abte.Site:Content.Container" version="4" removed="" hidden="" hiddenInIndex="">
-         <dimensions>
-          <language>de</language>
-         </dimensions>
-         <accessRoles __type="array"/>
-         <creationDateTime __type="object" __classname="DateTime">2022-04-25T12:51:42+00:00</creationDateTime>
-         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T12:51:48+00:00</lastModificationDateTime>
-         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T12:51:47+00:00</lastPublicationDateTime>
-         <properties>
-          <dropShadow __type="boolean"></dropShadow>
-          <bgColor __type="string">none</bgColor>
-          <linkText __type="string"></linkText>
-          <removePadding __type="boolean">1</removePadding>
-          <fullWidth __type="boolean"></fullWidth>
-          <contentFullWidth __type="boolean"></contentFullWidth>
-          <title __type="string">Bananarama</title>
-         </properties>
-        </variant>
-        <node identifier="978f4905-ba96-4b19-9fcc-7e0aa5dd884c" nodeName="node-jk29q37tcxkv9">
-         <variant sortingIndex="100" workspace="live" nodeType="Jonnitto.GoogleMaps:Map" version="3" removed="" hidden="" hiddenInIndex="">
-          <dimensions>
-           <language>de</language>
-          </dimensions>
-          <accessRoles __type="array"/>
-          <creationDateTime __type="object" __classname="DateTime">2022-04-25T15:46:42+00:00</creationDateTime>
-          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T15:46:54+00:00</lastModificationDateTime>
-          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T15:46:54+00:00</lastPublicationDateTime>
-          <properties>
-           <zoom __type="string">2</zoom>
-           <showinfo __type="boolean"></showinfo>
-           <heading __type="integer">0</heading>
-           <pitch __type="integer">0</pitch>
-           <mapLocation __type="string">Rüdigerstrasse 12, 8045 Zürich</mapLocation>
-          </properties>
-         </variant>
-        </node>
-       </node>
       </node>
      </node>
      <node identifier="0e8346cf-7ff9-4326-8864-81cf883c513f" nodeName="node-q9glhstwp67fw">
@@ -1059,6 +1265,47 @@
         <creationDateTime __type="object" __classname="DateTime">2022-04-25T08:11:08+00:00</creationDateTime>
         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-25T08:13:24+00:00</lastModificationDateTime>
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-25T08:13:24+00:00</lastPublicationDateTime>
+        <properties/>
+       </variant>
+      </node>
+     </node>
+     <node identifier="9fd741ba-b83d-4bbc-b859-3e603a180047" nodeName="node-qa3rusfebuxtp">
+      <variant sortingIndex="300" workspace="live" nodeType="Abte.Site:Document.Product" version="6" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-26T20:22:23+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T20:26:56+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T20:26:56+00:00</lastPublicationDateTime>
+       <properties>
+        <uriPathSegment __type="string">what</uriPathSegment>
+        <teaser_short __type="string"></teaser_short>
+        <hideHeader __type="boolean"></hideHeader>
+        <includeInSearchResults __type="boolean">1</includeInSearchResults>
+        <featureIcon __type="string">none</featureIcon>
+        <atm __type="string"></atm>
+        <bus __type="string"></bus>
+        <train __type="string"></train>
+        <school __type="string"></school>
+        <postbox __type="string"></postbox>
+        <road __type="string"></road>
+        <isNew __type="boolean"></isNew>
+        <isHero __type="boolean"></isHero>
+        <address __type="string">Rüdigerstrasse 12, 8045 Zürich</address>
+        <description __type="string"></description>
+        <title __type="string">What a beauty this House is.</title>
+       </properties>
+      </variant>
+      <node identifier="fd6dbf6c-e246-6b51-af3c-d9181ba9dc0e" nodeName="main">
+       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-26T20:22:23+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-26T20:26:56+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-26T20:26:56+00:00</lastPublicationDateTime>
         <properties/>
        </variant>
       </node>
