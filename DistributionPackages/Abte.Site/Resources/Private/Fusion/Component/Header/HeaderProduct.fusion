@@ -34,6 +34,10 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
         }
     }
 
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).closest("[instanceof Neos.Neos:Document][headerImage][headerImage != '']").property('headerImage') || q(node).closest("[instanceof Neos.Neos:Document][image][image != '']").property('image') }
+    }
+
     // teaser_short = Neos.Neos:Editable {
     //     property = 'teaser_short'
     //     node = Neos.Fusion:Case {
@@ -57,20 +61,25 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
 
 
     renderer = afx`
-        <div class="container">
 
-            ((HEADERPICTURE))
+        <div class="h-[175px] md:h-[275px] xl:h-[300px] 2xl:h-[350px] overflow-hidden">
+            <Sitegeist.Lazybones:Image 
+                @if.hasImage={props.imageSource}
+                imageSource={props.imageSource} 
+                width="2200"
+                height="480"
+                class="object-cover object-top w-full h-full"
+            />
+        </div>
 
+        <div class="container my-12">
             <div class="space-y-6">
                 <h4>{props.category}</h4>
                 <h1>
                     <span class="productTitle">{props.pageTitle}</span>
                 </h1>
-
                 <p class="lead">{props.address}</p>
-
             </div>
-           
         </div>
         <Abte.Site:Component.ProductSlider />
     `

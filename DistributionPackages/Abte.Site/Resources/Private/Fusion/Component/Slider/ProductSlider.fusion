@@ -25,7 +25,7 @@ prototype(Abte.Site:Component.ProductSlider) < prototype(Neos.Fusion:Component) 
                         // maximumWidth = 800
                         // maximumHeight = 600
                         allowCropping = false
-                        @process.template = ${ 'background: url(' + value + ');' }
+                        @process.template = ${ 'background: url(' + value + '); background-size: cover; background-position: center center;' }
                     }
             }
             content = ''
