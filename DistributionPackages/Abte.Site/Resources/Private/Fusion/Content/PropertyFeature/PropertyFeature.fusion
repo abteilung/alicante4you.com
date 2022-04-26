@@ -1,14 +1,33 @@
 prototype(Abte.Site:Content.PropertyFeature) < prototype(Neos.Neos:ContentComponent) {
 
-    featureIcon = Abte.Site:Mixin.PropertyFeatures {
-        class = ${'flex-1 text-black w-16 mt-2'}
+    node = ${ node }
+    featureIcon = ''
+    title = ''
+    textProperty = ''
+
+    @context {
+        node = ${ this.node }
+        featureIcon = ${ this.featureIcon }
+        title = ${ this.title }
+        textProperty = ${ this.textProperty }
+    }
+
+    distance = Neos.Neos:Editable {
+        property = ${ textProperty }
+        block = ${ false }
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
     }
 
     renderer = afx`
-        <div class="flex flex-col items-center justify-center w-32 h-32">
-            {props.featureIcon}
-            <h4><Neos.Neos:Editable property="title" /></h4>
-            <p><Neos.Neos:Editable property="distance" /></p>
+        <div 
+            class="flex flex-col items-left justify-left w-32 h-32"
+            @if.hasContent={props.distance}    
+        >
+            <Abte.Site:Mixin.PropertyFeatures class="flex-1" featureIcon={featureIcon} />
+            <h4 class="mt-4">{props.title}</h4>
+            {props.distance}
         </div>
     `
 }

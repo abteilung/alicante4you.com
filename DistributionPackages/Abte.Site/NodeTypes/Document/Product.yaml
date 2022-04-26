@@ -3,6 +3,7 @@
     'Abte.Site:Document.AbstractPage': true
     'Abte.Site:Mixin.Product': true
     'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.PropertyFeatures': true
     'Alicante.Flickity:Include': true
     'Abte.Site:Mixin.New': true
     'Abte.Site:Mixin.Hero': true
@@ -17,6 +18,9 @@
     nodeTypes:
       '*': false
   properties:
+    'description':
+      options:
+        preset: 'text.free'
     'images':
       options:
         preset: 'image.assets'

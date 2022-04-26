@@ -10,31 +10,92 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
             filterItemsArray = ${ this.filterItemsArray }
         }
 
+        description = Neos.Neos:Editable {
+            property = 'description'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
         // similarProducts = ${ q(site).find('[instanceof Abte.Site:Document.Product],[instanceof Abte.Site:Document.ProductLink]').filterByReferences('categories', q(node).property('categories')).remove(documentNode).get() }
         similarProducts = ${ q(documentNode).parent().children('[instanceof Abte.Site:Mixin.Product]').filterByReference( Array.last( q(node).property('categories') ), 'categories' ).remove(documentNode).get() }
         //  ${q(node).children().filterByReference(myCategoryNode, 'myCategoryReferencesField')}
          renderer = afx`
 
             <div class="space-y-12">
-                <div class="container">
-                    <main class="col-span-12 space-y-8 gridPadding-x">
+                <div class="container ">
+                    <main class="w-2/3 mx-auto space-y-8 gridPadding-x">
+
                         {props.main}
+
+                        <Abte.Site:Content.Container 
+                            title="description"
+                            linkText=''
+                            link=''
+                        >
+                            {props.description}
+                        </Abte.Site:Content.Container>
+
+
+                        <Abte.Site:Content.Container 
+                            title="Floor Plans"
+                            linkText=''
+                            link=''
+                        >
+                            ((FLOOR PLANS))
+                        </Abte.Site:Content.Container>
+
+
+                        <Abte.Site:Content.Container 
+                            title="Location"
+                            linkText=''
+                            link=''
+                        >
+                            <Jonnitto.GoogleMaps:StaticMap 
+                                mapLocation="Rüdigerstrasse 12, 8045 Zürich"
+                                zoom="17"
+                                title="caca"
+                                showinfo="true"
+                                text="blabla blabla"
+                                heading="Heading"
+                                maptype="terrain"
+                            />
+                        </Abte.Site:Content.Container>
+
+
+                        <Abte.Site:Content.Container 
+                            title="Distances"
+                            linkText=''
+                            link=''
+                        >
+                            <div class="grid grid-cols-4 gridgap">
+                                <Abte.Site:Content.PropertyFeature textProperty='atm' featureIcon='atm' title="ATM" />
+                                <Abte.Site:Content.PropertyFeature textProperty='train' featureIcon='train' title="Railway" />
+                                <Abte.Site:Content.PropertyFeature textProperty='bus' featureIcon='bus' title="Bus" />
+                                <Abte.Site:Content.PropertyFeature textProperty='postbox' featureIcon='postbox' title="Postal Office" />
+                                <Abte.Site:Content.PropertyFeature textProperty='road' featureIcon='road' title="Motorway" />
+                                <Abte.Site:Content.PropertyFeature textProperty='school' featureIcon='school' title="School" />
+                            </div>
+                        </Abte.Site:Content.Container>
+
                     </main>
+
+
                     <Abte.Site:Content.Container 
                         @if.hasSimilarProducts={props.similarProducts}
                         title={ I18n.translate('Abte.Site:Main:similarProducts') }
                         linkText=''
                         link=''
                     >
-
                         <Abte.Site:Content.Navigation 
                             node={node}
                             navigationItems={props.similarProducts}
                             limit="4" 
                             layout="products" 
                         />
-
                     </Abte.Site:Content.Container>
+
+
                 </div>
             </div>
         `

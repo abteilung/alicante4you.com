@@ -33,3 +33,21 @@
                             road:
                                 label: 'Highway'
                                 icon: 'road'
+        atm:
+            options:
+                preset: 'text.plain'
+        bus:
+            options:
+                preset: 'text.plain'
+        train:
+            options:
+                preset: 'text.plain'
+        school:
+            options:
+                preset: 'text.plain'
+        postbox:
+            options:
+                preset: 'text.plain'
+        road:
+            options:
+                preset: 'text.plain'

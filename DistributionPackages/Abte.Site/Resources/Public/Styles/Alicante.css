@@ -818,6 +818,7 @@ select {
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0;
+  font-weight: 700;
 }
         h2 i, h2 em, .h2 i, .h2 em, h1.h2 i, h1.h2 em, h4.h2 i, h4.h2 em, h5.h2 i, h5.h2 em {
   font-style: normal;
@@ -1617,11 +1618,6 @@ select {
 .select-disabled, .select[disabled] {
   pointer-events: none;
 }
-.tabs {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-}
 .tab {
   position: relative;
   display: inline-flex;
@@ -1712,9 +1708,6 @@ select {
 .left-0 {
   left: 0px;
 }
-.bottom-0 {
-  bottom: 0px;
-}
 .-top-10 {
   top: -2.5rem;
 }
@@ -1769,6 +1762,9 @@ select {
 .top-1 {
   top: 0.25rem;
 }
+.bottom-0 {
+  bottom: 0px;
+}
 .top-2 {
   top: 0.5rem;
 }
@@ -1781,11 +1777,11 @@ select {
 .z-10 {
   z-index: 10;
 }
-.z-20 {
-  z-index: 20;
-}
 .z-30 {
   z-index: 30;
+}
+.z-20 {
+  z-index: 20;
 }
 .z-50 {
   z-index: 50;
@@ -1930,9 +1926,6 @@ select {
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.\!-mb-\[2px\] {
-  margin-bottom: -2px !important;
 }
 .mt-0 {
   margin-top: 0px;
@@ -2110,6 +2103,12 @@ select {
 }
 .w-32 {
   width: 8rem;
+}
+.w-2\/3 {
+  width: 66.666667%;
+}
+.w-1\/2 {
+  width: 50%;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -2461,10 +2460,6 @@ select {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
-.border-b-primary {
-  --tw-border-opacity: 1;
-  border-bottom-color: hsl(var(--p) / var(--tw-border-opacity));
-}
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--p) / var(--tw-bg-opacity));
@@ -2476,6 +2471,10 @@ select {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-base-100 {
   --tw-bg-opacity: 1;
@@ -2507,10 +2506,6 @@ select {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .\!bg-transparent {
   background-color: transparent !important;
@@ -2792,10 +2787,6 @@ select {
 .\!text-primary {
   --tw-text-opacity: 1 !important;
   color: hsl(var(--p) / var(--tw-text-opacity)) !important;
-}
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 .text-slate-700 {
   --tw-text-opacity: 1;
@@ -3159,10 +3150,6 @@ select {
 
   .sm\:inline-flex {
     display: inline-flex;
-  }
-
-  .sm\:hidden {
-    display: none;
   }
 
   .sm\:w-auto {
