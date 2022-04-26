@@ -2,7 +2,15 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
 
     pageTitle = Neos.Neos:Editable {
         property = 'title'
-        block = ${ false }
+        block = ${ true }
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    address = Neos.Neos:Editable {
+        property = 'address'
+        block = ${ true }
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
             @position = 'end'
         }
@@ -26,26 +34,27 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
         }
     }
 
-    teaser_short = Neos.Neos:Editable {
-        property = 'teaser_short'
-        node = Neos.Fusion:Case {
-            isReference {
-                condition = ${ q(documentNode).is('[instanceof Abte.Site:Document.ProductLink]') }
-                renderer = ${ q(node).property('reference')}
-            }
-            fallback {
-                condition = ${ true }
-                renderer = ${ node }
-            }
-        }
-        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
-            @position = 'end'
-        }
-    }
+    // teaser_short = Neos.Neos:Editable {
+    //     property = 'teaser_short'
+    //     node = Neos.Fusion:Case {
+    //         isReference {
+    //             condition = ${ q(documentNode).is('[instanceof Abte.Site:Document.ProductLink]') }
+    //             renderer = ${ q(node).property('reference')}
+    //         }
+    //         fallback {
+    //             condition = ${ true }
+    //             renderer = ${ node }
+    //         }
+    //     }
+    //     @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+    //         @position = 'end'
+    //     }
+    // }
 
     price = ${ q(node).property('productPrice')}
 
     category = ${ q( q(node).property('categories') ).property('title') }
+
 
     renderer = afx`
         <div class="container">
@@ -58,15 +67,12 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
                     <span class="productTitle">{props.pageTitle}</span>
                 </h1>
 
-                <Neos.Fusion:Augmenter class="lead">
-                    {props.teaser_short}
-                </Neos.Fusion:Augmenter>
-
-                <Abte.Site:Component.RemoteSlider />
+                <p class="lead">{props.address}</p>
 
             </div>
            
         </div>
+        <Abte.Site:Component.ProductSlider />
     `
 
 	@cache {

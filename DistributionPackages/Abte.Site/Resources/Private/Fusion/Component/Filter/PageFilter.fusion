@@ -19,7 +19,7 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
     fallback {
       condition = ${ true }
       renderer = Neos.Neos:MenuItems {
-        itemCollection = ${ q(documentNode).parent().children('[uriPathSegment="kategorien"]').children('[instanceof Abte.Site:Document.Category]').get() }
+        itemCollection = ${ q(site).children('[uriPathSegment="kategorien"]').children('[instanceof Abte.Site:Document.Category]').get() }
         filter = ${ 'Abte.Site:Document.Category' }
       }
     }

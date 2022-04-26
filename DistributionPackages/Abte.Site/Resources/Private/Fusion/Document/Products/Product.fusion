@@ -1,11 +1,7 @@
 prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPage) {
     body.content = Neos.Fusion:Component {
 
-        @context {
-            parentCategory = ${ this.parentCategory }
-        }
-
-        filterItemsArray = ${ q(node).property('categories') }
+        filterItemsArray = ${ q(node).property('categories') ? q(node).property('categories') : null }
         @context {
             filterItemsArray = ${ this.filterItemsArray }
         }
@@ -17,10 +13,15 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
             }
         }
 
-        // similarProducts = ${ q(site).find('[instanceof Abte.Site:Document.Product],[instanceof Abte.Site:Document.ProductLink]').filterByReferences('categories', q(node).property('categories')).remove(documentNode).get() }
-        similarProducts = ${ q(documentNode).parent().children('[instanceof Abte.Site:Mixin.Product]').filterByReference( Array.last( q(node).property('categories') ), 'categories' ).remove(documentNode).get() }
-        //  ${q(node).children().filterByReference(myCategoryNode, 'myCategoryReferencesField')}
-         renderer = afx`
+        title = ${ q(node).property('title') }
+        
+        address = ${ q(node).property('address') }
+
+        floorPlans = ${ q(node).property('floorPlans') }
+
+        similarProducts = ${ q(node).property('categories') ? q(documentNode).parent().children('[instanceof Abte.Site:Mixin.Product]').filterByReference( Array.last( q(node).property('categories') ), 'categories' ).remove(documentNode).get() : null }
+
+        renderer = afx`
 
             <div class="space-y-12">
                 <div class="container ">
@@ -42,7 +43,11 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             linkText=''
                             link=''
                         >
-                            ((FLOOR PLANS))
+                            <Abte.Site:Content.Tabs>
+                                <Neos.Fusion:Loop items={props.floorPlans}>
+                                    <Abte.Site:Content.Tab tab_title="xxx" />
+                                </Neos.Fusion:Loop>
+                            </Abte.Site:Content.Tabs>
                         </Abte.Site:Content.Container>
 
 
@@ -52,9 +57,9 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             link=''
                         >
                             <Jonnitto.GoogleMaps:StaticMap 
-                                mapLocation="Rüdigerstrasse 12, 8045 Zürich"
+                                mapLocation={props.address}
                                 zoom="17"
-                                title="caca"
+                                title={props.title}
                                 showinfo="true"
                                 text="blabla blabla"
                                 heading="Heading"
@@ -107,10 +112,9 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
             }
             entryTags {
                 1 = ${Neos.Caching.nodeTypeTag('Abte.Site:Document.Product', documentNode)}
-                2 = ${Neos.Caching.nodeTypeTag('Abte.Site:Document.ProductLink', documentNode)}
                 // 1 = ${Neos.Caching.nodeTag(node)}
-                3 = ${Neos.Caching.nodeTag(filterItemsArray)}
-                4 = ${Neos.Caching.descendantOfTag(filterItemsArray)}
+                2 = ${Neos.Caching.nodeTag(filterItemsArray)}
+                3 = ${Neos.Caching.descendantOfTag(filterItemsArray)}
             }
         }    
     }

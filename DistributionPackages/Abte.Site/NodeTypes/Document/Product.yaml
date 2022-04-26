@@ -18,6 +18,11 @@
     nodeTypes:
       '*': false
   properties:
+    'address':
+      options:
+        preset: 'text.plain'
+      ui:
+        placeholder: 'Address of Property'
     'description':
       options:
         preset: 'text.free'
@@ -26,6 +31,13 @@
         preset: 'image.assets'
       ui:
         label: Further Images
+        inspector:
+          group: 'image'
+    'floorPlans':
+      options:
+        preset: 'image.assets'
+      ui:
+        label: Floorplans
         inspector:
           group: 'image'
     'categories':

@@ -11,8 +11,8 @@
   constraints:
     nodeTypes:
       '*': false
-      'Abte.Site:Document.Products': true
-      'Alicante.Navigation:Document.MegaMenu': true
+      'Abte.Site:Document.Product': true
+      # 'Alicante.Navigation:Document.MegaMenu': true
   childNodes:
     aside:
       type: 'Neos.Neos:ContentCollection'

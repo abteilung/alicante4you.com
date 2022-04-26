@@ -1,0 +1,61 @@
+prototype(Abte.Site:Component.ProductSlider) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('reference') ? q( q(node).property('reference') ).property('image') : q(node).property('image') }
+        // width   = 800
+        height  = 450
+        allowCropping = false
+    }
+
+    productImages = Neos.Fusion:Loop {
+        @if.hasImages = ${ q(node).property('images') }
+        items = ${ q(node).property('images') }
+        itemRenderer = Neos.Fusion:Tag {
+            attributes {
+                class = 'flex justify-center w-1/2 h-[450px] mx-8 slide roundedCorners'
+                    style = Neos.Neos:ImageUri {
+                        asset = ${ item }
+                        // width = 800
+                        height = 550
+                        // maximumWidth = 800
+                        // maximumHeight = 600
+                        allowCropping = false
+                        @process.template = ${ 'background: url(' + value + ');' }
+                    }
+            }
+            content = ''
+        }
+    }
+
+    sliderConfig = Neos.Fusion:DataStructure {
+        cellSelector = '.slide'
+        pageDots = false
+        draggable = ${ node.context.inBackend ? false : true }
+        prevNextButtons = true
+        contain = true
+        adaptiveHeight = false
+        // prevNextButtons = ${ q(node).property('images') ? true : false }
+        prevNextButtons = ${ q( q(node).property('reference') ).property('images') ? true : q(node).property('images') ? true : false }
+        @process.stringify = ${ Json.stringify(value) }
+    }
+    
+    renderer = afx`
+        <div class="mb-4 overflow-hidden md:mb-8 xl:mb-12 sliderRemoteContainer"
+            data-aos="fade-in"
+        >
+
+            <div
+                class="remoteSlider" 
+                data-flickity={props.sliderConfig}
+            >
+                {props.productImages}
+            </div>
+
+        </div>    
+    `
+}

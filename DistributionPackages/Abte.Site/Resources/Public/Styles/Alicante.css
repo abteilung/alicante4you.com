@@ -1147,38 +1147,6 @@ select {
   --tw-text-opacity: 1;
   color: hsl(var(--b3, var(--b2)) / var(--tw-text-opacity));
 }
-            .basketModal fieldset label .choices {
-  margin-bottom: 0px !important;
-  margin-top: 1rem;
-}
-            .basketModal fieldset label .choices__input {
-  background-color: transparent !important;
-}
-            .basketModal fieldset label .choices__inner {
-  border-width: 0px;
-  background-color: transparent !important;
-  padding: 0px !important;
-}
-            .basketModal fieldset label .choices__list--multiple .choices__item {
-  border-radius: 9999px;
-  border-width: 0px;
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  --tw-gradient-from: hsl(var(--a));
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, hsl(var(--a) / 0));
-  --tw-gradient-to: hsl(var(--af, var(--a)));
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0;
-}
-            .basketModal fieldset label .choices__button {
-  margin-right: 0px;
-  border-width: 0px !important;
-  background-size: 12px 12px !important;
-}
 
     figure.table {
   display: block;
@@ -1618,6 +1586,11 @@ select {
 .select-disabled, .select[disabled] {
   pointer-events: none;
 }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
 .tab {
   position: relative;
   display: inline-flex;
@@ -1768,6 +1741,9 @@ select {
 .top-2 {
   top: 0.5rem;
 }
+.-bottom-\[14px\] {
+  bottom: -14px;
+}
 .isolate {
   isolation: isolate;
 }
@@ -1845,6 +1821,10 @@ select {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .my-12 {
   margin-top: 3rem;
@@ -1926,6 +1906,9 @@ select {
 }
 .mt-8 {
   margin-top: 2rem;
+}
+.\!-mb-\[2px\] {
+  margin-bottom: -2px !important;
 }
 .mt-0 {
   margin-top: 0px;
@@ -2020,6 +2003,9 @@ select {
 .h-40 {
   height: 10rem;
 }
+.h-\[450px\] {
+  height: 450px;
+}
 .h-screen {
   height: 100vh;
 }
@@ -2089,6 +2075,9 @@ select {
 .w-8\/12 {
   width: 66.666667%;
 }
+.w-1\/2 {
+  width: 50%;
+}
 .w-1\/5 {
   width: 20%;
 }
@@ -2106,9 +2095,6 @@ select {
 }
 .w-2\/3 {
   width: 66.666667%;
-}
-.w-1\/2 {
-  width: 50%;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -2460,6 +2446,10 @@ select {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+.border-b-primary {
+  --tw-border-opacity: 1;
+  border-bottom-color: hsl(var(--p) / var(--tw-border-opacity));
+}
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--p) / var(--tw-bg-opacity));
@@ -2788,6 +2778,10 @@ select {
   --tw-text-opacity: 1 !important;
   color: hsl(var(--p) / var(--tw-text-opacity)) !important;
 }
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
 .text-slate-700 {
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
@@ -2818,6 +2812,12 @@ select {
 }
 .underline-offset-1 {
   text-underline-offset: 1px;
+}
+.underline-offset-\[6px\] {
+  text-underline-offset: 6px;
+}
+.underline-offset-\[4px\] {
+  text-underline-offset: 4px;
 }
 .opacity-0 {
   opacity: 0;
@@ -3152,6 +3152,10 @@ select {
     display: inline-flex;
   }
 
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:w-auto {
     width: auto;
   }
@@ -3307,12 +3311,6 @@ select {
 
   .kontaktModal fieldset textarea, .basketModal fieldset textarea {
     height: 8rem;
-  }
-
-  .basketModal fieldset label .choices__list--multiple .choices__item {
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: 0;
   }
 
   input, textarea {

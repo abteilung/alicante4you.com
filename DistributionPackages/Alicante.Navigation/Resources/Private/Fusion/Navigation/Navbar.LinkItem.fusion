@@ -1,7 +1,7 @@
 prototype(Alicante.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
     node                = ${ node }
-    linkItemClass 		= ${ 'block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black activeLink' : item.state == 'current' ? ' text-black activeLink' : 'text-base-300 hover:text-black duration-200') }
-    lastLinkItemClass 	= ${ 'block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black activeLink' : item.state == 'current' ? ' text-black' : 'text-base-300 hover:text-black duration-200') }
+    linkItemClass 		= ${ 'block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black underline underline-offset-[4px]' : item.state == 'current' ? ' text-black underline underline-offset-[4px]' : 'text-base-300 hover:text-black duration-200') }
+    lastLinkItemClass 	= ${ 'block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black underline underline-offset-[4px]' : item.state == 'current' ? ' text-black' : 'text-base-300 hover:text-black duration-200') }
     nodeType 			= ${ item.node.nodetype.name }
     linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
     doNotLinkNode       = ${ q(documentNode).property('doNotLink') }
@@ -157,7 +157,7 @@ prototype(Alicante.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component
 
 // prototype(Alicante.Navigation:Navbar.MegaMenuIndicator) < prototype(Neos.Fusion:Component) {
 //     renderer = afx`
-//         <div class="absolute -bottom-[16px] z-50 inline-block w-16 -ml-2 overflow-hidden left-1/2"
+//         <div class="absolute -bottom-[14px] z-50 inline-block w-16 -ml-2 overflow-hidden left-1/2"
 //             :class="megaMenu ? 'block' : 'hidden'"
 //         >
 //             <!-- :class="megaMenu ? 'block' : 'hidden'" -->
