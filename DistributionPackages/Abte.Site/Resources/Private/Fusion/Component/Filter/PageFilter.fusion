@@ -103,7 +103,7 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
         <!-- Tabs at lg breakpoint and up -->
         <div class="container hidden lg:block">
           <nav 
-            class="flex space-x-6 border-b-2 h3 border-base-200 mixitupFilter" 
+            class="flex space-x-6 border-b-2 border-base-200 mixitupFilter" 
             aria-label="Tabs"
             
           >

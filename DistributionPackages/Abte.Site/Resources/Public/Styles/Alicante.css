@@ -1699,8 +1699,8 @@ select {
 .right-1 {
   right: 0.25rem;
 }
-.-bottom-\[16px\] {
-  bottom: -16px;
+.-bottom-\[14px\] {
+  bottom: -14px;
 }
 .top-48 {
   top: 12rem;
@@ -1740,9 +1740,6 @@ select {
 }
 .top-2 {
   top: 0.5rem;
-}
-.-bottom-\[14px\] {
-  bottom: -14px;
 }
 .isolate {
   isolation: isolate;
@@ -1818,6 +1815,10 @@ select {
   margin-left: 0px;
   margin-right: 0px;
 }
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1825,10 +1826,6 @@ select {
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
-}
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 .-mx-2 {
   margin-left: -0.5rem;
@@ -2810,14 +2807,11 @@ select {
   -webkit-text-decoration-color: hsl(var(--p) / 0);
           text-decoration-color: hsl(var(--p) / 0);
 }
-.underline-offset-1 {
-  text-underline-offset: 1px;
-}
-.underline-offset-\[6px\] {
-  text-underline-offset: 6px;
-}
 .underline-offset-\[4px\] {
   text-underline-offset: 4px;
+}
+.underline-offset-1 {
+  text-underline-offset: 1px;
 }
 .opacity-0 {
   opacity: 0;
@@ -3431,10 +3425,6 @@ select {
     margin-top: -0.25rem;
   }
 
-  .md\:mt-8 {
-    margin-top: 2rem;
-  }
-
   .md\:block {
     display: block;
   }
@@ -3816,10 +3806,6 @@ select {
     margin-left: 0px;
   }
 
-    .lg\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
     .lg\:block {
     display: block;
   }
@@ -4078,10 +4064,6 @@ select {
 
   .xl\:ml-0 {
     margin-left: 0px;
-  }
-
-  .xl\:mt-0 {
-    margin-top: 0px;
   }
 
   .xl\:mb-12 {

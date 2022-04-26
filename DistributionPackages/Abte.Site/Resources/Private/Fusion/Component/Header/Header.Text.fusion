@@ -1,24 +1,30 @@
 prototype(Abte.Site:Component.TextHeader) < prototype(Neos.Fusion:Component) {
     
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
     pageTitle = Neos.Neos:Editable {
-        property = 'title'
+        property = 'titleOverride'
+        node = ${ node }
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
             @position = 'end'
         }
     }
 
     subTitle = Neos.Neos:Editable {
-        property = 'title'
+        property = 'subTitle'
+        node = ${ node }
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
             @position = 'end'
         }
     }
 
-    lead = Neos.Neos:Editable {
-        property = 'teaser_short'
-        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
-            @position = 'end'
-        }
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(documentNode).find("[instanceof Abte.Site:Document.Story][image][image != '']").property('image') || q(node).closest("[instanceof Neos.Neos:Document][image][image != '']").property('image') }
+        height  = 480
+        width   = 2200
     }
 
     hideHeader = ${ q(node).property('hideHeader') }
@@ -26,19 +32,23 @@ prototype(Abte.Site:Component.TextHeader) < prototype(Neos.Fusion:Component) {
 
     renderer = afx`
 
-        <div class="md:mt-8 lg:mt-2 xl:mt-0"
+        <div 
             @if.hideHeader={props.hideHeader ? false : true}
+            class="flex items-center mb-12 h-[175px] md:h-[275px] xl:h-[300px] overflow-hidden"
+            style={'background: url(' + props.imageSource + '); background-size: cover; background-position: center center;'}
         >
-            <div class="container grid md:grid-cols-2 gridgap gridPadding">
-                <div>
-                    <h1>{props.pageTitle}</h1>
+
+                <div class="container">
+                    <div>
+                        <Neos.Fusion:Augmenter class="lead text-white">
+                            {props.subTitle}
+                        </Neos.Fusion:Augmenter>
+                    </div>
+                    <div>
+                        <h1 class="text-white">{props.pageTitle}</h1>
+                    </div>
                 </div>
-                <div>
-                    <Neos.Fusion:Augmenter class="lead">
-                        {props.lead}
-                    </Neos.Fusion:Augmenter>
-                </div>
-            </div>
+
         </div>
 
     `

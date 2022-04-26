@@ -36,24 +36,9 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
 
     imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
         asset   = ${ q(node).closest("[instanceof Neos.Neos:Document][headerImage][headerImage != '']").property('headerImage') || q(node).closest("[instanceof Neos.Neos:Document][image][image != '']").property('image') }
+        height  = 480
+        width   = 2200
     }
-
-    // teaser_short = Neos.Neos:Editable {
-    //     property = 'teaser_short'
-    //     node = Neos.Fusion:Case {
-    //         isReference {
-    //             condition = ${ q(documentNode).is('[instanceof Abte.Site:Document.ProductLink]') }
-    //             renderer = ${ q(node).property('reference')}
-    //         }
-    //         fallback {
-    //             condition = ${ true }
-    //             renderer = ${ node }
-    //         }
-    //     }
-    //     @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
-    //         @position = 'end'
-    //     }
-    // }
 
     price = ${ q(node).property('productPrice')}
 
@@ -62,14 +47,10 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
 
     renderer = afx`
 
-        <div class="h-[175px] md:h-[275px] xl:h-[300px] 2xl:h-[350px] overflow-hidden">
-            <Sitegeist.Lazybones:Image 
-                @if.hasImage={props.imageSource}
-                imageSource={props.imageSource} 
-                width="2200"
-                height="480"
-                class="object-cover object-top w-full h-full"
-            />
+        <div 
+            class="h-[175px] md:h-[275px] xl:h-[300px] 2xl:h-[350px] overflow-hidden"
+            style={'background: url(' + props.imageSource + '); background-size: cover; background-position: center center;'}
+        >
         </div>
 
         <div class="container my-12">
