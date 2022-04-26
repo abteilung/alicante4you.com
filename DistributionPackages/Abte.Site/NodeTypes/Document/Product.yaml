@@ -22,7 +22,9 @@
       options:
         preset: 'text.plain'
       ui:
-        placeholder: 'Address of Property'
+        inline:
+          editorOptions:
+            placeholder: Address of Property
     'description':
       options:
         preset: 'text.free'
