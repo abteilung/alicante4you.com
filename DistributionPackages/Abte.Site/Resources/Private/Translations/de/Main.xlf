@@ -48,13 +48,13 @@
             </trans-unit>
 
            <trans-unit id="contactTitle">
-                <source>Contact Us</source>
-                <target>Kontaktieren Sie uns</target>
+                <source>Live your dream in and around Alicante</source>
+                <target>Erleben Sie Ihren Traum in Alicante</target>
             </trans-unit>
 
             <trans-unit id="contactSubTitle">
-                <source>We're happy to help</source>
-                <target>Wir freuen uns über Ihr Interesse an der E. Schweizer AG und beantworten Ihre Fragen gerne.</target>
+                <source></source>
+                <target></target>
             </trans-unit>
             
             <trans-unit id="ourSolutions">

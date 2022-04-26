@@ -16,11 +16,10 @@ prototype(Abte.Site:Component.MoreAboutUs) < prototype(Neos.Neos:ContentComponen
             </div>
             
             <div class="container gridPadding">
-                <div class="w-full space-y-4 md:pr-24 md:space-y-8">
-                    <h3 class="h2 text-primary">{ I18n.translate('Abte.Site:Main:contactTitle') }</h3>
-                    <p class="text-base-300">{ I18n.translate('Abte.Site:Main:contactSubTitle') }</p>
+                <div class="w-full md:pr-24">
+                    <h3 class="h2">{ I18n.translate('Abte.Site:Main:contactTitle') }</h3>
                     <Carbon.Link:Link 
-                        additionalClass="block mb-4 h3 text-primary hover:underline duration-200" 
+                        additionalClass="block mb-4 h3 hover:underline duration-200" 
                         link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
                         renderDefaultTagIfNoLink='true'
                     >
@@ -30,12 +29,11 @@ prototype(Abte.Site:Component.MoreAboutUs) < prototype(Neos.Neos:ContentComponen
                         </div>
                     </Carbon.Link:Link>
 
-                    <div class="inline-block px-5 py-3 text-sm tracking-normal text-white no-underline rounded-full cursor-pointer md:text-base group bg-primary link-external"
+                    <div class="inline-block px-5 py-3 group button link-external"
                         "@click.prevent"="showModal = !showModal"
                     >
                         <div class="flex flex-row items-center space-x-4">
-                            <div>{ I18n.translate('Abte.Site:Main:contactForm') }</div>
-                            <div class="relative left-0 duration-300 text-accent group-hover:left-2">{props.icon}</div>
+                            <div class="">{ I18n.translate('Abte.Site:Main:contactForm') }</div>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
         
     class = ''
-    buttonClass = 'flex flex-row items-center px-5 py-3 space-x-2 text-sm md:text-base truncate tracking-normal bg-white border-base-100 border-2 rounded-full button'
+    buttonClass = 'flex flex-row items-center space-x-2 button text-white'
     icon = ${ q(node).property('icon') ? '' : '' }
     iconPosition = ${ q(node).property('iconPosition') ? true : false }
     
@@ -20,12 +20,12 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
     // }
 
     iconBefore = Abte.Site:Icon.ArrowRight {
-        class='relative left-0 duration-300 text-accent group-hover:left-2'
+        class='relative left-0 duration-300 text-white group-hover:left-2'
         @if.buttonIsBefore=${this.positionBefore}
     }
 
     iconAfter = Abte.Site:Icon.ArrowRight {
-        class='relative left-0 duration-300 text-accent group-hover:left-2'
+        class='relative left-0 duration-300 text-white group-hover:left-2'
         @if.buttonIsBefore=${!this.positionBefore}
     }
 

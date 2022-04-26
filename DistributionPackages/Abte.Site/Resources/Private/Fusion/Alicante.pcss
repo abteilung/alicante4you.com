@@ -10,6 +10,9 @@
 
     .roundedCorners {
         @apply rounded-t-[30px] rounded-br-[30px];
+        &-small {
+            @apply rounded-t-[15px] rounded-br-[15px];
+        }
     }
 
     .mainNavigation a {
@@ -371,6 +374,6 @@
     }
 
     .button {
-        @apply font-sans rounded-full bg-primary text-white px-6 py-2 hover:scale-105 duration-150;
+        @apply roundedCorners-small cursor-pointer truncate px-5 py-3 text-sm md:text-base border-none bg-black text-white tracking-normal hover:scale-105 duration-150;
     }
 }

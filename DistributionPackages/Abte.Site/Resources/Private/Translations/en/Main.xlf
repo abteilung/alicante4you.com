@@ -38,9 +38,13 @@
             </trans-unit>
 
            <trans-unit id="contactTitle">
-                <source>Contact Us</source>
+                <source>Live your dream in and around Alicante</source>
             </trans-unit>
             
+            <trans-unit id="contactSubTitle">
+                <source></source>
+            </trans-unit>
+
             <trans-unit id="overview">
                 <source>Overview</source>
             </trans-unit>
