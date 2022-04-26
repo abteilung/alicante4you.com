@@ -1,0 +1,14 @@
+prototype(Abte.Site:Content.PropertyFeature) < prototype(Neos.Neos:ContentComponent) {
+
+    featureIcon = Abte.Site:Mixin.PropertyFeatures {
+        class = ${'flex-1 text-black w-16 mt-2'}
+    }
+
+    renderer = afx`
+        <div class="flex flex-col items-center justify-center w-32 h-32">
+            {props.featureIcon}
+            <h4><Neos.Neos:Editable property="title" /></h4>
+            <p><Neos.Neos:Editable property="distance" /></p>
+        </div>
+    `
+}

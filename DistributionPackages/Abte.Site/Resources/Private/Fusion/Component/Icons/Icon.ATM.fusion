@@ -1,0 +1,29 @@
+prototype(Abte.Site:Icon.ATM) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} width="62px" height="58px" viewBox="0 0 62 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Objekte" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Objektdetails" transform="translate(-107.000000, -4538.000000)" stroke="currentColor">
+                    <g id="Distanzen" transform="translate(30.000000, 4163.000000)">
+                        <g id="Icons" transform="translate(0.000000, 196.000000)">
+                            <g id="Group-5-Copy" transform="translate(0.000000, 179.000000)">
+                                <g id="icons/Bank" transform="translate(77.000000, 0.000000)">
+                                    <g id="credit-card-in" transform="translate(1.000000, 1.000000)">
+                                        <path d="M18,56 L18,6" id="Shape" stroke-width="2"></path>
+                                        <path d="M28,56 L28,6" id="Shape" stroke-width="2"></path>
+                                        <path d="M42,48 L42,36" id="Shape" stroke-width="2"></path>
+                                        <path d="M42,16 L42,21" id="Shape" stroke-width="2"></path>
+                                        <path d="M52,6 L52,52 C52,54.209 50.209,56 48,56 L12,56 C9.791,56 8,54.209 8,52 L8,6 L52,6 Z" id="Shape" stroke-width="2"></path>
+                                        <path d="M8,12 L6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 L54,0 C57.314,0 60,2.686 60,6 C60,9.314 57.314,12 54,12 L52,12" id="Shape" stroke-width="2"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

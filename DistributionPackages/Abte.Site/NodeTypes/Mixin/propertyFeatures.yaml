@@ -1,0 +1,35 @@
+'Abte.Site:Mixin.PropertyFeatures':
+    abstract: true
+    properties:
+        'featureIcon':
+            type: string
+            defaultValue: 'none'
+            ui:
+                label: 'Property Features'
+                position: 99
+                inspector:
+                    group: 'general'
+                    editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+                    editorOptions:
+                        values:
+                            none:
+                                label: ''
+                                icon: ''
+                            atm:
+                                label: 'ATM'
+                                icon: 'money-bill'
+                            bus:
+                                label: 'Public Transportation'
+                                icon: 'bus'
+                            train:
+                                label: 'Train'
+                                icon: 'train'
+                            school:
+                                label: 'School'
+                                icon: 'school'
+                            postbox:
+                                label: 'Post Office'
+                                icon: 'mail-bulk'
+                            road:
+                                label: 'Highway'
+                                icon: 'road'

@@ -8,6 +8,10 @@
         @apply hidden;
     }
 
+    u {
+        @apply underline-offset-[14px] decoration-4;
+    }
+
     .roundedCorners {
         @apply rounded-t-[30px] rounded-br-[30px];
         &-small {
@@ -122,12 +126,12 @@
             @apply not-italic text-base-300;
         }
     }
-    .testimonial .lead p{
+    .testimonial .lead p {
         @apply h1;
     }
 
     h4, .h4, h1.h4, h2.h4, h3.h4, h5.h4 {
-        @apply font-sans font-normal text-base;
+        @apply font-sans font-bold text-base;
         .megaMenu & {
             @apply mb-4;
         }

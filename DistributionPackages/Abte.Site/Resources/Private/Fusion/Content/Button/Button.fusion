@@ -2,7 +2,7 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
         
     class = ''
     buttonClass = 'flex flex-row items-center space-x-2 button text-white'
-    icon = ${ q(node).property('icon') ? '' : '' }
+    icon = ''
     iconPosition = ${ q(node).property('iconPosition') ? true : false }
     
     onDark = ${ q(node).property('onDark') ? 'border-white border-2 text-primary' : null }
@@ -14,6 +14,10 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
         block = ${ false }
     }
 
+    @context {
+        icon = ${ this.icon }
+    }
+
     target = ${ q(node).property('target') }
     // target.@process.convertUris = Neos.Neos:ConvertUris {
     //     forceConversion = true
@@ -22,11 +26,13 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
     iconBefore = Abte.Site:Icon.ArrowRight {
         class='relative left-0 duration-300 text-white group-hover:left-2'
         @if.buttonIsBefore=${this.positionBefore}
+        @if.hasIcon=${icon}
     }
 
     iconAfter = Abte.Site:Icon.ArrowRight {
         class='relative left-0 duration-300 text-white group-hover:left-2'
         @if.buttonIsBefore=${!this.positionBefore}
+        @if.hasIcon=${icon}
     }
 
     blank = ${ q(node).property('blank') ? true : false }

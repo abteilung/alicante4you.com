@@ -1,4 +1,5 @@
 'Alicante.MixitUp:Content.Filter':
+  abstract: true
   superTypes:
     'Neos.Neos:Content': true
     'Alicante.MixitUp:Include': true

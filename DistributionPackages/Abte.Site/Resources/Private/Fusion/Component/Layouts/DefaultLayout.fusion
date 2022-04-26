@@ -8,27 +8,17 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 			renderer = Abte.Site:Component.HomepageHeader
 		}
 
-		slimHeader {
-			condition = ${ q(node).is('[instanceof Abte.Site:Document.Overview],[instanceof Abte.Site:Document.AboutUs]') }
-			renderer = Abte.Site:Component.HomepageHeader {
-				class = "mt-20 container-x"
-			}
-		}
+		// slimHeader {
+		// 	condition = ${ q(node).is('[instanceof Abte.Site:Document.Overview],[instanceof Abte.Site:Document.World]') }
+		// 	renderer = Abte.Site:Component.HomepageHeader {
+		// 		class = "mt-20 container-x"
+		// 	}
+		// }
 
 		ProductPage {
-			condition = ${ q(node).is('[instanceof Abte.Site:Document.Product],[instanceof Abte.Site:Document.ProductLink]') }
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Product]') }
 			renderer = Abte.Site:Component.HeaderProduct
 		}
-
-		// ArticlePage {
-		// 	condition = ${ q(node).is('[instanceof Abte.Site:Document.Story]') }
-		// 	renderer = Abte.Site:Component.HeaderStories
-		// }
-
-		// ServicePage {
-		// 	condition = ${ q(node).is('[instanceof Abte.Site:Document.Service]') }
-		// 	renderer = Abte.Site:Component.HeaderService
-		// }
 
 		TextHeader {
 			condition = ${ q(node).is('[instanceof Abte.Site:Document.FilterPage],[instanceof Abte.Site:Document.Kompetenzen]') }
@@ -42,7 +32,7 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 
 		fallback {
 			condition = ${true}
-			renderer = '<div class="pt-24 mb-24"></div>'
+			renderer = ''
 		}		
 	}
 

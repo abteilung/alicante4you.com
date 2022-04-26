@@ -1,0 +1,32 @@
+prototype(Abte.Site:Icon.Train) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+       <svg class={props.class} width="62px" height="40px" viewBox="0 0 62 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Objekte" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                <g id="Objektdetails" transform="translate(-107.000000, -4370.000000)" stroke="currentColor">
+                    <g id="Distanzen" transform="translate(30.000000, 4163.000000)">
+                        <g id="Icons" transform="translate(0.000000, 196.000000)">
+                            <g id="Group-5" transform="translate(0.000000, 2.000000)">
+                                <g id="icons/Train" transform="translate(77.000000, 0.000000)">
+                                    <g id="train-speed" transform="translate(1.000000, 10.000000)">
+                                        <path d="M18.388,0 C18.388,8.837 11.225,16 2.388,16 L1.245,16" id="Shape" stroke-width="2"></path>
+                                        <path d="M60,0 L14.388,0 C10.878,0 7.687,2.041 6.216,5.228 L0.559,17.486 C-1.276,21.461 1.628,26 6.007,26 L60,26" id="Shape" stroke-width="2" stroke-linejoin="round"></path>
+                                        <path d="M2,38 L60,38" id="Shape" stroke-width="2" stroke-linejoin="round"></path>
+                                        <path d="M6,32 L10,32" id="Shape" stroke-width="2" stroke-linejoin="round"></path>
+                                        <path d="M18,32 L22,32" id="Shape" stroke-width="2" stroke-linejoin="round"></path>
+                                        <path d="M30,32 L34,32" id="Shape" stroke-width="2" stroke-linejoin="round"></path>
+                                        <path d="M42,32 L46,32" id="Shape" stroke-width="2" stroke-linejoin="round"></path>
+                                        <path d="M54,32 L58,32" id="Shape" stroke-width="2" stroke-linejoin="round"></path>
+                                        <path d="M60,16 L29,16 C26.239,16 24,13.761 24,11 C24,8.239 26.239,6 29,6 L60,6" id="Shape" stroke-width="2" stroke-linejoin="round"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

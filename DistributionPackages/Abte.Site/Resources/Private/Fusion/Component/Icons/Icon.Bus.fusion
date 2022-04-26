@@ -1,0 +1,32 @@
+prototype(Abte.Site:Icon.Bus) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} width="53px" height="60px" viewBox="0 0 53 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Objekte" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Objektdetails" transform="translate(-358.000000, -4537.000000)" stroke="currentColor">
+                    <g id="Distanzen" transform="translate(30.000000, 4163.000000)">
+                        <g id="Icons" transform="translate(0.000000, 196.000000)">
+                            <g id="Group-6-Copy" transform="translate(246.000000, 179.000000)">
+                                <g id="icons/Bus" transform="translate(77.000000, 0.000000)">
+                                    <g id="bus-front-10" transform="translate(6.000000, 0.000000)">
+                                        <path d="M25.1333333,34.8 L34.8,25.1333333" id="Shape" stroke-width="2"></path>
+                                        <polyline id="Shape" stroke-width="2" points="14.5 52.2 14.5 58 3.86666667 58 3.86666667 52.2"></polyline>
+                                        <polyline id="Shape" stroke-width="2" points="46.4 52.2 46.4 58 35.7666667 58 35.7666667 52.2"></polyline>
+                                        <path d="M50.2666667,52.2 L0,52.2 L0,3.86666667 C0,1.7313 1.7313,0 3.86666667,0 L46.4,0 C48.5353667,0 50.2666667,1.7313 50.2666667,3.86666667 L50.2666667,52.2 Z" id="Shape" stroke-width="2"></path>
+                                        <path d="M21.2666667,5.8 L29,5.8" id="Shape" stroke-width="2"></path>
+                                        <circle id="Oval" stroke-width="2" cx="9.66666667" cy="43.5" r="2.9"></circle>
+                                        <circle id="Oval" stroke-width="2" cx="40.6" cy="43.5" r="2.9"></circle>
+                                        <path d="M50.2666667,34.8 L0,34.8" id="Shape" stroke-width="2"></path>
+                                        <path d="M0,11.6 L50.2666667,11.6" id="Shape" stroke-width="2"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

@@ -577,8 +577,118 @@ select {
   --af: 36 69% 51%;
 }
 
+[data-theme=default] {
+  --p: 218 83% 38%;
+  --nf: 0 0% 75%;
+  --in: 198 93% 60%;
+  --su: 158 64% 52%;
+  --wa: 43 96% 56%;
+  --bc: 0 0% 19%;
+  --sc: 354 100% 90%;
+  --ac: 36 100% 12%;
+  --nc: 0 0% 19%;
+  --inc: 198 100% 12%;
+  --suc: 158 100% 10%;
+  --wac: 43 100% 11%;
+  --erc: 36 100% 10%;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --pf: 36 69% 51%;
+  --pc: 0 0% 100%;
+  --s: 354 78% 49%;
+  --sf: 0 77% 29%;
+  --n: 0 0% 94%;
+  --er: 36 100% 50%;
+  --b1: 0 0% 94%;
+  --b2: 0 0% 96%;
+  --b3: 0 0% 56%;
+  --a: 36 69% 61%;
+  --af: 36 69% 51%;
+}
+
+[data-theme=buy] {
+  --p: 354 78% 49%;
+  --pf: 354 78% 39%;
+  --sf: 0 0% 0%;
+  --af: 0 0% 0%;
+  --nf: 0 0% 0%;
+  --b1: 0 0% 100%;
+  --b2: 0 0% 0%;
+  --b3: 0 0% 0%;
+  --in: 198 93% 60%;
+  --su: 158 64% 52%;
+  --wa: 43 96% 56%;
+  --er: 0 91% 71%;
+  --bc: 0 0% 80%;
+  --pc: 354 100% 90%;
+  --sc: 0 0% 80%;
+  --ac: 0 0% 80%;
+  --nc: 0 0% 80%;
+  --inc: 198 100% 12%;
+  --suc: 158 100% 10%;
+  --wac: 43 100% 11%;
+  --erc: 0 100% 14%;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+}
+
+[data-theme=sell] {
+  --p: 218 83% 38%;
+  --pf: 218 83% 31%;
+  --sf: 0 0% 0%;
+  --af: 0 0% 0%;
+  --nf: 0 0% 0%;
+  --b1: 0 0% 100%;
+  --b2: 0 0% 0%;
+  --b3: 0 0% 0%;
+  --in: 198 93% 60%;
+  --su: 158 64% 52%;
+  --wa: 43 96% 56%;
+  --er: 0 91% 71%;
+  --bc: 0 0% 80%;
+  --pc: 218 100% 88%;
+  --sc: 0 0% 80%;
+  --ac: 0 0% 80%;
+  --nc: 0 0% 80%;
+  --inc: 198 100% 12%;
+  --suc: 158 100% 10%;
+  --wac: 43 100% 11%;
+  --erc: 0 100% 14%;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+}
+
     [x-cloak] {
   display: none;
+}
+
+    u {
+  text-decoration-thickness: 4px;
+  text-underline-offset: 14px;
 }
 
     .roundedCorners {
@@ -687,7 +797,7 @@ select {
   margin-bottom: 0.5rem;
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
   font-size: 27px;
-  line-height: 32.4px;
+  line-height: 42px;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -705,7 +815,7 @@ select {
     h2, .h2, h1.h2, h4.h2, h5.h2 {
   margin-bottom: 0.5rem;
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
-  font-size: 21px;
+  font-size: 24px;
   line-height: 28px;
   letter-spacing: 0;
 }
@@ -717,7 +827,7 @@ select {
 
     h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
-  font-size: 21px;
+  font-size: 24px;
   line-height: 28px;
   letter-spacing: 0;
   font-weight: 700;
@@ -745,7 +855,7 @@ select {
   margin-bottom: 0.5rem;
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
   font-size: 27px;
-  line-height: 32.4px;
+  line-height: 42px;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -753,7 +863,7 @@ select {
   margin-bottom: 0.5rem;
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
   font-size: 27px;
-  line-height: 32.4px;
+  line-height: 42px;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -761,7 +871,7 @@ select {
   margin-bottom: 0.5rem;
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
   font-size: 27px;
-  line-height: 32.4px;
+  line-height: 42px;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -769,7 +879,7 @@ select {
   margin-bottom: 0.5rem;
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
   font-size: 27px;
-  line-height: 32.4px;
+  line-height: 42px;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -777,7 +887,7 @@ select {
   margin-bottom: 0.5rem;
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
   font-size: 27px;
-  line-height: 32.4px;
+  line-height: 42px;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -797,7 +907,7 @@ select {
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 700;
 }
         .megaMenu h4, .megaMenu .h4, .megaMenu h1.h4, .megaMenu h2.h4, .megaMenu h3.h4, .megaMenu h5.h4 {
   margin-bottom: 1rem;
@@ -914,7 +1024,7 @@ select {
 }
 
     .megaMenu nav li a {
-  font-size: 21px;
+  font-size: 24px;
   line-height: 28px;
   letter-spacing: 0;
 }
@@ -1596,14 +1706,14 @@ select {
 .right-0 {
   right: 0px;
 }
-.bottom-0 {
-  bottom: 0px;
-}
 .top-0 {
   top: 0px;
 }
 .left-0 {
   left: 0px;
+}
+.bottom-0 {
+  bottom: 0px;
 }
 .-top-10 {
   top: -2.5rem;
@@ -1818,9 +1928,6 @@ select {
 .mt-20 {
   margin-top: 5rem;
 }
-.mb-24 {
-  margin-bottom: 6rem;
-}
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1830,14 +1937,14 @@ select {
 .mt-0 {
   margin-top: 0px;
 }
+.mb-24 {
+  margin-bottom: 6rem;
+}
 .mb-32 {
   margin-bottom: 8rem;
 }
 .mt-48 {
   margin-top: 12rem;
-}
-.mt-24 {
-  margin-top: 6rem;
 }
 .block {
   display: block;
@@ -2000,6 +2107,9 @@ select {
 }
 .w-5\/6 {
   width: 83.333333%;
+}
+.w-32 {
+  width: 8rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -2257,11 +2367,6 @@ select {
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
-}
-.space-y-24 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(6rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
@@ -2594,13 +2699,13 @@ select {
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
 }
 .text-lg {
-  font-size: 21px;
+  font-size: 24px;
   line-height: 28px;
   letter-spacing: 0;
 }
 .text-xl {
   font-size: 27px;
-  line-height: 32.4px;
+  line-height: 42px;
   letter-spacing: 0;
 }
 .text-base {
@@ -2676,9 +2781,9 @@ select {
   --tw-text-opacity: 1;
   color: hsl(var(--a) / var(--tw-text-opacity));
 }
-.\!text-white {
+.\!text-black {
   --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+  color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
 }
 .text-secondary {
   --tw-text-opacity: 1;
@@ -2704,6 +2809,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
+.\!text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
 .text-indigo-600 {
   --tw-text-opacity: 1;
   color: rgb(79 70 229 / var(--tw-text-opacity));
@@ -2711,10 +2820,6 @@ select {
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-}
-.no-underline {
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
 }
 .decoration-primary\/0 {
   -webkit-text-decoration-color: hsl(var(--p) / 0);
@@ -3052,20 +3157,12 @@ select {
     margin-left: 0px;
   }
 
-  .sm\:flex {
-    display: flex;
-  }
-
   .sm\:inline-flex {
     display: inline-flex;
   }
 
   .sm\:hidden {
     display: none;
-  }
-
-  .sm\:w-2\/3 {
-    width: 66.666667%;
   }
 
   .sm\:w-auto {
@@ -3148,7 +3245,7 @@ select {
 
   h2, .h2, h1.h2, h4.h2, h5.h2 {
     font-size: 27px;
-    line-height: 32.4px;
+    line-height: 42px;
     letter-spacing: 0;
   }
 
@@ -3365,10 +3462,6 @@ select {
     display: grid;
   }
 
-  .md\:hidden {
-    display: none;
-  }
-
   .md\:h-full {
     height: 100%;
   }
@@ -3537,14 +3630,14 @@ select {
   }
 
   .md\:text-lg {
-    font-size: 21px;
+    font-size: 24px;
     line-height: 28px;
     letter-spacing: 0;
   }
 
   .md\:text-xl {
     font-size: 27px;
-    line-height: 32.4px;
+    line-height: 42px;
     letter-spacing: 0;
   }
 
@@ -3583,7 +3676,7 @@ select {
 
   h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
     font-size: 27px;
-    line-height: 32.4px;
+    line-height: 42px;
     letter-spacing: 0;
   }
 
@@ -3618,7 +3711,7 @@ select {
   }
 
   .lead {
-    font-size: 21px;
+    font-size: 24px;
     line-height: 28px;
     letter-spacing: 0;
   }
@@ -3858,7 +3951,7 @@ select {
 
     .lg\:text-xl {
     font-size: 27px;
-    line-height: 32.4px;
+    line-height: 42px;
     letter-spacing: 0;
   }
 
@@ -3876,43 +3969,43 @@ select {
 
   h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1 {
     margin-bottom: 1rem;
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 72px;
+    line-height: 80px;
     letter-spacing: 0;
   }
 
   .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p {
     margin-bottom: 1rem;
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 72px;
+    line-height: 80px;
     letter-spacing: 0;
   }
 
   .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p {
     margin-bottom: 1rem;
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 72px;
+    line-height: 80px;
     letter-spacing: 0;
   }
 
   .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p {
     margin-bottom: 1rem;
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 72px;
+    line-height: 80px;
     letter-spacing: 0;
   }
 
   .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p {
     margin-bottom: 1rem;
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 72px;
+    line-height: 80px;
     letter-spacing: 0;
   }
 
   .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p {
     margin-bottom: 1rem;
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 72px;
+    line-height: 80px;
     letter-spacing: 0;
   }
 
@@ -4008,14 +4101,6 @@ select {
 
   .xl\:mb-12 {
     margin-bottom: 3rem;
-  }
-
-  .xl\:flex {
-    display: flex;
-  }
-
-  .xl\:hidden {
-    display: none;
   }
 
   .xl\:h-\[300px\] {
@@ -4116,14 +4201,6 @@ select {
 
   .\32xl\:mb-12 {
     margin-bottom: 3rem;
-  }
-
-  .\32xl\:flex {
-    display: flex;
-  }
-
-  .\32xl\:hidden {
-    display: none;
   }
 
   .\32xl\:h-\[350px\] {

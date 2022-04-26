@@ -1,0 +1,28 @@
+prototype(Abte.Site:Icon.Road) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} width="60px" height="59px" viewBox="0 0 60 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Objekte" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Objektdetails" transform="translate(-600.000000, -4537.000000)" stroke="currentColor">
+                    <g id="Distanzen" transform="translate(30.000000, 4163.000000)">
+                        <g id="Icons" transform="translate(0.000000, 196.000000)">
+                            <g id="Group-7-Copy" transform="translate(492.000000, 178.000000)">
+                                <g id="icons/Autobahn" transform="translate(77.000000, 0.000000)">
+                                    <g id="road-2" transform="translate(2.000000, 1.000000)">
+                                        <path d="M0,57 L17,0" id="Shape" stroke-width="2"></path>
+                                        <path d="M41,0 L58,57" id="Shape" stroke-width="2"></path>
+                                        <path d="M29,7 L29,13" id="Shape" stroke-width="2"></path>
+                                        <path d="M29,23 L29,31" id="Shape" stroke-width="2"></path>
+                                        <path d="M29,41 L29,51" id="Shape" stroke-width="2"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

@@ -32,19 +32,17 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
         target = ${ q(node).property('oneTarget') }        
 
         renderer = afx`
-            <!-- hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden -->
-            <!-- flex sm:flex md:flex lg:flex xl:flex 2xl:flex -->
-            <!-- right-0 bottom-0 -->
-            <div class="absolute top-0 left-0 z-20 w-full p-4 sm:w-2/3 md:p-8 xl:p-12">
+            <div class="p-4 md:p-8 xl:p-12">
+                <p class="lead">
+                    {props.lead}
+                </p>
                 <h1>
                     {props.header}
                 </h1>
-                <p class="!text-white">
-                    {props.lead}
-                </p>
             </div>
-            <div class="absolute bottom-0 p-4 md:p-8 xl:p-12">
+            <div class="p-4 md:p-8 xl:p-12">
                 <Abte.Site:Content.Button 
+                    class={ q(node).property('oneImage') ? 'bg-white !text-black' : 'bg-black text-white' }
                     target={props.target}
                     text={props.buttonText}
                 />
@@ -52,42 +50,65 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
         `
     }
     oneClass = 'roundedCorners relative bg-primary box-h-2 row-span-2 col-span-1 md:col-span-2 headGrid'
-    oneHTML = ${ q(node).property('oneHTML') }
+    oneImage =  Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('oneImage') }
+        width   = 800
+    }
+    oneTheme = ''
   
     two = ''
     twoClass = 'roundedCorners overflow-hidden relative bg-base-100 box-h-2 row-span-2 lg:row-span-1 lg:box-h-1 '
+    twoTheme = ''
     
     three = ''
     threeClass = 'roundedCorners overflow-hidden relative bg-white box-h-2 row-span-2 box-shadow'
+    hreeTheme = ''
 
     four = ''
     fourClass = 'roundedCorners relative bg-secondary text-white box-h-1'
+    fourTheme = ''
 
     five = ''
     fiveClass = 'roundedCorners relative bg-primary text-white box-h-1'
+    fiveTheme = ''
 
     renderer = afx`
         <div class={props.class + ' ' + 'grid md:grid-cols-2 lg:grid-cols-3 gridgap'}>
-            <div class={props.oneClass}>
+            <div 
+                @if.hasContent={props.one}
+                class={props.oneClass} data-theme={props.oneTheme}
+                style={props.oneImage ? 'background: url(' + props.oneImage +') no-repeat center center; background-size: cover;' : null }
+            >
                 <Abte.Site:Component.BackendIndicator label="1" />
                 {props.one}
-                {props.oneHTML}
             </div>
-            <div class={props.twoClass}>
+            <div
+                @if.hasContent={props.two}
+                class={props.twoClass} data-theme={props.twoTheme}
+            >
                 <Abte.Site:Component.BackendIndicator label="2" />
                 {props.two}
             </div>
-            <div class={props.threeClass}>
+            <div 
+                @if.hasContent={props.three}
+                class={props.threeClass} data-theme={props.threeTheme}
+            >
                 <Abte.Site:Component.BackendIndicator label="3" />
                 {props.three}
             </div>
 
-            <div class={props.fourClass}>
+            <div 
+                @if.hasContent={props.four}
+                class={props.fourClass} data-theme={props.fourTheme}
+            >
                 <Abte.Site:Component.BackendIndicator label="4" />
                 {props.four}
             </div>
 
-            <div class={props.fiveClass}>
+            <div 
+                @if.hasContent={props.five}
+                class={props.fiveClass} data-theme={props.fiveTheme}
+            >
                 <Abte.Site:Component.BackendIndicator label="5" />
                 {props.five}
             </div>

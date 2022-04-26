@@ -58,20 +58,20 @@ module.exports = {
 					lineHeight: '27px',
 					letterSpacing: '0'
 				}],
-				lg: ['21px', {
+				lg: ['24px', {
 					lineHeight: '28px',
 					letterSpacing: '0'
 				}],
 				xl: ['27px', {
-					lineHeight: '32.4px',
+					lineHeight: '42px',
 					letterSpacing: '0'
 				}],
 				'2xl': ['36px', {
 					lineHeight: '48px',
 					letterSpacing: '0'
 				}],
-				'3xl': ['42px', {
-					lineHeight: '50px',
+				'3xl': ['72px', {
+					lineHeight: '80px',
 					letterSpacing: '0'
 				}],
 			},
@@ -185,6 +185,12 @@ module.exports = {
                     'accent': '#E0AA59',
                     'accent-focus': '#D8942E',
                 },
+				'buy': {
+                    'primary': '#dd1c2f',
+				},
+				'sell': {
+                    'primary': '#114db3',
+				},
             },
         ],
     },

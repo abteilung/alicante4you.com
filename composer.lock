@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c382617dcfc1a65fc7ca598697b7baf",
+    "content-hash": "74bb2f1c977b93ce84e2eb57aa785a99",
     "packages": [
         {
             "name": "abte/site",
@@ -12,12 +12,13 @@
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abte.Site",
-                "reference": "0fd81ef21d1940642be5d677f0166e37cc6688be"
+                "reference": "af2e04df6f1ffdfd7eb32aa281f4de779f611a6f"
             },
             "require": {
                 "carbon/includeassets": "^5.3",
                 "carbon/link": "^1.7",
                 "flowpack/nodetemplates": "^1.3",
+                "jonnitto/googlemaps": "^4.0",
                 "jonnitto/prettyembedvideoplatforms": "^2.0",
                 "neos/neos": "*",
                 "neos/nodetypes-contentreferences": "^7.3",
@@ -114,32 +115,6 @@
             "autoload": {
                 "psr-4": {
                     "Alicante\\Forms\\": "Classes/"
-                }
-            },
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "alicante/fuzzysearch",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "./DistributionPackages/Alicante.FuzzySearch",
-                "reference": "359c270417766e018b9b85e3bd07825af65a296b"
-            },
-            "require": {
-                "neos/flow": "*"
-            },
-            "type": "neos-package",
-            "extra": {
-                "neos": {
-                    "package-key": "Alicante.FuzzySearch"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Alicante\\FuzzySearch\\": "Classes/"
                 }
             },
             "transport-options": {
@@ -12977,7 +12952,6 @@
         "abteilung/gridsystem": 20,
         "alicante/navigation": 20,
         "alicante/forms": 20,
-        "alicante/fuzzysearch": 20,
         "alicante/mixitup": 20,
         "alicante/flickity": 20,
         "alicante/privacy": 20

@@ -1,0 +1,17 @@
+'Abte.Site:Content.PropertyFeature':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abte.Site:Mixin.PropertyFeatures': true
+    'Abte.Site:Constraint.Content.Restricted': true
+  ui:
+    label: Property Feature
+    icon: flag-checkered
+  properties:
+    title:
+      options:
+        preset: 'text.plain'
+    distance:
+      ui:
+        label: 'Distance'
+      options:
+        preset: 'text.plain'        

@@ -1,0 +1,29 @@
+prototype(Abte.Site:Icon.School) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Objekte" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Objektdetails" transform="translate(-354.000000, -4358.000000)" stroke="currentColor">
+                    <g id="Distanzen" transform="translate(30.000000, 4163.000000)">
+                        <g id="Icons" transform="translate(0.000000, 196.000000)">
+                            <g id="Group-6" transform="translate(246.000000, 0.000000)">
+                                <g id="icons/School" transform="translate(77.000000, 0.000000)">
+                                    <g id="school" transform="translate(2.000000, 0.000000)">
+                                        <polyline id="Shape" stroke-width="2" points="29 15.4666667 29 0 39.6333333 0 39.6333333 7.73333333 29 7.73333333"></polyline>
+                                        <polyline id="Shape" stroke-width="2" points="32.8666667 58 32.8666667 44.4666667 25.1333333 44.4666667 25.1333333 58"></polyline>
+                                        <rect id="Rectangle-path" stroke-width="2" x="25.1333333" y="29" width="7.73333333" height="5.8"></rect>
+                                        <rect id="Rectangle-path" stroke-width="2" x="7.73333333" y="44.4666667" width="7.73333333" height="5.8"></rect>
+                                        <rect id="Rectangle-path" stroke-width="2" x="42.5333333" y="44.4666667" width="7.73333333" height="5.8"></rect>
+                                        <polygon id="Shape" stroke-width="2" points="42.5333333 34.8 42.5333333 25.1333333 29 15.4666667 15.4666667 25.1333333 15.4666667 34.8 0 34.8 0 58 58 58 58 34.8"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

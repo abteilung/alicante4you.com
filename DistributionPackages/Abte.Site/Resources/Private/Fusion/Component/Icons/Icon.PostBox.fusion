@@ -1,0 +1,28 @@
+prototype(Abte.Site:Icon.PostBox) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} width="62px" height="60px" viewBox="0 0 62 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Objekte" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Objektdetails" transform="translate(-599.000000, -4359.000000)" stroke="currentColor">
+                    <g id="Distanzen" transform="translate(30.000000, 4163.000000)">
+                        <g id="Icons" transform="translate(0.000000, 196.000000)">
+                            <g id="Group-7" transform="translate(492.000000, 1.000000)">
+                                <g id="icons/Post" transform="translate(77.000000, 0.000000)">
+                                    <g id="box-3d-50" transform="translate(1.000000, 0.000000)">
+                                        <path d="M14.941,6.529 L46.275,22.862" id="Shape" stroke-width="2"></path>
+                                        <polygon id="Shape" stroke-width="2" points="8 36.057 8 27 24 35 24 44.057"></polygon>
+                                        <polyline id="Shape" stroke-width="2" points="60 16 32 30 0 14"></polyline>
+                                        <path d="M32,30 L32,58" id="Shape" stroke-width="2"></path>
+                                        <polygon id="Shape" stroke-width="2" points="60 16 60 44 32 58 0 42 0 14 28 0"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

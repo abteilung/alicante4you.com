@@ -20,6 +20,7 @@ Neos:
                       h5: true
                       a: true
                       em: true
+                      underline: true
             'plain':
               type: string
               defaultValue: ''

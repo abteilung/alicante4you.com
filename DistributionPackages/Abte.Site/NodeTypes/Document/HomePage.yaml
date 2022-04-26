@@ -30,6 +30,7 @@
       'Abte.Site:Document.Category': true
       'Abte.Site:Document.Kompetenzen': true
       'Abte.Site:Document.AboutUs': true
+      'Abte.Site:Document.Overview': true
       'Abte.Site:Document.SearchResults': true
   properties:
     'footerInfo':

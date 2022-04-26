@@ -1,18 +1,15 @@
 'Abte.Site:Mixin.HeaderGrid':
   abstract: true
   properties:
-    'oneHTML': 
-      type: string
-      defaultValue: '<p>HTML Code</p>'
+    'oneImage': 
+      options:
+        preset: 'image.squareAsset'
       ui:
-        label: One HTML Code
-        reloadIfChanged: false
+        label: One Backdrop Image
+        reloadIfChanged: true
         inspector:
           group: general
           position: 11
-          editor: Neos.Neos/Inspector/Editors/CodeEditor
-          editorOptions:
-            buttonLabel: 'HTML bearbeiten'
     'oneHeader':
       options:
         preset: 'text.title'

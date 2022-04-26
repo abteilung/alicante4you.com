@@ -1,0 +1,62 @@
+
+prototype(Abte.Site:Mixin.PropertyFeatures) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+    @context {
+        class = ${ this.class }
+    }
+
+    icon = Neos.Fusion:Case {
+        atm {
+            condition = ${ q(node).property('featureIcon') == 'atm' }
+            renderer = Abte.Site:Icon.ATM {
+                class = ${ class }
+            }
+        }
+
+        bus {
+            condition = ${ q(node).property('featureIcon') == 'bus' }
+            renderer = Abte.Site:Icon.Bus {
+                class = ${ class }
+            }
+        }
+
+        train {
+            condition = ${ q(node).property('featureIcon') == 'train' }
+            renderer = Abte.Site:Icon.Train {
+                class = ${ class }
+            }
+        }
+
+        school {
+            condition = ${ q(node).property('featureIcon') == 'school' }
+            renderer = Abte.Site:Icon.School {
+                class = ${ class }
+            }
+        }
+
+        postbox {
+            condition = ${ q(node).property('featureIcon') == 'postbox' }
+            renderer = Abte.Site:Icon.PostBox {
+                class = ${ class }
+            }
+        }
+
+        highway {
+            condition = ${ q(node).property('featureIcon') == 'road' }
+            renderer = Abte.Site:Icon.Envelope {
+                class = ${ class }
+            }
+        }
+
+        none {
+            condition = ${ true }
+            renderer = ''
+        }
+    }
+
+    renderer = afx`
+        {props.icon}
+
+    `
+}
