@@ -1,4 +1,24 @@
 prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPage) {
+
+    // Overriding Conditions from Jonnitto for Maps rendering
+    head.googleMaps = Neos.Fusion:Tag {
+        @if.render = ${ true }
+    }
+
+    body.javascripts {
+        googleMapsFunction = Neos.Fusion:Tag {
+            @if.render = ${ true }
+        }
+        googleMapsApi = Neos.Fusion:Tag {
+            @if.render = ${ true }
+        }
+        googleMapsBackend = Neos.Fusion:Tag {
+            @if.render = ${ true }
+        }
+    }
+
+
+
     body.content = Neos.Fusion:Component {
 
         filterItemsArray = ${ q(node).property('categories') ? q(node).property('categories') : null }
@@ -69,14 +89,14 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             linkText=''
                             link=''
                         >
-                            <Jonnitto.GoogleMaps:Map 
-                                mapLocation={props.address}
-                                zoom="17"
-                                showInfo={true}
-                                title={props.title}
-                                showinfo="true"
-                                maptype="terrain"
-                            />
+                                <Jonnitto.GoogleMaps:Map 
+                                    mapLocation={props.address}
+                                    zoom="17"
+                                    showInfo={true}
+                                    title={props.title}
+                                    showinfo="true"
+                                    maptype="terrain"
+                                />
                         </Abte.Site:Content.Container>
 
 
