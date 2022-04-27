@@ -1,38 +1,38 @@
 'Abte.Site:Mixin.PropertyFeatures':
     abstract: true
     properties:
-        'featureIcon':
-            type: string
-            defaultValue: 'none'
-            ui:
-                label: 'Property Features'
-                position: 99
-                inspector:
-                    group: 'general'
-                    editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
-                    editorOptions:
-                        values:
-                            none:
-                                label: ''
-                                icon: ''
-                            atm:
-                                label: 'ATM'
-                                icon: 'money-bill'
-                            bus:
-                                label: 'Public Transportation'
-                                icon: 'bus'
-                            train:
-                                label: 'Train'
-                                icon: 'train'
-                            school:
-                                label: 'School'
-                                icon: 'school'
-                            postbox:
-                                label: 'Post Office'
-                                icon: 'mail-bulk'
-                            road:
-                                label: 'Highway'
-                                icon: 'road'
+        # 'featureIcon':
+        #     type: string
+        #     defaultValue: 'none'
+        #     ui:
+        #         label: 'Property Features'
+        #         position: 99
+        #         inspector:
+        #             group: 'general'
+        #             editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+        #             editorOptions:
+        #                 values:
+        #                     none:
+        #                         label: ''
+        #                         icon: ''
+        #                     atm:
+        #                         label: 'ATM'
+        #                         icon: 'money-bill'
+        #                     bus:
+        #                         label: 'Public Transportation'
+        #                         icon: 'bus'
+        #                     train:
+        #                         label: 'Train'
+        #                         icon: 'train'
+        #                     school:
+        #                         label: 'School'
+        #                         icon: 'school'
+        #                     postbox:
+        #                         label: 'Post Office'
+        #                         icon: 'mail-bulk'
+        #                     road:
+        #                         label: 'Highway'
+        #                         icon: 'road'
         atm:
             options:
                 preset: 'text.plain'
@@ -49,5 +49,30 @@
             options:
                 preset: 'text.plain'
         road:
+            options:
+                preset: 'text.plain'
+
+        prop_rooms:
+            options:
+                preset: 'text.plain'
+        prop_baths:
+            options:
+                preset: 'text.plain'
+        prop_toilets:
+            options:
+                preset: 'text.plain'
+        prop_year:
+            options:
+                preset: 'text.plain'
+        prop_property:
+            options:
+                preset: 'text.plain'
+        prop_living:
+            options:
+                preset: 'text.plain'
+        prop_parking:
+            options:
+                preset: 'text.plain'
+        prop_price:
             options:
                 preset: 'text.plain'

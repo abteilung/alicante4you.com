@@ -146,7 +146,7 @@
     }
 
     .lead {
-        @apply text-base lg:text-lg text-base-300 mb-4 !leading-normal;
+        @apply text-base lg:text-lg text-neutral mb-4 !leading-normal;
     }
 
     .container-wide {
@@ -329,17 +329,24 @@
     table {
         @apply overflow-hidden min-w-full;
         tbody, thead {
-            @apply divide-y divide-primary;
+            @apply divide-y divide-base-100;
 
             td, th {
-                @apply p-3 align-top text-left font-normal text-primary;
+                @apply align-top text-left font-normal text-lg py-5;
             }
+
             th {
                 @apply text-primary bg-base-200/50;
             }
         }
         thead th {
             @apply text-white bg-primary;
+        }
+        &.shortTable {
+            @apply mb-10 mt-4;
+            td, th {
+                @apply text-base py-2 text-neutral;
+            }
         }
     }
 

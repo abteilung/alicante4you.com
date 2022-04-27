@@ -9,7 +9,7 @@ prototype(Abte.Site:Content.LI) < prototype(Neos.Neos:ContentComponent) {
         <li class={props.listIcon ? 'grid grid-cols-12' : null}>
             {props.listIcon}
             <div class="col-span-11">
-                <Neos.Fusion:Augmenter class="">
+                <Neos.Fusion:Augmenter class="font-bold text-neutral">
                     <Neos.Neos:Editable property="li_text" />
                 </Neos.Fusion:Augmenter>
             </div>

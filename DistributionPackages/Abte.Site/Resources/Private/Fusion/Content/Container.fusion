@@ -7,6 +7,7 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
     }
 
     class = 'gridPadding'
+    contentClass = ''
 
     fullWidth = ${ q(node).property('fullWidth') }
     
@@ -57,14 +58,16 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
                     @if.hasTitleOrLink={ props.title ? true : props.link ? true : false }
                 >
                     <h2>{props.title}</h2>
-                    <Abte.Site:Content.Button 
+                    <div></div>
+
+                    <!-- <Abte.Site:Content.Button 
                         text={props.linkText} 
                         target={props.link} 
                         @if.hasLinkText={props.linkText}
-                    />
+                    /> -->
                 </div>
                 
-                <div>
+                <div class={props.contentClass}>
                     {props.content}
                 </div>
             </div>

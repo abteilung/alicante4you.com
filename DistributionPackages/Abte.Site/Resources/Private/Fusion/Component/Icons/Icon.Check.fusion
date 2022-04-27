@@ -3,10 +3,8 @@ prototype(Abte.Site:Icon.Check) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-<svg class={props.class} width="100%"  viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 13L7 19L21 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg class={props.class} width="100%"  viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 13L7 19L21 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
     `
 }
-

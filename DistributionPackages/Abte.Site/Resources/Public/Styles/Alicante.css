@@ -932,7 +932,7 @@ select {
   letter-spacing: 0;
   line-height: 1.5 !important;
   --tw-text-opacity: 1;
-  color: hsl(var(--b3, var(--b2)) / var(--tw-text-opacity));
+  color: hsl(var(--n) / var(--tw-text-opacity));
 }
 
     .container-wide {
@@ -1161,17 +1161,20 @@ select {
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
   --tw-divide-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-divide-opacity));
+  border-color: hsl(var(--b1) / var(--tw-divide-opacity));
 }
 
             table tbody td, table tbody th, table thead td, table thead th {
-  padding: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   text-align: left;
   vertical-align: top;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0;
   font-weight: 400;
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
 }
+
             table tbody th, table thead th {
   background-color: hsl(var(--b2, var(--b1)) / 0.5);
   --tw-text-opacity: 1;
@@ -1189,6 +1192,19 @@ select {
   background-color: hsl(var(--p) / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+        table.shortTable {
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
+}
+            table.shortTable td, table.shortTable th {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0;
+  --tw-text-opacity: 1;
+  color: hsl(var(--n) / var(--tw-text-opacity));
 }
 
 
@@ -1988,9 +2004,6 @@ select {
 .h-14 {
   height: 3.5rem;
 }
-.h-32 {
-  height: 8rem;
-}
 .h-10 {
   height: 2.5rem;
 }
@@ -2008,6 +2021,9 @@ select {
 }
 .h-screen {
   height: 100vh;
+}
+.h-32 {
+  height: 8rem;
 }
 .h-\[350px\] {
   height: 350px;
@@ -2095,9 +2111,6 @@ select {
 }
 .w-2\/3 {
   width: 66.666667%;
-}
-.w-\[30px\] {
-  width: 30px;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -2781,6 +2794,10 @@ select {
   --tw-text-opacity: 1 !important;
   color: hsl(var(--p) / var(--tw-text-opacity)) !important;
 }
+.text-neutral {
+  --tw-text-opacity: 1;
+  color: hsl(var(--n) / var(--tw-text-opacity));
+}
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -3458,10 +3475,6 @@ select {
     height: 3rem;
   }
 
-  .md\:h-44 {
-    height: 11rem;
-  }
-
   .md\:h-\[275px\] {
     height: 275px;
   }
@@ -3825,10 +3838,6 @@ select {
 
     .lg\:hidden {
     display: none;
-  }
-
-    .lg\:h-48 {
-    height: 12rem;
   }
 
     .lg\:h-12 {
