@@ -72,13 +72,14 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
 
                         <Abte.Site:Content.Container 
+                            @if.hasFloorplans={props.floorPlans}
                             title="Floor Plans"
                             linkText=''
                             link=''
                         >
-                            <Abte.Site:Content.Tabs>
-                                <Neos.Fusion:Loop items={props.floorPlans}>
-                                    <Abte.Site:Content.Tab tab_title="xxx" />
+                            <Abte.Site:Content.Tabs firstTab="1">
+                                <Neos.Fusion:Loop items={props.floorPlans} iterator="i" tabCollection={props.floorPlans}>
+                                    <Abte.Site:Content.Tab tab_title="xxx" tabId={i.cycle} />
                                 </Neos.Fusion:Loop>
                             </Abte.Site:Content.Tabs>
                         </Abte.Site:Content.Container>
@@ -89,14 +90,14 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             linkText=''
                             link=''
                         >
-                                <Jonnitto.GoogleMaps:Map 
-                                    mapLocation={props.address}
-                                    zoom="17"
-                                    showInfo={true}
-                                    title={props.title}
-                                    showinfo="true"
-                                    maptype="terrain"
-                                />
+                            <Jonnitto.GoogleMaps:Map 
+                                mapLocation={props.address}
+                                zoom="17"
+                                showInfo={true}
+                                title={props.title}
+                                showinfo="true"
+                                maptype="terrain"
+                            />
                         </Abte.Site:Content.Container>
 
 

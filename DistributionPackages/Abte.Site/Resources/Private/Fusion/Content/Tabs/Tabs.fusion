@@ -3,30 +3,44 @@ prototype(Abte.Site:Content.Tabs) < prototype(Neos.Neos:ContentComponent) {
     class = ''
     tab_title = ''
 
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    tabCollection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]') }
+
+    tabId = ${ q(node).property('_nodeName') }
+    
+    @context {
+        tabCollection = ${ this.tabCollection }
+        tabId = ${ this.tabId }
+    }
+
     tabs = Neos.Fusion:Collection {
-        collection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]') }
+        collection = ${ tabCollection }
         itemName = 'node'
         iterationName = 'i'
         itemRenderer = Abte.Site:Content.Tab
     }
 
     firstTab = Neos.Fusion:Collection {
-        collection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]').first() }
+        collection = ${ tabCollection.first() }
         itemName = 'node'
         iterationName = 'i'
-        itemRenderer = ${ q(node).property('_nodeName') }
+        itemRenderer = ${ tabId }
     }
 
     tabsNavigation = Neos.Fusion:Collection {
-        collection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]') }
+        collection = ${ tabCollection }
         itemName = 'node'
         iterationName = 'i'
         itemRenderer = Neos.Fusion:Tag {
             tagName = 'button'
             attributes {
                 class='pb-4 !-mb-[2px] h3 text-base-300'
-                :class=${ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + q(node).property('_nodeName') + "'" + "}" }
-                "@click"=${ "tab = " + "'" + q(node).property('_nodeName') + "'" + "" }
+                :class=${ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + tabId + "'" + "}" }
+                "@click"=${ "tab = " + "'" + tabId + "'" + "" }
             }
             content = Neos.Neos:Editable {
                 property = 'tab_title'
@@ -38,15 +52,15 @@ prototype(Abte.Site:Content.Tabs) < prototype(Neos.Neos:ContentComponent) {
     }
 
     tabsNavigationMobile = Neos.Fusion:Collection {
-        collection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]') }
+        collection = ${ tabCollection }
         itemName = 'node'
         iterationName = 'i'
         itemRenderer = Neos.Fusion:Tag {
             tagName = 'li'
             attributes {
                 class='relative py-2 pl-3 text-gray-900 cursor-default select-none pr-9'
-                :class=${ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + q(node).property('_nodeName') + "'" + "}" }
-                "@click"=${ "tab = " + "'" + q(node).property('_nodeName') + "'" + "" }
+                :class=${ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + tabId + "'" + "}" }
+                "@click"=${ "tab = " + "'" + tabId + "'" + "" }
             }
             content = Neos.Neos:Editable {
                 property = 'tab_title'
@@ -59,7 +73,7 @@ prototype(Abte.Site:Content.Tabs) < prototype(Neos.Neos:ContentComponent) {
     }  
 
     tabItems = Neos.Neos:MenuItems {
-        itemCollection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]').get() }
+        itemCollection = ${ tabCollection }
     }  
 
     imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
@@ -78,9 +92,9 @@ prototype(Abte.Site:Content.Tabs) < prototype(Neos.Neos:ContentComponent) {
                 x-model="tab"
             >
                 <Neos.Fusion:Loop 
-                    items={props.tabItems} 
+                    items={tabCollection} 
                     iterationName='i'
-                    @if.hasCats={props.tabItems}
+                    @if.hasCats={tabCollection}
                 >
                     <option 
                         value={ q(item.node).property('_nodeName') }
