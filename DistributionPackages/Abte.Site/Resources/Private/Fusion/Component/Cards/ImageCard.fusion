@@ -31,7 +31,7 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
             <Neos.Neos:NodeLink 
                 node={ q(node).get(0) }
                 attributes.class={ props.boxClass + ' ' + props.class }
-                attributes.x-show={ props.kates }
+                attributes.x-show={ q(documentNode).is('[instanceof Abte.Site:Document.World]') ? props.kates : null }
                 attributes.x-transition:enter="transition duration-50 ease-out"
                 attributes.x-transition:enter-end="scale-100 opacity-100"
                 attributes.x-transition:enter-start="scale-0 opacity-0"

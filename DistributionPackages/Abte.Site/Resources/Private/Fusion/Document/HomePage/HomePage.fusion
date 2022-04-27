@@ -46,7 +46,7 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
             </div>
         `
 
-        similarProducts = ${ q(site).find('[instanceof Abte.Site:Mixin.Product]').get() }
+        similarProducts = ${ q(site).children().find('[instanceof Abte.Site:Document.Product]').get() }
 
         renderer = afx`
             <main class="mt-0">
@@ -72,14 +72,12 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
                     linkText=''
                     link=''
                 >
-
                     <Abte.Site:Content.Navigation 
                         node={node}
                         navigationItems={props.similarProducts}
                         limit="3" 
                         layout="products" 
                     />
-
                 </Abte.Site:Content.Container>
 
             </main>

@@ -14,7 +14,6 @@
       '*': false
       'Abte.Site:Document.Page': true
       'Abte.Site:Document.PageWithAside': true
-      'Abte.Site:Document.FilterPage': true
       'Abte.Site:Document.Category': true
       'Abte.Site:Document.Overview': true
       'Abte.Site:Document.Product': true

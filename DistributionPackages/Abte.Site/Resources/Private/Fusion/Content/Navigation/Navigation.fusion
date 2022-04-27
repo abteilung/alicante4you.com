@@ -101,7 +101,7 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
                             <li class="mb-4"
                                 @if.isWithinRange={i.index < props.limit}
                             >
-                                <Abte.Site:Component.ImageCard node={item.node} />
+                                <Abte.Site:Component.ImageCard class="relative block" node={item.node} />
                             </li>
                         </Neos.Fusion:Loop>
                     </ul>
