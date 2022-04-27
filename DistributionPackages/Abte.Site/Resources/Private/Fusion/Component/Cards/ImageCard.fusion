@@ -51,7 +51,7 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
                             class="object-cover duration-150 scale-100 group-hover:scale-105 aspect-[19/12]"
                         />
 
-                        <img src="https://via.placeholder.com/620x620" alt={props.title} width="620" height="620"
+                        <img src="https://via.placeholder.com/620x450" class="aspect-[19/12]" alt={props.title} width="620" height="620"
                             @if.hasNoImage={!props.imageSource}
                         />                
                     </div>

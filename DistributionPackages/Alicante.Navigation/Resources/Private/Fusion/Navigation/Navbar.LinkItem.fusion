@@ -1,7 +1,7 @@
 prototype(Alicante.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
     node                = ${ node }
     linkItemClass 		= ${ 'block whitespace-nowrap underline-offset-[4px]' + ' ' + (item.state == 'active' ? 'text-black underline' : item.state == 'current' ? ' text-black underline' : 'text-black hover:underline duration-200') }
-    lastLinkItemClass 	= ${ 'block whitespace-nowrap underline-offset-[4px]' + ' ' + (item.state == 'active' ? 'text-black underline' : item.state == 'current' ? ' text-black' : 'text-black hover:underline duration-200') }
+    lastLinkItemClass 	= ${ 'block whitespace-nowrap underline-offset-[4px]' + ' ' + (item.state == 'active' ? 'text-black underline' : item.state == 'current' ? ' text-black underline' : 'text-black hover:underline duration-200') }
     nodeType 			= ${ item.node.nodetype.name }
     linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
     doNotLinkNode       = ${ q(documentNode).property('doNotLink') }

@@ -35,7 +35,7 @@ prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
     
         <Abte.Site:Component.MoreAboutUs />
 
-        <footer class="z-10">
+        <footer class="z-10 mt-24">
           
             <div class="pt-8 pb-16 text-black bg-base-100 gridPadding primary-footer">
                 <div class="container">{props.footerContent}

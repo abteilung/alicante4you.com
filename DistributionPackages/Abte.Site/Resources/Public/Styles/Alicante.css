@@ -2096,6 +2096,9 @@ select {
 .w-2\/3 {
   width: 66.666667%;
 }
+.w-\[30px\] {
+  width: 30px;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
