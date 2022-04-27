@@ -24,12 +24,13 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
     isNew = ${ q(node).property('isNew') ? true : false }
     category = ${ q( q(node).property('categories') ).property('title') }
     
-    class = 'relative flex flex-col h-full overflow-hidden duration-150 bg-white shadow-2xl box-shadow group roundedCorners isolate'
+    class = ''
+    boxClass = 'relative flex flex-col h-full overflow-hidden duration-150 bg-white shadow-2xl box-shadow group roundedCorners isolate'
 
     renderer = afx`
             <Neos.Neos:NodeLink 
                 node={ q(node).get(0) }
-                attributes.class={ props.class }
+                attributes.class={ props.boxClass + ' ' + props.class }
                 attributes.x-show={ props.kates }
                 attributes.x-transition:enter="transition duration-50 ease-out"
                 attributes.x-transition:enter-end="scale-100 opacity-100"

@@ -5,7 +5,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
         node = ${ this.node }
     }
 
-    class = 'headerGrid'
+    class = ''
 
     one = Neos.Fusion:Component {
         header = Neos.Neos:Editable {
@@ -73,7 +73,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
     fiveTheme = ''
 
     renderer = afx`
-        <div class={props.class + ' ' + 'grid md:grid-cols-2 lg:grid-cols-3 gridgap'}>
+        <div class={props.class + ' ' + 'headerGrid grid md:grid-cols-2 lg:grid-cols-3 gridgap'}>
             <div 
                 @if.hasContent={props.one}
                 class={props.oneClass} data-theme={props.oneTheme}

@@ -29,7 +29,7 @@ prototype(Abte.Site:Content.LatestNews) < prototype(Neos.Neos:ContentComponent) 
                 <div class=""
                     @if.isWithinRange={i.index < props.limit}
                 >
-                    <Abte.Site:Component.ServiceCard class="relative block group" node={item.node} />
+                    <Abte.Site:Component.LatestNewsCard class="relative block group" node={item.node} />
                 </div>
             </Neos.Fusion:Loop>
         </div>

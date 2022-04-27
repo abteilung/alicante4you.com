@@ -8,7 +8,7 @@ prototype(Alicante.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neo
     phone = ${ q(site).property('helpdeskPhone') }
 
     renderer = afx`
-      <div class="extras bg-neutral">
+      <div class="extras bg-base-100">
         <div class="container flex items-center justify-between h-12 gridPadding-x">
           <nav 
             class="flex items-center text-base md:space-x-6"

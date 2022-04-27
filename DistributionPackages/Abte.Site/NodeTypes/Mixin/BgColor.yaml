@@ -28,11 +28,11 @@
               bg-light:
                 label: 'BG Light'
                 icon: ''
+              bg-dark:
+                label: 'BG Dark'
+                icon: ''
               bg-primary:
                 label: 'BG Primary'
-                icon: ''
-              bg-primary-focus:
-                label: 'BG Primary Focus'
                 icon: ''
               bg-secondary:
                 label: 'BG Secondary'

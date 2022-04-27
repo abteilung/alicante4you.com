@@ -1,17 +1,14 @@
 prototype(Abte.Site:Document.Overview) < prototype(Abte.Site:Document.AbstractPage) {
     body.content = Neos.Fusion:Component {
         
-        two = afx`
-            <div class="grid h-full grid-cols-1 p-8 place-content-between">
-                <h3 class="self-start">xxx<br/><span class="text-primary-focus">xxx</span></h3>
-                <div class="self-end">
-                    <Abte.Site:Component.DropdownMenu 
-                        itemCollection={ q(node).parent().find('[instanceof Abte.Site:Document.Kurs]').get() ? q(node).parent().find('[instanceof Abte.Site:Document.Kurs]').get() : q(node).get() }
-                        label={ q(node).parent().find('[instanceof Abte.Site:Document.Kurs]').get() ? I18n.translate('Abte.Site:Main:currentCourses') : I18n.translate('Abte.Site:Main:noCourses') }
-                    />
-                </div>
-            </div>    
-        `
+        two = Abte.Site:Component.ImageCard {
+            node = ${ q(site).find('[instanceof Abte.Site:Document.Product][isHero*=1]').get() }
+            kates = ''
+            class = ''
+            imageClass = 'w-full h-full duration-300 scale-105 group-hover:scale-100 object-cover object-center'
+            category = ${ q(q(site).find('[instanceof Abte.Site:Document.Story][isHero*=1],[instanceof Abte.Site:Document.Kompetenz][isHero*=1]').get()).parent('[instanceof Abte.Site:Document.Category]').property('title') }
+        }
+        // twoTheme = ${ q(q(site).find('[instanceof Abte.Site:Document.Story][isHero*=1],[instanceof Abte.Site:Document.Kompetenz][isHero*=1]').get()).closest("[instanceof Neos.Neos:Document][colorWorld][colorWorld != '']").property('colorWorld') }
 
         three = ''
 
@@ -24,11 +21,12 @@ prototype(Abte.Site:Document.Overview) < prototype(Abte.Site:Document.AbstractPa
         renderer = afx`
             <main class="main">
                 <div class="container gridPadding-x">
-                    <Abte.Site:Component.HeaderGrid 
+                    <Abte.Site:Component.HeaderGrid
+                        class='mb-24' 
                         oneTheme={ props.oneTheme }
                         oneClass='roundedCorners relative bg-primary col-span-1 md:col-span-2 headGrid'
                         two={props.two}
-                        twoClass='roundedCorners overflow-hidden relative bg-base-100'
+                        twoClass='roundedCorners relative'
                     />
                 </div>
                 {props.main}
@@ -53,7 +51,7 @@ prototype(Abte.Site:Document.GridItemRenderer) < prototype(Neos.Fusion:Component
         isProduct {
             condition = ${ q(node).is('[instanceof Abte.Site:Document.Product],[instanceof Abte.Site:Document.ProductLink]') }
             renderer = Abte.Site:Component.ImageCard {
-                class = "relative w-full h-full group block"
+                class = "relative block w-full h-full group"
                 category=${ q( q(node).property('categories') ).property('title') }
             }
         }

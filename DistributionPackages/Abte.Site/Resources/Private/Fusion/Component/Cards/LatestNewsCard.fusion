@@ -1,0 +1,59 @@
+prototype(Abte.Site:Component.LatestNewsCard) < prototype(Neos.Neos:ContentComponent) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('teaserImage') ? q(node).property('teaserImage') : q(node).property('image') }
+        width   = 240
+        height  = 240
+    }
+
+    title = ${ q(node).property('title') }
+    subTitle = ${ q(node).property('subTitle') }
+
+    icon = Abte.Site:Icon.ArrowRight {
+        class = 'absolute bottom-0 left-0 z-10 duration-150 scale-75 text-secondary bottom-6 lg:scale-100 group-hover:left-4'
+    }
+
+    class = 'relative w-full h-full group'
+    imageClass = 'w-full h-full object-cover object-center duration-300 scale-100 group-hover:scale-105'
+
+    pageTitleForFilter = ${ q(documentNode).property('title') }
+    kates = Abte.Site:Component.FilterKates
+
+    datePublished = ${ Date.formatCldr( q(node).property('datePublished'), 'd. MMM y', 'de_CH') }
+
+
+    renderer = afx`
+
+        <Neos.Neos:NodeLink 
+            node={ q(node).get(0) }
+            attributes.class={ props.class }
+            attributes.x-show={ props.kates }
+            attributes.x-show.@if.isOfType={ q(documentNode).is('[instanceof Alicante.MixitUp:Include]') }
+            attributes.x-transition:enter="transition duration-50 ease-out"
+            attributes.x-transition:enter-end="scale-100 opacity-100"
+            attributes.x-transition:enter-start="scale-0 opacity-0"
+            attributes.x-transition:leave="transition duration-50 ease-in"
+            attributes.x-transition:leave-end="opacity-0 scale-100"
+        >
+           <div class="grid grid-cols-4 gridgap">
+                <div class="relative w-20 h-20 overflow-hidden rounded-full isolate bg-base-200">
+                    <Sitegeist.Lazybones:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                        class={props.imageClass}
+                    />
+                </div>
+                <div class="relative w-full h-full col-span-3">
+                    <p class="mb-0 font-bold line-clamp-none md:line-clamp-3 lg:line-clamp-none">{ q(node).property('titleOverride') ? q(node).property('titleOverride') : q(documentNode).is('[instanceof Abte.Site:Document.Kompetenzen],[instanceof Abte.Site:Document.Products]') ? q(node).property('subTitle') : q(node).property('title') }</p>
+                    {props.icon}
+                </div>
+            </div>
+           
+        </Neos.Neos:NodeLink>
+    `
+}

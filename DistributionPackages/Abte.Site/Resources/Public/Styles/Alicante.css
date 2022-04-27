@@ -542,14 +542,14 @@ select {
 
 :root {
   --p: 218 83% 38%;
-  --nf: 0 0% 75%;
+  --nf: 0 0% 11%;
   --in: 198 93% 60%;
   --su: 158 64% 52%;
   --wa: 43 96% 56%;
   --bc: 0 0% 19%;
   --sc: 354 100% 90%;
   --ac: 36 100% 12%;
-  --nc: 0 0% 19%;
+  --nc: 0 0% 83%;
   --inc: 198 100% 12%;
   --suc: 158 100% 10%;
   --wac: 43 100% 11%;
@@ -568,7 +568,7 @@ select {
   --pc: 0 0% 100%;
   --s: 354 78% 49%;
   --sf: 0 77% 29%;
-  --n: 0 0% 94%;
+  --n: 0 0% 13%;
   --er: 36 100% 50%;
   --b1: 0 0% 94%;
   --b2: 0 0% 96%;
@@ -579,14 +579,14 @@ select {
 
 [data-theme=default] {
   --p: 218 83% 38%;
-  --nf: 0 0% 75%;
+  --nf: 0 0% 11%;
   --in: 198 93% 60%;
   --su: 158 64% 52%;
   --wa: 43 96% 56%;
   --bc: 0 0% 19%;
   --sc: 354 100% 90%;
   --ac: 36 100% 12%;
-  --nc: 0 0% 19%;
+  --nc: 0 0% 83%;
   --inc: 198 100% 12%;
   --suc: 158 100% 10%;
   --wac: 43 100% 11%;
@@ -605,7 +605,7 @@ select {
   --pc: 0 0% 100%;
   --s: 354 78% 49%;
   --sf: 0 77% 29%;
-  --n: 0 0% 94%;
+  --n: 0 0% 13%;
   --er: 36 100% 50%;
   --b1: 0 0% 94%;
   --b2: 0 0% 96%;
@@ -712,7 +712,7 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--b3, var(--b2)) / var(--tw-text-opacity));
+  color: hsl(var(--n) / var(--tw-text-opacity));
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -780,7 +780,7 @@ select {
   list-style-position: outside;
   list-style-type: decimal;
 }
-        .bg-secondary p, .bg-primary p, .bg-error p, .bg-secondary h1, .bg-primary h1, .bg-error h1, .bg-secondary .h1, .bg-primary .h1, .bg-error .h1, .bg-secondary h2, .bg-primary h2, .bg-error h2, .bg-secondary .h2, .bg-primary .h2, .bg-error .h2, .bg-secondary h3, .bg-primary h3, .bg-error h3, .bg-secondary .h3, .bg-primary .h3, .bg-error .h3, .bg-secondary h4, .bg-primary h4, .bg-error h4, .bg-secondary .h4, .bg-primary .h4, .bg-error .h4, .bg-secondary h5, .bg-primary h5, .bg-error h5, .bg-secondary .h5, .bg-primary .h5, .bg-error .h5, .bg-secondary h6, .bg-primary h6, .bg-error h6, .bg-secondary .h6, .bg-primary .h6, .bg-error .h6 {
+        .bg-secondary p, .bg-primary p, .bg-neutral p, .bg-error p, .bg-secondary h1, .bg-primary h1, .bg-neutral h1, .bg-error h1, .bg-secondary .h1, .bg-primary .h1, .bg-neutral .h1, .bg-error .h1, .bg-secondary h2, .bg-primary h2, .bg-neutral h2, .bg-error h2, .bg-secondary .h2, .bg-primary .h2, .bg-neutral .h2, .bg-error .h2, .bg-secondary h3, .bg-primary h3, .bg-neutral h3, .bg-error h3, .bg-secondary .h3, .bg-primary .h3, .bg-neutral .h3, .bg-error .h3, .bg-secondary h4, .bg-primary h4, .bg-neutral h4, .bg-error h4, .bg-secondary .h4, .bg-primary .h4, .bg-neutral .h4, .bg-error .h4, .bg-secondary h5, .bg-primary h5, .bg-neutral h5, .bg-error h5, .bg-secondary .h5, .bg-primary .h5, .bg-neutral .h5, .bg-error .h5, .bg-secondary h6, .bg-primary h6, .bg-neutral h6, .bg-error h6, .bg-secondary .h6, .bg-primary .h6, .bg-neutral .h6, .bg-error .h6 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -844,7 +844,7 @@ select {
   --tw-text-opacity: 1;
   color: hsl(var(--b3, var(--b2)) / var(--tw-text-opacity));
 }
-    .bg-secondary .testimonial .lead p, .bg-primary .testimonial .lead p, .bg-error .testimonial .lead p {
+    .bg-secondary .testimonial .lead p, .bg-primary .testimonial .lead p, .bg-neutral .testimonial .lead p, .bg-error .testimonial .lead p {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1726,6 +1726,9 @@ select {
 .-right-3 {
   right: -0.75rem;
 }
+.bottom-0 {
+  bottom: 0px;
+}
 .-top-8 {
   top: -2rem;
 }
@@ -1734,9 +1737,6 @@ select {
 }
 .top-1 {
   top: 0.25rem;
-}
-.bottom-0 {
-  bottom: 0px;
 }
 .top-2 {
   top: 0.5rem;
@@ -1897,6 +1897,9 @@ select {
 }
 .mb-0 {
   margin-bottom: 0px;
+}
+.mt-24 {
+  margin-top: 6rem;
 }
 .mt-20 {
   margin-top: 5rem;
@@ -2475,13 +2478,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--er) / var(--tw-bg-opacity));
 }
-.bg-cyan-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(207 250 254 / var(--tw-bg-opacity));
-}
 .bg-neutral {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
+}
+.bg-cyan-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(207 250 254 / var(--tw-bg-opacity));
 }
 .bg-base-200 {
   --tw-bg-opacity: 1;
@@ -2935,7 +2938,7 @@ select {
 .line-clamp-none {
   -webkit-line-clamp: unset;
 }
-.bg-secondary p, .hover\:bg-primary:hover p, .bg-error p, .bg-secondary h1, .bg-primary h1, .bg-error h1, .bg-secondary .h1, .bg-primary .h1, .bg-error .h1, .bg-secondary h2, .bg-primary h2, .bg-error h2, .bg-secondary .h2, .bg-primary .h2, .bg-error .h2, .bg-secondary h3, .bg-primary h3, .bg-error h3, .bg-secondary .h3, .bg-primary .h3, .bg-error .h3, .bg-secondary h4, .bg-primary h4, .bg-error h4, .bg-secondary .h4, .bg-primary .h4, .bg-error .h4, .bg-secondary h5, .bg-primary h5, .bg-error h5, .bg-secondary .h5, .bg-primary .h5, .bg-error .h5, .bg-secondary h6, .bg-primary h6, .bg-error h6, .bg-secondary .h6, .bg-primary .h6, .bg-error .h6 {
+.bg-secondary p, .hover\:bg-primary:hover p, .bg-neutral p, .bg-error p, .bg-secondary h1, .bg-primary h1, .bg-neutral h1, .bg-error h1, .bg-secondary .h1, .bg-primary .h1, .bg-neutral .h1, .bg-error .h1, .bg-secondary h2, .bg-primary h2, .bg-neutral h2, .bg-error h2, .bg-secondary .h2, .bg-primary .h2, .bg-neutral .h2, .bg-error .h2, .bg-secondary h3, .bg-primary h3, .bg-neutral h3, .bg-error h3, .bg-secondary .h3, .bg-primary .h3, .bg-neutral .h3, .bg-error .h3, .bg-secondary h4, .bg-primary h4, .bg-neutral h4, .bg-error h4, .bg-secondary .h4, .bg-primary .h4, .bg-neutral .h4, .bg-error .h4, .bg-secondary h5, .bg-primary h5, .bg-neutral h5, .bg-error h5, .bg-secondary .h5, .bg-primary .h5, .bg-neutral .h5, .bg-error .h5, .bg-secondary h6, .bg-primary h6, .bg-neutral h6, .bg-error h6, .bg-secondary .h6, .bg-primary .h6, .bg-neutral .h6, .bg-error .h6 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -3040,6 +3043,9 @@ select {
 }
 .group:hover .group-hover\:right-6 {
   right: 1.5rem;
+}
+.group:hover .group-hover\:left-4 {
+  left: 1rem;
 }
 .group:hover .group-hover\:right-0 {
   right: 0px;

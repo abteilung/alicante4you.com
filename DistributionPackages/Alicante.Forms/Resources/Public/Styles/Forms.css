@@ -1,10 +1,3 @@
-.choices__item p, .choices__item h1, .choices__item .h1, .choices__item h2, .choices__item .h2, .choices__item h3, .choices__item .h3, .choices__item h4, .choices__item .h4, .choices__item h5, .choices__item .h5, .choices__item h6, .choices__item .h6 {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity))
-}
-        .choices__item p {
-    color: rgb(255 255 255 / 0.6)
-}
 .choices__item {
     --tw-bg-opacity: 1 !important;
     background-color: hsl(var(--p) / var(--tw-bg-opacity)) !important

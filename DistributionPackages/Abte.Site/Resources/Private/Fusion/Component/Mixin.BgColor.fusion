@@ -9,14 +9,14 @@ prototype(Abte.Site:Mixin.BgColor) < prototype(Neos.Fusion:Component) {
             renderer = 'bg-base-100 gridPadding-y'
         }
 
+        dark {
+            condition = ${ q(node).property('bgColor') == 'bg-dark' }
+            renderer = 'bg-neutral text-white gridPadding-y'
+        }
+
         primary {
             condition = ${ q(node).property('bgColor') == 'bg-primary' }
             renderer = 'bg-primary text-white gridPadding-y'
-        }
-
-        primaryFocus {
-            condition = ${ q(node).property('bgColor') == 'bg-primary-focus' }
-            renderer = 'bg-primary-focus gridPadding-y'
         }
 
         secondary {
