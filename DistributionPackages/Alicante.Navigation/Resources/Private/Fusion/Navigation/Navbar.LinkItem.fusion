@@ -24,7 +24,7 @@ prototype(Alicante.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component
                 attributes.target={props.linkTarget}
                 renderDefaultTagIfNoLink={false}
             >
-                { q(item.node).property('titleOverride') ? q(item.node).property('titleOverride') : q(item.node).property('title') }
+                { q(item.node).property('title') }
             </Neos.Neos:NodeLink>
 
             <!-- Not linked, for structure -->
