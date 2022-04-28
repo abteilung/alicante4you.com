@@ -28,42 +28,43 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
     boxClass = 'relative flex flex-col h-full overflow-hidden duration-150 bg-white shadow-2xl box-shadow group roundedCorners isolate'
 
     renderer = afx`
-            <Neos.Neos:NodeLink 
-                node={ q(node).get(0) }
-                attributes.class={ props.boxClass + ' ' + props.class }
-                attributes.x-show={ q(documentNode).is('[instanceof Abte.Site:Document.World]') ? props.kates : null }
-                attributes.x-transition:enter="transition duration-50 ease-out"
-                attributes.x-transition:enter-end="scale-100 opacity-100"
-                attributes.x-transition:enter-start="scale-0 opacity-0"
-                attributes.x-transition:leave="transition duration-50 ease-in"
-                attributes.x-transition:leave-end="opacity-0 scale-100"
-            >
 
-                <Abte.Site:Component.isNew 
-                    @if.isNew={ props.isNew }
-                />
+        <Neos.Neos:NodeLink 
+            node={ q(node).get(0) }
+            attributes.class={ props.boxClass + ' ' + props.class }
+            attributes.x-show={ q(documentNode).is('[instanceof Abte.Site:Document.World]') ? props.kates : null }
+            attributes.x-transition:enter="transition duration-50 ease-out"
+            attributes.x-transition:enter-end="scale-100 opacity-100"
+            attributes.x-transition:enter-start="scale-0 opacity-0"
+            attributes.x-transition:leave="transition duration-50 ease-in"
+            attributes.x-transition:leave-end="opacity-0 scale-100"
+        >
 
-                <div class="flex flex-col flex-1 space-y-4">
-                    <div class="overflow-hidden">
-                        <Sitegeist.Lazybones:Image 
-                            @if.hasImage={props.imageSource}
-                            imageSource={props.imageSource} 
-                            class="object-cover duration-150 scale-100 group-hover:scale-105 aspect-[19/12]"
-                        />
+            <Abte.Site:Component.isNew 
+                @if.isNew={ props.isNew }
+            />
 
-                        <img src="https://via.placeholder.com/620x450" class="aspect-[19/12]" alt={props.title} width="620" height="620"
-                            @if.hasNoImage={!props.imageSource}
-                        />                
-                    </div>
-                    <div class="px-6 pt-2 pb-6 md:px-4 lg:px-6">
-                        <p class="hidden mb-2 text-base-300">{props.category}</p>
-                        <h3 class="mb-0">{props.title}</h3>
-                        <h3 class="pr-12 text-secondary line-clamp-3">{props.subTitle}</h3>
-                        <Abte.Site:Component.ProductFeaturesShort />
-                    </div>
-                    {props.icon}
+            <div class="flex flex-col flex-1 space-y-4">
+                <div class="overflow-hidden">
+                    <Sitegeist.Lazybones:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                        class="object-cover duration-150 scale-100 group-hover:scale-105 aspect-[19/12]"
+                    />
+
+                    <img src="https://via.placeholder.com/620x450" class="aspect-[19/12]" alt={props.title} width="620" height="620"
+                        @if.hasNoImage={!props.imageSource}
+                    />                
                 </div>
-            </Neos.Neos:NodeLink>
+                <div class="px-6 pt-2 pb-6 md:px-4 lg:px-6">
+                    <p class="hidden mb-2 text-base-300">{props.category}</p>
+                    <h3 class="mb-0">{props.title}</h3>
+                    <h3 class="pr-12 text-secondary line-clamp-3">{props.subTitle}</h3>
+                    <Abte.Site:Component.ProductFeaturesShort />
+                </div>
+                {props.icon}
+            </div>
+        </Neos.Neos:NodeLink>
     `
 }
 

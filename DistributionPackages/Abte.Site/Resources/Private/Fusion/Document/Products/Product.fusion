@@ -105,6 +105,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             title="Distances"
                             linkText=''
                             link=''
+                            @if.hasDistance={ node.context.inBackend || q(node).property('atm') || q(node).property('train') || q(node).property('bus') || q(node).property('postbox') || q(node).property('road') || q(node).property('school') }
                         >
                             <div class="grid grid-cols-4 gridgap">
                                 <Abte.Site:Content.PropertyFeature textProperty='atm' featureIcon='atm' title="ATM" />
