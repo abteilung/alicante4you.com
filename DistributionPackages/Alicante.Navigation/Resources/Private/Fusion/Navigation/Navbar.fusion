@@ -18,16 +18,14 @@ prototype(Alicante.Navigation:Component.Navbar) < prototype(Neos.Fusion:Componen
                     </div>
                     
                     <div 
-                        x-data="\{ 'showSearch' : false \}"
                         class="flex justify-between w-full navArea"
-                        :class="showSearch ? 'left-0' : ''"
                     >
                     
-                        <!-- <Alicante.Navigation:Component.FuzzySearch /> -->
-
                         <div 
                             x-data="\{ 'showMenu' : false \}" 
-                            class="flex justify-center w-full">
+                            class="flex justify-center w-full"
+                        >
+
                             <Alicante.Navigation:Component.Navbar.Navigation />
                             <Alicante.Navigation:Component.Navbar.Hamburger />
                             <!-- <Alicante.Navigation:Component.Navbar.KontaktButton /> -->

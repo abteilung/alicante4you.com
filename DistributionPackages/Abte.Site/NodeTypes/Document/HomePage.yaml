@@ -45,10 +45,20 @@
     'footerItems':
       type: references
       ui:
-        label: i18n
+        label: Footer Items
         reloadIfChanged: true
         inspector:
           group: general
           editorOptions:
             nodeTypes:
               - 'Neos.Neos:Document'
+    'mobileNavigationItems':
+      type: references
+      ui:
+        label: Mobile Navigation Items
+        reloadIfChanged: true
+        inspector:
+          group: general
+          editorOptions:
+            nodeTypes:
+              - 'Neos.Neos:Document'              

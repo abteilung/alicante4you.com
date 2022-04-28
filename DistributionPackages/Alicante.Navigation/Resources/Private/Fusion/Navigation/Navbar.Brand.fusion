@@ -10,7 +10,7 @@ prototype(Alicante.Navigation:Component.Navbar.Brand) < prototype(Neos.Fusion:Co
                 attributes.data-aos="fade-in"
                 attributes.data-aos-delay="500"
             >
-                <Abte.Site:Component.Logo class="w-[130px] lg:w-[160px] 2xl:w-[190px] md:w-auto h-auto" />
+                <Abte.Site:Component.Logo class="w-[160px] md:w-[180px] lg:w-[200px] 2xl:w-[250px]" />
             </Neos.Neos:NodeLink>
         </div>
 
