@@ -1950,6 +1950,9 @@ select {
 .flex {
   display: flex;
 }
+.\!flex {
+  display: flex !important;
+}
 .table {
   display: table;
 }
@@ -2121,6 +2124,9 @@ select {
 .flex-none {
   flex: none;
 }
+.\!flex-1 {
+  flex: 1 1 0% !important;
+}
 .origin-top-left {
   transform-origin: top left;
 }
@@ -2277,6 +2283,9 @@ select {
 }
 .flex-col {
   flex-direction: column;
+}
+.\!flex-col {
+  flex-direction: column !important;
 }
 .flex-wrap {
   flex-wrap: wrap;

@@ -26,17 +26,7 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
       
   }
 
-  itemsWrapClass = Neos.Fusion:Case {
-      projects {
-        condition = ${ q(node).is('[instanceof Abte.Site:Document.Projects]') }
-        renderer = 'grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 mt-12 filterContent w-full relative gridgap'
-      }
-      fallback {
-        condition = ${ true }
-        // renderer = 'mt-12 filterContent flex-wrap flex'
-        renderer = 'grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 mt-12 filterContent w-full relative gridgap'
-      }
-  }
+  itemsWrapClass = 'grid flex sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 mt-12 filterContent w-full relative gridgap'
 
   filterItems = Neos.Fusion:Loop {
     items = ${ q(documentNode).children('[instanceof Abte.Site:Mixin.Product]').get() || q(documentNode).find('[instanceof Abte.Site:Document.Story]').sort('datePublished', 'DESC').get() }
@@ -75,7 +65,7 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
       x-data="{cat: window.location.hash ? window.location.hash.replace('#', '') : 'all' }"
     >
 
-      <div class=" filter gridPadding-x gridPadding-bottom">
+      <div class="filter gridPadding-x gridPadding-bottom">
 
         <!-- Dropdown menu on small screens -->
         <div class="lg:hidden">
