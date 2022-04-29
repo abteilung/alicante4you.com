@@ -186,7 +186,7 @@ module.exports = {
                     'primary': '#dd1c2f',
 				},
 				'sell': {
-                    'primary': '#114db3',
+                    'primary': '#FBB03B',
 				},
             },
         ],
