@@ -18,6 +18,12 @@
     nodeTypes:
       '*': false
   properties:
+    'image':
+      options:
+        preset: 'image.headerAsset'
+      ui:
+        inspector:
+          position: 1
     'address':
       options:
         preset: 'text.plain'

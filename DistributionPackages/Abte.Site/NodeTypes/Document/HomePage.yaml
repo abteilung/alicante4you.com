@@ -61,4 +61,4 @@
           group: general
           editorOptions:
             nodeTypes:
-              - 'Neos.Neos:Document'              
+              - 'Neos.Neos:Document'
