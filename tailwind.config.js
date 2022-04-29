@@ -171,11 +171,9 @@ module.exports = {
         themes: [
             {
                 'default': {
-                    'primary': '#114db3',
-                    'primary-focus': '#D8942E',
+                    'primary': '#FBB03B',
                     'primary-content': '#ffffff',
                     'secondary': '#dd1c2f',
-                    'secondary-focus': '#831111',
                     'neutral': '#222222',
                     'error': '#ff9900',
                     'base-100': '#EFEFEF',
@@ -183,7 +181,6 @@ module.exports = {
                     'base-300': '#8f8f8f',
                     // other colors
                     'accent': '#E0AA59',
-                    'accent-focus': '#D8942E',
                 },
 				'buy': {
                     'primary': '#dd1c2f',
