@@ -3,6 +3,7 @@ prototype(Alicante.Navigation:Component.Navbar.Navigation) < prototype(Neos.Fusi
     menuItems = Neos.Neos:MenuItems {
       itemCollection = ${ q(site).property('menuItems') ? q(site).property('menuItems') : null }
       maximumLevels = 2
+      renderHiddenInIndex = ${ true }
         // filter = ${ 'Neos.Neos:Shortcut,Neos.Neos:Document,Abte.Site:Document.Categories' }
     }
 

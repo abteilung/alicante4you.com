@@ -3,6 +3,7 @@ prototype(Alicante.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neo
     menuItems = Neos.Neos:MenuItems {
         itemCollection = ${ q(site).property('extraItems') ? q(site).property('extraItems') : null }
         maximumLevels = 1
+        renderHiddenInIndex = ${ true }
     }
 
     phone = ${ q(site).property('helpdeskPhone') }
