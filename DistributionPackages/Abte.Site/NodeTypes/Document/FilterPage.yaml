@@ -2,6 +2,7 @@
   superTypes:
     'Abte.Site:Document.AbstractPage': true
     'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.ShowFilter': true
     'Alicante.MixitUp:Include': true
     'Abte.Site:Constraint.Document.Restricted': true
   ui:

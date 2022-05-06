@@ -1,0 +1,15 @@
+'Abte.Site:Mixin.ShowFilter':
+  abstract: true
+  ui:
+    label: Show Filter
+    icon: square-full
+    position: 440
+  properties:
+    'showFilter':
+      type: boolean
+      defaultValue: 'true'
+      ui:
+        label: 'Show Filter'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'style'

@@ -65,10 +65,13 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
       x-data="{cat: window.location.hash ? window.location.hash.replace('#', '') : 'all' }"
     >
 
-      <div class="filter gridPadding-x gridPadding-bottom">
+      <div class="filter gridPadding-x gridPadding-bottom"
+      >
 
         <!-- Dropdown menu on small screens -->
-        <div class="lg:hidden">
+        <div class="lg:hidden"
+          @if.filterIsVisible={ q(node).property('showFilter') }
+        >
           <label for="filter-tab" 
             class="sr-only">Select a tab</label>
           <select 
@@ -91,7 +94,9 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
 
 
         <!-- Tabs at lg breakpoint and up -->
-        <div class="container hidden lg:block">
+        <div class="container hidden lg:block"
+          @if.filterIsVisible={ q(node).property('showFilter') }
+        >
           <nav 
             class="flex space-x-6 border-b-2 border-base-200 mixitupFilter" 
             aria-label="Tabs"
