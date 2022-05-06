@@ -1,9 +1,8 @@
 prototype(Alicante.Navigation:Component.Navbar.Navigation) < prototype(Neos.Fusion:Component) {
     
     menuItems = Neos.Neos:MenuItems {
-        itemCollection = ${ q(site).children('[instanceof Abte.Site:Document.World],[instanceof Abte.Site:Document.Overview]').get() }
-        maximumLevels = 2
-        renderHiddenInIndex = true
+      itemCollection = ${ q(site).property('menuItems') ? q(site).property('menuItems') : null }
+      maximumLevels = 2
         // filter = ${ 'Neos.Neos:Shortcut,Neos.Neos:Document,Abte.Site:Document.Categories' }
     }
 

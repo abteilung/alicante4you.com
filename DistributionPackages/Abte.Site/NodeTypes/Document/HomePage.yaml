@@ -33,6 +33,26 @@
       'Abte.Site:Document.Overview': true
       'Abte.Site:Document.SearchResults': true
   properties:
+    'menuItems':
+      type: references
+      ui:
+        label: Main Menu Items
+        reloadIfChanged: true
+        inspector:
+          group: general
+          editorOptions:
+            nodeTypes:
+              - 'Neos.Neos:Document'  
+    'extraItems':
+      type: references
+      ui:
+        label: Extra (Top) Menu Items
+        reloadIfChanged: true
+        inspector:
+          group: general
+          editorOptions:
+            nodeTypes:
+              - 'Neos.Neos:Document'  
     'footerInfo':
       type: string
       ui:

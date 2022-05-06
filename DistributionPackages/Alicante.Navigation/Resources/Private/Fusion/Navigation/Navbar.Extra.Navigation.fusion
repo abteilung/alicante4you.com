@@ -1,7 +1,7 @@
 prototype(Alicante.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neos.Neos:ContentComponent) {
     
     menuItems = Neos.Neos:MenuItems {
-        entryLevel = 1
+        itemCollection = ${ q(site).property('extraItems') ? q(site).property('extraItems') : null }
         maximumLevels = 1
     }
 
