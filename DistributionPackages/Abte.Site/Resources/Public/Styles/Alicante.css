@@ -2436,6 +2436,9 @@ select {
 .overflow-hidden {
   overflow: hidden;
 }
+.\!overflow-hidden {
+  overflow: hidden !important;
+}
 .overflow-y-auto {
   overflow-y: auto;
 }
