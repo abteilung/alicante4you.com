@@ -9,23 +9,21 @@ prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent)
     }
 
     renderer = afx`
-        <div class="container relative grid-cols-3 md:grid xl:grid-cols-4 isolate bg-base-100 testimonial" data-theme="default">
-            <div class="relative z-10 col-end-4 xl:col-end-5">
-                <Sitegeist.Kaleidoscope:Image 
-                    @if.hasImage={props.imageSource}
-                    imageSource={props.imageSource} 
-                    width="700"
-                    height="700"
-                    class="object-cover object-center w-full h-[350px] md:h-full min-h-[350px] lg:min-h-[550px] xl:min-h-[700px]"
-                />
-            </div>
-            <div class="w-full h-full md:absolute md:top-0 md:left-0">
-                <div class="container gridPadding">
-                    <div class="w-full space-y-4 md:space-y-8 xl:space-y-12 md:w-4/6 xl:w-5/8 2xl:w-4/6">
-                        {props.content}
-                    </div>
+        <div class="container gridPadding">
+            <div class="grid-cols-3 overflow-hidden roundedCorners md:grid isolate bg-base-100 testimonial" data-theme="default">
+                <div class="h-full col-span-2 p-16">
+                    {props.content}
                 </div>
-            </div>
+                <div class="relative ">
+                    <Sitegeist.Kaleidoscope:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                        width="700"
+                        height="700"
+                        class="object-cover object-center w-full h-[350px] md:h-full min-h-[350px] lg:min-h-[500px]"
+                    />
+                </div>
+            </div>	
         </div>	
     `
 }

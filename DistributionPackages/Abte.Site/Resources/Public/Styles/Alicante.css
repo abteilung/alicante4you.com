@@ -1820,6 +1820,9 @@ select {
 .col-end-13 {
   grid-column-end: 13;
 }
+.col-end-3 {
+  grid-column-end: 3;
+}
 .row-span-2 {
   grid-row: span 2 / span 2;
 }
@@ -2555,6 +2558,9 @@ select {
 }
 .p-12 {
   padding: 3rem;
+}
+.p-16 {
+  padding: 4rem;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -3848,6 +3854,10 @@ select {
 
     .lg\:min-h-\[550px\] {
     min-height: 550px;
+  }
+
+    .lg\:min-h-\[500px\] {
+    min-height: 500px;
   }
 
     .lg\:w-\[200px\] {
