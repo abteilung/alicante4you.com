@@ -37,7 +37,7 @@ prototype(Abte.Site:Component.Header) < prototype(Neos.Fusion:Component) {
 
         <div class="h-[175px] md:h-[275px] xl:h-[300px] 2xl:h-[350px] overflow-hidden">
 
-            <Sitegeist.Lazybones:Image 
+            <Sitegeist.Kaleidoscope:Image 
                 @if.hasImage={props.imageSource}
                 imageSource={props.imageSource} 
                 width="2200"

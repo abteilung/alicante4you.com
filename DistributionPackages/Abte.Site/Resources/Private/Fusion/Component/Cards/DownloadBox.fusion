@@ -19,7 +19,7 @@ prototype(Abte.Site:Content.DownloadBox) < prototype(Neos.Neos:ContentComponent)
                     additionalClass="hover:underline" 
                     renderDefaultTagIfNoLink='true'
                 >
-                    <Sitegeist.Lazybones:Image 
+                    <Sitegeist.Kaleidoscope:Image 
                         @if.hasImage={props.imageSource}
                         imageSource={props.imageSource} 
                         width="720"

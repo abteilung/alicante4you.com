@@ -43,7 +43,7 @@ prototype(Abte.Site:Component.ImageBox) < prototype(Neos.Neos:ContentComponent) 
             </div>
 
             <div class="h-[250px] md:h-full">
-                <Sitegeist.Lazybones:Image 
+                <Sitegeist.Kaleidoscope:Image 
                     @if.hasImage={props.imageSource}
                     imageSource={props.imageSource} 
                     width="700"

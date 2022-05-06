@@ -1,5 +1,4 @@
 /**
- * This code is feasable for production, and renders an image with LazyBones.
  *
  * To better learn Neos take a look at Abte.Site:Content.BasicImage,
  * which renders our images as an img tag.
@@ -41,7 +40,7 @@ prototype(Abte.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
 
     renderer = afx`
         <Alicante.Navigation:Component.DisplayCondition>
-            <Sitegeist.Lazybones:Image
+            <Sitegeist.Kaleidoscope:Image
                 class={props.class}
                 lazy={true}
                 lazyWidth={200}

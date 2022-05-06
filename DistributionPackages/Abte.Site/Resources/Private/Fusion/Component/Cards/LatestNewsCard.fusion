@@ -42,7 +42,7 @@ prototype(Abte.Site:Component.LatestNewsCard) < prototype(Neos.Neos:ContentCompo
         >
            <div class="grid grid-cols-4 gridgap">
                 <div class="relative w-20 h-20 overflow-hidden rounded-full isolate bg-base-200">
-                    <Sitegeist.Lazybones:Image 
+                    <Sitegeist.Kaleidoscope:Image 
                         @if.hasImage={props.imageSource}
                         imageSource={props.imageSource} 
                         class={props.imageClass}

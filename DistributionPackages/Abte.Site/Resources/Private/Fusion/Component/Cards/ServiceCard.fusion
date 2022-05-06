@@ -47,7 +47,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
             {props.icon}
 
             <div class="relative h-full overflow-hidden bg-base-100">
-                <Sitegeist.Lazybones:Image 
+                <Sitegeist.Kaleidoscope:Image 
                     @if.hasImage={props.imageSource}
                     imageSource={props.imageSource} 
                     class={props.imageClass}

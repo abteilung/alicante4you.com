@@ -9,9 +9,9 @@ prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent)
     }
 
     renderer = afx`
-        <div class="relative grid-cols-3 md:grid xl:grid-cols-4 isolate bg-base-100 testimonial" data-theme="default">
+        <div class="container relative grid-cols-3 md:grid xl:grid-cols-4 isolate bg-base-100 testimonial" data-theme="default">
             <div class="relative z-10 col-end-4 xl:col-end-5">
-                <Sitegeist.Lazybones:Image 
+                <Sitegeist.Kaleidoscope:Image 
                     @if.hasImage={props.imageSource}
                     imageSource={props.imageSource} 
                     width="700"

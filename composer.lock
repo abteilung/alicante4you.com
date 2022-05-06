@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abte.Site",
-                "reference": "af2e04df6f1ffdfd7eb32aa281f4de779f611a6f"
+                "reference": "7b768b7ba67626e3b73621f38645c7b5f6b5a113"
             },
             "require": {
                 "carbon/includeassets": "^5.3",
@@ -22,7 +22,7 @@
                 "jonnitto/prettyembedvideoplatforms": "^2.0",
                 "neos/neos": "*",
                 "neos/nodetypes-contentreferences": "^7.3",
-                "sitegeist/lazybones": "^3.1"
+                "sitegeist/kaleidoscope": "^6.5"
             },
             "type": "neos-site",
             "extra": {
@@ -8943,47 +8943,6 @@
             "time": "2022-04-27T14:52:48+00:00"
         },
         {
-            "name": "sitegeist/lazybones",
-            "version": "v3.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sitegeist/Sitegeist.Lazybones.git",
-                "reference": "a348e39c7a0e792aa48bf955071bb6e49c144329"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sitegeist/Sitegeist.Lazybones/zipball/a348e39c7a0e792aa48bf955071bb6e49c144329",
-                "reference": "a348e39c7a0e792aa48bf955071bb6e49c144329",
-                "shasum": ""
-            },
-            "require": {
-                "neos/fusion-afx": "^1.2 || ^7.0 || ^8.0 || dev-master",
-                "sitegeist/kaleidoscope": "^6.1 || dev-master"
-            },
-            "type": "neos-package",
-            "extra": {
-                "neos": {
-                    "package-key": "Sitegeist.Lazybones"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sitegeist\\Lazybones\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "description": "Lazy loading for sitegeist/kaleidoscope",
-            "support": {
-                "issues": "https://github.com/sitegeist/Sitegeist.Lazybones/issues",
-                "source": "https://github.com/sitegeist/Sitegeist.Lazybones/tree/v3.1.1"
-            },
-            "abandoned": "sitegeist/kaleidoscope",
-            "time": "2022-04-01T08:56:59+00:00"
-        },
-        {
             "name": "sitegeist/slipstream",
             "version": "v2.1.5",
             "source": {
@@ -13003,5 +12962,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

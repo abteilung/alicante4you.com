@@ -31,7 +31,7 @@ prototype(Abte.Site:Component.UnsereMaerkte) < prototype(Neos.Neos:ContentCompon
   	renderer = afx`
         <div class={props.class + ' ' + 'relative z-0 overflow-hidden cnt-container gridPadding 2xl:py-24 isolate bg-base-100'}>
 
-            <Sitegeist.Lazybones:Image 
+            <Sitegeist.Kaleidoscope:Image 
                 @if.hasImage={props.BGimageSource}
                 imageSource={props.BGimageSource} 
                 height="800"
@@ -71,7 +71,7 @@ prototype(Abte.Site:Component.UnsereMaerkte) < prototype(Neos.Neos:ContentCompon
                 </div>
             </div>
 
-            <Sitegeist.Lazybones:Image 
+            <Sitegeist.Kaleidoscope:Image 
                 @if.hasImage={props.imageSource}
                 imageSource={props.imageSource} 
                 height="400"

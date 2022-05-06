@@ -17,11 +17,11 @@ Neos:
             values:
               - de
             uriSegment: 'de'
-          fr:
-            label: FR
+          en:
+            label: EN
             values:
-              - fr
-            uriSegment: 'fr'
+              - en
+            uriSegment: 'en'
           # en:
           #   label: EN
           #   values:

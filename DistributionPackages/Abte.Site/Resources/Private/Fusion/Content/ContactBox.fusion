@@ -23,7 +23,7 @@ prototype(Abte.Site:Content.ContactBox) < prototype(Neos.Neos:ContentComponent) 
 {props.title}
 {props.subTitle} 
 
-            <Sitegeist.Lazybones:Image 
+            <Sitegeist.Kaleidoscope:Image 
                 @if.hasImage={props.imageSource}
                 imageSource={props.imageSource} 
                 width="720"

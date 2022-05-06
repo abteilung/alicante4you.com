@@ -1,6 +1,5 @@
 /**
  * This Basic example shows how you can render a image tag
- * on your own. For production we recommend to use LazyBones,
  * as shown in Abte.Site:Content.Image.
  *
  * This fusion prototype is currently not used and just an example.

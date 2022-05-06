@@ -94,7 +94,7 @@ prototype(Abte.Site:RadioGroup.Item) < prototype(Neos.Fusion:Component) {
                     <h3>
                         {props.title}
                     </h3>
-                    <Sitegeist.Lazybones:Image 
+                    <Sitegeist.Kaleidoscope:Image 
                         @if.hasImage={props.imageSource}
                         imageSource={props.imageSource} 
                         width="350"

@@ -23,7 +23,7 @@ prototype(Abte.Site:Content.LogoGrid.Item) < prototype(Neos.Neos:ContentComponen
             attributes.class="flex justify-center px-2 py-8 bg-white"
         >
             <div>
-                <Sitegeist.Lazybones:Image 
+                <Sitegeist.Kaleidoscope:Image 
                     @if.hasImage={props.imageSource}
                     imageSource={props.imageSource} 
                     maximumWidth="325"

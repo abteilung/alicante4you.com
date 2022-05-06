@@ -39,7 +39,7 @@ prototype(Abte.Site:Content.Modal) < prototype(Neos.Neos:ContentComponent) {
                     class="overflow-hidden"
                     "@click"="open = true"
                 >
-                    <Sitegeist.Lazybones:Image 
+                    <Sitegeist.Kaleidoscope:Image 
                         @if.hasImage={props.imageSource}
                         imageSource={props.imageSource} 
                         class="duration-300 scale-100 group-hover:scale-105 aspect-tv"
@@ -101,7 +101,7 @@ prototype(Abte.Site:Content.Modal) < prototype(Neos.Neos:ContentComponent) {
                         <div class="relative w-full p-4 text-base bg-white lg:w-2/3 contentPanel md:p-8 xl:p-12 2xl:p-12 gridPadding-x">
                             <div class="grid grid-cols-2 gridgap">
                                 <div class="overflow-hidden">
-                                    <Sitegeist.Lazybones:Image 
+                                    <Sitegeist.Kaleidoscope:Image 
                                         @if.hasImage={props.imageSource}
                                         imageSource={props.imageSource} 
                                         class="w-full h-full aspect-tv"

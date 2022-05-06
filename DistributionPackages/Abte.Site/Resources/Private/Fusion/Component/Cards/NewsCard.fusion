@@ -37,7 +37,7 @@ prototype(Abte.Site:Component.NewsCard) < prototype(Neos.Fusion:Component) {
         <Neos.Neos:NodeLink 
             node={ q(node).get(0) }
         >
-            <Sitegeist.Lazybones:Image 
+            <Sitegeist.Kaleidoscope:Image 
                 @if.hasImage={props.imageSource}
                 imageSource={props.imageSource} 
                 class="duration-300 scale-100 group-hover:scale-105"

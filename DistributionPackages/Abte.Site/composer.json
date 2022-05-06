@@ -9,7 +9,7 @@
         "jonnitto/prettyembedvideoplatforms": "^2.0",
         "neos/nodetypes-contentreferences": "^7.3",
         "carbon/link": "^1.7",
-        "sitegeist/lazybones": "^3.1",
+        "sitegeist/kaleidoscope": "^6.5",
         "jonnitto/googlemaps": "^4.0"
     },
     "autoload": {
