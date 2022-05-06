@@ -1,0 +1,19 @@
+{
+    "description": "A package for Neos CMS which render multi columns in form nodetypes.",
+    "type": "neos-package",
+    "name": "alicante/form-multicolumnsection",
+    "require": {
+        "neos/neos": "*",
+        "neos/form": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alicante\\Form\\MultiColumnSection\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Alicante.Form.MultiColumnSection"
+        }
+    }
+}

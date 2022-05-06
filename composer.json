@@ -40,6 +40,7 @@
         "alicante/navigation": "@dev",
 
         "alicante/forms": "@dev",
+        "alicante/form-multicolumnsection": "@dev",
         "alicante/mixitup": "@dev",
         "alicante/flickity": "@dev",
         "alicante/privacy": "@dev"

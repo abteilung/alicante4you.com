@@ -1,0 +1,27 @@
+Neos:
+  Form:
+    presets:
+      default:
+        formElementTypes:
+          'Alicante.Form.MultiColumnSection:TwoColumns':
+            superTypes:
+              'Neos.Form:FormElement': true
+            implementationClassName: 'Alicante\Form\MultiColumnSection\Form\TwoColumnFormElement'
+            renderingOptions:
+              renderableNameInTemplate: container
+              templatePathPattern: 'resource://{@package}/Private/Form/{@type}.html'
+              partialPathPattern: 'resource://{@package}/Private/Form/Partials/{@type}.html'
+              layoutPathPattern: 'resource://{@package}/Private/Form/Layouts/{@type}.html'
+          'Alicante.Form.MultiColumnSection:ThreeColumns':
+            superTypes:
+              'Neos.Form:FormElement': true
+            implementationClassName: 'Alicante\Form\MultiColumnSection\Form\ThreeColumnFormElement'
+            renderingOptions:
+              renderableNameInTemplate: container
+              templatePathPattern: 'resource://{@package}/Private/Form/{@type}.html'
+              partialPathPattern: 'resource://{@package}/Private/Form/Partials/{@type}.html'
+              layoutPathPattern: 'resource://{@package}/Private/Form/Layouts/{@type}.html'
+  Neos:
+    fusion:
+      autoInclude:
+        'Alicante.Form.MultiColumnSection': true

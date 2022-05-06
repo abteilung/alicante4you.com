@@ -1,0 +1,15 @@
+prototype(Alicante.Form.MultiColumnSection:TwoColumns.Definition) < prototype(Neos.Form.Builder:FormElement.Definition) {
+    @class = 'Alicante\\Form\\MultiColumnSection\\Fusion\\TwoColumnFormElementImplementation'
+    formElementType = 'Alicante.Form.MultiColumnSection:TwoColumns'
+
+    column1Elements = Neos.Form.Builder:ElementCollection {
+        prototype(Neos.Form.Builder:FormElement.Definition) {
+            renderingOptions._column = 1
+        }
+    }
+    column2Elements = Neos.Form.Builder:ElementCollection {
+        prototype(Neos.Form.Builder:FormElement.Definition) {
+            renderingOptions._column = 2
+        }
+    }
+}
