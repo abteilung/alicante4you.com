@@ -66,7 +66,7 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
 
                 {props.main}
 
-                <Abte.Site:Content.Container 
+                <!-- <Abte.Site:Content.Container 
                     @if.hasSimilarProducts={props.similarProducts}
                     title={ I18n.translate('Abte.Site:Main:similarProducts') }
                     linkText=''
@@ -78,7 +78,7 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
                         limit="3" 
                         layout="products" 
                     />
-                </Abte.Site:Content.Container>
+                </Abte.Site:Content.Container> -->
 
             </main>
         `

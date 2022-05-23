@@ -47,31 +47,24 @@ module.exports = {
 			},
 			fontSize: {
 				xs: ['14px', {
-					lineHeight: '24px',
 					letterSpacing: '0'
 				}],
 				sm: ['16px', {
-					lineHeight: '24px',
 					letterSpacing: '0'
 				}],
 				base:['18px', {
-					lineHeight: '27px',
 					letterSpacing: '0'
 				}],
-				lg: ['24px', {
-					lineHeight: '28px',
+				lg: ['21px', {
 					letterSpacing: '0'
 				}],
 				xl: ['27px', {
-					lineHeight: '42px',
 					letterSpacing: '0'
 				}],
 				'2xl': ['36px', {
-					lineHeight: '48px',
 					letterSpacing: '0'
 				}],
 				'3xl': ['72px', {
-					lineHeight: '80px',
 					letterSpacing: '0'
 				}],
 			},

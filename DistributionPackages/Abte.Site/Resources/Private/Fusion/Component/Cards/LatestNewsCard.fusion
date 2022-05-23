@@ -49,7 +49,7 @@ prototype(Abte.Site:Component.LatestNewsCard) < prototype(Neos.Neos:ContentCompo
                     />
                 </div>
                 <div class="relative w-full h-full col-span-3">
-                    <p class="mb-0 font-bold line-clamp-none md:line-clamp-3 lg:line-clamp-none">{ q(node).property('titleOverride') ? q(node).property('titleOverride') : q(documentNode).is('[instanceof Abte.Site:Document.Kompetenzen],[instanceof Abte.Site:Document.Products]') ? q(node).property('subTitle') : q(node).property('title') }</p>
+                    <p class="mb-0 font-bold line-clamp-none md:line-clamp-3 lg:line-clamp-none">{ q(node).property('titleOverride') ? q(node).property('title') : q(documentNode).is('[instanceof Abte.Site:Document.Kompetenzen],[instanceof Abte.Site:Document.Products]') ? q(node).property('subTitle') : q(node).property('title') }</p>
                     {props.icon}
                 </div>
             </div>
