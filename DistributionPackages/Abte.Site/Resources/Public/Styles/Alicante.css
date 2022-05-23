@@ -4372,6 +4372,14 @@ select {
     padding: 3rem;
   }
 
+  .\32xl\:p-20 {
+    padding: 5rem;
+  }
+
+  .\32xl\:p-16 {
+    padding: 4rem;
+  }
+
   .\32xl\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;

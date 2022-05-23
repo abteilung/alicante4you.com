@@ -32,7 +32,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
         target = ${ q(node).property('oneTarget') }        
 
         renderer = afx`
-            <div class="p-4 md:p-8 xl:p-12">
+            <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
                 <p class="lead">
                     {props.lead}
                 </p>
@@ -40,7 +40,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
                     {props.header}
                 </h1>
             </div>
-            <div class="p-4 md:p-8 xl:p-12">
+            <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
                 <Abte.Site:Content.Button 
                     class={ q(node).property('oneImage') ? 'bg-white !text-black' : 'bg-black text-white' }
                     target={props.target}
