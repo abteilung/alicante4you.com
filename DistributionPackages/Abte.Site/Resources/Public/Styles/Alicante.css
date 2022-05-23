@@ -2081,6 +2081,12 @@ select {
 .flex-none {
   flex: none;
 }
+.grow {
+  flex-grow: 1;
+}
+.grow-0 {
+  flex-grow: 0;
+}
 .origin-top-left {
   transform-origin: top left;
 }
@@ -2253,11 +2259,17 @@ select {
 .content-start {
   align-content: flex-start;
 }
+.content-between {
+  align-content: space-between;
+}
 .items-start {
   align-items: flex-start;
 }
 .items-center {
   align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
 }
 .justify-center {
   justify-content: center;

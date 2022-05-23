@@ -49,7 +49,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
             </div>
         `
     }
-    oneClass = 'roundedCorners relative bg-primary box-h-2 row-span-2 col-span-1 md:col-span-2 headGrid'
+    oneClass = 'roundedCorners grid content-between relative bg-primary box-h-2 row-span-2 col-span-1 md:col-span-2 headGrid'
     oneImage =  Sitegeist.Kaleidoscope:AssetImageSource {
         asset   = ${ q(node).property('oneImage') }
         width   = 800
