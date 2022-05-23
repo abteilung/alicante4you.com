@@ -1051,7 +1051,7 @@ select {
   color: rgb(255 255 255 / 0.75) !important;
 }
     .serviceCard {
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
   --tw-gradient-from: rgb(0 0 0 / 0.5);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
 }
@@ -2247,8 +2247,8 @@ select {
 .place-content-between {
   place-content: space-between;
 }
-.content-end {
-  align-content: flex-end;
+.content-start {
+  align-content: flex-start;
 }
 .items-start {
   align-items: flex-start;
