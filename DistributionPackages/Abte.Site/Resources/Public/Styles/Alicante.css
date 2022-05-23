@@ -2790,9 +2790,16 @@ select {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
+.no-underline {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
 .decoration-primary\/0 {
   -webkit-text-decoration-color: hsl(var(--p) / 0);
           text-decoration-color: hsl(var(--p) / 0);
+}
+.decoration-0 {
+  text-decoration-thickness: 0px;
 }
 .underline-offset-\[4px\] {
   text-underline-offset: 4px;
@@ -2903,6 +2910,12 @@ select {
 }
 .duration-500 {
   transition-duration: 500ms;
+}
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+.\!duration-500 {
+  transition-duration: 500ms !important;
 }
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -3077,9 +3090,19 @@ select {
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
 }
+.group:hover .group-hover\:underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
 .group:hover .group-hover\:decoration-current {
   -webkit-text-decoration-color: currentColor;
           text-decoration-color: currentColor;
+}
+.group:hover .group-hover\:decoration-auto {
+  text-decoration-thickness: auto;
+}
+.group:hover .group-hover\:decoration-2 {
+  text-decoration-thickness: 2px;
 }
 @media (min-width: 640px) {
 
