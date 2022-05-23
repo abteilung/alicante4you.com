@@ -19,12 +19,12 @@ prototype(Alicante.Navigation:Component.Navbar.Language) < prototype(Neos.Fusion
             >
                 <Neos.Fusion:Tag
                     tagName="button" 
-                    attributes.class="flex py-1 transition text-primary xl:py-2 focus:outline-none focus:ring-0" 
+                    attributes.class="flex py-1 transition text-neutral xl:py-2 focus:outline-none focus:ring-0" 
                     attributes."@click"="open = !open"
                     @if.isActiveLang={item.state == "current"}
                 >
-                    <span class="uppercase">{item.label}</span>
-                    <span class="text-primary">
+                    <span class="font-bold">{item.label}</span>
+                    <span class="text-neutral">
                         {props.subNavCaret}
                     </span>
                 </Neos.Fusion:Tag>
