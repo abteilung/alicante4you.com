@@ -23,7 +23,7 @@ prototype(Alicante.Navigation:Component.Navbar) < prototype(Neos.Fusion:Componen
                     
                         <div 
                             x-data="\{ 'showMenu' : false \}" 
-                            class="flex"
+                            class="flex-none lg:flex"
                         >
 
                             <Alicante.Navigation:Component.Navbar.Navigation />
