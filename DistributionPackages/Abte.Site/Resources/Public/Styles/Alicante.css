@@ -1695,6 +1695,18 @@ select {
 .top-2 {
   top: 0.5rem;
 }
+.top-12 {
+  top: 3rem;
+}
+.right-12 {
+  right: 3rem;
+}
+.top-4 {
+  top: 1rem;
+}
+.right-4 {
+  right: 1rem;
+}
 .isolate {
   isolation: isolate;
 }
@@ -1906,6 +1918,9 @@ select {
 .mt-48 {
   margin-top: 12rem;
 }
+.mr-0 {
+  margin-right: 0px;
+}
 .block {
   display: block;
 }
@@ -2076,6 +2091,11 @@ select {
 }
 .w-2\/3 {
   width: 66.666667%;
+}
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .flex-1 {
   flex: 1 1 0%;

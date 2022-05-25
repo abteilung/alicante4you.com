@@ -25,7 +25,7 @@ prototype(Alicante.Navigation:Component.Navbar.KontaktModal) < prototype(Neos.Fu
                 <Alicante.Navigation:Component.Navbar.KontaktModal.CloseButton />
 
                 <div 
-                    class="container flex items-start justify-center h-screen gridPadding" 
+                    class="container flex items-start justify-center h-screen gridPadding-top" 
                     x-transition:enter="transition ease duration-100 transform" 
                     x-transition:enter-start="opacity-0 scale-90 translate-y-1" 
                     x-transition:enter-end="opacity-100 scale-100 translate-y-0" 
@@ -33,10 +33,30 @@ prototype(Alicante.Navigation:Component.Navbar.KontaktModal) < prototype(Neos.Fu
                     x-transition:leave-start="opacity-100 scale-100 translate-y-0" 
                     x-transition:leave-end="opacity-0 scale-90 translate-y-1"
                 >
-                    <div class="w-full pt-4 text-base bg-white md:pt-8 xl:pt-12 2xl:p-12 gridPadding-x contentPanel"
+                    <div class="relative w-full pt-4 text-base bg-white roundedCorners md:pt-8 xl:pt-12 2xl:p-12 gridPadding-x contentPanel"
                         "@click.away"="showModal = false" 
                     >
                         {props.content}
+                        <div class="absolute cursor-pointer top-4 right-4"
+                            "@click.prevent"="showModal = !showModal"
+                        >
+                            <button 
+                                class="w-auto text-lg text-secondary pill focus:outline-none"
+                                aria-expanded="false"
+                            >
+                                <div class="relative flex items-center justify-center w-6 h-6">
+                                    <span 
+                                        class="absolute w-full h-[2px] transition translate-y-0 rotate-45 transform bg-current">
+                                    </span>
+                                    <span 
+                                        class="absolute w-full h-[2px] opacity-0 translate-x-3 transition transform bg-current">
+                                    </span>
+                                    <span 
+                                        class="absolute w-full h-[2px] translate-y-0 -rotate-45 transition transform bg-current">
+                                    </span>
+                                </div>
+                            </button>
+                        </div>    
                     </div>
                 </div>
             </div>
@@ -56,7 +76,7 @@ prototype(Alicante.Navigation:Component.Navbar.KontaktModal) < prototype(Neos.Fu
 prototype(Alicante.Navigation:Component.Navbar.KontaktModal.CloseButton) < prototype(Neos.Fusion:Component) {
   
 	renderer = afx`
-        <div class="absolute right-0 cursor-pointer top-2 md:top-4 xl:top-8 md:right-4 xl:right-12"
+        <!-- <div class="absolute right-0 cursor-pointer top-2 md:top-4 xl:top-8 md:right-4 xl:right-12"
             "@click.prevent"="showModal = !showModal"
         >
             <button 
@@ -75,6 +95,6 @@ prototype(Alicante.Navigation:Component.Navbar.KontaktModal.CloseButton) < proto
                     </span>
                 </div>
             </button>
-        </div>    
+        </div>     -->
     `
 }
