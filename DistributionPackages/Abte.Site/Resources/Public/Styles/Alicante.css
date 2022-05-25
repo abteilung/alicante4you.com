@@ -1067,10 +1067,12 @@ select {
   display: grid;
   gap: 1rem;
 }
+        
 
         #kurs-form fieldset label:last-child, .kontaktModal fieldset label:last-child {
   grid-column: 1 / -1;
 }
+        
 
         .kontaktModal fieldset input, .kontaktModal fieldset textarea, .basketModal fieldset input, .basketModal fieldset textarea {
   --tw-bg-opacity: 1;
@@ -2081,12 +2083,6 @@ select {
 .flex-none {
   flex: none;
 }
-.grow {
-  flex-grow: 1;
-}
-.grow-0 {
-  flex-grow: 0;
-}
 .origin-top-left {
   transform-origin: top left;
 }
@@ -2267,9 +2263,6 @@ select {
 }
 .items-center {
   align-items: center;
-}
-.items-stretch {
-  align-items: stretch;
 }
 .justify-center {
   justify-content: center;
@@ -3382,10 +3375,6 @@ select {
     gap: 1.5rem;
   }
 
-  #kurs-form fieldset, .kontaktModal fieldset {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .kontaktModal fieldset textarea, .basketModal fieldset textarea {
     height: 8rem;
   }
@@ -3806,14 +3795,6 @@ select {
 
   .gridPadding-bottom {
     padding-bottom: 6rem;
-  }
-
-  #kurs-form fieldset, .kontaktModal fieldset {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .kontaktModal fieldset, .basketModal fieldset {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .kontaktModal fieldset label:last-child, .basketModal fieldset label:last-child {
@@ -4368,16 +4349,12 @@ select {
     margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .\32xl\:p-12 {
-    padding: 3rem;
-  }
-
-  .\32xl\:p-20 {
-    padding: 5rem;
-  }
-
   .\32xl\:p-16 {
     padding: 4rem;
+  }
+
+  .\32xl\:p-12 {
+    padding: 3rem;
   }
 
   .\32xl\:py-24 {
