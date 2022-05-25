@@ -7,23 +7,23 @@ prototype(Alicante.Navigation:Component.Navbar) < prototype(Neos.Fusion:Componen
         <div 
             x-cloak
             id={props.menuID}
-            class="fixed top-0 z-20 w-full transition-all duration-200 transform isolate backdrop-blur-md"
+            class="fixed top-0 z-20 w-full transition-all duration-200 transform isolate"
         >
             <Alicante.Navigation:Component.Extra.Navbar.Navigation />
             
             <div class="flex justify-center bg-white">
                 <div class="container flex justify-between mx-0 gridPadding-x">
-                    <div class="flex items-center bg-white justify-left">
-                        <Alicante.Navigation:Component.Navbar.Brand />
-                    </div>
                     
                     <div 
-                        class="flex justify-between w-full navArea"
+                        class="relative flex justify-between w-full navArea"
                     >
+                        <div class="flex items-center bg-white justify-left">
+                            <Alicante.Navigation:Component.Navbar.Brand />
+                        </div>
                     
                         <div 
                             x-data="\{ 'showMenu' : false \}" 
-                            class="flex justify-center w-full"
+                            class="flex"
                         >
 
                             <Alicante.Navigation:Component.Navbar.Navigation />

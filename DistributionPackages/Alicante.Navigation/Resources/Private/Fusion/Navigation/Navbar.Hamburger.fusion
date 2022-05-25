@@ -5,7 +5,7 @@ prototype(Alicante.Navigation:Component.Navbar.Hamburger) < prototype(Neos.Fusio
         type="button" 
         "@click.prevent"="showMenu = !showMenu "
         "@keydown.escape"="showMenu = false"
-        class="flex items-center space-x-3 text-lg text-primary focus:outline-none lg:hidden" 
+        class="absolute flex items-center space-x-3 text-lg top-1/2 left-1/2 text-neutral focus:outline-none lg:hidden" 
         aria-expanded="false"
       >
         <div class="relative flex items-center justify-center w-6 md:w-10 text-alert">

@@ -29,7 +29,7 @@ prototype(Alicante.Navigation:Component.Navbar.Mobile) < prototype(Neos.Fusion:C
       x-transition:enter-start="opacity-0 transform" 
       x-transition:leave="transition duration-200" 
       x-transition:leave-end="opacity-0 transform"
-      class="absolute left-0 z-40 w-full bg-white divide-y divide-gray-100 shadow-lg top-36 md:top-44 text-primary focus:outline-none"
+      class="absolute left-0 z-40 w-full divide-y divide-white bg-white/50 roundedCorners top-36 md:top-36 text-neutral focus:outline-none"
     >
 
       <!-- With Subs -->
