@@ -3442,6 +3442,14 @@ select {
     right: 1rem;
   }
 
+  .md\:top-6 {
+    top: 1.5rem;
+  }
+
+  .md\:right-6 {
+    right: 1.5rem;
+  }
+
   .md\:col-span-4 {
     grid-column: span 4 / span 4;
   }

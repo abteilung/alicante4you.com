@@ -25,7 +25,7 @@ prototype(Alicante.Navigation:Component.Navbar.KontaktModal) < prototype(Neos.Fu
                 <Alicante.Navigation:Component.Navbar.KontaktModal.CloseButton />
 
                 <div 
-                    class="container flex items-start justify-center h-screen gridPadding-top" 
+                    class="container flex items-start justify-center h-screen gridPadding-x gridPadding-top" 
                     x-transition:enter="transition ease duration-100 transform" 
                     x-transition:enter-start="opacity-0 scale-90 translate-y-1" 
                     x-transition:enter-end="opacity-100 scale-100 translate-y-0" 
@@ -37,7 +37,7 @@ prototype(Alicante.Navigation:Component.Navbar.KontaktModal) < prototype(Neos.Fu
                         "@click.away"="showModal = false" 
                     >
                         {props.content}
-                        <div class="absolute cursor-pointer top-4 right-4"
+                        <div class="absolute cursor-pointer top-4 md:top-6 right-4 md:right-6"
                             "@click.prevent"="showModal = !showModal"
                         >
                             <button 
