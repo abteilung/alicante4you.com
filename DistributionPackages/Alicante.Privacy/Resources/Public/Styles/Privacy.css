@@ -17,18 +17,6 @@
     color: rgb(255 255 255 / var(--tw-text-opacity)) !important
 }
   
-  .gdpr-cookieconsent-settings p, .gdpr-cookieconsent-settings h1, .gdpr-cookieconsent-settings .h1, .gdpr-cookieconsent-settings h2, .gdpr-cookieconsent-settings .h2, .gdpr-cookieconsent-settings h3, .gdpr-cookieconsent-settings .h3, .gdpr-cookieconsent-settings h4, .gdpr-cookieconsent-settings .h4, .gdpr-cookieconsent-settings h5, .gdpr-cookieconsent-settings .h5, .gdpr-cookieconsent-settings h6, .gdpr-cookieconsent-settings .h6 {
-  
-    --tw-text-opacity: 1;
-  
-    color: rgb(255 255 255 / var(--tw-text-opacity))
-}
-  
-  .gdpr-cookieconsent-settings p {
-  
-    color: rgb(255 255 255 / 0.6)
-}
-  
   .gdpr-cookieconsent-settings {
   
     left: 100% !important;
@@ -101,8 +89,6 @@
   
     font-size: 24px;
   
-    line-height: 28px;
-  
     letter-spacing: 0;
   
     letter-spacing: 0em !important
@@ -118,8 +104,6 @@
     margin-bottom: 0.5rem;
   
     font-size: 14px;
-  
-    line-height: 24px;
   
     letter-spacing: 0;
   
@@ -151,8 +135,6 @@
   
     font-size: 14px;
   
-    line-height: 24px;
-  
     letter-spacing: 0
 }
   
@@ -174,8 +156,6 @@
     text-align: left;
   
     font-size: 16px;
-  
-    line-height: 24px;
   
     letter-spacing: 0;
   
@@ -207,16 +187,12 @@
   
     font-size: 16px !important;
   
-    line-height: 24px !important;
-  
     letter-spacing: 0 !important
 }
   
   .gdpr-cookieconsent-settings a {
   
     font-size: 18px !important;
-  
-    line-height: 27px !important;
   
     letter-spacing: 0 !important;
   
@@ -232,8 +208,6 @@
   .gdpr-cookieconsent-settings .gdpr-cookieconsent-settings__content__links a {
   
     font-size: 16px !important;
-  
-    line-height: 24px !important;
   
     letter-spacing: 0 !important
 }
@@ -266,9 +240,7 @@
   
         margin-bottom: 1rem;
   
-        font-size: 27px;
-  
-        line-height: 42px;
+        font-size: 36px;
   
         letter-spacing: 0
     }
@@ -278,8 +250,6 @@
         margin-bottom: 1rem;
   
         font-size: 16px;
-  
-        line-height: 24px;
   
         letter-spacing: 0
     }
@@ -296,8 +266,6 @@
         padding-bottom: 0.5rem;
   
         font-size: 16px;
-  
-        line-height: 24px;
   
         letter-spacing: 0
     }

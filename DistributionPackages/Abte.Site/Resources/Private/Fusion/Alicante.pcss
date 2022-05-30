@@ -8,10 +8,6 @@
         @apply hidden;
     }
 
-    u {
-        @apply underline-offset-[14px] decoration-4;
-    }
-
     .roundedCorners {
         @apply rounded-t-[15px] md:rounded-t-[30px] rounded-br-[15px] md:rounded-br-[30px];
         &-small {
@@ -101,13 +97,16 @@
     }
 
     h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1 {
-        @apply mb-2 font-headings text-xl lg:text-2xl xl:text-3xl font-light xl:mb-4;
+        @apply mb-2 font-headings text-xl md:text-2xl xl:text-3xl font-light xl:mb-4 leading-tight;
         i, em {
             @apply not-italic text-accent-focus;
         }
         .headGrid & i, 
         .headGrid & em {
             @apply not-italic !text-accent-focus;
+        }
+        u {
+            @apply underline-offset-[6px] decoration-2 md:underline-offset-8 md:decoration-[2.5px] lg:decoration-[3px] xl:decoration-4;
         }
     }
 

@@ -55,13 +55,13 @@ module.exports = {
 				base:['18px', {
 					letterSpacing: '0'
 				}],
-				lg: ['21px', {
+				lg: ['24px', {
 					letterSpacing: '0'
 				}],
-				xl: ['27px', {
+				xl: ['36px', {
 					letterSpacing: '0'
 				}],
-				'2xl': ['36px', {
+				'2xl': ['48px', {
 					letterSpacing: '0'
 				}],
 				'3xl': ['72px', {
