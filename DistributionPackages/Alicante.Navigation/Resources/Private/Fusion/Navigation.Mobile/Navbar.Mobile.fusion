@@ -16,8 +16,8 @@ prototype(Alicante.Navigation:Component.Navbar.Mobile) < prototype(Neos.Fusion:C
     }
   }
 
-  linkItemClass 		= ${ 'pt-1 pb-2 block text-lg font-bold whitespace-nowrap tracking-normal' + ' ' + (item.state == 'active' ? ' ' : item.state == 'current' ? ' py-1 border-b-2 border-b-white' : '') }
-  lastLinkItemClass 	= ${ 'pt-1 pb-2 block text-lg font-bold whitespace-nowrap tracking-normal' + ' ' + (item.state == 'active' ? ' ' : item.state == 'current' ? ' py-1 border-b-2 border-b-white' : '') }
+  linkItemClass 		= ${ 'pt-1 pb-2 block text-base md:text-lg font-bold whitespace-nowrap tracking-normal' + ' ' + (item.state == 'active' ? ' ' : item.state == 'current' ? ' py-1 border-b-2 border-b-white' : '') }
+  lastLinkItemClass 	= ${ 'pt-1 pb-2 block text-base md:text-lg font-bold whitespace-nowrap tracking-normal' + ' ' + (item.state == 'active' ? ' ' : item.state == 'current' ? ' py-1 border-b-2 border-b-white' : '') }
   nodeType 			= ${ item.node.nodetype.name }
   linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
   doNotLinkNode       = ${ q(documentNode).property('doNotLink') }
@@ -29,7 +29,7 @@ prototype(Alicante.Navigation:Component.Navbar.Mobile) < prototype(Neos.Fusion:C
       x-transition:enter-start="opacity-0 transform" 
       x-transition:leave="transition duration-200" 
       x-transition:leave-end="opacity-0 transform"
-      class="absolute left-0 z-40 w-2/3 p-12 divide-y bg-neutral backdrop-blur-3xl divide-white/10 roundedCorners-top top-24 md:top-32 text-neutral focus:outline-none !text-white"
+      class="absolute left-0 z-40 w-full md:w-2/3 p-6 md:p-12 divide-y bg-neutral backdrop-blur-3xl divide-white/10 roundedCorners-top top-20 md:top-32 text-neutral focus:outline-none !text-white"
     >
 
       <!-- With Subs -->
@@ -100,7 +100,7 @@ prototype(Alicante.Navigation:Component.Navbar.Mobile) < prototype(Neos.Fusion:C
       </div>
 -->
 
-      <div class="pt-8 text-sm">
+      <div class="pt-4 text-sm md:pt-8">
         {props.metaItems}
       </div>
 

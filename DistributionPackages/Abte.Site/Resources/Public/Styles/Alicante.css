@@ -991,6 +991,9 @@ select {
         #primaryMenu.-translate-y-48 {
   margin-top: 2rem !important;
 }
+        .-translate-y-48 nav[x-show="showMenu"] {
+  top: 8rem;
+}
         body[data-theme="human"] .subNavigation button a {
   --tw-text-opacity: 1;
   color: hsl(var(--af, var(--a)) / var(--tw-text-opacity));
@@ -1668,8 +1671,8 @@ select {
 .top-48 {
   top: 12rem;
 }
-.top-24 {
-  top: 6rem;
+.top-20 {
+  top: 5rem;
 }
 .right-2 {
   right: 0.5rem;
@@ -2062,9 +2065,6 @@ select {
 .w-4 {
   width: 1rem;
 }
-.w-2\/3 {
-  width: 66.666667%;
-}
 .w-14 {
   width: 3.5rem;
 }
@@ -2091,6 +2091,9 @@ select {
 }
 .w-32 {
   width: 8rem;
+}
+.w-2\/3 {
+  width: 66.666667%;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -2636,8 +2639,8 @@ select {
 .pb-2 {
   padding-bottom: 0.5rem;
 }
-.pt-8 {
-  padding-top: 2rem;
+.pt-4 {
+  padding-top: 1rem;
 }
 .pt-2 {
   padding-top: 0.5rem;
@@ -2648,14 +2651,14 @@ select {
 .pr-12 {
   padding-right: 3rem;
 }
-.pt-4 {
-  padding-top: 1rem;
-}
 .pb-3 {
   padding-bottom: 0.75rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
+}
+.pt-8 {
+  padding-top: 2rem;
 }
 .pb-16 {
   padding-bottom: 4rem;
@@ -3758,6 +3761,10 @@ select {
     padding: 2rem;
   }
 
+  .md\:p-12 {
+    padding: 3rem;
+  }
+
   .md\:p-4 {
     padding: 1rem;
   }
@@ -3765,6 +3772,10 @@ select {
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .md\:pt-8 {
+    padding-top: 2rem;
   }
 
   .md\:pr-24 {
@@ -3783,8 +3794,9 @@ select {
     padding-top: 12rem;
   }
 
-  .md\:pt-8 {
-    padding-top: 2rem;
+  .md\:text-lg {
+    font-size: 24px;
+    letter-spacing: 0;
   }
 
   .md\:text-sm {
