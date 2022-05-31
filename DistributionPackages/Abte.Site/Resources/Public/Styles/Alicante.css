@@ -722,8 +722,7 @@ select {
 }
 
         body strong {
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
+  font-weight: 700;
 }
 
     main {
@@ -2681,6 +2680,9 @@ select {
 .pt-32 {
   padding-top: 8rem;
 }
+.pl-0 {
+  padding-left: 0px;
+}
 .text-left {
   text-align: left;
 }
@@ -3769,9 +3771,23 @@ select {
     padding: 1rem;
   }
 
+  .md\:p-24 {
+    padding: 6rem;
+  }
+
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .md\:pt-8 {
@@ -3792,6 +3808,10 @@ select {
 
   .md\:pt-48 {
     padding-top: 12rem;
+  }
+
+  .md\:pr-12 {
+    padding-right: 3rem;
   }
 
   .md\:text-lg {
