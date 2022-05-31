@@ -14,6 +14,12 @@
             @apply rounded-t-[10px] md:rounded-t-[15px] rounded-br-[10px] md:rounded-br-[15px];
         }
     }
+    .roundedCorners-top {
+        @apply rounded-tr-[15px] md:rounded-tr-[30px] rounded-b-[15px] md:rounded-b-[30px];
+        &-small {
+            @apply rounded-tr-[10px] md:rounded-tr-[15px] rounded-b-[10px] md:rounded-b-[15px];
+        }
+    }
 
     .mainNavigation a {
         @apply font-bold text-neutral border-b-2 border-transparent;
@@ -224,6 +230,13 @@
         &.-translate-y-48 {
          @apply mt-8 md:mt-0 !important;
         }
+    }
+
+    nav[x-show="showMenu"] {
+        .-translate-y-48 & {
+            @apply md:top-[152px];
+        }
+
     }
 
     .subNavigation button a {
