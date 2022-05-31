@@ -1712,6 +1712,9 @@ select {
 .top-2 {
   top: 0.5rem;
 }
+.bottom-12 {
+  bottom: 3rem;
+}
 .isolate {
   isolation: isolate;
 }
