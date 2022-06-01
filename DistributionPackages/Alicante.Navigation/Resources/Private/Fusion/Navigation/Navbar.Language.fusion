@@ -40,11 +40,11 @@ prototype(Alicante.Navigation:Component.Navbar.Language) < prototype(Neos.Fusion
                 x-transition:leave-end="transform opacity-0 scale-95" 
                 class="absolute right-0 z-10 w-full origin-top-right"
             >
-                <div class="absolute right-0 w-12 mt-2 origin-top-right bg-white rounded-md shadow-lg focus:outline-none">
+                <div class="absolute right-0 mt-2 duration-200 origin-top-right bg-white rounded-md shadow-lg hover:bg-neutral focus:outline-none">
                     <Neos.Fusion:Loop items={props.menuItems}>
                         <Neos.Neos:NodeLink 
                             @if.isActiveLang={item.state != "current"}
-                            attributes.class="block px-4 py-2 text-primary hover:text-primary-focus focus:bg-black focus:outline-none focus:shadow-outline" 
+                            attributes.class="flex items-center justify-center w-12 font-bold md:w-16 aspect-square text-neutral hover:text-white focus:outline-none focus:shadow-outline" 
                             node={item.node}
                         >
                             {item.label}
