@@ -26,7 +26,7 @@ prototype(Abte.Site:Component.MoreAboutUs) < prototype(Neos.Neos:ContentComponen
                                 renderDefaultTagIfNoLink='true'
                             >
                                 <div class="flex items-center">
-                                    <Abte.Site:Icon.ColorPhone class="mr-2 " />
+                                    <Abte.Site:Icon.ColorPhone class="mr-2 text-neutral" />
                                     <Neos.Neos:Editable property="helpdeskPhone" node={site} />
                                 </div>
                             </Carbon.Link:Link>

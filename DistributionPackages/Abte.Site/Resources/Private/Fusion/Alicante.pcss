@@ -20,7 +20,13 @@
             @apply rounded-tr-[10px] md:rounded-tr-[15px] rounded-b-[10px] md:rounded-b-[15px];
         }
     }
+    footer .mainNavigation {
+            @apply grid space-x-0 lg:space-x-6 2xl:space-x-10 lg:flex text-base md:text-[21px] 2xl:text-lg mr-0;
 
+        button {
+            @apply text-left;
+        }
+    }
     .mainNavigation a {
         @apply font-bold text-neutral border-b-2 border-transparent;
 
@@ -42,7 +48,7 @@
     }
     
     main p {
-        @apply mb-4;
+        @apply space-y-4;
     }
 
     main a {
@@ -58,7 +64,7 @@
     .container-image, 
     .button {
         .neos-contentcollection & {
-            @apply mb-8;
+            @apply space-y-8;
         }
     }
 
@@ -117,14 +123,14 @@
     }
 
     h2, .h2, h1.h2, h4.h2, h5.h2 {
-        @apply mb-2 font-bold font-headings text-lg md:text-xl !leading-tight;
+        @apply mb-2 font-bold font-headings text-lg md:text-[27px] lg:text-xl !leading-tight;
         i, em {
             @apply not-italic text-accent-focus;
         }
     }
 
     h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
-        @apply text-lg lg:text-[27px] font-headings !leading-tight font-bold;
+        @apply text-[21px] lg:text-[27px] font-headings !leading-tight font-bold;
         i, em {
             @apply not-italic text-accent-focus;
         }
@@ -250,6 +256,10 @@
         &.activeLink {
             @apply !text-primary;
         }
+    }
+
+    .primary-footer {
+        @apply py-4 md:py-8 lg:py-12 2xl:py-24; 
     }
 
     .box-shadow {

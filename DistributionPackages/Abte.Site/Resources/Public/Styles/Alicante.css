@@ -696,7 +696,23 @@ select {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+    footer .mainNavigation {
+  margin-right: 0px;
+  display: grid;
+}
+    footer .mainNavigation > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0px * var(--tw-space-x-reverse));
+  margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+}
+    footer .mainNavigation {
+  font-size: 18px;
+  letter-spacing: 0;
+}
 
+        footer .mainNavigation button {
+  text-align: left;
+}
     .mainNavigation a {
   border-bottom-width: 2px;
   border-color: transparent;
@@ -730,8 +746,10 @@ select {
   z-index: 0;
 }
     
-    main p {
-  margin-bottom: 1rem;
+    main p > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
     main a {
@@ -744,8 +762,10 @@ select {
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
-        .neos-contentcollection .ce-text, .neos-contentcollection .container-image, .neos-contentcollection .button {
-  margin-bottom: 2rem;
+        .neos-contentcollection .ce-text > :not([hidden]) ~ :not([hidden]), .neos-contentcollection .container-image > :not([hidden]) ~ :not([hidden]), .neos-contentcollection .button > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
     .megaMenu .ce-text {
@@ -833,8 +853,7 @@ select {
 
     h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  letter-spacing: 0;
+  font-size: 21px;
   font-weight: 700;
   line-height: 1.25 !important;
 }
@@ -1005,6 +1024,11 @@ select {
         .subNavigation button a.activeLink {
   --tw-text-opacity: 1 !important;
   color: hsl(var(--p) / var(--tw-text-opacity)) !important;
+}
+
+    .primary-footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
     .box-shadow {
@@ -2281,6 +2305,9 @@ select {
 .items-center {
   align-items: center;
 }
+.justify-end {
+  justify-content: flex-end;
+}
 .justify-center {
   justify-content: center;
 }
@@ -2552,9 +2579,6 @@ select {
 .p-12 {
   padding: 3rem;
 }
-.p-16 {
-  padding: 4rem;
-}
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -2649,12 +2673,6 @@ select {
 }
 .pb-4 {
   padding-bottom: 1rem;
-}
-.pt-8 {
-  padding-top: 2rem;
-}
-.pb-16 {
-  padding-bottom: 4rem;
 }
 .pt-48 {
   padding-top: 12rem;
@@ -3335,6 +3353,10 @@ select {
     border-top-right-radius: 30px;
   }
 
+  footer .mainNavigation {
+    font-size: 21px;
+  }
+
   .extras nav button {
     display: flex;
   }
@@ -3350,8 +3372,7 @@ select {
   }
 
   h2, .h2, h1.h2, h4.h2, h5.h2 {
-    font-size: 36px;
-    letter-spacing: 0;
+    font-size: 27px;
   }
 
   .lead {
@@ -3421,6 +3442,11 @@ select {
 
   .-translate-y-48 nav[x-show="showMenu"] {
     top: 152px;
+  }
+
+  .primary-footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   form fieldset {
@@ -3644,10 +3670,6 @@ select {
     margin-top: -0.25rem;
   }
 
-    .md\:mb-24 {
-    margin-bottom: 6rem;
-  }
-
     .md\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -3812,6 +3834,12 @@ select {
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+    .md\:space-y-16 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+  }
+
     .md\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
@@ -3903,6 +3931,16 @@ select {
 }
 @media (min-width: 1024px) {
 
+  footer .mainNavigation {
+    display: flex;
+  }
+
+  footer .mainNavigation > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   body {
     font-size: 18px;
     letter-spacing: 0;
@@ -3910,6 +3948,11 @@ select {
 
   h1 u, .h1 u, h2.h1 u, h3.h1 u, h4.h1 u, h5.h1 u {
     text-decoration-thickness: 3px;
+  }
+
+  h2, .h2, h1.h2, h4.h2, h5.h2 {
+    font-size: 36px;
+    letter-spacing: 0;
   }
 
   h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
@@ -3941,6 +3984,11 @@ select {
 
   .gridPadding-bottom {
     padding-bottom: 6rem;
+  }
+
+  .primary-footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .kontaktModal fieldset label:last-child, .basketModal fieldset label:last-child {
@@ -4226,6 +4274,16 @@ select {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
+    .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+    .lg\:space-y-24 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(6rem * var(--tw-space-y-reverse));
+  }
+
     .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -4234,6 +4292,10 @@ select {
 
     .lg\:p-8 {
     padding: 2rem;
+  }
+
+    .lg\:p-16 {
+    padding: 4rem;
   }
 
     .lg\:py-0 {
@@ -4532,6 +4594,17 @@ select {
 }
 @media (min-width: 1536px) {
 
+  footer .mainNavigation > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  footer .mainNavigation {
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+
   .gridPadding {
     padding-left: 0px;
     padding-right: 0px;
@@ -4540,6 +4613,11 @@ select {
   .gridPadding-x {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .primary-footer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .container {
