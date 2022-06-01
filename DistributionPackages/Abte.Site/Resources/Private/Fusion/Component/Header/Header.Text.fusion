@@ -34,7 +34,7 @@ prototype(Abte.Site:Component.TextHeader) < prototype(Neos.Fusion:Component) {
 
         <div 
             @if.hideHeader={props.hideHeader ? false : true}
-            class="flex items-center mb-12 h-[175px] md:h-[275px] xl:h-[300px] overflow-hidden gridPadding-x"
+            class="flex items-center mb-4 md:mb-12 h-[175px] md:h-[275px] xl:h-[300px] overflow-hidden gridPadding-x"
             style={'background: url(' + props.imageSource + '); background-size: cover; background-position: center center;'}
         >
 

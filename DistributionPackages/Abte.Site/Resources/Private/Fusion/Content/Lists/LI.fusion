@@ -2,7 +2,7 @@ prototype(Abte.Site:Content.LI) < prototype(Neos.Neos:ContentComponent) {
 
     listIcon = Abte.Site:Mixin.Icons {
         // class = ${ q(node).property('textColor') }
-        class = ${'text-primary w-[20px] mt-2'}
+        class = ${'text-primary w-[15px] md:w-[18px] lg:w-[20px] mt-2'}
     }
 
     renderer = afx`

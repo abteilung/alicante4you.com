@@ -54,6 +54,11 @@
     main a {
         @apply text-primary;
     }
+    svg.text-primary {
+        body[data-theme="human"] & {
+            @apply text-secondary;            
+        }
+    }
 
     .ce-text {
         @apply space-y-4;
@@ -130,7 +135,7 @@
     }
 
     h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
-        @apply text-[21px] lg:text-[27px] font-headings !leading-tight font-bold;
+        @apply text-base md:text-[21px] lg:text-[27px] font-headings !leading-tight font-bold;
         i, em {
             @apply not-italic text-accent-focus;
         }
@@ -256,6 +261,10 @@
         &.activeLink {
             @apply !text-neutral;
         }
+    }
+
+    .ordered-list ul {
+        @apply space-y-1 lg:space-y-2;
     }
 
     .primary-footer {

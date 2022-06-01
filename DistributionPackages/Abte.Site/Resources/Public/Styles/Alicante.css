@@ -752,9 +752,18 @@ select {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+    body[data-theme="human"] svgmain a {
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
+}
+
     main a {
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
+}
+        body[data-theme="human"] svg.text-primary {
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
 }
 
     .ce-text > :not([hidden]) ~ :not([hidden]) {
@@ -853,7 +862,8 @@ select {
 
     h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
   font-family: sofia-pro, Helvetica, Arial, sans-serif;
-  font-size: 21px;
+  font-size: 18px;
+  letter-spacing: 0;
   font-weight: 700;
   line-height: 1.25 !important;
 }
@@ -1026,6 +1036,12 @@ select {
   color: hsl(var(--n) / var(--tw-text-opacity)) !important;
 }
 
+    .ordered-list ul > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
     .primary-footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1145,6 +1161,11 @@ select {
   font-size: 24px;
   letter-spacing: 0;
   font-weight: 400;
+}
+
+            body[data-theme="human"] svgtable tbody th, body[data-theme="human"] svgtable thead th {
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
 }
 
             table tbody th, table thead th {
@@ -2103,8 +2124,8 @@ select {
 .w-1\/5 {
   width: 20%;
 }
-.w-\[20px\] {
-  width: 20px;
+.w-\[15px\] {
+  width: 15px;
 }
 .w-1\/6 {
   width: 16.666667%;
@@ -2982,6 +3003,10 @@ select {
 .line-clamp-none {
   -webkit-line-clamp: unset;
 }
+body[data-theme="human"] svg.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
+}
 .bg-secondary p, .hover\:bg-primary:hover p, .bg-neutral p, .bg-error p, .bg-secondary h1, .bg-primary h1, .bg-neutral h1, .bg-error h1, .bg-secondary .h1, .bg-primary .h1, .bg-neutral .h1, .bg-error .h1, .bg-secondary h2, .bg-primary h2, .bg-neutral h2, .bg-error h2, .bg-secondary .h2, .bg-primary .h2, .bg-neutral .h2, .bg-error .h2, .bg-secondary h3, .bg-primary h3, .bg-neutral h3, .bg-error h3, .bg-secondary .h3, .bg-primary .h3, .bg-neutral .h3, .bg-error .h3, .bg-secondary h4, .bg-primary h4, .bg-neutral h4, .bg-error h4, .bg-secondary .h4, .bg-primary .h4, .bg-neutral .h4, .bg-error .h4, .bg-secondary h5, .bg-primary h5, .bg-neutral h5, .bg-error h5, .bg-secondary .h5, .bg-primary .h5, .bg-neutral .h5, .bg-error .h5, .bg-secondary h6, .bg-primary h6, .bg-neutral h6, .bg-error h6, .bg-secondary .h6, .bg-primary .h6, .bg-neutral .h6, .bg-error .h6 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -3082,6 +3107,10 @@ select {
 }
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
+}
+body[data-theme="human"] svg.group:hover .group-hover\:text-primary {
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
 }
 .group:hover .group-hover\:left-2 {
   left: 0.5rem;
@@ -3383,6 +3412,10 @@ select {
     font-size: 27px;
   }
 
+  h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3 {
+    font-size: 21px;
+  }
+
   .lead {
     margin-bottom: 1rem;
   }
@@ -3561,10 +3594,6 @@ select {
     right: 1rem;
   }
 
-    .md\:top-40 {
-    top: 10rem;
-  }
-
     .md\:col-span-4 {
     grid-column: span 4 / span 4;
   }
@@ -3682,6 +3711,10 @@ select {
     margin-top: -0.25rem;
   }
 
+    .md\:mt-12 {
+    margin-top: 3rem;
+  }
+
     .md\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -3744,6 +3777,10 @@ select {
 
     .md\:w-12 {
     width: 3rem;
+  }
+
+    .md\:w-\[18px\] {
+    width: 18px;
   }
 
     .md\:w-1\/4 {
@@ -3998,6 +4035,12 @@ select {
     padding-bottom: 6rem;
   }
 
+  .ordered-list ul > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  }
+
   .primary-footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -4222,6 +4265,10 @@ select {
 
     .lg\:w-20 {
     width: 5rem;
+  }
+
+    .lg\:w-\[20px\] {
+    width: 20px;
   }
 
     .lg\:w-2\/3 {
