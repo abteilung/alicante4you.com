@@ -2076,6 +2076,9 @@ select {
 .min-h-\[350px\] {
   min-height: 350px;
 }
+.min-h-\[175px\] {
+  min-height: 175px;
+}
 .w-full {
   width: 100%;
 }
@@ -3763,6 +3766,10 @@ body[data-theme="human"] svg.group:hover .group-hover\:text-primary {
     min-height: 400px;
   }
 
+    .md\:min-h-\[275px\] {
+    min-height: 275px;
+  }
+
     .md\:w-\[180px\] {
     width: 180px;
   }
@@ -3915,6 +3922,11 @@ body[data-theme="human"] svg.group:hover .group-hover\:text-primary {
     .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+    .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
     .md\:pt-8 {
@@ -4570,6 +4582,10 @@ body[data-theme="human"] svg.group:hover .group-hover\:text-primary {
 
   .xl\:h-screen {
     height: 100vh;
+  }
+
+  .xl\:min-h-\[300px\] {
+    min-height: 300px;
   }
 
   .xl\:flex-1 {
