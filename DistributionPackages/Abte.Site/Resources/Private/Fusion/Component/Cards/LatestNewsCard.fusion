@@ -41,15 +41,15 @@ prototype(Abte.Site:Component.LatestNewsCard) < prototype(Neos.Neos:ContentCompo
             attributes.x-transition:leave-end="opacity-0 scale-100"
         >
            <div class="grid grid-cols-4 gridgap">
-                <div class="relative w-20 h-20 overflow-hidden rounded-full isolate bg-base-200">
+                <div class="relative overflow-hidden rounded-full w-14 md:w-12 aspect-square lg:w-20 lg:h-20 isolate bg-base-200">
                     <Sitegeist.Kaleidoscope:Image 
                         @if.hasImage={props.imageSource}
                         imageSource={props.imageSource} 
                         class={props.imageClass}
                     />
                 </div>
-                <div class="relative w-full h-full col-span-3">
-                    <p class="mb-0 font-bold no-underline duration-300 line-clamp-none md:line-clamp-3 lg:line-clamp-none group-hover:underline underline-offset-1">{ q(node).property('titleOverride') ? q(node).property('title') : q(documentNode).is('[instanceof Abte.Site:Document.Kompetenzen],[instanceof Abte.Site:Document.Products]') ? q(node).property('subTitle') : q(node).property('title') }</p>
+                <div class="relative w-full h-20 col-span-3 md:h-24 lg:h-full">
+                    <p class="mb-0 font-bold no-underline duration-300 line-clamp-2 md:line-clamp-3 lg:line-clamp-none group-hover:underline underline-offset-1">{ q(node).property('titleOverride') ? q(node).property('title') : q(documentNode).is('[instanceof Abte.Site:Document.Kompetenzen],[instanceof Abte.Site:Document.Products]') ? q(node).property('subTitle') : q(node).property('title') }</p>
                     {props.icon}
                 </div>
             </div>
