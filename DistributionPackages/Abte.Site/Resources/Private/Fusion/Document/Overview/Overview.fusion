@@ -19,7 +19,7 @@ prototype(Abte.Site:Document.Overview) < prototype(Abte.Site:Document.AbstractPa
         oneTheme = ${ q(documentNode).is('[uriPathSegment="buy-real-estate"]') ? 'buy' : 'sell' }
 
         renderer = afx`
-            <main class="main">
+            <main class="mt-4 main">
                 <div class="container gridPadding-x">
                     <Abte.Site:Component.HeaderGrid
                         class='mb-24' 
