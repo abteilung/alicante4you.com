@@ -53,9 +53,9 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
         >
         </div>
 
-        <div class="container my-12">
-            <div class="space-y-6">
-                <h4>{props.category}</h4>
+        <div class="container py-4 gridPadding-x md:py-8 lg:py-12 2xl:py-24">
+            <div class="w-full mx-auto space-y-4 lg:w-2/3 md:space-y-8">
+                <p>{props.category}</p>
                 <h1>
                     <span class="productTitle">{props.pageTitle}</span>
                 </h1>

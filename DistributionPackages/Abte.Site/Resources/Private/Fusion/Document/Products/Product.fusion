@@ -47,7 +47,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
             <div class="space-y-12">
                 <div class="container ">
-                    <main class="w-2/3 mx-auto space-y-8 gridPadding-x">
+                    <main class="mx-auto space-y-4 md:space-y-8 lg:w-2/3">
 
                         {props.main}
 
@@ -55,7 +55,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             title="Features"
                             linkText=''
                             link=''
-                            contentClass=''
+                            contentClass='productTable'
                         >
                             {props.features}
                         </Abte.Site:Content.Container>
@@ -107,7 +107,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             link=''
                             @if.hasDistance={ node.context.inBackend || q(node).property('atm') || q(node).property('train') || q(node).property('bus') || q(node).property('postbox') || q(node).property('road') || q(node).property('school') }
                         >
-                            <div class="grid grid-cols-4 gridgap">
+                            <div class="grid grid-cols-3 md:grid-cols-5 gridgap">
                                 <Abte.Site:Content.PropertyFeature textProperty='atm' featureIcon='atm' title="ATM" />
                                 <Abte.Site:Content.PropertyFeature textProperty='train' featureIcon='train' title="Railway" />
                                 <Abte.Site:Content.PropertyFeature textProperty='bus' featureIcon='bus' title="Bus" />

@@ -22,11 +22,11 @@ prototype(Abte.Site:Content.PropertyFeature) < prototype(Neos.Neos:ContentCompon
 
     renderer = afx`
         <div 
-            class="flex flex-col items-left justify-left w-32 h-32"
+            class="flex flex-col h-32 items-left justify-left"
             @if.hasContent={props.distance}    
         >
             <Abte.Site:Mixin.PropertyFeatures class="flex-1" featureIcon={featureIcon} />
-            <h4 class="mt-4">{props.title}</h4>
+            <h4 class="flex-none mt-4">{props.title}</h4>
             {props.distance}
         </div>
     `
