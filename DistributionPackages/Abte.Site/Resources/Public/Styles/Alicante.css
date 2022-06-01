@@ -4885,6 +4885,10 @@ body[data-theme="human"] svg.group:hover .group-hover\:text-primary {
     height: 980px;
   }
 
+  .\32xl\:h-\[300px\] {
+    height: 300px;
+  }
+
   .\32xl\:min-h-\[500px\] {
     min-height: 500px;
   }

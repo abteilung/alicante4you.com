@@ -48,7 +48,7 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
     renderer = afx`
 
         <div 
-            class="h-[175px] md:h-[275px] xl:h-[300px] 2xl:h-[350px] overflow-hidden"
+            class="h-[175px] md:h-[275px] xl:h-[300px] overflow-hidden"
             style={'background: url(' + props.imageSource + '); background-size: cover; background-position: center center;'}
         >
         </div>
