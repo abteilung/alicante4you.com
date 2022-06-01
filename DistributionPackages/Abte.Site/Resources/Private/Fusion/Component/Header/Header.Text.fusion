@@ -34,10 +34,10 @@ prototype(Abte.Site:Component.TextHeader) < prototype(Neos.Fusion:Component) {
 
         <div 
             @if.hideHeader={props.hideHeader ? false : true}
-            class="flex items-center mb-4 md:mb-12 min-h-[175px] md:min-h-[275px] xl:min-h-[300px] overflow-hidden gridPadding-x py-4 md:py-8 lg:py-12 2xl-py-24"
+            class="items-center mb-4 overflow-hidden md:mb-12 bg-blend-multiply"
             style={'background: url(' + props.imageSource + '); background-size: cover; background-position: center center;'}
         >
-
+            <div class="flex min-h-[175px] md:min-h-[275px] xl:min-h-[300px] py-4 gridPadding-x md:py-8 lg:py-12 2xl-py-24 bg-gradient-to-tr from-neutral/50 to-neutral/10">
                 <div class="container">
                     <div>
                         <Neos.Fusion:Augmenter class="text-white lead">
@@ -48,7 +48,7 @@ prototype(Abte.Site:Component.TextHeader) < prototype(Neos.Fusion:Component) {
                         <h1 class="text-white">{props.pageTitle}</h1>
                     </div>
                 </div>
-
+            </div>
         </div>
 
     `
