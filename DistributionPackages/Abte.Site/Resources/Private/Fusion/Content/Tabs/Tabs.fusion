@@ -39,7 +39,7 @@ prototype(Abte.Site:Content.Tabs) < prototype(Neos.Neos:ContentComponent) {
             tagName = 'button'
             attributes {
                 class='pb-4 !-mb-[2px] h3 text-base-300'
-                :class=${ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + tabId + "'" + "}" }
+                :class=${ "{ 'border-b-2 border-b-primary active !text-neutral': tab === " + "'" + tabId + "'" + "}" }
                 "@click"=${ "tab = " + "'" + tabId + "'" + "" }
             }
             content = Neos.Neos:Editable {
@@ -59,7 +59,7 @@ prototype(Abte.Site:Content.Tabs) < prototype(Neos.Neos:ContentComponent) {
             tagName = 'li'
             attributes {
                 class='relative py-2 pl-3 text-gray-900 cursor-default select-none pr-9'
-                :class=${ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + tabId + "'" + "}" }
+                :class=${ "{ 'border-b-2 border-b-primary active !text-neutral': tab === " + "'" + tabId + "'" + "}" }
                 "@click"=${ "tab = " + "'" + tabId + "'" + "" }
             }
             content = Neos.Neos:Editable {
@@ -99,7 +99,7 @@ prototype(Abte.Site:Content.Tabs) < prototype(Neos.Neos:ContentComponent) {
                     <option 
                         value={ q(item.node).property('_nodeName') }
                         class='relative py-2 pl-3 text-gray-900 cursor-default select-none pr-9'
-                        :class={ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + q(item.node).property('_nodeName') + "'" + "}" }
+                        :class={ "{ 'border-b-2 border-b-primary active !text-neutral': tab === " + "'" + q(item.node).property('_nodeName') + "'" + "}" }
                         "@click"={ "tab = " + "'" + q(item.node).property('_nodeName') + "'" + "" }
                     >
                         {item.label}

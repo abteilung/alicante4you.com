@@ -34,13 +34,13 @@ prototype(Abte.Site:Component.TextHeader) < prototype(Neos.Fusion:Component) {
 
         <div 
             @if.hideHeader={props.hideHeader ? false : true}
-            class="flex items-center mb-12 h-[175px] md:h-[275px] xl:h-[300px] overflow-hidden"
+            class="flex items-center mb-12 h-[175px] md:h-[275px] xl:h-[300px] overflow-hidden gridPadding-x"
             style={'background: url(' + props.imageSource + '); background-size: cover; background-position: center center;'}
         >
 
                 <div class="container">
                     <div>
-                        <Neos.Fusion:Augmenter class="lead text-white">
+                        <Neos.Fusion:Augmenter class="text-white lead">
                             {props.subTitle}
                         </Neos.Fusion:Augmenter>
                     </div>

@@ -15,8 +15,8 @@ prototype(Abte.Site:Component.filterButton) < prototype(Neos.Fusion:Component) {
         
         attributes {
             "@click"=${"cat = '" + props.kate + "'"}
-            class = 'filterButton pb-2 mb-[-2px] duration-150 cursor-pointer block text-base-300 hover:text-primary whitespace-nowrap'
-            ":class"=${ "{'!text-primary' : cat === '" + props.kate + "' }" }
+            class = 'filterButton pb-2 mb-[-2px] duration-150 cursor-pointer block text-base-300 hover:text-neutral whitespace-nowrap'
+            ":class"=${ "{'!text-neutral border-b-2 border-neutral' : cat === '" + props.kate + "' }" }
         }
     }
 }
