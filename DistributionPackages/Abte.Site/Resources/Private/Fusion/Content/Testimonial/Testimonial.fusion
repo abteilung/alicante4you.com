@@ -20,7 +20,7 @@ prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent)
                         imageSource={props.imageSource} 
                         width="700"
                         height="700"
-                        class="object-cover object-center w-full h-[350px] md:h-full min-h-[350px] lg:min-h-[500px]"
+                        class="object-cover object-top md:object-center w-full h-[350px] md:h-full min-h-[250px] lg:min-h-[500px]"
                     />
                 </div>
             </div>	

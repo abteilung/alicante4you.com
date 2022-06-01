@@ -4007,6 +4007,11 @@ body[data-theme="human"] svg.group:hover .group-hover\:text-primary {
     margin-bottom: calc(2rem * var(--tw-space-y-reverse));
   }
 
+    .md\:object-center {
+    -o-object-position: center;
+       object-position: center;
+  }
+
     .md\:p-8 {
     padding: 2rem;
   }
