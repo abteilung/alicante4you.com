@@ -57,11 +57,11 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
     oneTheme = ''
   
     two = ''
-    twoClass = 'roundedCorners overflow-hidden relative bg-base-100 box-h-2 row-span-2 lg:row-span-1 lg:box-h-1 '
+    twoClass = 'roundedCorners overflow-hidden relative bg-base-100 box-h-3 row-span-2 lg:row-span-1'
     twoTheme = ''
     
     three = ''
-    threeClass = 'roundedCorners overflow-hidden relative bg-white box-h-2 row-span-2 box-shadow'
+    threeClass = 'roundedCorners overflow-hidden relative bg-white md:box-h-2 row-span-2 box-shadow'
     hreeTheme = ''
 
     four = ''

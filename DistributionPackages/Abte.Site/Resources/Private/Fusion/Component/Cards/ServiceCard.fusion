@@ -41,7 +41,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
             attributes.x-transition:leave="transition duration-50 ease-in"
             attributes.x-transition:leave-end="opacity-0 scale-100"
         >
-            <div class="absolute z-10 grid content-start block w-full h-full p-6 text-white md:p-4 lg:p-8 serviceCard">
+            <div class="absolute z-10 grid content-start block w-full h-full p-4 text-white md:p-6 lg:p-8 serviceCard">
                 <p>{ q(documentNode).is('[uriPathSegment="news-and-trends"],[uriPathSegment="home"]') ? props.datePublished : props.titleOverride }</p>
                 <h3 class="pr-12 mb-0 line-clamp-none md:line-clamp-3 lg:line-clamp-none">{ q(node).property('titleOverride') ? q(node).property('title') : q(documentNode).is('[instanceof Abte.Site:Document.Kompetenzen],[instanceof Abte.Site:Document.Products]') ? q(node).property('subTitle') : q(node).property('title') }</h3>
             </div>

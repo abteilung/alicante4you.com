@@ -47,8 +47,8 @@ prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
             
             <div class="py-8 bg-white gridPadding-x text-primary">
                 <div class="container">
-                    <div class="items-center justify-between flex-none lg:flex gridgap">
-                        <div class="flex justify-center w-full lg:w-auto">
+                    <div class="flex items-center justify-between gridgap">
+                        <div class="flex justify-center w-auto w-full">
                             <Abte.Site:Component.Logo class="h-16" />
                         </div>
                         <div class="justify-center py-4 text-sm text-right lg:py-0">

@@ -150,7 +150,7 @@
     }
 
     .lead {
-        @apply text-base lg:text-lg text-neutral mb-4 !leading-normal;
+        @apply text-base lg:text-lg text-neutral mb-2 md:mb-4 !leading-normal;
     }
 
     .container-wide {
@@ -191,7 +191,7 @@
         @apply px-4 md:px-8 xl:px-12 2xl:px-0;
     }
     .gridPadding-y {
-        @apply py-12 md:py-16 lg:py-24 xl:py-32 ;
+        @apply py-4 md:py-8 lg:py-24 xl:py-32 ;
     }
 
     .gridPadding-left {
@@ -356,7 +356,7 @@
         &.shortTable {
             @apply mb-10 mt-4;
             td, th {
-                @apply text-base py-2 text-neutral;
+                @apply text-sm md:text-base py-1 lg:py-2 text-neutral;
             }
         }
     }
@@ -389,11 +389,14 @@
     }
 
     .box-h-1 {
-        @apply h-64;
+        @apply h-48 md:h-64;
     }
 
     .box-h-2 {
-        @apply h-128 lg:h-full;
+        @apply h-64 md:h-128 lg:h-full;
+    }
+    .box-h-3 {
+        @apply h-48 md:h-128 lg:h-64;
     }
 
     .button {
