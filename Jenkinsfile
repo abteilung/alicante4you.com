@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Install Neos') {
       steps {
-        sh '''composer install
+        sh '''#!/bin/bash
+composer install
 pnpm install'''
       }
     }
