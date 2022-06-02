@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Install Neos') {
       steps {
-        sh '''php composer.phar install
+        sh '''composer install
 pnpm install'''
       }
     }
