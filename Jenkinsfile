@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Install Neos') {
       steps {
-        sh '''source /Users/abteilung/.zshrc
+        sh '''source ~/.zshrc
 '''
         sh 'pnpm install'
         sh 'composer install'
