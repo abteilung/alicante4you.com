@@ -164,9 +164,9 @@ module.exports = {
         themes: [
             {
                 'default': {
-                    'primary': '#FBB03B',
+                    'primary': '#dd1c2f',
                     'primary-content': '#ffffff',
-                    'secondary': '#dd1c2f',
+                    'secondary': '#FBB03B',
                     'neutral': '#222222',
                     'error': '#dd1c2f',
                     'base-100': '#EFEFEF',

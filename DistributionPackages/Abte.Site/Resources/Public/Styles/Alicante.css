@@ -541,16 +541,16 @@ select {
 }
 
 :root {
-  --p: 37 96% 61%;
-  --pf: 37 96% 49%;
-  --sf: 354 78% 39%;
+  --p: 354 78% 49%;
+  --pf: 354 78% 39%;
+  --sf: 37 96% 49%;
   --af: 36 69% 49%;
   --nf: 0 0% 11%;
   --in: 198 93% 60%;
   --su: 158 64% 52%;
   --wa: 43 96% 56%;
   --bc: 0 0% 19%;
-  --sc: 354 100% 90%;
+  --sc: 37 100% 12%;
   --ac: 36 100% 12%;
   --nc: 0 0% 83%;
   --inc: 198 100% 12%;
@@ -568,7 +568,7 @@ select {
   --tab-border: 1px;
   --tab-radius: 0.5rem;
   --pc: 0 0% 100%;
-  --s: 354 78% 49%;
+  --s: 37 96% 61%;
   --n: 0 0% 13%;
   --er: 354 78% 49%;
   --b1: 0 0% 94%;
@@ -578,16 +578,16 @@ select {
 }
 
 [data-theme=default] {
-  --p: 37 96% 61%;
-  --pf: 37 96% 49%;
-  --sf: 354 78% 39%;
+  --p: 354 78% 49%;
+  --pf: 354 78% 39%;
+  --sf: 37 96% 49%;
   --af: 36 69% 49%;
   --nf: 0 0% 11%;
   --in: 198 93% 60%;
   --su: 158 64% 52%;
   --wa: 43 96% 56%;
   --bc: 0 0% 19%;
-  --sc: 354 100% 90%;
+  --sc: 37 100% 12%;
   --ac: 36 100% 12%;
   --nc: 0 0% 83%;
   --inc: 198 100% 12%;
@@ -605,7 +605,7 @@ select {
   --tab-border: 1px;
   --tab-radius: 0.5rem;
   --pc: 0 0% 100%;
-  --s: 354 78% 49%;
+  --s: 37 96% 61%;
   --n: 0 0% 13%;
   --er: 354 78% 49%;
   --b1: 0 0% 94%;
@@ -756,18 +756,9 @@ select {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-    body[data-theme="buy"] svgmain a {
-  --tw-text-opacity: 1;
-  color: hsl(var(--s) / var(--tw-text-opacity));
-}
-
     main a {
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
-}
-        body[data-theme="buy"] svg.text-primary {
-  --tw-text-opacity: 1;
-  color: hsl(var(--s) / var(--tw-text-opacity));
 }
 
     .ce-text > :not([hidden]) ~ :not([hidden]) {
@@ -1166,11 +1157,6 @@ select {
   font-size: 18px;
   letter-spacing: 0;
   font-weight: 400;
-}
-
-            body[data-theme="buy"] svgtable tbody th, body[data-theme="buy"] svgtable thead th {
-  --tw-text-opacity: 1;
-  color: hsl(var(--s) / var(--tw-text-opacity));
 }
 
             table tbody th, table thead th {
@@ -2858,13 +2844,13 @@ select {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
-.text-indigo-600 {
-  --tw-text-opacity: 1;
-  color: rgb(79 70 229 / var(--tw-text-opacity));
-}
 .text-error {
   --tw-text-opacity: 1;
   color: hsl(var(--er) / var(--tw-text-opacity));
+}
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -3014,10 +3000,6 @@ select {
 }
 .line-clamp-none {
   -webkit-line-clamp: unset;
-}
-body[data-theme="buy"] svg.hover\:text-primary:hover {
-  --tw-text-opacity: 1;
-  color: hsl(var(--s) / var(--tw-text-opacity));
 }
 .bg-secondary p, .hover\:bg-primary:hover p, .bg-neutral p, .bg-error p, .bg-secondary h1, .bg-primary h1, .bg-neutral h1, .bg-error h1, .bg-secondary .h1, .bg-primary .h1, .bg-neutral .h1, .bg-error .h1, .bg-secondary h2, .bg-primary h2, .bg-neutral h2, .bg-error h2, .bg-secondary .h2, .bg-primary .h2, .bg-neutral .h2, .bg-error .h2, .bg-secondary h3, .bg-primary h3, .bg-neutral h3, .bg-error h3, .bg-secondary .h3, .bg-primary .h3, .bg-neutral .h3, .bg-error .h3, .bg-secondary h4, .bg-primary h4, .bg-neutral h4, .bg-error h4, .bg-secondary .h4, .bg-primary .h4, .bg-neutral .h4, .bg-error .h4, .bg-secondary h5, .bg-primary h5, .bg-neutral h5, .bg-error h5, .bg-secondary .h5, .bg-primary .h5, .bg-neutral .h5, .bg-error .h5, .bg-secondary h6, .bg-primary h6, .bg-neutral h6, .bg-error h6, .bg-secondary .h6, .bg-primary .h6, .bg-neutral .h6, .bg-error .h6 {
   --tw-text-opacity: 1;
@@ -3219,10 +3201,6 @@ body[data-theme="buy"] svg.hover\:text-primary:hover {
 }
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
-}
-body[data-theme="buy"] svg.group:hover .group-hover\:text-primary {
-  --tw-text-opacity: 1;
-  color: hsl(var(--s) / var(--tw-text-opacity));
 }
 .group:hover .group-hover\:left-2 {
   left: 0.5rem;
