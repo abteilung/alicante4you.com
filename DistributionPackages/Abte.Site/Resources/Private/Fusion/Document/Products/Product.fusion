@@ -147,7 +147,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                         <Abte.Site:Content.Navigation 
                             node={node}
                             navigationItems={props.similarProducts}
-                            limit="4" 
+                            limit="3" 
                             layout="products" 
                         />
                     </Abte.Site:Content.Container>
