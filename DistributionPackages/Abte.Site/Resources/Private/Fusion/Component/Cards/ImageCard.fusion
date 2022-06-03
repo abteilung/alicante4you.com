@@ -16,7 +16,7 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
     subTitle = ${ q(node).property('subTitle') || q( q(node).property('reference') ).property('subTitle') }
 
     icon = Abte.Site:Icon.ArrowRight {
-        class = 'absolute z-0 duration-150 scale-75 bottom-6 lg:scale-100 text-secondary group-hover:right-6 right-4 md:right-6 lg:right-8'
+        class = 'absolute z-0 duration-150 scale-75 bottom-6 lg:scale-100 text-primary group-hover:right-6 right-4 md:right-6 lg:right-8'
     }
 
     kates = Abte.Site:Component.FilterKates

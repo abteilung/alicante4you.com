@@ -164,11 +164,11 @@ module.exports = {
         themes: [
             {
                 'default': {
-                    'primary': '#FBB03B',
+                    'primary': '#dd1c2f',
                     'primary-content': '#ffffff',
-                    'secondary': '#dd1c2f',
+                    'secondary': '#FBB03B',
                     'neutral': '#222222',
-                    'error': '#ff9900',
+                    'error': '#dd1c2f',
                     'base-100': '#EFEFEF',
                     'base-200': '#f4f4f4',
                     'base-300': '#8f8f8f',
@@ -177,9 +177,23 @@ module.exports = {
                 },
 				'buy': {
                     'primary': '#dd1c2f',
+					'primary-content': '#ffffff',
+                    'secondary': '#FBB03B',
+                    'neutral': '#222222',
+                    'error': '#dd1c2f',
+                    'base-100': '#EFEFEF',
+                    'base-200': '#f4f4f4',
+                    'base-300': '#8f8f8f',
 				},
 				'sell': {
                     'primary': '#FBB03B',
+					'primary-content': '#ffffff',
+                    'secondary': '#dd1c2f',
+                    'neutral': '#222222',
+                    'error': '#dd1c2f',
+                    'base-100': '#EFEFEF',
+                    'base-200': '#f4f4f4',
+                    'base-300': '#8f8f8f',
 				},
             },
         ],

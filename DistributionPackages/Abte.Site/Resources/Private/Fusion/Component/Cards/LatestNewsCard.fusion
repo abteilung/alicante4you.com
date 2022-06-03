@@ -15,7 +15,7 @@ prototype(Abte.Site:Component.LatestNewsCard) < prototype(Neos.Neos:ContentCompo
     subTitle = ${ q(node).property('subTitle') }
 
     icon = Abte.Site:Icon.ArrowRight {
-        class = 'absolute bottom-0 left-0 z-10 duration-150 scale-75 text-secondary bottom-6 lg:scale-100 group-hover:left-4'
+        class = 'absolute bottom-0 left-0 z-10 duration-150 scale-75 text-primary bottom-6 lg:scale-100 group-hover:left-4'
     }
 
     class = 'relative w-full h-full group'

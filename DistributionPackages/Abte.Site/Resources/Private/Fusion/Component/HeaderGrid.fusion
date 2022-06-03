@@ -65,11 +65,11 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
     hreeTheme = ''
 
     four = ''
-    fourClass = 'roundedCorners relative bg-secondary text-white box-h-1'
+    fourClass = 'roundedCorners relative bg-primary text-white box-h-1'
     fourTheme = ''
 
     five = ''
-    fiveClass = 'roundedCorners relative bg-primary text-white box-h-1'
+    fiveClass = 'roundedCorners relative bg-secondary text-white box-h-1'
     fiveTheme = ''
 
     renderer = afx`
