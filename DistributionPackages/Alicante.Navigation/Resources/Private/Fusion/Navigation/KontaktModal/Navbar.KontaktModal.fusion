@@ -33,7 +33,7 @@ prototype(Alicante.Navigation:Component.Navbar.KontaktModal) < prototype(Neos.Fu
                     x-transition:leave-start="opacity-100 scale-100 translate-y-0" 
                     x-transition:leave-end="opacity-0 scale-90 translate-y-1"
                 >
-                    <div class="relative w-full pt-4 text-base bg-white roundedCorners md:pt-8 xl:pt-12 2xl:p-12 gridPadding-x contentPanel"
+                    <div class="relative w-full p-4 text-base bg-white roundedCorners md:p-8 xl:p-12 2xl:p-12 gridPadding-x contentPanel"
                         "@click.away"="showModal = false" 
                     >
                         {props.content}
