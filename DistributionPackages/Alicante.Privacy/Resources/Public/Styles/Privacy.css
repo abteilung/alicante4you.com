@@ -17,18 +17,6 @@
     color: rgb(255 255 255 / var(--tw-text-opacity)) !important
 }
   
-  .gdpr-cookieconsent-settings p, .gdpr-cookieconsent-settings h1, .gdpr-cookieconsent-settings .h1, .gdpr-cookieconsent-settings h2, .gdpr-cookieconsent-settings .h2, .gdpr-cookieconsent-settings h3, .gdpr-cookieconsent-settings .h3, .gdpr-cookieconsent-settings h4, .gdpr-cookieconsent-settings .h4, .gdpr-cookieconsent-settings h5, .gdpr-cookieconsent-settings .h5, .gdpr-cookieconsent-settings h6, .gdpr-cookieconsent-settings .h6 {
-  
-    --tw-text-opacity: 1;
-  
-    color: rgb(255 255 255 / var(--tw-text-opacity))
-}
-  
-  .gdpr-cookieconsent-settings p {
-  
-    color: rgb(255 255 255 / 0.6)
-}
-  
   .gdpr-cookieconsent-settings {
   
     left: 100% !important;
@@ -65,13 +53,6 @@
     --tw-text-opacity: 1 !important;
   
     color: rgb(255 255 255 / var(--tw-text-opacity)) !important
-}
-  
-  body[data-theme="human"] svg.gdpr-cookieconsent-settings .button {
-  
-    --tw-text-opacity: 1;
-  
-    color: hsl(var(--s) / var(--tw-text-opacity))
 }
   
   .gdpr-cookieconsent-settings .button {
