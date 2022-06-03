@@ -46,7 +46,7 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
 
 
     renderer = afx`
-
+        <Alicante.Navigation:Component.Navbar.SubNavigation />
         <div 
             class="h-[175px] md:h-[275px] xl:h-[300px] overflow-hidden"
             style={'background: url(' + props.imageSource + '); background-size: cover; background-position: center center;'}

@@ -52,6 +52,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                         {props.main}
 
                         <Abte.Site:Content.Container 
+                            id="id-features"
                             title="Features"
                             linkText=''
                             link=''
@@ -62,6 +63,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
 
                         <Abte.Site:Content.Container 
+                            id="id-description"
                             title="Description"
                             linkText=''
                             link=''
@@ -73,6 +75,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
                         <Abte.Site:Content.Container 
                             @if.hasFloorplans={props.floorPlans}
+                            id="id-floor-plans"
                             title="Floor Plans"
                             linkText=''
                             link=''
@@ -86,6 +89,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
 
                         <Abte.Site:Content.Container 
+                            id="id-location"
                             title="Location"
                             linkText=''
                             link=''
@@ -102,6 +106,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
 
                         <Abte.Site:Content.Container 
+                            id="id-distances"
                             title="Distances"
                             linkText=''
                             link=''

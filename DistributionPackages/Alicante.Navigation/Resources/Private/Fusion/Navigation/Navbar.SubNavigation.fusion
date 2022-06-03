@@ -2,9 +2,9 @@ prototype(Alicante.Navigation:Component.Navbar.SubNavigation) < prototype(Neos.F
     
   @if.isProduct = ${ q(documentNode).is('[instanceof Abte.Site:Document.Product]')}
 
-  subMenuItems = Neos.Neos:MenuItems {
-    itemCollection = ${ q(documentNode).find('[instanceof Abte.Site:Content.Container]').get() }
-    maximumLevels = 1
+  subMenuItems = Neos.Fusion:Map {
+    items = ${ ['Features','Description','Floor Plans', 'Location', 'Distances'] }
+    itemRenderer = ${ item }
   }
 
   renderer = afx`
@@ -14,7 +14,7 @@ prototype(Alicante.Navigation:Component.Navbar.SubNavigation) < prototype(Neos.F
     >
       <div class="container flex flex-row py-2 space-x-6 gridPadding-x">
         <Neos.Fusion:Loop items={props.subMenuItems} iterationName="i">
-          <Alicante.Navigation:Navbar.LinkItem anchorLinks={true} />
+          <Alicante.Navigation:Navbar.LinkItem anchorLinks={true} anchor={Carbon.String.urlize(item)} title={item} />
         </Neos.Fusion:Loop>
       </div>
     </nav>

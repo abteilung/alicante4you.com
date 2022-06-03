@@ -7,6 +7,8 @@ prototype(Alicante.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component
     doNotLinkNode       = ${ q(documentNode).property('doNotLink') }
     hasSubItems         = ${ item.subItems ? 'subs' : 'no Subs' }
     anchorLinks         = ''
+    anchor              = ''
+    title               = ''
 
     @context {
         node = ${ this.node }
@@ -42,10 +44,10 @@ prototype(Alicante.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component
             <!-- Anchor Links for Products -->
             <a 
                 @if.isAnchorLink={props.anchorLinks ? true : false }
-                href={ '#id-' + q(item.node).property('_nodeName') }
+                href={ '#id-' + String.toLowercase(props.anchor) + q(item.node).property('_nodeName') }
                 class={ i.isLast ? props.lastLinkItemClass : props.linkItemClass }
             >
-                { q(item.node).property('title') }
+                { q(item.node).property('title') || props.title }
             </a>
 
             <!-- <Alicante.Navigation:Navbar.MegaMenuIndicator /> -->

@@ -47,9 +47,11 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
         }
 	}
 
+    id = ${ 'id-' + q(node).property('_nodeName') }
+
   	renderer = afx`
         <div 
-            id={ 'id-' + q(node).property('_nodeName') }
+            id={ props.id }
             class={props.class + ' ' + props.removePadding + ' ' + props.shadowClass + ' ' + props.fullWidthClass}
         >
             
