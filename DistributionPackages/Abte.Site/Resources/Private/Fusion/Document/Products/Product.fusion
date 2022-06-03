@@ -92,7 +92,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                         >
                             <Jonnitto.GoogleMaps:Map 
                                 mapLocation={props.address}
-                                zoom="17"
+                                zoom="12"
                                 showInfo={true}
                                 title={props.title}
                                 showinfo="true"
