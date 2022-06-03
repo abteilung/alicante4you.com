@@ -62,6 +62,23 @@
           position: 40
           editorOptions:
             nodeTypes: ['Neos.Neos:Document']
+    'fourTarget':
+      options:
+        preset: 'text.link'
+      ui:
+        label: Button 4 Link
+        inspector: 
+          group: general
+          position: 41
+    'fourText':
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Button 4 Text
+        inspector: 
+          group: general
+          position: 42
+
     'five':
       type: reference
       ui:
@@ -72,3 +89,19 @@
           position: 50
           editorOptions:
             nodeTypes: ['Neos.Neos:Document']
+    'fiveTarget':
+      options:
+        preset: 'text.link'
+      ui:
+        label: Button 5 Link
+        inspector: 
+          group: general
+          position: 51
+    'fiveText':
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Button 5 Text
+        inspector: 
+          group: general
+          position: 52

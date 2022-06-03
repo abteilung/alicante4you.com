@@ -29,7 +29,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
             block = ${ false }
         }
 
-        target = ${ q(node).property('oneTarget') }        
+        target = ${ q(node).property('oneTarget') }
 
         renderer = afx`
             <div class="p-4 md:p-8 xl:p-12 2xl:p-16">

@@ -16,7 +16,17 @@
                 <source>All</source>
                 <target>Alle</target>
             </trans-unit>
-            
+
+            <trans-unit id="buyRealEstate">
+                <source>Buy Real Estate</source>
+                <target>Immobilie kaufen</target>
+            </trans-unit>
+
+            <trans-unit id="sellRealEstate">
+                <source>Sell Real Estate</source>
+                <target>Immobilie verkaufen</target>
+            </trans-unit>
+
             <trans-unit id="moreAboutUs">
                 <source>More about us…</source>
                 <target>Mehr über uns…</target>
