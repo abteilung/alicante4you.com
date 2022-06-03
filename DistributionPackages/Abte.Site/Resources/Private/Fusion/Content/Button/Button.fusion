@@ -37,7 +37,7 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
 
     blank = ${ q(node).property('blank') ? true : false }
 
-    isContactButton = ${ q(node).property('isContactButton') }
+    isContactButton = ${ this.target == '#contact' ? true : false}
 
     renderer = afx`
         <div class="block">
