@@ -45,7 +45,6 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
                     class={ q(node).property('oneImage') ? 'bg-white !text-black' : 'bg-black text-white' }
                     target={props.target}
                     text={props.buttonText}
-                    isContactButton={q(node).property('oneTarget') == '#contact' ? true : false}
                 />
             </div>
         `
