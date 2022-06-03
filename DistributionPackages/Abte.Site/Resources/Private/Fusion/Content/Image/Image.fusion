@@ -36,19 +36,26 @@ prototype(Abte.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
             renderer = Sitegeist.Kaleidoscope:DummyImageSource
         }
     }
+
+    imageLarge = ${ this.src }
+    
     alternativeText = ${q(node).property('alternativeText')}
+
+    clickEnlarge = ${ q(node).property('clickEnlarge') }
 
     renderer = afx`
         <Alicante.Navigation:Component.DisplayCondition>
-            <Sitegeist.Kaleidoscope:Image
-                class={props.class}
-                lazy={true}
-                lazyWidth={200}
-                width={props.width}
-                height={props.height}
-                imageSource={props.src}
-                alt={props.alternativeText}
-            />
+            <Neos.Fusion:Augmenter data-bp={props.clickEnlarge ? props.imageLarge : null}>
+                <Sitegeist.Kaleidoscope:Image
+                    class={props.class}
+                    lazy={true}
+                    lazyWidth={200}
+                    width={props.width}
+                    height={props.height}
+                    imageSource={props.src}
+                    alt={props.alternativeText}
+                />
+            </Neos.Fusion:Augmenter>
         </Alicante.Navigation:Component.DisplayCondition>
 	`
 }

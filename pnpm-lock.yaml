@@ -11,6 +11,7 @@ specifiers:
   alpinejs: ^3.10.2
   aos: ^2.3.4
   autoprefixer: ^10.4.7
+  bigpicture: ^2.6.2
   browser-sync: ^2.27.10
   browserslist: ^4.20.3
   choices.js: ^10.1.0
@@ -56,6 +57,7 @@ dependencies:
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.0.24
   '@tailwindcss/line-clamp': 0.3.1_tailwindcss@3.0.24
   aos: 2.3.4
+  bigpicture: 2.6.2
   choices.js: 10.1.0
   daisyui: 2.15.2_ugi4xkrfysqkt4c4y6hkyfj344
   flickity: 3.0.0
@@ -457,6 +459,10 @@ packages:
   /batch/0.6.1:
     resolution: {integrity: sha1-3DQxT05nkxgJP8dgJyUl+UvyXBY=}
     dev: true
+
+  /bigpicture/2.6.2:
+    resolution: {integrity: sha512-IZmRDr7ZSJLDtDvOP/dfqvJhMBqV/tGQAl3UgvkaCzePIkHYlYV/uCg9349E4RPF3ng7QM+eqFZ2CY7tE6pLMA==}
+    dev: false
 
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}

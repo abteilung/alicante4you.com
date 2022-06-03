@@ -1,0 +1,10 @@
+'Abte.Site:Mixin.ClickEnlarge':
+  abstract: true
+  properties:
+    'clickEnlarge':
+      type: boolean
+      ui:
+        label: Click Enlarge
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
