@@ -41,7 +41,7 @@ prototype(Alicante.Navigation:Component.Navbar.KontaktModal) < prototype(Neos.Fu
                             "@click.prevent"="showModal = !showModal"
                         >
                             <button 
-                                class="w-auto text-lg text-secondary pill focus:outline-none"
+                                class="w-auto text-lg text-error pill focus:outline-none"
                                 aria-expanded="false"
                             >
                                 <div class="relative flex items-center justify-center w-6 h-6">
