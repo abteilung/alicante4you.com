@@ -24,31 +24,35 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
     // }
 
     iconBefore = Abte.Site:Icon.ArrowRight {
-        class='relative left-0 duration-300 text-white group-hover:left-2'
+        class='relative left-0 text-white duration-300 group-hover:left-2'
         @if.buttonIsBefore=${this.positionBefore}
         @if.hasIcon=${icon}
     }
 
     iconAfter = Abte.Site:Icon.ArrowRight {
-        class='relative left-0 duration-300 text-white group-hover:left-2'
+        class='relative left-0 text-white duration-300 group-hover:left-2'
         @if.buttonIsBefore=${!this.positionBefore}
         @if.hasIcon=${icon}
     }
 
     blank = ${ q(node).property('blank') ? true : false }
 
+    isContactButton = ${ q(node).property('isContactButton') }
+
     renderer = afx`
         <div class="block">
             <div class="inline-block group">
-                <Carbon.Link:Link 
-                    additionalClass={'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style} 
-                    link={props.target} 
-                    renderDefaultTagIfNoLink='true' 
-                >
-                    {props.iconBefore}
-                    <span>{props.text}</span>
-                    {props.iconAfter}
-                </Carbon.Link:Link>
+                <Neos.Fusion:Augmenter "@click.prevent"={props.isContactButton ? 'showModal = !showModal' : null}>
+                    <Carbon.Link:Link 
+                        additionalClass={'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style} 
+                        link={props.target} 
+                        renderDefaultTagIfNoLink='true' 
+                    >
+                        {props.iconBefore}
+                        <span>{props.text}</span>
+                        {props.iconAfter}
+                    </Carbon.Link:Link>
+                </Neos.Fusion:Augmenter>
             </div>
         </div>
     `

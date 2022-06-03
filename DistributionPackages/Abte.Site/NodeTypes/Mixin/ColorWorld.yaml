@@ -15,7 +15,7 @@
             values:
               default:
                 label: 'Default'
-              human:
-                label: 'Human'
-              vet:
-                label: 'Vet'
+              buy:
+                label: 'Buy'
+              sell:
+                label: 'Sell'

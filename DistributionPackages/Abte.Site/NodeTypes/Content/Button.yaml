@@ -52,4 +52,11 @@
         label: On Dark BG
         reloadIfChanged: true
         inspector:
-          group: 'link'          
+          group: 'link'
+    'isContactButton':
+      type: boolean
+      ui:
+        label: Show Contact Overlay
+        reloadIfChanged: false
+        inspector:
+          group: 'link'
