@@ -13,7 +13,7 @@ prototype(Abte.Site:Component.MoreAboutUs) < prototype(Neos.Neos:ContentComponen
         <div class="gridPadding">
             <div class="container relative grid-cols-2 overflow-hidden bg-white gridgap box-shadow roundedCorners md:grid isolate testimonial">
                 <div class="h-[250px] md:h-full min-h-full md:min-h-[400px] 2xl:min-h-[500px]">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.8601345838865!2d8.484689951447619!3d47.39516177906895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900bb9f0d22899%3A0x3448b74c963237f8!2sSchweizer%20AG%2C%20Med.-R%C3%B6ntgentechnik!5e0!3m2!1sde!2sch!4v1646057612916!5m2!1sde!2sch" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d86396.88097915045!2d8.5305856884261!3d47.41384229999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x937130679e47095f!2sREMAX%20Immobilien%20Wallisellen%20Rolf%20Wirnsberger!5e0!3m2!1sde!2sch!4v1654252115559!5m2!1sde!2sch" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="grid content-between w-full px-4 py-4 md:pl-0 md:pr-12 md:py-6 lg:py-12">
                     <h3 class="h2">{ I18n.translate('Abte.Site:Main:contactTitle') }</h3>
