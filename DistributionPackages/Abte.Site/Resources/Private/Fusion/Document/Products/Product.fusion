@@ -37,7 +37,14 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
         
         address = ${ q(node).property('address') }
 
-        floorPlans = ${ q(node).property('floorPlans') }
+        floorPlans = Neos.Fusion:Map {
+            items = ${ q(node).property('floorPlans') }
+            itemRenderer = Abte.Site:Content.Tab {
+                content = Sitegeist.Kaleidoscope:Image {
+                    imageSource=${q(item).property('image')}
+                }
+            }
+        }
 
         similarProducts = ${ q(node).property('categories') ? q(documentNode).parent().children('[instanceof Abte.Site:Mixin.Product]').filterByReference( Array.last( q(node).property('categories') ), 'categories' ).remove(documentNode).get() : null }
 
@@ -80,9 +87,10 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             linkText=''
                             link=''
                         >
-                            <Abte.Site:Content.Tabs firstTab="1">
-                                <Neos.Fusion:Loop items={props.floorPlans} iterator="i" tabCollection={props.floorPlans}>
-                                    <Abte.Site:Content.Tab tab_title="xxx" tabId={i.cycle} />
+
+                            <Abte.Site:Content.Tabs firstTab="1" tabCollection={props.floorPlans}>
+                                <Neos.Fusion:Loop items={props.floorPlans} iterator="i" >
+                                    xxx
                                 </Neos.Fusion:Loop>
                             </Abte.Site:Content.Tabs>
                         </Abte.Site:Content.Container>
