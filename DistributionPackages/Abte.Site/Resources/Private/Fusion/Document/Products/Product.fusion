@@ -53,7 +53,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
                         <Abte.Site:Content.Container 
                             id="id-features"
-                            title="Features"
+                            title={ I18n.translate('Abte.Site:Main:features') }
                             linkText=''
                             link=''
                             contentClass='productTable'
@@ -64,7 +64,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
                         <Abte.Site:Content.Container 
                             id="id-description"
-                            title="Description"
+                            title={ I18n.translate('Abte.Site:Main:description') }
                             linkText=''
                             link=''
                             contentClass='lead'
@@ -76,7 +76,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                         <Abte.Site:Content.Container 
                             @if.hasFloorplans={props.floorPlans}
                             id="id-floor-plans"
-                            title="Floor Plans"
+                            title={ I18n.translate('Abte.Site:Main:floorPlans') }
                             linkText=''
                             link=''
                         >
@@ -90,7 +90,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
                         <Abte.Site:Content.Container 
                             id="id-location"
-                            title="Location"
+                            title={ I18n.translate('Abte.Site:Main:location') }
                             linkText=''
                             link=''
                         >
@@ -107,7 +107,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
 
                         <Abte.Site:Content.Container 
                             id="id-distances"
-                            title="Distances"
+                            title={ I18n.translate('Abte.Site:Main:distances') }
                             linkText=''
                             link=''
                             @if.hasDistance={ node.context.inBackend || q(node).property('atm') || q(node).property('train') || q(node).property('bus') || q(node).property('postbox') || q(node).property('road') || q(node).property('school') }
@@ -171,7 +171,7 @@ prototype(Abte.Site:Component.ProductFeatures) < prototype(Neos.Neos:ContentComp
         rooms = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_rooms' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Rooms'
+            label = ${ I18n.translate('Abte.Site:Main:rooms') }
             content = Neos.Neos:Editable {
                 property = 'prop_rooms'
                 block = ${ false }
@@ -183,7 +183,7 @@ prototype(Abte.Site:Component.ProductFeatures) < prototype(Neos.Neos:ContentComp
         baths = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_baths' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Baths'
+            label = ${ I18n.translate('Abte.Site:Main:baths') }
             content = Neos.Neos:Editable {
                 property = 'prop_baths'
                 block = ${ false }
@@ -195,7 +195,7 @@ prototype(Abte.Site:Component.ProductFeatures) < prototype(Neos.Neos:ContentComp
         toilets = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_toilets' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Toilets'
+            label = ${ I18n.translate('Abte.Site:Main:toilets') }
             content = Neos.Neos:Editable {
                 property = 'prop_toilets'
                 block = ${ false }
@@ -207,7 +207,7 @@ prototype(Abte.Site:Component.ProductFeatures) < prototype(Neos.Neos:ContentComp
         year = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_year' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Year of construction'
+            label = ${ I18n.translate('Abte.Site:Main:year') }
             content = Neos.Neos:Editable {
                 property = 'prop_year'
                 block = ${ false }
@@ -219,7 +219,7 @@ prototype(Abte.Site:Component.ProductFeatures) < prototype(Neos.Neos:ContentComp
         property = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_property' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Property'
+            label = ${ I18n.translate('Abte.Site:Main:property') }
             content = Neos.Neos:Editable {
                 property = 'prop_property'
                 block = ${ false }
@@ -233,7 +233,7 @@ prototype(Abte.Site:Component.ProductFeatures) < prototype(Neos.Neos:ContentComp
         living = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_living' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Living'
+            label = ${ I18n.translate('Abte.Site:Main:living') }
             content = Neos.Neos:Editable {
                 property = 'prop_living'
                 block = ${ false }
@@ -246,7 +246,7 @@ prototype(Abte.Site:Component.ProductFeatures) < prototype(Neos.Neos:ContentComp
         parking = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_parking' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Parking Spaces'
+            label = ${ I18n.translate('Abte.Site:Main:parking') }
             content = Neos.Neos:Editable {
                 property = 'prop_parking'
                 block = ${ false }
@@ -259,7 +259,7 @@ prototype(Abte.Site:Component.ProductFeatures) < prototype(Neos.Neos:ContentComp
         price = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_price' )}
             @glue = ${'</td><td class="font-bold text-right">'}
-            label = 'Selling Price'
+            label = ${ I18n.translate('Abte.Site:Main:price') }
             content = Neos.Neos:Editable {
                 property = 'prop_price'
                 block = ${ false }
@@ -294,7 +294,7 @@ prototype(Abte.Site:Component.ProductFeaturesShort) < prototype(Neos.Neos:Conten
         rooms = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_rooms' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Rooms'
+            label = ${ I18n.translate('Abte.Site:Main:rooms') }
             content = Neos.Neos:Editable {
                 property = 'prop_rooms'
                 block = ${ false }
@@ -306,7 +306,7 @@ prototype(Abte.Site:Component.ProductFeaturesShort) < prototype(Neos.Neos:Conten
         property = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_property' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Property'
+            label = ${ I18n.translate('Abte.Site:Main:property') }
             content = Neos.Neos:Editable {
                 property = 'prop_property'
                 block = ${ false }
@@ -319,7 +319,7 @@ prototype(Abte.Site:Component.ProductFeaturesShort) < prototype(Neos.Neos:Conten
         living = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_living' )}
             @glue = ${'</td><td class="text-right">'}
-            label = 'Living'
+            label = ${ I18n.translate('Abte.Site:Main:living') }
             content = Neos.Neos:Editable {
                 property = 'prop_living'
                 block = ${ false }
@@ -332,7 +332,7 @@ prototype(Abte.Site:Component.ProductFeaturesShort) < prototype(Neos.Neos:Conten
         price = Neos.Fusion:Join {
             @if.hasContent=${ node.context.inBackend || q(node).property('prop_price' )}
             @glue = ${'</td><td class="font-bold text-right">'}
-            label = 'Selling Price'
+            label = ${ I18n.translate('Abte.Site:Main:price') }
             content = Neos.Neos:Editable {
                 property = 'prop_price'
                 block = ${ false }

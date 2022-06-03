@@ -182,7 +182,81 @@
                 <target>Distanzen</target>
             </trans-unit>
 
-    
+
+
+            <trans-unit id="atm">
+                <source>ATM</source>
+                <target>Bankomat</target>
+            </trans-unit>
+
+            <trans-unit id="train">
+                <source>Railway</source>
+                <target>Bahn</target>
+            </trans-unit>
+
+            <trans-unit id="bus">
+                <source>Bus</source>
+                <target>Bus</target>
+            </trans-unit>
+
+            <trans-unit id="postbox">
+                <source>Postal Office</source>
+                <target>Postbüro</target>
+            </trans-unit>
+
+            <trans-unit id="road">
+                <source>Motorway</source>
+                <target>Autobahn</target>
+            </trans-unit>
+
+            <trans-unit id="school">
+                <source>School</source>
+                <target>Schule</target>
+            </trans-unit>
+
+
+
+            <trans-unit id="rooms">
+                <source>Rooms</source>
+                <target>Zimmer</target>
+            </trans-unit>
+
+            <trans-unit id="baths">
+                <source>Baths</source>
+                <target>Badezimmer</target>
+            </trans-unit>
+
+            <trans-unit id="toilets">
+                <source>Toilets</source>
+                <target>Toiletten</target>
+            </trans-unit>
+
+            <trans-unit id="year">
+                <source>Year of construction</source>
+                <target>Baujahr</target>
+            </trans-unit>
+
+            <trans-unit id="property">
+                <source>Property</source>
+                <target>Grundstück</target>
+            </trans-unit>
+
+            <trans-unit id="living">
+                <source>Living</source>
+                <target>Wohnfläche</target>
+            </trans-unit>
+
+            <trans-unit id="parking">
+                <source>Parking Spaces</source>
+                <target>Parkplätze</target>
+            </trans-unit>
+
+            <trans-unit id="price">
+                <source>Selling Price</source>
+                <target>Verkaufspreis</target>
+            </trans-unit>
+
+
 
         </body>
     </file>

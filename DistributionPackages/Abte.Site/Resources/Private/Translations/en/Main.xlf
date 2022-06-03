@@ -145,6 +145,68 @@
                 <source>Distances</source>
             </trans-unit>
 
+
+
+
+
+            <trans-unit id="atm">
+                <source>ATM</source>
+            </trans-unit>
+
+            <trans-unit id="train">
+                <source>Railway</source>
+            </trans-unit>
+
+            <trans-unit id="bus">
+                <source>Bus</source>
+            </trans-unit>
+
+            <trans-unit id="postbox">
+                <source>Postal Office</source>
+            </trans-unit>
+
+            <trans-unit id="road">
+                <source>Motorway</source>
+            </trans-unit>
+
+            <trans-unit id="school">
+                <source>School</source>
+            </trans-unit>
+
+
+
+            <trans-unit id="rooms">
+                <source>Rooms</source>
+            </trans-unit>
+
+            <trans-unit id="baths">
+                <source>Baths</source>
+            </trans-unit>
+
+            <trans-unit id="toilets">
+                <source>Toilets</source>
+            </trans-unit>
+
+            <trans-unit id="year">
+                <source>Year of construction</source>
+            </trans-unit>
+
+            <trans-unit id="property">
+                <source>Property</source>
+            </trans-unit>
+
+            <trans-unit id="living">
+                <source>Living</source>
+            </trans-unit>
+
+            <trans-unit id="parking">
+                <source>Parking Spaces</source>
+            </trans-unit>
+
+            <trans-unit id="price">
+                <source>Selling Price</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>
