@@ -58,7 +58,7 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
                 </div>
                 <div class="p-4 md:p-6 lg:p-8">
                     <!-- <p class="hidden mb-2 text-base-300">{props.category}</p> -->
-                    <h3 class="flex-1 h-full mb-0 lg:h-32 md:line-clamp-2 lg:line-clamp-3">{props.title}</h3>
+                    <h3 class="flex-1 h-full mb-0 md:line-clamp-2 lg:line-clamp-3">{props.title}</h3>
                     <Abte.Site:Component.ProductFeaturesShort />
                 </div>
                 {props.icon}
