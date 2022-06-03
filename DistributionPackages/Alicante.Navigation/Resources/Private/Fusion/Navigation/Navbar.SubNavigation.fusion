@@ -4,23 +4,23 @@ prototype(Alicante.Navigation:Component.Navbar.SubNavigation) < prototype(Neos.F
 
   subMenuItems = Neos.Fusion:DataStructure {
     features = Neos.Fusion:DataStructure {
-      label = 'Features'
+      label = ${ I18n.translate('Abte.Site:Main:features') }
       anchor = 'features'
     }
     description = Neos.Fusion:DataStructure {
-      label = 'Description'
+      label = ${ I18n.translate('Abte.Site:Main:description') }
       anchor = 'description'
     }
     floorPlans = Neos.Fusion:DataStructure {
-      label = 'Floor Plans'
+      label = ${ I18n.translate('Abte.Site:Main:floorPlans') }
       anchor = 'floor plans'
     }
     location = Neos.Fusion:DataStructure {
-      label = 'Location'
+      label = ${ I18n.translate('Abte.Site:Main:location') }
       anchor = 'location'
     }
     distances = Neos.Fusion:DataStructure {
-      label = 'Distances'
+      label = ${ I18n.translate('Abte.Site:Main:distances') }
       anchor = 'distances'
       @if.hasDistance=${ q(node).property('atm') || q(node).property('train') || q(node).property('bus') || q(node).property('postbox') || q(node).property('road') || q(node).property('school') }      
     }
