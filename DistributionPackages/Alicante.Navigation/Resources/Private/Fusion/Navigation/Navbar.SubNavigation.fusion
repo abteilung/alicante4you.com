@@ -2,19 +2,47 @@ prototype(Alicante.Navigation:Component.Navbar.SubNavigation) < prototype(Neos.F
     
   @if.isProduct = ${ q(documentNode).is('[instanceof Abte.Site:Document.Product]')}
 
-  subMenuItems = Neos.Fusion:Map {
-    items = ${ ['Features','Description','Floor Plans', 'Location', 'Distances'] }
+  subMenuItems = Neos.Fusion:DataStructure {
+    features = Neos.Fusion:DataStructure {
+      label = 'Features'
+      anchor = 'features'
+    }
+    description = Neos.Fusion:DataStructure {
+      label = 'Description'
+      anchor = 'description'
+    }
+    floorPlans = Neos.Fusion:DataStructure {
+      label = 'Floor Plans'
+      anchor = 'floor plans'
+    }
+    location = Neos.Fusion:DataStructure {
+      label = 'Location'
+      anchor = 'location'
+    }
+    distances = Neos.Fusion:DataStructure {
+      label = 'Distances'
+      anchor = 'distances'
+      @if.hasDistance=${ q(node).property('atm') || q(node).property('train') || q(node).property('bus') || q(node).property('postbox') || q(node).property('road') || q(node).property('school') }      
+    }
+  }
+
+  @context {
+    subMenuItems = ${ this.subMenuItems }
+  }
+
+  menuItems = Neos.Fusion:Map {
+    items = ${ subMenuItems }
     itemRenderer = ${ item }
   }
 
   renderer = afx`
     <nav 
-      @if.hasItems={props.subMenuItems}
+      @if.hasItems={props.menuItems}
       class="bg-opacity-80 bg-base-100 backdrop-blur-sm subNavigation"
     >
       <div class="container flex flex-row py-2 space-x-6 gridPadding-x">
-        <Neos.Fusion:Loop items={props.subMenuItems} iterationName="i">
-          <Alicante.Navigation:Navbar.LinkItem anchorLinks={true} anchor={Carbon.String.urlize(item)} title={item} />
+        <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+          <Alicante.Navigation:Navbar.LinkItem anchorLinks={true} anchor={Carbon.String.urlize(item.anchor)} title={item.label} />
         </Neos.Fusion:Loop>
       </div>
     </nav>
