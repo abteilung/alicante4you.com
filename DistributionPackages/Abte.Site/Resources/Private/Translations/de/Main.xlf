@@ -157,6 +157,33 @@
                 <target>Keine aktuellen Kurse</target>
             </trans-unit>
 
+            <trans-unit id="features">
+                <source>Features</source>
+                <target>Eigenschaften</target>
+            </trans-unit>
+
+            <trans-unit id="description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+
+            <trans-unit id="floorPlans">
+                <source>Floor Plans</source>
+                <target>Grundrisse</target>
+            </trans-unit>
+
+            <trans-unit id="location">
+                <source>Location</source>
+                <target>Lage</target>
+            </trans-unit>
+
+            <trans-unit id="distances">
+                <source>Distances</source>
+                <target>Distanzen</target>
+            </trans-unit>
+
+    
+
         </body>
     </file>
 </xliff>

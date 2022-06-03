@@ -125,6 +125,26 @@
                 <source>No courses available</source>
             </trans-unit>
 
+            <trans-unit id="features">
+                <source>Features</source>
+            </trans-unit>
+
+            <trans-unit id="description">
+                <source>Description</source>
+            </trans-unit>
+
+            <trans-unit id="floorPlans">
+                <source>Floor Plans</source>
+            </trans-unit>
+
+            <trans-unit id="location">
+                <source>Location</source>
+            </trans-unit>
+
+            <trans-unit id="distances">
+                <source>Distances</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>
