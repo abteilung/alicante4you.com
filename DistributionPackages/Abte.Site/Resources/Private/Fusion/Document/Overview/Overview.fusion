@@ -16,7 +16,7 @@ prototype(Abte.Site:Document.Overview) < prototype(Abte.Site:Document.AbstractPa
 
         five = ''
 
-        oneTheme = ${ q(documentNode).is('[uriPathSegment="buy-real-estate"]') ? 'buy' : 'sell' }
+        oneTheme = ${ q(node).closest("[instanceof Neos.Neos:Document][colorWorld][colorWorld != '']").property('colorWorld') }
 
         renderer = afx`
             <main class="mt-4 main">
