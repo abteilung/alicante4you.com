@@ -1,0 +1,71 @@
+prototype(Abte.Site:Component.ProductFeaturesShort) < prototype(Neos.Neos:ContentComponent) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    listOfProps = Neos.Fusion:DataStructure {
+        rooms = Neos.Fusion:Join {
+            @if.hasContent=${ node.context.inBackend || q(node).property('prop_rooms' )}
+            @glue = ${'</td><td class="text-right">'}
+            label = ${ I18n.translate('Abte.Site:Main:rooms') }
+            content = Neos.Neos:Editable {
+                property = 'prop_rooms'
+                block = ${ false }
+                @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                    @position = 'end'
+                }
+            }
+        }
+        property = Neos.Fusion:Join {
+            @if.hasContent=${ node.context.inBackend || q(node).property('prop_property' )}
+            @glue = ${'</td><td class="text-right">'}
+            label = ${ I18n.translate('Abte.Site:Main:property') }
+            content = Neos.Neos:Editable {
+                property = 'prop_property'
+                block = ${ false }
+                @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                    @position = 'end'
+                }
+                @process.template = ${ '' + value + ' m<sup>2</sup>' }
+            }
+        }   
+        living = Neos.Fusion:Join {
+            @if.hasContent=${ node.context.inBackend || q(node).property('prop_living' )}
+            @glue = ${'</td><td class="text-right">'}
+            label = ${ I18n.translate('Abte.Site:Main:living') }
+            content = Neos.Neos:Editable {
+                property = 'prop_living'
+                block = ${ false }
+                @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                    @position = 'end'
+                }
+                @process.template = ${ '' + value + ' m<sup>2</sup>' }
+            }
+        }   
+        price = Neos.Fusion:Join {
+            @if.hasContent=${ node.context.inBackend || q(node).property('prop_price' )}
+            @glue = ${'</td><td class="font-bold text-right">'}
+            label = ${ I18n.translate('Abte.Site:Main:price') }
+            content = Neos.Neos:Editable {
+                property = 'prop_price'
+                block = ${ false }
+                @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                    @position = 'end'
+                }
+                @process.template = ${ 'EUR ' + value + '' }
+            }
+        }                   
+    }
+
+    renderer = afx`
+        <table class="shortTable">
+            <Neos.Fusion:Loop items={props.listOfProps} iterationName='i'>
+                <tr>
+                    <td class={i.isLast ? 'font-bold' : null}>{item}</td>
+                </tr>
+            </Neos.Fusion:Loop>
+        </table>
+    `
+}
