@@ -234,7 +234,7 @@
 
     #primaryMenu {
         &.-translate-y-48 {
-         @apply mt-8 md:mt-0 !important;
+         @apply mt-20 md:mt-6 xl:mt-4 !important;
         }
     }
 
@@ -246,13 +246,7 @@
     }
 
     .subNavigation button a {
-        body[data-theme="human"] & {
-            @apply text-accent-focus;            
-        }
-        body[data-theme="vet"] & {
-            @apply text-accent-focus;            
-        }
-
+            @apply text-white/60 hover:text-white;
         &.activeLink {
             @apply !text-neutral;
         }

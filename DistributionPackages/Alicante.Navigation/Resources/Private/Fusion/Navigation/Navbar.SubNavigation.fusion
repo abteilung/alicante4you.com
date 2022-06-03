@@ -38,7 +38,7 @@ prototype(Alicante.Navigation:Component.Navbar.SubNavigation) < prototype(Neos.F
   renderer = afx`
     <nav 
       @if.hasItems={props.menuItems}
-      class="bg-opacity-80 bg-base-100 backdrop-blur-sm subNavigation"
+      class="bg-opacity-90 bg-neutral subNavigation"
     >
       <div class="container flex flex-row py-2 space-x-6 gridPadding-x">
         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">

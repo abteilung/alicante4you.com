@@ -1012,20 +1012,20 @@ select {
   overflow-x: scroll !important;
 }
         #primaryMenu.-translate-y-48 {
-  margin-top: 2rem !important;
+  margin-top: 5rem !important;
 }
         .-translate-y-48 nav[x-show="showMenu"] {
   top: 9rem;
 }
-        body[data-theme="human"] .subNavigation button a {
-  --tw-text-opacity: 1;
-  color: hsl(var(--af, var(--a)) / var(--tw-text-opacity));
-}
-        body[data-theme="vet"] .subNavigation button a {
-  --tw-text-opacity: 1;
-  color: hsl(var(--af, var(--a)) / var(--tw-text-opacity));
+
+    .subNavigation button a {
+  color: rgb(255 255 255 / 0.6);
 }
 
+    .subNavigation button a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
         .subNavigation button a.activeLink {
   --tw-text-opacity: 1 !important;
   color: hsl(var(--n) / var(--tw-text-opacity)) !important;
@@ -2546,8 +2546,8 @@ select {
 .bg-opacity-95 {
   --tw-bg-opacity: 0.95;
 }
-.bg-opacity-80 {
-  --tw-bg-opacity: 0.8;
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
 }
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
@@ -2843,10 +2843,6 @@ select {
 .text-slate-400 {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
-}
-.text-error {
-  --tw-text-opacity: 1;
-  color: hsl(var(--er) / var(--tw-text-opacity));
 }
 .text-indigo-600 {
   --tw-text-opacity: 1;
@@ -3568,7 +3564,7 @@ select {
   }
 
   #primaryMenu.-translate-y-48 {
-    margin-top: 0px !important;
+    margin-top: 1.5rem !important;
   }
 
   .-translate-y-48 nav[x-show="showMenu"] {
@@ -4549,6 +4545,10 @@ select {
 
   .gridPadding-bottom {
     padding-bottom: 8rem;
+  }
+
+  #primaryMenu.-translate-y-48 {
+    margin-top: 1rem !important;
   }
 
   .container {
