@@ -32,6 +32,11 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                 @position = 'end'
             }
         }
+        content = Neos.Neos:ContentCollectionRenderer {
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+	}
 
         title = ${ q(node).property('title') }
         
