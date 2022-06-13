@@ -1,0 +1,14 @@
+{
+    "scripts": {
+        "build": "neos-react-scripts build",
+        "watch": "neos-react-scripts watch"
+    },
+    "neos": {
+        "buildTargetDirectory": "../../../Public/GeoCodingEditor"
+    },
+    "devDependencies": {
+        "@neos-project/neos-ui-extensibility": "*"
+    },
+    "dependencies": {
+    }
+}

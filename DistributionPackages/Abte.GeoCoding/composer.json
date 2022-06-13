@@ -1,0 +1,25 @@
+{
+    "type": "neos-abteilung",
+    "name": "abteilung/geocoding",
+    "version": "5.0.0",
+    "description": "GeoCoding address",
+    "require": {
+        "neos/neos": ">=3.3",
+        "neos/neos-ui": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abte\\GeoCoding\\": "Classes/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "*"
+        },
+        "neos": {
+            "package-key": "Abte.GeoCoding"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

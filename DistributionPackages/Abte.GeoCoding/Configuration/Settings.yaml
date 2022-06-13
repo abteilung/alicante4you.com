@@ -1,0 +1,19 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          Abte.GeoCoding:
+            - Main
+            - NodeTypes/*
+    Ui:
+      resources:
+        javascript:
+          "Abte.GeoCoding:GeoCodingEditor":
+            resource: resource://Abte.GeoCoding/Public/GeoCodingEditor/Plugin.js
+      frontendConfiguration:
+        Abte.GeoCoding:
+          services: openstreetmap, google
+          googleApiKey: ''
+          #https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&accept-language=en&q=Rudigerstrasse
+          #https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key={YOUR_API_KEY}

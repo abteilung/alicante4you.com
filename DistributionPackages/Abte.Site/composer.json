@@ -5,6 +5,7 @@
     "require": {
         "neos/neos": "*",
         "carbon/includeassets": "^5.3",
+        "abteilung/geocoding": "*",
         "flowpack/nodetemplates": "^1.3",
         "jonnitto/prettyembedvideoplatforms": "^2.0",
         "neos/nodetypes-contentreferences": "^7.3",

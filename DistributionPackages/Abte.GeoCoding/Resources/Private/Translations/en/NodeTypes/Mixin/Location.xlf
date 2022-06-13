@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Abte.GeoCoding" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.location" xml:space="preserve">
+                <target>Location</target>
+            </trans-unit>
+            <trans-unit id="properties.location_address" xml:space="preserve">
+                <target>Address</target>
+            </trans-unit>
+            <trans-unit id="properties.location_address2" xml:space="preserve">
+                <target>Additional address</target>
+            </trans-unit>
+            <trans-unit id="properties.location_pobox" xml:space="preserve">
+                <target>P.O. Box</target>
+            </trans-unit>
+            <trans-unit id="properties.location_zip" xml:space="preserve">
+                <target>ZIP</target>
+            </trans-unit>
+            <trans-unit id="properties.location_city" xml:space="preserve">
+                <target>Place/City</target>
+            </trans-unit>
+            <trans-unit id="properties.location_county" xml:space="preserve">
+                <target>Region</target>
+            </trans-unit>
+            <trans-unit id="properties.location_country" xml:space="preserve">
+                <target>Country</target>
+            </trans-unit>
+            <trans-unit id="properties.location_coordinates" xml:space="preserve">
+                <target>Coordinates</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

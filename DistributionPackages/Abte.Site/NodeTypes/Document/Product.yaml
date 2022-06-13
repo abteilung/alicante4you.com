@@ -59,3 +59,18 @@
           editorOptions:
             nodeTypes: ['Abte.Site:Document.Category']
             # startingPoint: "ClientEval:node.properties._path.replace(/(.+)(\\/.+)/, '$1')"
+    geoCoordinates:
+      type: string
+      ui:
+        label: Geolocation
+        inspector:
+          label: GeoLocation
+          group: document
+          position: 95
+          editor: "Abte.GeoCoding/GeoCodingEditor"
+          editorOptions:
+            googleApiKey: ''
+            div: ";"
+            # zip: "ClientEval:node.properties.company_zip"
+            # city: "ClientEval:node.properties.company_city"
+            address: "ClientEval:node.properties.address"            
