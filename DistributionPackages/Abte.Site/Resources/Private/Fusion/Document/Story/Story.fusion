@@ -1,7 +1,7 @@
 prototype(Abte.Site:Document.Story) < prototype(Abte.Site:Document.AbstractPage) {
 
     head {
-        headTags {
+        headTag {
             shareThis = '<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5a4f62e85d7f1a001224d076&product=sticky-share-buttons" async="async"></script>'
         }
     }

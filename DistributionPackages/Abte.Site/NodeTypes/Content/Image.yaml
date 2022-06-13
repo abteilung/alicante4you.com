@@ -2,6 +2,7 @@
   superTypes:
     'Neos.Neos:Content': true
     'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.ClickEnlarge': true
     'Abte.Site:Mixin.DisplayCondition': true
   ui:
     label: Image

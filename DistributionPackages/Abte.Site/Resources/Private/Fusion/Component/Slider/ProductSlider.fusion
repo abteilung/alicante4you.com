@@ -1,20 +1,39 @@
 prototype(Abte.Site:Component.ProductSlider) < prototype(Neos.Fusion:Component) {
     
     node = ${ node }
+    images = ${ q(node).property('images') }
+
     @context {
         node = ${ this.node }
+        images = ${ this.images }
     }
 
-    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
-        asset   = ${ q(node).property('reference') ? q( q(node).property('reference') ).property('image') : q(node).property('image') }
-        // width   = 800
-        height  = 450
-        allowCropping = false
+    // imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+    //     asset   = ${ q(node).property('image') }
+    //     // width   = 800
+    //     height  = 450
+    //     allowCropping = false
+    // }
+
+    mainImage = Neos.Fusion:Tag {
+        attributes {
+            class = 'flex justify-center w-2/3 lg:w-1/2 2xl:w-1/3 slide roundedCorners'
+                style = Neos.Neos:ImageUri {
+                    asset = ${ q(node).property('image') }
+                    // width = 800
+                    height = 550
+                    // maximumWidth = 800
+                    // maximumHeight = 600
+                    allowCropping = false
+                    @process.template = ${ 'background: url(' + value + '); background-size: cover; background-position: center center;' }
+                }
+        }
+        content = ''
     }
 
     productImages = Neos.Fusion:Loop {
-        @if.hasImages = ${ q(node).property('images') }
-        items = ${ q(node).property('images') }
+        @if.hasImages = ${ images }
+        items = ${ images }
         itemRenderer = Neos.Fusion:Tag {
             attributes {
                 class = 'flex justify-center w-2/3 lg:w-1/2 2xl:w-1/3 slide roundedCorners'
@@ -40,7 +59,7 @@ prototype(Abte.Site:Component.ProductSlider) < prototype(Neos.Fusion:Component) 
         contain = true
         adaptiveHeight = false
         // prevNextButtons = ${ q(node).property('images') ? true : false }
-        prevNextButtons = ${ q( q(node).property('reference') ).property('images') ? true : q(node).property('images') ? true : false }
+        prevNextButtons = ${ q(node).property('images') ? true : false }
         @process.stringify = ${ Json.stringify(value) }
     }
     
@@ -53,9 +72,11 @@ prototype(Abte.Site:Component.ProductSlider) < prototype(Neos.Fusion:Component) 
                 class="remoteSlider" 
                 data-flickity={props.sliderConfig}
             >
+                {props.mainImage}
                 {props.productImages}
             </div>
 
         </div>    
     `
 }
+

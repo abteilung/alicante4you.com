@@ -46,7 +46,14 @@ prototype(Abte.Site:Mixin.PropertyFeatures) < prototype(Neos.Fusion:Component) {
 
         highway {
             condition = ${ featureIcon == 'road' }
-            renderer = Abte.Site:Icon.Envelope {
+            renderer = Abte.Site:Icon.Road {
+                class = ${ class }
+            }
+        }
+
+        airport {
+            condition = ${ featureIcon == 'airport' }
+            renderer = Abte.Site:Icon.Airplane {
                 class = ${ class }
             }
         }

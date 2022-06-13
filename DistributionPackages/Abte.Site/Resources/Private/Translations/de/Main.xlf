@@ -17,6 +17,11 @@
                 <target>Alle</target>
             </trans-unit>
 
+           <trans-unit id="objectsForSale">
+                <source>Objects for Sale</source>
+                <target>Freie Objekte</target>
+            </trans-unit>
+
             <trans-unit id="buyRealEstate">
                 <source>Buy Real Estate</source>
                 <target>Immobilie kaufen</target>
@@ -67,9 +72,39 @@
                 <target></target>
             </trans-unit>
             
-            <trans-unit id="ourSolutions">
-                <source>Our Digital X-Ray Solutions</source>
-                <target>Unsere digitalen Röntgenlösungen</target>
+            <trans-unit id="distATM">
+                <source>ATM</source>
+                <target>Bankomat</target>
+            </trans-unit>
+
+            <trans-unit id="distRailway">
+                <source>Railway</source>
+                <target>Bahn</target>
+            </trans-unit>
+
+            <trans-unit id="distBus">
+                <source>Bus</source>
+                <target>Bus</target>
+            </trans-unit>
+
+            <trans-unit id="distPost">
+                <source>Postal Office</source>
+                <target>Postbüro</target>
+            </trans-unit>
+
+            <trans-unit id="distMotorway">
+                <source>Motorway</source>
+                <target>Autobahn</target>
+            </trans-unit>
+
+            <trans-unit id="distSchool">
+                <source>School</source>
+                <target>Schule</target>
+            </trans-unit>
+
+            <trans-unit id="distAirport">
+                <source>Airport</source>
+                <target>Flughafen</target>
             </trans-unit>
 
             <trans-unit id="overview">
@@ -115,16 +150,6 @@
             <trans-unit id="solventBuyers">
                 <source>Are you looking for solvent buyers for your property?</source>
                 <target>Suchen Sie solvente Käufer für Ihr Grundstück?</target>
-            </trans-unit>
-
-            <trans-unit id="solutionsForHum">
-                <source>for hospitals, X-ray institutes and your medical practice.</source>
-                <target>für Spitäler, Röntgeninstitute und Ihre Arztpraxis.</target>
-            </trans-unit>
-
-            <trans-unit id="solutionsForVet">
-                <source>for your veterinary practice.</source>
-                <target>für Ihre Tierarztpraxis.</target>
             </trans-unit>
 
             <trans-unit id="currentCourses">

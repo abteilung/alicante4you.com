@@ -42,14 +42,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
         
         address = ${ q(node).property('address') }
 
-        floorPlans = Neos.Fusion:Map {
-            items = ${ q(node).property('floorPlans') }
-            itemRenderer = Abte.Site:Content.Tab {
-                content = Sitegeist.Kaleidoscope:Image {
-                    imageSource=${q(item).property('image')}
-                }
-            }
-        }
+        floorPlans = ${ q(node).property('floorPlans') }
 
         similarProducts = ${ q(node).property('categories') ? q(documentNode).parent().children('[instanceof Abte.Site:Mixin.Product]').filterByReference( Array.last( q(node).property('categories') ), 'categories' ).remove(documentNode).get() : null }
 
@@ -92,12 +85,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             linkText=''
                             link=''
                         >
-
-                            <Abte.Site:Content.Tabs firstTab="1" tabCollection={props.floorPlans}>
-                                <Neos.Fusion:Loop items={props.floorPlans} iterator="i" >
-                                    xxx
-                                </Neos.Fusion:Loop>
-                            </Abte.Site:Content.Tabs>
+                            <Abte.Site:Component.ProductFloorPlans />
                         </Abte.Site:Content.Container>
 
 
@@ -126,12 +114,13 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             @if.hasDistance={ node.context.inBackend || q(node).property('atm') || q(node).property('train') || q(node).property('bus') || q(node).property('postbox') || q(node).property('road') || q(node).property('school') }
                         >
                             <div class="grid grid-cols-3 md:grid-cols-5 gridgap">
-                                <Abte.Site:Content.PropertyFeature textProperty='atm' featureIcon='atm' title="ATM" />
-                                <Abte.Site:Content.PropertyFeature textProperty='train' featureIcon='train' title="Railway" />
-                                <Abte.Site:Content.PropertyFeature textProperty='bus' featureIcon='bus' title="Bus" />
-                                <Abte.Site:Content.PropertyFeature textProperty='postbox' featureIcon='postbox' title="Postal Office" />
-                                <Abte.Site:Content.PropertyFeature textProperty='road' featureIcon='road' title="Motorway" />
-                                <Abte.Site:Content.PropertyFeature textProperty='school' featureIcon='school' title="School" />
+                                <Abte.Site:Content.PropertyFeature textProperty='atm' featureIcon='atm' title={ I18n.translate('Abte.Site:Main:distATM') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='train' featureIcon='train' title={ I18n.translate('Abte.Site:Main:distRailway') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='bus' featureIcon='bus' title={ I18n.translate('Abte.Site:Main:distBus') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='postbox' featureIcon='postbox' title={ I18n.translate('Abte.Site:Main:distPost') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='road' featureIcon='road' title={ I18n.translate('Abte.Site:Main:distMotorway') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='school' featureIcon='school' title={ I18n.translate('Abte.Site:Main:distSchool') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='airport' featureIcon='airport' title={ I18n.translate('Abte.Site:Main:distAirport') } />
                             </div>
                         </Abte.Site:Content.Container>
 
