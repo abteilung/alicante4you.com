@@ -1,0 +1,111 @@
+prototype(Abte.Site:Content.Tabs) < prototype(Neos.Neos:ContentComponent) {
+
+    class = ''
+
+    tabs = Neos.Fusion:Collection {
+        collection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]') }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Abte.Site:Content.Tab
+    }
+
+    firstTab = Neos.Fusion:Collection {
+        collection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]').first() }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = ${ q(node).property('_nodeName') }
+    }
+
+    tabsNavigation = Neos.Fusion:Collection {
+        collection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]') }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Neos.Fusion:Tag {
+            tagName = 'button'
+            attributes {
+                class='pb-4 !-mb-[2px] h3 text-base-300'
+                :class=${ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + q(node).property('_nodeName') + "'" + "}" }
+                "@click"=${ "tab = " + "'" + q(node).property('_nodeName') + "'" + "" }
+            }
+            content = Neos.Neos:Editable {
+                property = 'tab_title'
+                @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                    @position = 'end'
+                }
+            }
+        }
+    }
+
+    tabsNavigationMobile = Neos.Fusion:Collection {
+        collection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]') }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Neos.Fusion:Tag {
+            tagName = 'li'
+            attributes {
+                class='relative py-2 pl-3 text-gray-900 cursor-default select-none pr-9'
+                :class=${ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + q(node).property('_nodeName') + "'" + "}" }
+                "@click"=${ "tab = " + "'" + q(node).property('_nodeName') + "'" + "" }
+            }
+            content = Neos.Neos:Editable {
+                property = 'tab_title'
+                @process.tmpl = ${ ' ' + value + ' '}
+                @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                    @position = 'end'
+                }
+            }
+        }
+    }  
+
+    tabItems = Neos.Neos:MenuItems {
+        itemCollection = ${ q(node).children('[instanceof Abte.Site:Content.Tab]').get() }
+    }  
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+
+  	renderer = afx`
+        <div   
+            x-data={"{ tab: " + "'" + props.firstTab + "'" + " }"}
+        >
+            <select 
+                id="filter-tab" 
+                name="filter-tab" 
+                class="block w-full py-2 pl-3 pr-10 mb-4 text-base border-2 rounded-md sm:hidden focus:outline-none focus:ring-transparent border-base-100 text-primary focus:border-base-100 sm:text-sm"
+                x-model="tab"
+            >
+                <Neos.Fusion:Loop 
+                    items={props.tabItems} 
+                    iterationName='i'
+                    @if.hasCats={props.tabItems}
+                >
+                    <option 
+                        value={ q(item.node).property('_nodeName') }
+                        class='relative py-2 pl-3 text-gray-900 cursor-default select-none pr-9'
+                        :class={ "{ 'border-b-2 border-b-primary active !text-primary': tab === " + "'" + q(item.node).property('_nodeName') + "'" + "}" }
+                        "@click"={ "tab = " + "'" + q(item.node).property('_nodeName') + "'" + "" }
+                    >
+                        {item.label}
+                    </option>
+                </Neos.Fusion:Loop>
+            </select>
+
+
+
+            <div 
+                class={props.class}
+            >
+
+                <div class="flex hidden w-full mb-12 space-x-4 border-b-2 md:space-x-8 border-base-200 md:block">
+                    {props.tabsNavigation}
+                </div>
+ 
+                {props.tabs}
+            
+            </div>
+        </div>
+    `
+
+}

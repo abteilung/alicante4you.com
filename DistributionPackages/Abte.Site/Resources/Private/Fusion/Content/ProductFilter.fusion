@@ -1,0 +1,28 @@
+prototype(Abte.Site:Content.ProductFilter) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    filterItems = Neos.Fusion:Loop {
+        items = ${ q(documentNode).children('[instanceof Abte.Site:Mixin.Product]').get() }
+        itemName = 'node'
+        iterationName = 'i'
+
+        itemRenderer = Abte.Site:Component.ImageCard {
+            node = ${ q(node) }
+        }
+    }
+
+    renderer = afx`
+        <div 
+            id="filterContainer" 
+            x-data="{cat: window.location.hash ? window.location.hash.replace('#', '') : 'all' }"
+        >
+            <div class="relative flex grid w-full mt-4 md:grid-cols-2 lg:grid-cols-3 md:mt-12 filterContent gridgap">
+                {props.filterItems}
+            </div>
+        </div>
+    `
+}

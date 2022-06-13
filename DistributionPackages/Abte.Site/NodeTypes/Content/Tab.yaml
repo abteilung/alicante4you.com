@@ -1,0 +1,19 @@
+'Abte.Site:Content.Tab':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'Abte.Site:Constraint.Content.Restricted': TRUE
+  label: "${q(node).property('tab_title') || 'Tab'}"
+  ui:
+    label: Tab
+    icon: 'hand-point-right'
+    position: 50
+  properties:
+    'tab_title':
+      defaultValue: 'Tab'
+      options:
+        preset: 'text.title'
+      ui:
+        reloadifChanged: true
+        inspector:
+          group: general

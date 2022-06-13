@@ -17,6 +17,11 @@
                 <target>Alle</target>
             </trans-unit>
 
+           <trans-unit id="objectsForSale">
+                <source>Objects for Sale</source>
+                <target>Freie Objekte</target>
+            </trans-unit>
+
             <trans-unit id="buyRealEstate">
                 <source>Buy Real Estate</source>
                 <target>Immobilie kaufen</target>

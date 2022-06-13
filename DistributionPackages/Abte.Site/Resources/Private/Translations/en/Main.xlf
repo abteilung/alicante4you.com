@@ -13,6 +13,10 @@
                 <source>Execution</source>
             </trans-unit>
 
+           <trans-unit id="objectsForSale">
+                <source>Objects for Sale</source>
+            </trans-unit>
+
             <trans-unit id="buyRealEstate">
                 <source>Buy Real Estate</source>
             </trans-unit>

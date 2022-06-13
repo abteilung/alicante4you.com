@@ -9,9 +9,7 @@ prototype(Abte.Site:Document.World) < prototype(Abte.Site:Document.AbstractPage)
         renderer = afx`
             <main class="main">
 
-                <div class="container">
-                    {props.filter}
-                </div>
+          
 
                 {props.main}
                 <!-- <Abte.Site:Component.SubMenuAsCards /> -->

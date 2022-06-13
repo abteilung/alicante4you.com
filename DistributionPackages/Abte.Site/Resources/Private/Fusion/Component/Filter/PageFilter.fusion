@@ -9,7 +9,7 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
 
   categoryItems = Neos.Fusion:Case {
     news {
-      condition = ${ q(documentNode).is('[uriPathSegment="news-and-trends"]') }
+      condition = ${ q(documentNode).is('[instanceof Abte.Site:Document.FilterPage]') }
       renderer = Neos.Neos:MenuItems {
         itemCollection = ${ q(documentNode).children('[instanceof Abte.Site:Document.Category]').get() }
         filter = ${ 'Abte.Site:Document.Category' }
@@ -81,7 +81,7 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
           >
             <option value="all"
                 @if.showAllFilter={props.showAllFilter}
-            >{ I18n.translate('Abte.Site:Main:all') }</option>
+            >{q(documentNode).is('[instanceof Abte.Site:Document.FilterPage]') ? I18n.translate('Abte.Site:Main:all') : I18n.translate('Abte.Site:Main:objectsForSale') }</option>
             <Neos.Fusion:Loop 
                 items={props.categoryItems} 
                 iterationName='i'
@@ -110,7 +110,7 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
               ":class"="{'!text-neutral border-neutral': cat === 'all'}"
               class="cursor-pointer border-b-2 filterButton text-base-300 pb-2 mb-[-2px]"
             >
-                { I18n.translate('Abte.Site:Main:all') }
+                {q(documentNode).is('[instanceof Abte.Site:Document.FilterPage]') ? I18n.translate('Abte.Site:Main:all') : I18n.translate('Abte.Site:Main:objectsForSale') }
             </button>
 
             <Neos.Fusion:Loop 
