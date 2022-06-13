@@ -1261,6 +1261,95 @@ select {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+    #bp_container {
+  --tw-backdrop-blur: blur(24px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+        #bp_container img {
+        }
+        #bp_container #bp_count {
+  bottom: 0px;
+}
+        #bp_container #bp_caption p, #bp_container #bp_caption h1, #bp_container #bp_caption .h1, #bp_container #bp_caption h2, #bp_container #bp_caption .h2, #bp_container #bp_caption h3, #bp_container #bp_caption .h3, #bp_container #bp_caption h4, #bp_container #bp_caption .h4, #bp_container #bp_caption h5, #bp_container #bp_caption .h5, #bp_container #bp_caption h6, #bp_container #bp_caption .h6 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+        .bg-secondary #bp_container #bp_caption, .bg-primary #bp_container #bp_caption, .bg-neutral #bp_container #bp_caption, .bg-error #bp_container #bp_caption {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+        #bp_container #bp_caption p, #bp_container #bp_caption h1, #bp_container #bp_caption .h1, #bp_container #bp_caption h2, #bp_container #bp_caption .h2, #bp_container #bp_caption h3, #bp_container #bp_caption .h3, #bp_container #bp_caption h4, #bp_container #bp_caption .h4, #bp_container #bp_caption h5, #bp_container #bp_caption .h5, #bp_container #bp_caption h6, #bp_container #bp_caption .h6 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+        .bg-secondary #bp_container #bp_caption, .bg-primary #bp_container #bp_caption, .bg-neutral #bp_container #bp_caption, .bg-error #bp_container #bp_caption {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+        #bp_container #bp_caption p, #bp_container #bp_caption h1, #bp_container #bp_caption .h1, #bp_container #bp_caption h2, #bp_container #bp_caption .h2, #bp_container #bp_caption h3, #bp_container #bp_caption .h3, #bp_container #bp_caption h4, #bp_container #bp_caption .h4, #bp_container #bp_caption h5, #bp_container #bp_caption .h5, #bp_container #bp_caption h6, #bp_container #bp_caption .h6 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+        #bp_container #bp_caption {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+        #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+  margin-bottom: 0.5rem;
+  font-family: sofia-pro, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0;
+  font-weight: 700;
+  line-height: 1.25 !important;
+}
+        #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+  margin-bottom: 0.5rem;
+  font-family: sofia-pro, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0;
+  font-weight: 700;
+  line-height: 1.25 !important;
+}
+        #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+  margin-bottom: 0.5rem;
+  font-family: sofia-pro, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0;
+  font-weight: 700;
+  line-height: 1.25 !important;
+}
+        #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+  margin-bottom: 0.5rem;
+  font-family: sofia-pro, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0;
+  font-weight: 700;
+  line-height: 1.25 !important;
+}
+        #bp_container #bp_caption i, #bp_container #bp_caption em, h1#bp_container #bp_caption i, h1#bp_container #bp_caption em, h4#bp_container #bp_caption i, h4#bp_container #bp_caption em, h5#bp_container #bp_caption i, h5#bp_container #bp_caption em {
+  font-style: normal;
+  --tw-text-opacity: 1;
+  color: hsl(var(--af, var(--a)) / var(--tw-text-opacity));
+}
+        #bp_container #bp_caption {
+  top: 0px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+            #bp_container #bp_caption button {
+  display: none;
+}
+
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -3620,6 +3709,22 @@ select {
     letter-spacing: 0;
   }
 
+  #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+    font-size: 27px;
+  }
+
+  #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+    font-size: 27px;
+  }
+
+  #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+    font-size: 27px;
+  }
+
+  #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+    font-size: 27px;
+  }
+
   .container {
     max-width: 768px;
   }
@@ -4170,6 +4275,26 @@ select {
 
   .box-h-3 {
     height: 16rem;
+  }
+
+  #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+    font-size: 36px;
+    letter-spacing: 0;
+  }
+
+  #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+    font-size: 36px;
+    letter-spacing: 0;
+  }
+
+  #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+    font-size: 36px;
+    letter-spacing: 0;
+  }
+
+  #bp_container #bp_caption, h1#bp_container #bp_caption, h4#bp_container #bp_caption, h5#bp_container #bp_caption {
+    font-size: 36px;
+    letter-spacing: 0;
   }
 
   .container {

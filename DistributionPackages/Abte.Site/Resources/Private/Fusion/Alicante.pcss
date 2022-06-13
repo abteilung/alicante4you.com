@@ -411,4 +411,20 @@
     .button {
         @apply roundedCorners-small cursor-pointer truncate px-5 py-3 text-sm md:text-base border-none bg-black text-white tracking-normal hover:scale-105 duration-150;
     }
+
+    #bp_container {
+        @apply backdrop-blur-xl;
+
+        img {
+        }
+        #bp_count {
+            @apply bottom-0;
+        }
+        #bp_caption {
+            @apply bg-neutral h2 text-white top-0 w-fit h-fit;
+            button {
+                @apply hidden;
+            }
+        }
+    }
 }
