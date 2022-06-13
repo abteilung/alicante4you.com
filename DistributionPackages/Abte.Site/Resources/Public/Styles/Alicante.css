@@ -1119,20 +1119,6 @@ select {
   display: grid;
   gap: 1rem;
 }
-
-    #bp_caption p, #bp_caption h1, #bp_caption .h1, #bp_caption h2, #bp_caption .h2, #bp_caption h3, #bp_caption .h3, #bp_caption h4, #bp_caption .h4, #bp_caption h5, #bp_caption .h5, #bp_caption h6, #bp_caption .h6 {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-    #bp_caption p {
-  color: rgb(255 255 255 / 0.6);
-}
-
-    #bp_caption {
-  --tw-bg-opacity: 1 !important;
-  background-color: hsl(var(--p) / var(--tw-bg-opacity)) !important;
-}
         
 
         #kurs-form fieldset label:last-child, .kontaktModal fieldset label:last-child {
