@@ -114,12 +114,12 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                             @if.hasDistance={ node.context.inBackend || q(node).property('atm') || q(node).property('train') || q(node).property('bus') || q(node).property('postbox') || q(node).property('road') || q(node).property('school') }
                         >
                             <div class="grid grid-cols-3 md:grid-cols-5 gridgap">
-                                <Abte.Site:Content.PropertyFeature textProperty='atm' featureIcon='atm' title="ATM" />
-                                <Abte.Site:Content.PropertyFeature textProperty='train' featureIcon='train' title="Railway" />
-                                <Abte.Site:Content.PropertyFeature textProperty='bus' featureIcon='bus' title="Bus" />
-                                <Abte.Site:Content.PropertyFeature textProperty='postbox' featureIcon='postbox' title="Postal Office" />
-                                <Abte.Site:Content.PropertyFeature textProperty='road' featureIcon='road' title="Motorway" />
-                                <Abte.Site:Content.PropertyFeature textProperty='school' featureIcon='school' title="School" />
+                                <Abte.Site:Content.PropertyFeature textProperty='atm' featureIcon='atm' title={ I18n.translate('Abte.Site:Main:distATM') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='train' featureIcon='train' title={ I18n.translate('Abte.Site:Main:distRailway') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='bus' featureIcon='bus' title={ I18n.translate('Abte.Site:Main:distBus') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='postbox' featureIcon='postbox' title={ I18n.translate('Abte.Site:Main:distPost') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='road' featureIcon='road' title={ I18n.translate('Abte.Site:Main:distMotorway') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='school' featureIcon='school' title={ I18n.translate('Abte.Site:Main:distSchool') } />
                             </div>
                         </Abte.Site:Content.Container>
 

@@ -53,6 +53,30 @@
                 <source></source>
             </trans-unit>
 
+            <trans-unit id="distATM">
+                <source>ATM</source>
+            </trans-unit>
+
+            <trans-unit id="distRailway">
+                <source>Railway</source>
+            </trans-unit>
+
+            <trans-unit id="distBus">
+                <source>Bus</source>
+            </trans-unit>
+
+            <trans-unit id="distPost">
+                <source>Postal Office</source>
+            </trans-unit>
+
+            <trans-unit id="distMotorway">
+                <source>Motorway</source>
+            </trans-unit>
+
+            <trans-unit id="distSchool">
+                <source>School</source>
+            </trans-unit>
+
             <trans-unit id="overview">
                 <source>Overview</source>
             </trans-unit>
