@@ -29,7 +29,7 @@ prototype(Abte.Site:Component.FloorPlanSlider) < prototype(Neos.Fusion:Component
         itemRenderer = Neos.Fusion:Join {
             image = Neos.Fusion:Tag {
                 attributes {
-                    class = 'flex justify-center roundedCorners'
+                    class = 'flex justify-center overflow-hidden roundedCorners box-shadow'
                 }
                 content = Neos.Fusion:Augmenter {
                     data-bp = Sitegeist.Kaleidoscope:AssetImageSource {
@@ -53,7 +53,7 @@ prototype(Abte.Site:Component.FloorPlanSlider) < prototype(Neos.Fusion:Component
                     class = 'mt-4'
                 }
             }
-            @process.wrap = ${ '<div class="w-2/3 overflow-hidden floorPlan lg:w-1/2 2xl:w-1/3 group">' + value + '</div>'}
+            @process.wrap = ${ '<div class="w-2/3 floorPlan lg:w-1/2 2xl:w-1/3 group">' + value + '</div>'}
         }
     }
 
