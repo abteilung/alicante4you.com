@@ -38,8 +38,8 @@ packages:
     files:
       - Forms.js
       - Forms.pcss
-      - Styles/choices.base.scss
-      - Styles/choices.scss
+      # - Styles/choices.base.scss
+      # - Styles/choices.scss
   - package: Alicante.Privacy
     files:
       - Privacy.pcss
