@@ -4363,6 +4363,14 @@ select {
     min-height: 500px;
   }
 
+    .lg\:min-h-\[150px\] {
+    min-height: 150px;
+  }
+
+    .lg\:min-h-\[100px\] {
+    min-height: 100px;
+  }
+
     .lg\:w-\[200px\] {
     width: 200px;
   }

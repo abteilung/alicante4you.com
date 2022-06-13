@@ -10,18 +10,21 @@ prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent)
 
     renderer = afx`
         <div class="container gridPadding">
-            <div class="grid-cols-3 overflow-hidden roundedCorners md:grid isolate bg-base-100 testimonial" data-theme="default">
+            <div class="overflow-hidden roundedCorners md:grid isolate bg-base-100 testimonial" data-theme="default">
                 <div class="grid content-between h-full col-span-2 p-4 gridgap md:p-8 lg:p-16">
                     {props.content}
-                </div>
-                <div class="relative ">
-                    <Sitegeist.Kaleidoscope:Image 
-                        @if.hasImage={props.imageSource}
-                        imageSource={props.imageSource} 
-                        width="700"
-                        height="700"
-                        class="object-cover object-top md:object-center w-full h-[350px] md:h-full min-h-[250px] lg:min-h-[500px]"
-                    />
+                    <div class="flex gridgap">
+                        <Sitegeist.Kaleidoscope:Image 
+                            @if.hasImage={props.imageSource}
+                            imageSource={props.imageSource} 
+                            width="100"
+                            height="100"
+                            class="object-cover object-top rounded-full md:object-center"
+                        />
+                        <div class="w-full">
+                            eeeee
+                        </div>
+                    </div>
                 </div>
             </div>	
         </div>	
