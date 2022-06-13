@@ -3,19 +3,6 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
     # so don't append it again
     head.titleTag.outputSuffixOnTitleOverride = false
 
-
-    body.javascripts {
-        googleMapsFunction = Neos.Fusion:Tag {
-            @if.render = ${ true }
-        }
-        googleMapsApi = Neos.Fusion:Tag {
-            @if.render = ${ true }
-        }
-        googleMapsBackend = Neos.Fusion:Tag {
-            @if.render = ${ true }
-        }
-    }
-
     body.content = Neos.Fusion:Component {
 
         two = Abte.Site:Component.ServiceCard {

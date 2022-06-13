@@ -13,6 +13,9 @@
     'title':
       options:
         preset: 'text.title'
+    'author':
+      options:
+        preset: 'text.free'
     'image':
       options:
         preset: 'image.squareAsset'

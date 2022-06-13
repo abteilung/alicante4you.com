@@ -8,6 +8,8 @@ prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent)
         asset   = ${ q(node).property('image') }
     }
 
+    author = ${ q(node).property('author') }
+
     renderer = afx`
         <div class="container gridPadding">
             <div class="overflow-hidden roundedCorners md:grid isolate bg-base-100 testimonial" data-theme="default">
@@ -22,7 +24,7 @@ prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent)
                             class="object-cover object-top rounded-full md:object-center"
                         />
                         <div class="w-full">
-                            eeeee
+                            {props.author}
                         </div>
                     </div>
                 </div>
