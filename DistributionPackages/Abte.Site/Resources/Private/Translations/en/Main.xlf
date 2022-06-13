@@ -81,6 +81,10 @@
                 <source>School</source>
             </trans-unit>
 
+            <trans-unit id="distAirport">
+                <source>Airport</source>
+            </trans-unit>
+
             <trans-unit id="overview">
                 <source>Overview</source>
             </trans-unit>

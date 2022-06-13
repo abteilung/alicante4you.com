@@ -23,7 +23,7 @@ prototype(Alicante.Navigation:Component.Navbar.SubNavigation) < prototype(Neos.F
     distances = Neos.Fusion:DataStructure {
       label = ${ I18n.translate('Abte.Site:Main:distances') }
       anchor = 'distances'
-      @if.hasDistance=${ q(node).property('atm') || q(node).property('train') || q(node).property('bus') || q(node).property('postbox') || q(node).property('road') || q(node).property('school') }      
+      @if.hasDistance=${ q(node).property('atm') || q(node).property('train') || q(node).property('bus') || q(node).property('postbox') || q(node).property('road') || q(node).property('school') || q(node).property('airplane') }      
     }
   }
 

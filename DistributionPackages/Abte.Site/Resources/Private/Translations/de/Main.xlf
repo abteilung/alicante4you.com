@@ -102,6 +102,11 @@
                 <target>Schule</target>
             </trans-unit>
 
+            <trans-unit id="distAirport">
+                <source>Airport</source>
+                <target>Flughafen</target>
+            </trans-unit>
+
             <trans-unit id="overview">
                 <source>Overview…</source>
                 <target>Zur Übersicht</target>

@@ -51,6 +51,13 @@ prototype(Abte.Site:Mixin.PropertyFeatures) < prototype(Neos.Fusion:Component) {
             }
         }
 
+        airport {
+            condition = ${ featureIcon == 'airport' }
+            renderer = Abte.Site:Icon.Airplane {
+                class = ${ class }
+            }
+        }
+
         none {
             condition = ${ true }
             renderer = ''

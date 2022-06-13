@@ -120,6 +120,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                                 <Abte.Site:Content.PropertyFeature textProperty='postbox' featureIcon='postbox' title={ I18n.translate('Abte.Site:Main:distPost') } />
                                 <Abte.Site:Content.PropertyFeature textProperty='road' featureIcon='road' title={ I18n.translate('Abte.Site:Main:distMotorway') } />
                                 <Abte.Site:Content.PropertyFeature textProperty='school' featureIcon='school' title={ I18n.translate('Abte.Site:Main:distSchool') } />
+                                <Abte.Site:Content.PropertyFeature textProperty='airport' featureIcon='airport' title={ I18n.translate('Abte.Site:Main:distAirport') } />
                             </div>
                         </Abte.Site:Content.Container>
 

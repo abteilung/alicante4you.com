@@ -51,6 +51,9 @@
         road:
             options:
                 preset: 'text.plain'
+        airport:
+            options:
+                preset: 'text.plain'
 
         prop_rooms:
             options:
