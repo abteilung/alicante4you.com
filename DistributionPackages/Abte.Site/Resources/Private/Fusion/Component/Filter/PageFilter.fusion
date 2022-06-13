@@ -108,7 +108,7 @@ prototype(Abte.Site:Component.ProductFilter) < prototype(Neos.Fusion:Component) 
               id="filterAll"
               "@click"="cat = 'all'" 
               ":class"="{'!text-neutral border-neutral': cat === 'all'}"
-              class="cursor-pointer border-b-2 filterButton text-base-300 pb-2 mb-[-2px]"
+              class="cursor-pointer h3 border-b-2 text-[21px] 2xl:text-lg filterButton text-base-300 pb-2 mb-[-2px]"
             >
                 {q(documentNode).is('[instanceof Abte.Site:Document.FilterPage]') ? I18n.translate('Abte.Site:Main:all') : I18n.translate('Abte.Site:Main:objectsForSale') }
             </button>
