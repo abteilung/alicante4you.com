@@ -34,6 +34,7 @@ prototype(Abte.Site:Component.FloorPlanSlider) < prototype(Neos.Fusion:Component
                 data-bp = Sitegeist.Kaleidoscope:AssetImageSource {
                     asset   = ${ item }
                 }
+                data-caption = ${ item.title }
                 class = 'cursor-pointer'
                 content = Sitegeist.Kaleidoscope:Image {
                     imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
