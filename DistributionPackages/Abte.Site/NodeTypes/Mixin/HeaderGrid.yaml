@@ -78,6 +78,14 @@
         inspector: 
           group: general
           position: 42
+    'fourHeader':
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Button 4 Header
+        inspector: 
+          group: general
+          position: 43
 
     'five':
       type: reference
@@ -97,6 +105,14 @@
         inspector: 
           group: general
           position: 51
+    'fiveHeader':
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Button 5 Header
+        inspector: 
+          group: general
+          position: 52
     'fiveText':
       options:
         preset: 'text.plain'
@@ -104,4 +120,4 @@
         label: Button 5 Text
         inspector: 
           group: general
-          position: 52
+          position: 53
