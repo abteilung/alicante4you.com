@@ -28,14 +28,14 @@ prototype(Abte.Site:Component.FloorPlanSlider) < prototype(Neos.Fusion:Component
         items = ${ images }
         itemRenderer = Neos.Fusion:Tag {
             attributes {
-                class = 'flex justify-center w-2/3 lg:w-1/2 2xl:w-1/3 floorPlan roundedCorners'
+                class = 'flex justify-center w-2/3 overflow-hidden group lg:w-1/2 2xl:w-1/3 floorPlan roundedCorners'
             }
             content = Neos.Fusion:Augmenter {
                 data-bp = Sitegeist.Kaleidoscope:AssetImageSource {
                     asset   = ${ item }
                 }
                 data-caption = ${ item.title }
-                class = 'cursor-pointer'
+                class = 'duration-150 scale-100 cursor-pointer hover:scale-105'
                 content = Sitegeist.Kaleidoscope:Image {
                     imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
                         asset   = ${ item }
