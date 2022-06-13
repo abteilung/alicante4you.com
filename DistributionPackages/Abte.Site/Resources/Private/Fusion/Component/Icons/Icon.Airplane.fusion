@@ -3,23 +3,17 @@ prototype(Abte.Site:Icon.Airplane) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-        <svg class={props.class} width="62px" height="58px" viewBox="0 0 62 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Objekte" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                <g id="Objektdetails" transform="translate(-107.000000, -4538.000000)" stroke="currentColor">
-                    <g id="Distanzen" transform="translate(30.000000, 4163.000000)">
-                        <g id="Icons" transform="translate(0.000000, 196.000000)">
-                            <g id="Group-5-Copy" transform="translate(0.000000, 179.000000)">
-                                <g id="icons/Bank" transform="translate(77.000000, 0.000000)">
-                                    <g id="credit-card-in" transform="translate(1.000000, 1.000000)">
-                                        <path d="M18,56 L18,6" id="Shape" stroke-width="2"></path>
-                                        <path d="M28,56 L28,6" id="Shape" stroke-width="2"></path>
-                                        <path d="M42,48 L42,36" id="Shape" stroke-width="2"></path>
-                                        <path d="M42,16 L42,21" id="Shape" stroke-width="2"></path>
-                                        <path d="M52,6 L52,52 C52,54.209 50.209,56 48,56 L12,56 C9.791,56 8,54.209 8,52 L8,6 L52,6 Z" id="Shape" stroke-width="2"></path>
-                                        <path d="M8,12 L6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 L54,0 C57.314,0 60,2.686 60,6 C60,9.314 57.314,12 54,12 L52,12" id="Shape" stroke-width="2"></path>
-                                    </g>
-                                </g>
-                            </g>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59px" height="59px" viewBox="0 0 59 59" version="1.1">
+            <title>airplane</title>
+            <g id="Find" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Find-details" transform="translate(-1153.000000, -3713.000000)" stroke="#282828" stroke-width="2">
+                    <g id="Group-14" transform="translate(315.000000, 3611.000000)">
+                        <g id="airplane" transform="translate(839.000000, 103.000000)">
+                            <path d="M44.2858093,23.2987572 L52.1618093,47.8637572 C52.7336098,49.6475307 52.2604163,51.6012875 50.9358093,52.9257572 L47.8838093,55.9777572 L34.2238093,33.3597572" id="Path"/>
+                            <path d="M33.6788093,12.6917572 L9.11380929,4.81575718 C7.33003581,4.24395662 5.37627901,4.71715019 4.05180929,6.04175718 L0.999809295,9.09375718 L23.6178093,22.7537572" id="Path"/>
+                            <path d="M11.8608093,37.1827572 L1.15080929,35.9887572 C1.10079775,35.9815396 1.05033885,35.9778638 0.999809295,35.9777572 C0.588586079,35.9778512 0.219343869,36.2296787 0.0691363218,36.6124871 C-0.0810712257,36.9952954 0.0183826588,37.4310314 0.319809295,37.7107572 L0.319809295,37.7107572 L7.14580929,44.4277572" id="Path"/>
+                            <path d="M19.7998093,45.1287572 L20.9928093,55.8287572 C20.9985962,55.8782013 21.0009352,55.9279883 20.9998093,55.9777572 C20.9997153,56.3889804 20.7478878,56.7582226 20.3650794,56.9084301 C19.9822711,57.0586377 19.5465351,56.9591838 19.2668093,56.6577572 L19.2668093,56.6577572 L12.5498093,49.8317572" id="Path"/>
+                            <path d="M56.0338093,0.953757176 C53.8468093,-1.23324282 45.7518093,0.637757176 42.8228093,3.56675718 L18.8338093,27.5567572 C17.1095643,29.282695 15.5883484,31.2001517 14.2998093,33.2717572 L4.24280929,49.4187572 C3.87370559,50.1914007 3.92803546,51.0995854 4.38662001,51.8227145 C4.84520456,52.5458436 5.64354081,52.9822042 6.49980929,52.9777908 C6.86258496,52.9418725 7.21958626,52.861606 7.56280929,52.7387572 L23.7098093,42.6937572 C25.7852071,41.4028361 27.7057488,39.8782132 29.4338093,38.1497572 L53.4198093,14.1637572 C56.3488093,11.2347572 58.2198093,3.13975718 56.0338093,0.953757176 Z" id="Path"/>
                         </g>
                     </g>
                 </g>
