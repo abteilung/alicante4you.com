@@ -26,20 +26,10 @@ prototype(Abte.Site:Component.FloorPlanSlider) < prototype(Neos.Fusion:Component
     productImages = Neos.Fusion:Loop {
         @if.hasImages = ${ images }
         items = ${ images }
-<<<<<<< HEAD
         itemRenderer = Neos.Fusion:Join {
             image = Neos.Fusion:Tag {
                 attributes {
                     class = 'flex justify-center roundedCorners'
-=======
-        itemRenderer = Neos.Fusion:Tag {
-            attributes {
-                class = 'flex justify-center w-2/3 overflow-hidden box-shadow group lg:w-1/2 2xl:w-1/3 floorPlan roundedCorners'
-            }
-            content = Neos.Fusion:Augmenter {
-                data-bp = Sitegeist.Kaleidoscope:AssetImageSource {
-                    asset   = ${ item }
->>>>>>> 2796c7f0ac1f4cc1a81c4871ff91c52ddc2653e9
                 }
                 content = Neos.Fusion:Augmenter {
                     data-bp = Sitegeist.Kaleidoscope:AssetImageSource {
