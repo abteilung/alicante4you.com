@@ -8,7 +8,13 @@ prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent)
         asset   = ${ q(node).property('image') }
     }
 
-    author = ${ q(node).property('author') }
+    author = Neos.Neos:Editable {
+        property = 'author'
+        block = ${ true }
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
 
     renderer = afx`
         <div class="container gridPadding">
