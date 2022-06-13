@@ -18,6 +18,13 @@ prototype(Abte.Site:Document.Story) < prototype(Abte.Site:Document.AbstractPage)
                 @position = 'end'
             }
         }
+        
+        titleOverride = Neos.Neos:Editable {
+            property = 'titleOverride'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
 
         subTitle = Neos.Neos:Editable {
             property = 'subTitle'
@@ -56,7 +63,8 @@ prototype(Abte.Site:Document.Story) < prototype(Abte.Site:Document.AbstractPage)
                 <div class="container py-4 gridPadding-x md:py-8 lg:py-12 2xl:py-24">
 
                     <div class="w-full mx-auto space-y-4 lg:w-2/3 md:space-y-8">
-                        <p>{props.subitoTitolo}</p>
+                        <!-- <p>{props.subitoTitolo}</p> -->
+                        <p>{props.titleOverride}</p>
                         <h1>{props.pageTitle}</h1>
                         <Neos.Fusion:Augmenter class="lead">
                             {props.teaser_short}
