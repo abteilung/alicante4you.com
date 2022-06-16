@@ -1,16 +1,17 @@
 prototype(Abte.Site:TrackingScript.GoogleAnalytics) < prototype(Neos.Fusion:Component) {
 
-    // script for schweizer-roentgen.ch
+    // XXX is CUSTOMER
+    property = "XXX"
 
-    renderer = afx`
+    renderer = ${'
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTWB34TBR9"></script>
-        <script>{"
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-' + props.property + '"></script>
+        <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            gtag("js", new Date());
 
-            gtag('config', 'G-ZTWB34TBR9');
-        "}</script>
-    `
+            gtag("config", "G-' + props.property + '");
+        </script>
+    '}
 }

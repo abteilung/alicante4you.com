@@ -7,6 +7,8 @@
 ##
 prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
     head {
+        stats = Abte.Site:TrackingScript.GoogleAnalytics
+        stats.@if.isLive=${!node.context.inBackend}
         headTag = Neos.Fusion:Join {
             @glue = ''
             comp = '<meta http-equiv="x-ua-compatible" content="ie=edge" />''
