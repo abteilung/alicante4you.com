@@ -31,25 +31,53 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
 
         target = ${ q(node).property('oneTarget') }
 
+        videoUrl = ""
+
         renderer = afx`
-            <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
-                <p class="lead">
-                    {props.lead}
-                </p>
-                <h1>
-                    {props.header}
-                </h1>
-            </div>
-            <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
-                <Abte.Site:Content.Button 
-                    class={ q(node).property('oneImage') ? 'bg-white !text-black' : 'bg-black text-white' }
-                    target={props.target}
-                    text={props.buttonText}
-                />
+
+            <div class="relative content-between w-full h-full ">
+                  
+                <div class="absolute z-10 w-full h-full overflow-hidden border-2 border-alert"
+                    @if.hasVideo={props.videoUrl}
+                >
+                    <iframe 
+                        class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" 
+                        src={props.videoUrl + '?autoplay=1&mute=1&playsinline=1&loop=1&controls=0&disablekb=1' }
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>      
+
+                <div class="relative z-20">
+                    <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
+            
+                        <p class="lead">
+                            {props.lead}
+                        </p>
+                        <h1>
+                            {props.header}
+                        </h1>
+                    </div>
+                    
+                    <div class="flex p-4 space-x-8 md:p-8 xl:p-12 2xl:p-16">
+                        <Abte.Site:Content.Button 
+                            class={ q(node).property('oneImage') ? 'bg-white !text-black' : 'bg-black text-white' }
+                            target={props.target}
+                            text={props.buttonText}
+                        />
+                        <Abte.Site:Content.Button 
+                            @if.hasVideo={props.videoUrl}
+                            class={ q(node).property('oneImage') ? 'bg-white !text-black' : 'bg-black text-white' }
+                            target={props.target}
+                            text={props.buttonText}
+                        />
+                    </div>
+                </div>
             </div>
         `
     }
-    oneClass = 'roundedCorners grid content-between relative bg-primary box-h-2 row-span-2 col-span-1 md:col-span-2 headGrid'
+    oneClass = 'roundedCorners grid relative bg-primary overflow-hidden box-h-2 row-span-2 col-span-1 md:col-span-2 headGrid'
     oneImage =  Sitegeist.Kaleidoscope:AssetImageSource {
         asset   = ${ q(node).property('oneImage') }
         width   = 800
