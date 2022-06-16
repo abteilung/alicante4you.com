@@ -31,7 +31,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
 
         target = ${ q(node).property('oneTarget') }
 
-        videoUrl = ""
+        videoUrl = ${ q(node).property('oneVideo') }
 
         renderer = afx`
 
@@ -42,7 +42,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
                 >
                     <iframe 
                         class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" 
-                        src={props.videoUrl + '?autoplay=1&mute=1&playsinline=1&loop=1&controls=0&disablekb=1' }
+                        src={'https://www.youtube.com/embed/' + props.videoUrl + '?autoplay=1&cc_load_policy=3&mute=1&playsinline=1&loop=1&controls=0&disablekb=1' }
                         frameborder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>

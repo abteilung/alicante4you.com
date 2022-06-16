@@ -32,6 +32,14 @@
         inspector: 
           group: general
           position: 12
+    'oneVideo':
+      options:
+        preset: 'text.link'
+      ui:
+        label: Video (Youtube)
+        inspector: 
+          group: general
+          position: 15
     'two':
       type: reference
       ui:
