@@ -97,7 +97,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
                 @if.hasContent={props.one}
                 class={props.oneClass + ' ' + 'jarallax'} 
                 data-theme={props.oneTheme}
-                style={props.oneImage ? 'background: url(' + props.oneImage +') no-repeat center center; background-size: cover;' : null }
+                style={props.oneImage ? 'background: url(' + props.oneImage +') no-repeat center center; background-size: cover; ' : null }
 
                 data-jarallax
                 data-video-src={'https://www.youtube.com/watch?v=' + props.videoUrl}
