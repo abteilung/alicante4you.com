@@ -2141,6 +2141,9 @@ select {
 .h-\[768px\] {
   height: 768px;
 }
+.h-screen\/75 {
+  height: 75vh;
+}
 .max-h-60 {
   max-height: 15rem;
 }

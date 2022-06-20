@@ -48,6 +48,13 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
 
         similarProducts = ${ q(site).children().find('[instanceof Abte.Site:Document.Product]').get() }
 
+        videoUrl = ${ q(documentNode).property('oneVideo') }
+
+        videoModalContent = Neos.Neos:ContentCollection {
+            nodePath = ${ q(site).children('video').property('_path') }
+            collection = ${ q(site).children('video').children() }
+        }
+
         renderer = afx`
             <main class="mt-0">
                 <div class="container mb-4 md:mb-12 lg:mb-24 gridPadding-x">
@@ -81,6 +88,20 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
                 </Abte.Site:Content.Container> -->
 
             </main>
+
+
+                <div
+                    class="modal"
+                    role="dialog"
+                    tabindex="-1"
+                    x-show="showVideo"
+                    x-on:click.away="showVideo = false"
+                    x-cloak
+                    x-transition
+                    class="fixed top-0 left-0 z-50 w-screen text-white h-screen/75 bg-primary"
+                >
+                    {props.videoModalContent}
+                </div>
         `
     }
 }

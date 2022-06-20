@@ -26,7 +26,7 @@ prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
     bodyTag {
         attributes {
             data-theme=${ q(node).closest("[instanceof Neos.Neos:Document][colorWorld][colorWorld != '']").property('colorWorld') }
-            x-data="\{ showModal : false, showMenu : false, showBasket : false, formOrder: localStorage.getItem('orderValue') \}"
+            x-data="\{ showModal : false, showMenu : false, showVideo : false, showBasket : false, formOrder: localStorage.getItem('orderValue') \}"
             x-init="$watch('formOrder', (val) => localStorage.setItem('orderValue', val))"
         }
     }
