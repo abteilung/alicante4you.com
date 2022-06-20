@@ -6,7 +6,7 @@ prototype(Abte.Site:Mixin.BgColor) < prototype(Neos.Fusion:Component) {
     BgColor = Neos.Fusion:Case {
         light {
             condition = ${ q(node).property('bgColor') == 'bg-light' }
-            renderer = 'bg-base-100 gridPadding-y'
+            renderer = 'bg-base-100'
         }
 
         dark {

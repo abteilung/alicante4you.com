@@ -11,7 +11,7 @@ prototype(Abte.Site:Document.AboutUs) < prototype(Abte.Site:Document.AbstractPag
 
         renderer = afx`
             <main class="main">
-                <div class="container gridPadding-x">
+                <div class="container">
                     <Abte.Site:Component.HeaderGrid 
                         class="aboutUsGrid"
                         oneTheme=''

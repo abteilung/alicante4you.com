@@ -48,7 +48,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
             </div>
             {props.icon}
 
-            <div class="relative h-full bg-base-100">
+            <div class="relative h-full">
                 <Sitegeist.Kaleidoscope:Image 
                     @if.hasImage={props.imageSource}
                     imageSource={props.imageSource} 

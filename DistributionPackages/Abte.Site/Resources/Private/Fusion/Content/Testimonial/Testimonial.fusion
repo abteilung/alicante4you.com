@@ -17,7 +17,7 @@ prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent)
     }
 
     renderer = afx`
-        <div class="container gridPadding">
+        <div class="container">
             <div class="overflow-hidden roundedCorners md:grid isolate bg-base-100 testimonial" data-theme="default">
                 <div class="grid content-between h-full col-span-2 p-4 gridgap md:p-8 lg:p-16">
                     {props.content}
