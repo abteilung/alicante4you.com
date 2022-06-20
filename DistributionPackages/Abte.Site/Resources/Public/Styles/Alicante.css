@@ -3923,13 +3923,12 @@ select {
 .line-clamp-none {
   -webkit-line-clamp: unset;
 }
-<<<<<<< HEAD
 .\[hash\:base64\] {
   hash: base64;
 }
 .\[hfname\:string\] {
   hfname: string;
-=======
+}
 .jarallax {
   position: relative;
   z-index: 0;
@@ -3943,7 +3942,6 @@ select {
   width: 100%;
   height: 100%;
   z-index: -1;
->>>>>>> 1b4e138094a0f6c944ec52674779e89882d891d7
 }
 .bg-secondary p, .hover\:bg-primary:hover p, .bg-neutral p, .bg-error p, .bg-secondary h1, .bg-primary h1, .bg-neutral h1, .bg-error h1, .bg-secondary .h1, .bg-primary .h1, .bg-neutral .h1, .bg-error .h1, .bg-secondary h2, .bg-primary h2, .bg-neutral h2, .bg-error h2, .bg-secondary .h2, .bg-primary .h2, .bg-neutral .h2, .bg-error .h2, .bg-secondary h3, .bg-primary h3, .bg-neutral h3, .bg-error h3, .bg-secondary .h3, .bg-primary .h3, .bg-neutral .h3, .bg-error .h3, .bg-secondary h4, .bg-primary h4, .bg-neutral h4, .bg-error h4, .bg-secondary .h4, .bg-primary .h4, .bg-neutral .h4, .bg-error .h4, .bg-secondary h5, .bg-primary h5, .bg-neutral h5, .bg-error h5, .bg-secondary .h5, .bg-primary .h5, .bg-neutral .h5, .bg-error .h5, .bg-secondary h6, .bg-primary h6, .bg-neutral h6, .bg-error h6, .bg-secondary .h6, .bg-primary .h6, .bg-neutral .h6, .bg-error .h6 {
   --tw-text-opacity: 1;

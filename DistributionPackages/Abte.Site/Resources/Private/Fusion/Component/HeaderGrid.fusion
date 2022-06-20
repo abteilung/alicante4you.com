@@ -33,13 +33,14 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
 
         target = ${ q(node).property('oneTarget') }
 
+        videoUrl = ${ q(documentNode).property('oneVideo') }
 
         renderer = afx`
 
             <div class="relative content-between w-full h-full">
                   
                 <div 
-                    class="relative z-20 jarallax"
+                    class={props.videoUrl ? 'relative z-20 jarallax' : 'relative z-20 '}
                 >
                     <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
             
@@ -57,12 +58,31 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
                             target={props.target}
                             text={props.buttonText}
                         />
-                        <Abte.Site:Content.Button 
+                        <div x-data="{'isVideoOpen': false}"
                             @if.hasVideo={props.videoUrl}
-                            class={ q(node).property('oneImage') ? 'bg-white !text-black' : 'bg-black text-white' }
-                            target={props.target}
-                            text={props.buttonText}
-                        />
+                        >
+                            <div 
+                                "@click.prevent"="isVideoOpen = !isVideoOpen"
+                                class="flex-row items-center space-x-2 text-white ex button"
+                            >
+                                Play Video
+                            </div>
+                            <div
+                                class="modal"
+                                role="dialog"
+                                tabindex="-1"
+                                x-show="isVideoOpen"
+                                x-on:click.away="isVideoOpen = false"
+                                x-cloak
+                                x-transition
+                                class="fixed w-screen h-screen bg-white"
+                                style="width: 800px; height: 800px;"
+                            >
+                                <Jonnitto.PrettyEmbedVideoPlatforms:Content.Video 
+                                    videoID={ props.videoUrl}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
