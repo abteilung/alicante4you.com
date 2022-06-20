@@ -13,4 +13,5 @@ Carbon:
             - https://stats.abteilung.tools/tracker.js[async data-ackee-server="https://stats.abteilung.tools" data-ackee-domain-id="8280dda7-93d2-4564-87ef-68181ac2ff35"]
           Body: 
             - Alicante.js[defer]
-            - Ackee.js[defer][inline]
+            - https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.0.3/jarallax.min.js
+            - https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.0.3/jarallax-video.min.js

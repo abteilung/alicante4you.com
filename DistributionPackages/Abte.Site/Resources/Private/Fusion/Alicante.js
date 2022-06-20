@@ -8,9 +8,10 @@ Alpine.start();
 
 
 // Include Jarallax Video
-import { jarallax, jarallaxVideo } from 'jarallax';
+// import { jarallax, jarallaxVideo } from 'jarallax';
 
-jarallaxVideo();
+// jarallax();
+// jarallaxVideo();
 
 
 
