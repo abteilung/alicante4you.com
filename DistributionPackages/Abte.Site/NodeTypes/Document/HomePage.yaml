@@ -18,7 +18,7 @@
       position: 'after main'
     modal:
       type: 'Neos.Neos:ContentCollection'
-    orderForm:
+    video:
       type: 'Neos.Neos:ContentCollection'
   constraints:
     nodeTypes:
