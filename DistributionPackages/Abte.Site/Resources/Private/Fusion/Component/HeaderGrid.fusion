@@ -36,10 +36,10 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
 
         renderer = afx`
 
-            <div class="relative content-between w-full h-full">
+            <div class="relative w-full h-full">
                   
                 <div 
-                    class="relative z-20 grid h-full place-content-between jarallax"
+                    class="relative z-20 grid content-between h-full jarallax"
                 >
                     <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
             

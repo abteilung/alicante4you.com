@@ -24,7 +24,7 @@ prototype(Abte.Site:Document.Overview) < prototype(Abte.Site:Document.AbstractPa
                     <Abte.Site:Component.HeaderGrid
                         class='mb-24' 
                         oneTheme={ props.oneTheme }
-                        oneClass='roundedCorners grid content-between relative bg-primary col-span-1 md:col-span-2 headGrid'
+                        oneClass='roundedCorners relative bg-primary col-span-1 md:col-span-2 headGrid '
                         two={props.two}
                         twoClass='roundedCorners relative'
                     />
