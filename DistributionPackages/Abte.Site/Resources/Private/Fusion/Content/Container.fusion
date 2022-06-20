@@ -6,14 +6,14 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
         node = ${ this.node }
     }
 
-    class = 'gridPadding'
+    class = ''
     contentClass = ''
 
     fullWidth = ${ q(node).property('fullWidth') }
     
     contentFullWidth = ${ q(node).property('contentFullWidth') ? null : 'container' }
 
-    fullWidthClass = ${ this.fullWidth ? 'cnt-container' : 'container' }
+    fullWidthClass = ${ this.fullWidth ? 'cnt-container gridPadding-y' : 'container gridPadding' }
     
     dropShadow = ${ q(node).property('dropShadow') }
     

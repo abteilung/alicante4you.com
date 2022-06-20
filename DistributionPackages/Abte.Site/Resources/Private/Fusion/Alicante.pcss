@@ -165,6 +165,10 @@
 
     .container {
         @apply max-w-screen-xl !important;
+
+        .cnt-container & {
+            @apply gridPadding-x;
+        }
     }
     .containerHeader {
         .button {
@@ -281,7 +285,7 @@
         @apply !text-white/75;
     }
     .serviceCard {
-        @apply bg-gradient-to-br from-black/50;
+        @apply bg-black/20;
     }
 
     .box-newsletter.box-shadow {

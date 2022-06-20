@@ -24,7 +24,7 @@ prototype(Abte.Site:Document.Kompetenzen) < prototype(Abte.Site:Document.Abstrac
 
         renderer = afx`
             <main class="main">
-                <div class="container gridPadding-x gridPadding-bottom">
+                <div class="container gridPadding-bottom">
                     <Abte.Site:Component.SubMenuAsCards cols="3" />
                 </div>
                 {props.main}
