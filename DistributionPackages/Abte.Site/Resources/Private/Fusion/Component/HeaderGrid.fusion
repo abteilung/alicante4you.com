@@ -39,7 +39,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
             <div class="relative content-between w-full h-full bg-black/20 bg-blend-multiply">
                   
                 <div 
-                    class="relative z-20 jarallax"
+                    class="relative z-20 grid h-full place-content-between jarallax"
                 >
                     <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
             
