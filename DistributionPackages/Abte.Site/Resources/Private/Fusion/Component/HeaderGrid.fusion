@@ -39,8 +39,6 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
                   
                 <div 
                     class="relative z-20 jarallax"
-                    data-jarallax
-                    data-video-src={'https://www.youtube.com/watch?v=' + props.videoUrl}
                 >
                     <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
             
@@ -98,6 +96,9 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
                 @if.hasContent={props.one}
                 class={props.oneClass} data-theme={props.oneTheme}
                 style={props.oneImage ? 'background: url(' + props.oneImage +') no-repeat center center; background-size: cover;' : null }
+
+                data-jarallax
+                data-video-src={'https://www.youtube.com/watch?v=' + props.videoUrl}
             >
                 <Abte.Site:Component.BackendIndicator label="1" />
                 {props.one}
