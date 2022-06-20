@@ -7,6 +7,14 @@ Alpine.start();
 
 
 
+// Include Jarallax Video
+import { jarallax, jarallaxVideo } from 'jarallax';
+
+jarallaxVideo();
+
+
+
+
 // Include Lightbox 
 import BigPicture from 'bigpicture'
 

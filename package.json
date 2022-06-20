@@ -72,6 +72,7 @@
     "flickity": "^3.0.0",
     "flickity-as-nav-for": "^3.0.0",
     "isotope-layout": "^3.0.6",
+    "jarallax": "^2.0.3",
     "matches-selector": "^1.2.0",
     "mixitup": "^3.3.1"
   }
