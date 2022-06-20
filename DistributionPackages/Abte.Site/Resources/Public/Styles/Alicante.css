@@ -964,10 +964,6 @@ select {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-    .\!gridPadding-y {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 
     .gridPadding-left {
   padding-left: 1.25rem;
@@ -1982,10 +1978,6 @@ select {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -2142,14 +2134,11 @@ select {
 .h-32 {
   height: 8rem;
 }
-.h-\[768px\] {
-  height: 768px;
-}
-.h-screen\/75 {
-  height: 75vh;
-}
 .h-auto {
   height: auto;
+}
+.h-\[768px\] {
+  height: 768px;
 }
 .max-h-60 {
   max-height: 15rem;
@@ -2159,9 +2148,6 @@ select {
 }
 .max-h-0 {
   max-height: 0px;
-}
-.max-h-full {
-  max-height: 100%;
 }
 .min-h-\[20px\] {
   min-height: 20px;
@@ -2231,12 +2217,6 @@ select {
 }
 .w-screen {
   width: 100vw;
-}
-.w-\[800px\] {
-  width: 800px;
-}
-.max-w-3xl {
-  max-width: 48rem;
 }
 .max-w-\[800px\] {
   max-width: 800px;
@@ -2664,14 +2644,11 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-.\!bg-transparent {
-  background-color: transparent !important;
-}
-.bg-black\/90 {
-  background-color: rgb(0 0 0 / 0.9);
-}
 .bg-black\/80 {
   background-color: rgb(0 0 0 / 0.8);
+}
+.\!bg-transparent {
+  background-color: transparent !important;
 }
 .bg-opacity-95 {
   --tw-bg-opacity: 0.95;
@@ -2681,9 +2658,6 @@ select {
 }
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
-}
-.bg-opacity-60 {
-  --tw-bg-opacity: 0.6;
 }
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
@@ -3034,11 +3008,6 @@ select {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 .ring-1 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -3143,6 +3112,9 @@ select {
 .jarallax {
   position: relative;
   z-index: 0;
+}
+.headerGrid .jarallax {
+  background-color: rgb(0 0 0 / 0.2);
 }
 .jarallax > .jarallax-img {
   position: absolute;
@@ -3718,11 +3690,6 @@ select {
     padding-bottom: 2rem;
   }
 
-  .\!gridPadding-y {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   .gridPadding-left {
     padding-left: 2rem;
   }
@@ -3963,11 +3930,6 @@ select {
     .md\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
-  }
-
-    .md\:mx-8 {
-    margin-left: 2rem;
-    margin-right: 2rem;
   }
 
     .md\:mb-8 {
@@ -4316,11 +4278,6 @@ select {
     padding-bottom: 6rem;
   }
 
-  .\!gridPadding-y {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
   .gridPadding-left {
     padding-left: 3rem;
   }
@@ -4524,11 +4481,6 @@ select {
     margin-right: -1rem;
   }
 
-    .lg\:mx-12 {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-
     .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -4679,10 +4631,6 @@ select {
     padding: 4rem;
   }
 
-    .lg\:p-12 {
-    padding: 3rem;
-  }
-
     .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -4767,11 +4715,6 @@ select {
   }
 
   .gridPadding-y {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  .\!gridPadding-y {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
@@ -4892,11 +4835,6 @@ select {
     grid-column-start: 12;
   }
 
-  .xl\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .xl\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -4975,10 +4913,6 @@ select {
 
   .xl\:p-12 {
     padding: 3rem;
-  }
-
-  .xl\:p-24 {
-    padding: 6rem;
   }
 
   .xl\:py-3 {

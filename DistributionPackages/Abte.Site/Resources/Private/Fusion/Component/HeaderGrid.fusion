@@ -99,7 +99,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
         <div class={props.class + ' ' + 'headerGrid grid md:grid-cols-2 lg:grid-cols-3 gridgap'}>
             <div 
                 @if.hasContent={props.one}
-                class={props.oneClass + ' ' + 'jarallax'} 
+                class={props.oneClass + ' ' + ''} 
                 data-theme={props.oneTheme}
                 style={props.oneImage ? 'background: url(' + props.oneImage +') no-repeat center center; background-size: cover; ' : null }
 
