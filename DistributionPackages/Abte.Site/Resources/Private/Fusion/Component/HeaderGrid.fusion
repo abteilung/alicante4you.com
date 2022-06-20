@@ -40,11 +40,7 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
             <div class="relative w-full h-full">
                   
                 <div 
-<<<<<<< HEAD
-                    class={props.videoUrl ? 'relative z-20 jarallax' : 'relative z-20 '}
-=======
-                    class="relative z-20 grid content-between h-full jarallax"
->>>>>>> 8ec2b10b489057799829cabdfce76d5a8a98b4ca
+                    class={props.videoUrl ? 'relative z-20 grid content-between h-full jarallax' : 'relative z-20 grid content-between h-full '}
                 >
                     <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
             
