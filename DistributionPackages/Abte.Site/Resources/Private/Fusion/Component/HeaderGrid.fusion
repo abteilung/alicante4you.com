@@ -35,21 +35,13 @@ prototype(Abte.Site:Component.HeaderGrid) < prototype(Neos.Fusion:Component) {
 
         renderer = afx`
 
-            <div class="relative content-between w-full h-full ">
+            <div class="relative content-between w-full h-full">
                   
-                <div class="absolute z-10 w-full h-full overflow-hidden"
-                    @if.hasVideo={props.videoUrl}
+                <div 
+                    class="relative z-20 jarallax"
+                    data-jarallax
+                    data-video-src={'https://www.youtube.com/watch?v=' + props.videoUrl}
                 >
-                    <iframe 
-                        class="absolute block object-cover object-center w-full h-full" 
-                        src={'https://www.youtube.com/embed/' + props.videoUrl + '?autoplay=1&cc_load_policy=3&mute=1&playsinline=1&loop=1&controls=0&disablekb=1' }
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>      
-
-                <div class="relative z-20">
                     <div class="p-4 md:p-8 xl:p-12 2xl:p-16">
             
                         <p class="lead">
