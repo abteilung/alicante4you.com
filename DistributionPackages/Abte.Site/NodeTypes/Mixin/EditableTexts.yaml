@@ -1,0 +1,9 @@
+
+'Abte.Site:Mixin.EditableTexts':
+  abstract: true
+  properties:
+    'map_liveYourDream':
+      options:
+        preset: 'text.plain'
+      ui:
+        label: i18n

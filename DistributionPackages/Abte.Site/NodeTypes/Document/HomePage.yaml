@@ -5,6 +5,7 @@
     'Abte.Site:Mixin.HeaderGrid': true
     'Abte.Site:Constraint.Document.Restricted': true
     'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.EditableTexts': true
     'Abte.Site:Mixin.Helpdesk': true
   ui:
     label: HomePage
