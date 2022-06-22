@@ -80,7 +80,7 @@ finishers:
     identifier: 'Neos.Form:Email'
     options:
       templatePathAndFilename: resource://Alicante.Forms/Private/Templates/Email/Message.txt
-      subject: 'Contact from alicante.realestate'
+      subject: Contact from alicante.realestate
       recipientAddress: rolf.wirnsberger@remax.ch
       recipientName: 'Alicante Real Estate'
       senderAddress: rolf.wirnsberger@remax.ch

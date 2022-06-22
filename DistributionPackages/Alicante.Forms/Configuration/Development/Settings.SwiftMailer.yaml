@@ -5,7 +5,7 @@ Neos:
       options:
         host: 'localhost'
         port: '1025'
-        encryption: 'null'
-        username: 'null'
-        password: 'null'
-        localDomain: 'localhost'
+        encryption: null
+        username: null
+        password: null
+        localDomain: '127.0.0.1'
