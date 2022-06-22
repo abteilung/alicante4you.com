@@ -33,7 +33,9 @@ prototype(Abte.Site:Component.MoreAboutUs) < prototype(Neos.Neos:ContentComponen
                             "@click.prevent"="showModal = !showModal"
                         >
                             <div class="flex flex-row items-center space-x-4">
-                                <div class="">{ I18n.translate('Abte.Site:Main:contactForm') }</div>
+                                <div class="">
+                                    <Neos.Neos:Editable property="button_zumKontakt" node={site} />
+                                </div>
                             </div>
                         </div>
                     </div>
