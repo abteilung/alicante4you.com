@@ -6,6 +6,6 @@ Neos:
         host: 'mail.cyon.ch'
         port: '465'
         encryption: 'ssl'
-        username: 'xxx@selfix.ch'
-        password: 'xxx'
+        username: 'contact@alicante.realestate'
+        password: 'TqP<q$>6qCW.JJi'
         localDomain: 'mail.cyon.ch'
