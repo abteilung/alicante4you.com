@@ -120,8 +120,7 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
                             </div>
                         </button>
                     </div>  
-                    <div x-show.showVideo="open" x-on:click.away="showVideo = false" class="w-full h-full">
-                    </div>
+                    <div x-show.showVideo="showVideo" x-on:click.away="showVideo = false" class="w-full h-full"></div>
                 </div>
         `
     }
