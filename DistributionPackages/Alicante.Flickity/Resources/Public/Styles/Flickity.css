@@ -80,10 +80,6 @@ https://flickity.metafizzy.co
 
 .flickity-button:hover {
   cursor: pointer;
-  margin-top: -1.5rem;
-  --tw-scale-x: 1.5;
-  --tw-scale-y: 1.5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flickity-button:focus {
@@ -116,14 +112,25 @@ https://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 
 .flickity-prev-next-button {
-  top: 50%;
   /* vertically center */
+  top: 50%;
   transform: translateY(-50%);
+  height: 100%;
 }
 
-.flickity-prev-next-button.previous { left: 10px; }
+.flickity-prev-next-button.previous {
+  left: 0px;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: hsl(var(--n) / 0.5);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
+}
 
-.flickity-prev-next-button.next { right: 10px; }
+.flickity-prev-next-button.next {
+  right: 0px;
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+  --tw-gradient-from: hsl(var(--n) / 0.5);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
+}
 
 /* right to left */
 
@@ -259,6 +266,15 @@ https://flickity.metafizzy.co
 }
 
 .flickity-rtl .flickity-page-dot { direction: rtl; }
+
+.flickity-page-dot p, .flickity-page-dot h1, .flickity-page-dot .h1, .flickity-page-dot h2, .flickity-page-dot .h2, .flickity-page-dot h3, .flickity-page-dot .h3, .flickity-page-dot h4, .flickity-page-dot .h4, .flickity-page-dot h5, .flickity-page-dot .h5, .flickity-page-dot h6, .flickity-page-dot .h6 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.flickity-page-dot p {
+  color: rgb(255 255 255 / 0.6);
+}
 
 .flickity-page-dot {
   margin-right: 0.25rem;

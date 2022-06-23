@@ -67,7 +67,6 @@ https://flickity.metafizzy.co
 
 .flickity-button:hover {
   cursor: pointer;
-  @apply scale-150 -mt-6;
 }
 
 .flickity-button:focus {
@@ -96,13 +95,20 @@ https://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 
 .flickity-prev-next-button {
-  top: 50%;
   /* vertically center */
+  top: 50%;
   transform: translateY(-50%);
+  @apply h-full;
 }
 
-.flickity-prev-next-button.previous { left: 10px; }
-.flickity-prev-next-button.next { right: 10px; }
+.flickity-prev-next-button.previous { 
+  @apply left-0;
+  @apply bg-gradient-to-r from-neutral/50;
+ }
+.flickity-prev-next-button.next {
+  @apply right-0;
+  @apply bg-gradient-to-l from-neutral/50;
+ }
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;

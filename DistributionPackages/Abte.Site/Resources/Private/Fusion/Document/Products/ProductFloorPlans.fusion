@@ -70,7 +70,7 @@ prototype(Abte.Site:Component.FloorPlanSlider) < prototype(Neos.Fusion:Component
     }
     
     renderer = afx`
-        <div class="mb-4 md:mb-8 xl:mb-12 sliderRemoteContainer"
+        <div class="pt-12 mb-4 overflow-x-hidden h-fit md:mb-8 xl:mb-12 sliderRemoteContainer"
             data-aos="fade-in"
         >
 
