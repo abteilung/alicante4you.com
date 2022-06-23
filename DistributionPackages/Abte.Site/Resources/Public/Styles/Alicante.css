@@ -1020,6 +1020,10 @@ select {
     .subNavigation {
   overflow-x: scroll !important;
 }
+
+        .subNavigation::-webkit-scrollbar {
+  display: none;
+}
         #primaryMenu.-translate-y-48 {
   margin-top: 5rem !important;
 }

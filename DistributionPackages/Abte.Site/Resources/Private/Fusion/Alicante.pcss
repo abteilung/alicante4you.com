@@ -234,6 +234,10 @@
 
     .subNavigation {
         @apply !overflow-x-scroll;
+
+        &::-webkit-scrollbar {
+            @apply hidden;
+        }
     }
 
     #primaryMenu {
