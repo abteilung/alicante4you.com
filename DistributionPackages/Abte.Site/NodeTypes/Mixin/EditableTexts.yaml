@@ -1,0 +1,10 @@
+
+'Abte.Site:Mixin.EditableTexts':
+  abstract: true
+  properties:
+    'map_liveYourDream':
+      options:
+        preset: 'text.plain'
+    'button_zumKontakt':
+      options:
+        preset: 'text.plain'

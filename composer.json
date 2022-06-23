@@ -43,7 +43,9 @@
         "alicante/form-multicolumnsection": "@dev",
         "alicante/mixitup": "@dev",
         "alicante/flickity": "@dev",
-        "alicante/privacy": "@dev"
+        "alicante/privacy": "@dev",
+        "alicante/translate": "@dev"        
+
     },
     "require-dev": {
         "neos/buildessentials": "~7.3.0",

@@ -1,4 +1,4 @@
-Lieber Kunde, vielen Dank für Ihre Anfrage:
+Vielen Dank für Ihre Anfrage:
 
 <f:for each="{form.formState.formValues}" as="value" key="label">
   {label}: {value}
