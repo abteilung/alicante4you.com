@@ -1230,10 +1230,6 @@ select {
     .box-h-1 {
   height: 12rem;
 }
-
-    .box-h-2 {
-  height: 16rem;
-}
     .box-h-3 {
   height: 12rem;
 }
@@ -2139,13 +2135,13 @@ select {
 .h-auto {
   height: auto;
 }
-.h-\[768px\] {
-  height: 768px;
-}
 .h-fit {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+.h-\[768px\] {
+  height: 768px;
 }
 .max-h-60 {
   max-height: 15rem;
@@ -2829,11 +2825,11 @@ select {
 .pr-4 {
   padding-right: 1rem;
 }
-.pt-32 {
-  padding-top: 8rem;
-}
 .pt-12 {
   padding-top: 3rem;
+}
+.pt-32 {
+  padding-top: 8rem;
 }
 .text-left {
   text-align: left;
@@ -3792,10 +3788,6 @@ select {
     max-width: 768px;
   }
 
-    .md\:box-h-2 {
-    height: 16rem;
-  }
-
     @media (min-width: 768px) {
 
     .md\:box-h-2 {
@@ -4153,10 +4145,6 @@ select {
     --tw-space-y-reverse: 0;
     margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(4rem * var(--tw-space-y-reverse));
-  }
-
-    .md\:overflow-x-visible {
-    overflow-x: visible;
   }
 
     .md\:object-center {
