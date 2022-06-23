@@ -1,0 +1,26 @@
+Sitegeist:
+  LostInTranslation:
+    DeepLApi:
+      authenticationKey: a0c24b3e-9d96-ebc5-14a6-43fceeb3f118
+
+      baseUri: 'https://api.deepl.com/v2/'
+      # baseUriFree: 'https://api-free.deepl.com/v2/'
+
+    nodeTranslation:
+      #
+      # Enable the automatic translations of nodes while they are adopted to another dimension
+      #
+      enabled: true
+
+      #
+      # Translate all inline editable fields without further configuration.
+      #
+      # If this is disabled iline editables can be configured for translation by setting
+      # `options.translateOnAdoption: true` for each property seperatly
+      #
+      translateInlineEditables: true
+
+      #
+      # The name of the language dimension. Usually needs no modification
+      #
+      languageDimensionName: 'language'

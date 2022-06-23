@@ -6,6 +6,8 @@ Neos:
           'text':
             'title':
               type: string
+              options:
+                automaticTranslation: true
               ui:
                 inlineEditable: true
                 inline:
@@ -23,6 +25,8 @@ Neos:
                       underline: true
             'plain':
               type: string
+              options:
+                automaticTranslation: true
               defaultValue: ''
               ui:
                 inlineEditable: true
@@ -33,6 +37,8 @@ Neos:
                     hyphens: true
             'inspector':
               type: string
+              options:
+                automaticTranslation: true
               defaultValue: ''
               ui:
                 inspector:
@@ -48,6 +54,8 @@ Neos:
                     hyphens: true
             'free':
               type: string
+              options:
+                automaticTranslation: true
               defaultValue: ''
               ui:
                 inlineEditable: true

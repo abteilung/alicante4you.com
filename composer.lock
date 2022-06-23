@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "203008667f9e24a81fec9106f0e93004",
+    "content-hash": "80800bbebc32f9008cf4ef1a3564da72",
     "packages": [
         {
             "name": "abte/site",
@@ -258,6 +258,34 @@
                     "Alicante\\Privacy\\": "Classes/"
                 }
             },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "alicante/translate",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Alicante.Translate",
+                "reference": "04d9df26425caab17b4a64e8685eec44458e8c58"
+            },
+            "require": {
+                "neos/neos": "^7.0.0",
+                "sitegeist/lostintranslation": "^2.0"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Alicante.Translate"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Alicante\\Translate\\": "Classes"
+                }
+            },
+            "description": "DeepL - Lost in translation",
             "transport-options": {
                 "relative": true
             }
@@ -8977,6 +9005,49 @@
             "time": "2022-05-10T08:47:01+00:00"
         },
         {
+            "name": "sitegeist/lostintranslation",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sitegeist/Sitegeist.LostInTranslation.git",
+                "reference": "5004aa681902db0435a5427f53f31881a0302685"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sitegeist/Sitegeist.LostInTranslation/zipball/5004aa681902db0435a5427f53f31881a0302685",
+                "reference": "5004aa681902db0435a5427f53f31881a0302685",
+                "shasum": ""
+            },
+            "require": {
+                "neos/http-factories": "^5.3 || ^7.0 || ^8.0 || dev-master",
+                "neos/neos": "^5.3 || ^7.0 || ^8.0 || dev-master"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.78"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Sitegeist.LostInTranslation"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sitegeist\\LostInTranslation\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "Automatic content translations for Neos using the DeepL Api",
+            "support": {
+                "issues": "https://github.com/sitegeist/Sitegeist.LostInTranslation/issues",
+                "source": "https://github.com/sitegeist/Sitegeist.LostInTranslation/tree/v2.0.1"
+            },
+            "time": "2022-04-01T11:14:15+00:00"
+        },
+        {
             "name": "sitegeist/slipstream",
             "version": "v2.1.5",
             "source": {
@@ -12989,7 +13060,8 @@
         "alicante/form-multicolumnsection": 20,
         "alicante/mixitup": 20,
         "alicante/flickity": 20,
-        "alicante/privacy": 20
+        "alicante/privacy": 20,
+        "alicante/translate": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
