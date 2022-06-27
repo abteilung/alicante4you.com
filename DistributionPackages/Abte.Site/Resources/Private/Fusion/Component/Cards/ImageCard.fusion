@@ -21,6 +21,8 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
 
     kates = Abte.Site:Component.FilterKates
 
+    soldState = ${ q(node).property('soldState') }
+
     isNew = ${ q(node).property('isNew') ? true : false }
     category = ${ q( q(node).property('categories') ).property('title') }
     
@@ -28,43 +30,50 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
     boxClass = 'relative h-full flex flex-col overflow-hidden duration-150 bg-white shadow-2xl box-shadow group roundedCorners isolate'
 
     renderer = afx`
-
-        <Neos.Neos:NodeLink 
-            node={ q(node).get(0) }
-            attributes.class={ props.boxClass + ' ' + props.class }
-            attributes.x-show={ q(documentNode).is('[instanceof Abte.Site:Document.World]') ? props.kates : null }
-            attributes.x-transition:enter="transition duration-10 ease-out"
-            attributes.x-transition:enter-end="scale-100 opacity-100"
-            attributes.x-transition:enter-start="scale-0 opacity-0"
-            attributes.x-transition:leave="transition duration-10 ease-in"
-            attributes.x-transition:leave-end="opacity-0 scale-100"
-        >
+        <div class="relative">
 
             <Abte.Site:Component.isNew 
                 @if.isNew={ props.isNew }
+                @if.hasNoSoldState={ props.soldState == 'none'}
             />
 
-            <div class="">
-                <div class="overflow-hidden">
-                    <Sitegeist.Kaleidoscope:Image 
-                        @if.hasImage={props.imageSource}
-                        imageSource={props.imageSource} 
-                        class="object-cover duration-150 scale-100 group-hover:scale-105 aspect-video lg:aspect-[19/12]"
-                    />
+            <Abte.Site:Component.soldState
+                @if.hasSoldState={ props.soldState != 'none'}
+            />
+            <Neos.Neos:NodeLink 
+                node={ q(node).get(0) }
+                attributes.class={ props.boxClass + ' ' + props.class }
+                attributes.x-show={ q(documentNode).is('[instanceof Abte.Site:Document.World]') ? props.kates : null }
+                attributes.x-transition:enter="transition duration-10 ease-out"
+                attributes.x-transition:enter-end="scale-100 opacity-100"
+                attributes.x-transition:enter-start="scale-0 opacity-0"
+                attributes.x-transition:leave="transition duration-10 ease-in"
+                attributes.x-transition:leave-end="opacity-0 scale-100"
+            >
 
-                    <img src="https://via.placeholder.com/620x450" class="aspect-video lg:aspect-[19/12]" alt={props.title} width="620" height="620"
-                        @if.hasNoImage={!props.imageSource}
-                    />                
+                <div class="">
+                    <div class="overflow-hidden">
+                        <Sitegeist.Kaleidoscope:Image 
+                            @if.hasImage={props.imageSource}
+                            imageSource={props.imageSource} 
+                            class="object-cover duration-150 scale-100 group-hover:scale-105 aspect-video lg:aspect-[19/12]"
+                        />
+
+                        <img src="https://via.placeholder.com/620x450" class="aspect-video lg:aspect-[19/12]" alt={props.title} width="620" height="620"
+                            @if.hasNoImage={!props.imageSource}
+                        />                
+                    </div>
+                    <div class="p-4 md:p-6 lg:p-8">
+                        <!-- <p class="hidden mb-2 text-base-300">{props.category}</p> -->
+                        <h3 class="flex-1 h-full mb-0 md:line-clamp-2 lg:line-clamp-3">{props.title}</h3>
+                        <Abte.Site:Component.ProductFeaturesShort />
+                    </div>
+                    {props.icon}
                 </div>
-                <div class="p-4 md:p-6 lg:p-8">
-                    <!-- <p class="hidden mb-2 text-base-300">{props.category}</p> -->
-                    <h3 class="flex-1 h-full mb-0 md:line-clamp-2 lg:line-clamp-3">{props.title}</h3>
-                    <Abte.Site:Component.ProductFeaturesShort />
-                </div>
-                {props.icon}
-            </div>
-        </Neos.Neos:NodeLink>
+            </Neos.Neos:NodeLink>
+        </div>
     `
+
 }
 
 
@@ -77,11 +86,29 @@ prototype(Abte.Site:Component.isNew) < prototype(Neos.Fusion:Component) {
     }
 
     renderer = afx`
-        <div class="absolute z-10 flex items-center justify-center w-10 h-10 text-white duration-150 scale-90 rounded-full bg-primary lg:w-12 lg:h-12 -top-3 md:-top-5 -right-3 md:-right-5 lg:-top-6 lg:-right-6 group-hover:scale-100">
+        <div class="absolute z-10 flex items-center justify-center w-20 h-20 text-white duration-150 scale-90 rounded-full center bg-primary -top-3 md:-top-5 -right-3 md:-right-5 lg:-top-6 lg:-right-6 group-hover:scale-100">
             <div class="text-xs md:text-sm font-headings">
                 { I18n.translate('Abte.Site:Main:new') }
             </div>
         </div>
     `
+}
 
+
+
+prototype(Abte.Site:Component.soldState) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+
+    @context {
+        node = ${ this.node }
+    }
+
+    renderer = afx`
+        <div class="absolute z-10 flex items-center justify-center w-20 h-20 text-white duration-150 scale-90 rounded-full bg-secondary -top-3 md:-top-5 -right-3 md:-right-5 lg:-top-6 lg:-right-6 group-hover:scale-100">
+            <div class="text-xs md:text-sm font-headings">
+                { q(node).property('soldState') == 'reserved' ? I18n.translate('Abte.Site:Main:reserved') : I18n.translate('Abte.Site:Main:sold') }
+            </div>
+        </div>
+    `
 }

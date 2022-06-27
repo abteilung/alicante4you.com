@@ -117,6 +117,16 @@
                 <target>Neu</target>
             </trans-unit>
 
+            <trans-unit id="sold">
+                <source>Sold</source>
+                <target>Verkauft</target>
+            </trans-unit>
+
+            <trans-unit id="reserved">
+                <source>Reserved</source>
+                <target>Reserviert</target>
+            </trans-unit>
+
             <trans-unit id="back">
                 <source>Back</source>
                 <target>Zurück</target>

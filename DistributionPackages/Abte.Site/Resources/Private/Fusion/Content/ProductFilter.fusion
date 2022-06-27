@@ -15,6 +15,10 @@ prototype(Abte.Site:Content.ProductFilter) < prototype(Neos.Fusion:Component) {
         }
     }
 
+    @context {
+        filterItemsArray = ${ q(documentNode).children('[instanceof Abte.Site:Mixin.Product]').get() }
+    }
+
     renderer = afx`
         <div 
             id="filterContainer" 
@@ -25,4 +29,13 @@ prototype(Abte.Site:Content.ProductFilter) < prototype(Neos.Fusion:Component) {
             </div>
         </div>
     `
+
+	@cache {
+		mode = 'cached'
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Abte.Site:Document.Product', node)}
+		}
+	}
+
+
 }

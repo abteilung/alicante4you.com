@@ -97,6 +97,14 @@
                 <source>New</source>
             </trans-unit>
 
+            <trans-unit id="sold">
+                <source>Sold</source>
+            </trans-unit>
+
+            <trans-unit id="reserved">
+                <source>Reserved</source>
+            </trans-unit>
+
             <trans-unit id="back">
                 <source>Back</source>
             </trans-unit>
