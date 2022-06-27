@@ -7,6 +7,7 @@
     'Alicante.Flickity:Include': true
     'Abte.Site:Mixin.New': true
     'Abte.Site:Mixin.Hero': true
+    'Abte.Site:Mixin.SoldState': true
     'Abte.Site:Constraint.Document.Restricted': true
     'Abte.Site:Mixin.Searchable.SiteSearch': true
   label: "${ q(node).property('isHero') && node.context.inBackend ? '<span class=\"hidden\">🏆 </span>' + q(node).property('title') : q(node).property('isNew') && node.context.inBackend ? '<span class=\"hidden\">🆕 </span>' + q(node).property('title') : q(node).property('title') }"

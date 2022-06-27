@@ -1,0 +1,33 @@
+'Abte.Site:Mixin.SoldState':
+  abstract: true
+  ui:
+    label: Sold State
+    icon: square-full
+    position: 30
+    inspector:
+      groups:
+        style:
+          label: 'Style'
+          position: 25
+          icon: 'clone'
+  properties:
+    'soldState':
+      type: string
+      defaultValue: 'none'
+      ui:
+        label: 'Reserviert? Verkauft?'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              none:
+                label: 'None'
+                icon: ''
+              reserved:
+                label: 'Reserviert'
+                icon: ''
+              sold:
+                label: 'Verkauft'
+                icon: ''
