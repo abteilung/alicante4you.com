@@ -1,8 +1,5 @@
 import path from "path";
-import glob from "glob";
-import postcssrc from "postcss-load-config";
-import resolve from "resolve";
-import { DepGraph } from "dependency-graph";
+import { glob, postcssrc, resolve, DepGraph } from "carbon-pipeline";
 import { minify, config, toArray } from "./helper.mjs";
 
 function rc() {
@@ -10,6 +7,7 @@ function rc() {
         minify,
         basePath: config.folder.base,
         resolve: importResolve,
+        ...config.postcssOptions,
     })
         .then((rc) => {
             return rc;

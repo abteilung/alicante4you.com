@@ -20,17 +20,18 @@
     "authors": [
         {
             "name": "Jon Uhlmann",
-            "email": "me@jonnitto.ch",
-            "homepage": "https://www.jonnitto.ch"
+            "email": "hello@uhlmann.pro",
+            "homepage": "https://www.uhlmann.pro"
         }
     ],
     "archive": {
         "exclude": [
             "/.github",
-            "/Test",
             "/.editorconfig",
             "/.gitattributes",
             "/.gitignore",
+            "/NPM",
+            "/Test",
             "/CODE_OF_CONDUCT.md",
             "/LICENSE",
             "/Makefile",

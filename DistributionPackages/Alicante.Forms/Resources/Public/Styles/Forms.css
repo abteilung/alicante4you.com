@@ -1,2 +1,5 @@
-.choices__item{--tw-bg-opacity:1!important;background-color:hsl(var(--p)/var(--tw-bg-opacity))!important}
+.choices__item {
+    --tw-bg-opacity: 1 !important;
+    background-color: hsl(var(--p) / var(--tw-bg-opacity)) !important
+}
 /*# sourceMappingURL=Forms.css.map */

@@ -33,7 +33,7 @@
     },
     "server": false,
     // "proxy": "127.0.0.1:8081",
-    "proxy": "http://alicante4you.com.ddev.site/",
+    "proxy": "http://die-coacherei2.ch.ddev.site/",
     "port": 3000,
     "middleware": false,
     "serveStatic": [],
